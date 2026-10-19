@@ -1,99 +1,67 @@
 # 1.3 LLM 中的 Attention 成本与长上下文需求
 
-在 Transformer 语言模型中，Attention 机制负责从已有上下文中读取信息。随着输入文档变长、生成内容增多，模型需要处理更多位置，并保存更多可供后续读取的信息。本节以 Decoder-only 模型的常规自回归生成为例，说明这些计算与存储需求如何产生。
+Decoder-only 语言模型逐步生成文本，并通过 Attention 读取已有上下文。下面从生成与缓存机制出发，解释输入变长时的计算成本，以及有效使用长上下文所需的条件。
 
-## Next-token Prediction 与自回归生成
+## 自回归生成与 KV Cache
 
-Next-token Prediction 根据已有序列，估计紧接其后的 Token 在词表上的概率分布。Decoder-only 模型通过 Causal Self-Attention 汇总当前及此前位置的信息，再由输出层给出这一分布。生成时，系统按照解码策略选取一个 Token，将其追加到序列末尾，然后继续计算。这种逐步扩展序列的过程称为自回归生成（Autoregressive Generation）。[Kwon et al.，§2.1—2.2](https://arxiv.org/html/2309.06180v1)
-
-例如，对于提示文本 `The cat sat`，一种可能的续写是 ` on the mat`。生成过程逐步扩展已有序列；每一步可以利用的上下文，都包含原始提示文本和此前已生成的内容。这是文本续写的教学示例，实际 Token 边界由 Tokenizer 决定。
-
+Next-token Prediction 根据已有序列估计后续 Token 在词表上的概率分布。模型通过 Causal Self-Attention 汇总当前及此前的信息，再由输出层给出分布；系统选取一个 Token，追加到序列末尾，继续生成。这一循环称为自回归生成（Autoregressive Generation）。[Kwon et al.，§2.1—2.2](https://arxiv.org/html/2309.06180v1)
 
 <figure align="center">
-<img src="../../assets/overview/autoregressive-steps.png" alt="英文前缀经过模型得到词表概率分布，选出的 Token 追加到下一轮输入">
-<figcaption><p align="center">图 1-7　自回归生成的两个步骤</p></figcaption>
+<img src="https://jalammar.github.io/images/xlnet/gpt-2-autoregression-2.gif" alt="Jay Alammar 自回归动画：生成的 Token 追加到输入序列，再进入下一轮生成">
+<figcaption><p align="center">图 1-7　自回归生成中的反馈循环</p></figcaption>
 </figure>
 
-## KV Cache 复用已有上下文
+[原始动画](https://jalammar.github.io/images/xlnet/gpt-2-autoregression-2.gif)展示输出追加到输入的反馈过程。图中的英文词语用于示意，实际 Token 边界由 Tokenizer 决定。
 
-逐步生成意味着模型会反复读取相同的前缀。Attention 层将输入表示映射为 Query、Key 和 Value：Query 与 Key 用于计算匹配权重，Value 提供被汇总的内容。Key 和 Value 合称 KV，保存了后续位置读取该位置时所需的信息。
-
-在参数和前缀固定的 Causal Transformer 中，已有位置的表示不受后来追加内容的影响。因此，各层已算出的历史 KV 可以保存下来，后续生成时直接复用。这样的缓存称为 KV Cache；每处理一个新 Token，模型计算其 Query 和 KV，读取历史 KV，并将新 KV 追加到缓存。[Shazeer，§2.3—2.4](https://arxiv.org/html/1911.02150v1)
-
-下图以 `a robot` 为例：处理 `robot` 时，每层保留的 `a` 的 Key 和 Value 参与当前计算，新增位置则计算自己的 QKV。图中词语用于说明处理顺序，实际 Token 边界取决于 Tokenizer。
+每轮生成都会再次读取历史信息。Attention 层将输入表示映射为 Query、Key 和 Value：Query 与 Key 决定匹配权重，Value 提供被汇总的内容。在参数和前缀固定的 Causal Transformer 中，历史位置的表示不受后来追加内容的影响，因此各层已算出的 Key 和 Value 可以保存在 **KV Cache** 中复用。新位置只需计算自己的 QKV，并读取历史 KV。[Shazeer，§2.3—2.4](https://arxiv.org/html/1911.02150v1)
 
 <figure align="center">
 <img src="../../assets/overview/alammar-kv-cache.png" alt="Jay Alammar 原图：处理 robot 时，各 Decoder 层保留 a 的 KV 并计算当前位置的 QKV">
 <figcaption><p align="center">图 1-8　历史 KV 的逐层复用</p></figcaption>
 </figure>
 
-KV Cache 减少了历史位置的重复计算，同时引入了持续增长的存储需求：保留的上下文越长，各层需要保存的 KV 就越多。
+图中处理 `robot` 时，各层复用 `a` 的 KV，并追加当前位置的 KV。缓存减少了重复计算，也使保存全部历史时的显存占用随序列增长。
 
-## Prefill 与 Decode 分别处理提示文本和生成内容
+## Prefill、Decode 与长度相关的成本
 
-提示文本（Prompt）在生成开始前已经完整给定，可以一次处理多个位置；生成内容则依赖前一步选出的 Token，需要逐步推进。采用 KV Cache 时，这两种计算对应 Prefill 与 Decode。
-
-| 阶段 | 处理的输入 | Attention 与缓存操作 |
-| --- | --- | --- |
-| Prefill | 已知 Prompt 的多个位置 | 在因果约束下计算各位置的表示，建立各层 KV Cache |
-| Decode | 每个请求本轮新输入的一个 Token | 计算该位置的表示，读取历史 KV，并追加新 KV |
-
-<p align="center">表 1-4　Prefill 与 Decode</p>
-
-Prefill 完成后，模型利用 Prompt 最后一个位置的输出生成首个新 Token。随后，每轮 Decode 将刚生成的 Token 作为输入，继续生成后续内容。图 1-9 对照了这两个阶段在单层 Attention 中需要处理的位置。[Kwon et al.，§2.2](https://arxiv.org/html/2309.06180v1)
+**Prefill** 处理已知的提示文本（Prompt），在因果约束下计算多个位置并建立 KV Cache；模型利用最后一个位置的输出生成首个新 Token。此后每轮 **Decode** 处理刚生成的 Token，读取并更新缓存，再生成后续内容。[Kwon et al.，§2.2](https://arxiv.org/html/2309.06180v1)
 
 <figure align="center">
 <img src="../../assets/overview/prefill-decode.svg" alt="Prefill 处理已知 Prompt 的多个位置；单步 Decode 处理一个新位置，并读取历史与当前 KV">
 <figcaption><p align="center">图 1-9　Prefill 与 Decode</p></figcaption>
 </figure>
 
-图中省略了其他 Head、投影和前馈网络等组件；生成概率还需经过模型后续层及输出层。长 Prompt 也可以分块执行 Prefill，各块仍处理已知输入，并保留所需的历史 KV。[Jiang et al.，§2](https://arxiv.org/html/2310.06825v1)
+图中只展示单层 Attention 的位置关系，生成概率还需经过模型后续计算及输出层。长 Prompt 可以分块执行 Prefill。[Jiang et al.，§2](https://arxiv.org/html/2310.06825v1)
 
-## 更长的上下文增加计算、访存与缓存成本
-
-采用 Dense Attention 时，Prefill 要为 Prompt 中的多个位置计算匹配与汇总；常规单步 Decode 只计算一个新位置，但仍需读取可访问的历史 KV。这使输入长度对两个阶段产生不同影响。
-
-图 1-10 将长度为 4 和 8 的序列并列展示：因果位置对从 10 个增加到 36 个，单步读取的 KV 则从 4 组增加到 8 组。这里统计的是单个 Head 的位置关系。
+在模型配置固定、采用 Dense Attention 并缓存全部历史 KV 时，完整序列的位置对计算随长度呈二次增长；单步 Decode 的历史读取量和 KV Cache 容量则随长度线性增长。图 1-10 以单个 Head 为例：序列从 4 个位置增至 8 个，因果位置对从 10 个增至 36 个，单步读取的 KV 从 4 组增至 8 组。[Vaswani et al.，Table 1](https://arxiv.org/html/1706.03762v7)；[Shazeer，§2.4](https://arxiv.org/html/1911.02150v1)
 
 <figure align="center">
 <img src="../../assets/overview/context-costs.png" alt="N 为 4 和 8 时因果位置对分别为 10 和 36，单步读取与缓存的 KV 分别为 4 和 8 组">
 <figcaption><p align="center">图 1-10　序列长度与 Attention 成本</p></figcaption>
 </figure>
 
-| 成本来源 | 随长度增长的变化 | 直接影响 |
+二次运算量与中间显存占用需要分别分析：FlashAttention 可以通过分块计算避免保存完整分数矩阵。实际延迟还取决于硬件、一次同时处理的序列数（Batch Size）和实现；小 Batch 的 Decode 可能主要受模型参数与 KV 的读取带宽限制。[Dao et al.，§3](https://arxiv.org/html/2205.14135v2)；[Shazeer，§2.4.1](https://arxiv.org/html/1911.02150v1)
+
+## Long Context 的位置适配与信息使用
+
+长上下文（Long Context）需要同时满足资源、位置处理和模型能力三个方面的要求。
+
+| 方面 | 需要解决的问题 | 评估重点 |
 | --- | --- | --- |
-| 完整输入的位置对计算 | 序列长度加倍时，位置对数量约增至四倍 | 长输入的 Attention 运算量增加 |
-| 单步 Decode 的历史读取 | 可访问的历史越长，需要读取的 KV 越多 | 每步 Attention 的计算和访存成本增加 |
-| KV Cache | 保留的 Token 越多，缓存越大 | 单请求显存占用增加，可同时服务的请求数受限 |
+| 资源成本 | 支撑更长输入的计算、缓存和访存 | Prefill/Decode 耗时、峰值显存 |
+| 位置适配 | 处理超出训练范围的位置与距离 | Position Encoding、扩展方法及训练设置 |
+| 信息使用 | 从长文本中读取并利用相关信息 | 不同位置的检索、问答与信息整合 |
 
-<p align="center">表 1-5　序列长度与资源成本</p>
+<p align="center">表 1-4　Long Context 的三个条件</p>
 
-上述关系假设模型配置保持不变，采用 Dense Attention 并缓存全部历史 KV。Causal Mask 限制可访问的位置，但完整序列中的有效位置对仍随长度呈二次增长。FlashAttention 通过分块计算避免保存完整分数矩阵，因此 Attention 的运算量与中间显存占用需要分别分析。[Vaswani et al.，Table 1](https://arxiv.org/html/1706.03762v7)；[Dao et al.，§3](https://arxiv.org/html/2205.14135v2)
+例如，Position Interpolation 重映射 Rotary Position Embedding（RoPE）的位置索引，并配合适应训练扩展上下文窗口。能力评估则需要检查相关信息能否被有效使用。[Chen et al.，§2.3](https://arxiv.org/html/2306.15595v2)
 
-实际延迟还取决于硬件、一次同时处理的序列数（Batch Size）和计算实现。小 Batch 的 Decode 可能主要受模型参数与 KV 的读取带宽限制；减少缓存容量能节省显存，速度收益则需要在具体配置下测量。[Shazeer，§2.4.1](https://arxiv.org/html/1911.02150v1)
-
-## Long Context 还需要位置适配与有效的信息使用
-
-长上下文（Long Context）的目标，是让模型利用更长的文档、对话或代码完成任务。计算和缓存优化解决资源成本；随着输入变长，模型还会遇到超出训练范围的位置与距离，以及分散在长文本中的相关信息。
-
-| 条件 | 要解决的问题 | 对应检查 |
-| --- | --- | --- |
-| 资源可承受 | 运算量、显存及缓存访问能否支撑目标长度 | Prefill 时间、Decode 时间、峰值显存 |
-| 位置处理适配 | 更长的位置与距离是否超出训练时的使用范围 | Position Encoding、扩展方法及训练设置 |
-| 信息能够有效使用 | 模型能否读取并利用长上下文中的相关信息 | 不同位置的检索、问答、多段信息整合等任务 |
-
-<p align="center">表 1-6　Long Context 的三个条件</p>
-
-例如，使用 Rotary Position Embedding（RoPE）的模型可以通过 Position Interpolation 重映射位置索引，并配合适应训练来扩展上下文窗口。[Chen et al., 2023，§2.3](https://arxiv.org/html/2306.15595v2)
-
-Lost in the Middle 的多文档问答实验通过改变含答案文档的位置，检查模型能否使用上下文不同位置的信息。图 1-11 用七份文档示意这一设置；文档数量为教学设定。
+Lost in the Middle 在多文档问答中移动含答案文档的位置，发现其评估模型的回答表现会随位置变化。下图用七份文档示意实验设置，未展示得分；这一结论限于论文评估的模型与任务。[Liu et al.，§3.1—3.3](https://arxiv.org/html/2307.03172v1)
 
 <figure align="center">
 <img src="../../assets/overview/context-evidence-position.png" alt="相同问题与文档集合，分别把含答案文档放在开头、中间和结尾；未展示实验得分">
 <figcaption><p align="center">图 1-11　相关信息位置的对照设置</p></figcaption>
 </figure>
-
-该研究在其评估的模型和任务中发现，相关信息的位置会影响回答表现。这说明接受更长输入与有效利用其中信息需要分别评估；其他模型需要在相应任务上单独评估。[Liu et al., 2023，§3.1—3.3](https://arxiv.org/html/2307.03172v1)
 
 图示来源与许可见[图表来源](../../appendices/references.md#图表来源)。
 

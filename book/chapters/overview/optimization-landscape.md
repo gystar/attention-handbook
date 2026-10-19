@@ -20,7 +20,7 @@
 | 历史怎样进入状态 | Linear Attention、Gated DeltaNet | 用状态更新与读取组织计算 | [第 9 章 Linear Attention 的 Recurrent Formulation 与 State Update](../linear-attention/README.md) |
 | 不同序列模块怎样组合 | Hybrid Architectures | Layer 或模块的组合 | [第 10 章 Hybrid Architectures 的结构设计与方法比较](../hybrid-architectures/README.md) |
 
-<p align="center">表 1-7　Attention 优化路线</p>
+<p align="center">表 1-5　Attention 优化路线</p>
 
 ## 模型结构、计算实现与缓存管理
 
@@ -40,7 +40,7 @@ Linear Attention 进一步改变历史信息的组织方式：在适用的核形
 | FlashAttention 与 KV 分页管理 | 运算调度、缓存布局 | Kernel 支持对应缓存布局及推理阶段 |
 | Attention 与状态更新模块 | 不同层或模块的信息读取方式 | 协调层间表示、训练与推理状态 |
 
-<p align="center">表 1-8　不同改进方向的组合</p>
+<p align="center">表 1-6　不同改进方向的组合</p>
 
 技术时间线及原始论文入口见[附录 B 技术演进时间线与方法对照表](../../appendices/timeline.md)。结合上面的设计对象，可以辨认同期工作解决的不同问题，以及后续模型采用的组合。
 
@@ -54,7 +54,7 @@ Linear Attention 进一步改变历史信息的组织方式：在适用的核形
 | Prefill 与 Decode | 耗时、每步延迟、峰值显存 | 输入与输出长度、Batch Size、硬件与精度 |
 | 服务系统 | 吞吐、并发与延迟 | 请求分布、缓存策略和延迟约束 |
 
-<p align="center">表 1-9　方法比较的基本条件</p>
+<p align="center">表 1-7　方法比较的基本条件</p>
 
 FlashAttention 论文同时评估 Attention 实现与训练性能，PagedAttention 论文评估服务系统中的吞吐等指标。阅读这些结果时，应将速度或内存收益与其测量范围对应起来。[Dao et al.，§4](https://arxiv.org/html/2205.14135v2)；[Kwon et al.，§6](https://arxiv.org/html/2309.06180v1) 详细比较检查表见[方法比较的条件与指标](../../appendices/timeline.md#方法比较的条件与指标)。
 

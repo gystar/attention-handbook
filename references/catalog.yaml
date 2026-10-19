@@ -723,3 +723,15 @@ assets:
   attribution: Jay Alammar, The Illustrated GPT-2; CC BY-NC-SA 4.0；原图未修改。
   license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
   display_mode: local_file
+- id: alammar-autoregression
+  source_id: alammar2019gpt2
+  locator: One Difference From BERT; gpt-2-autoregression-2.gif
+  download_url: https://jalammar.github.io/images/xlnet/gpt-2-autoregression-2.gif
+  local_path: book/assets/overview/alammar-autoregression.gif
+  archive_status: pending
+  sha256: null
+  git_blob: 98d6bb283dbe8ce02d0d255ad4146b4cbb223056
+  archive_note: fetch_file 返回空内容；fetch_blob 对二进制解码失败；终端代理连接与直连 DNS 均不可用。未完成逐帧或播放核查。
+  attribution: Jay Alammar, The Illustrated GPT-2; CC BY-NC-SA 4.0；原 GIF 未修改。
+  license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+  display_mode: remote_url

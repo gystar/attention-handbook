@@ -74,7 +74,7 @@
 | 图 1-4 | [Zhang, Lipton, Li & Smola，Dive into Deep Learning，§10.7，Figure 10.7.1](https://d2l.ai/chapter_recurrent-modern/seq2seq.html)，[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)；SVG 白底栅格化，图中内容未改动 | RNN Encoder–Decoder 的固定表示传递 |
 | 图 1-5 | 本书依据 [Bahdanau et al.，§3.1，式 (4)—(6)](https://arxiv.org/html/1409.0473v7#S3.SS1) 绘制；词语切分与权重为教学设定 | 英中翻译中逐步变化的读取权重 |
 | 图 1-6 | [Jay Alammar，The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/#a-high-level-look)，CC BY-NC-SA 4.0；原图未修改 | Attention 承担原文、译文及跨序列的信息交互 |
-| 图 1-7 | 本书依据 [Kwon et al.，§2.1—2.2](https://arxiv.org/html/2309.06180v1) 绘制 | Next-token Prediction 与逐步追加，英文续写为教学设定 |
+| 图 1-7 | [Jay Alammar，The Illustrated GPT-2，One Difference From BERT](https://jalammar.github.io/illustrated-gpt2/#one-difference-from-bert)，CC BY-NC-SA 4.0；原 GIF 未修改 | 生成结果追加到输入，形成自回归反馈循环 |
 | 图 1-8 | [Jay Alammar，The Illustrated GPT-2，Evaluation Time: Processing One Token at a Time](https://jalammar.github.io/illustrated-gpt2/#evaluation-time-processing-one-token-at-a-time)，CC BY-NC-SA 4.0；原图未修改 | 历史 KV 在各层的复用 |
 | 图 1-9 | 本书依据 [Kwon et al.，§2.2](https://arxiv.org/html/2309.06180v1) 绘制 | Prefill 与 Decode 的位置关系 |
 | 图 1-10 | 本书依据 [Vaswani et al.，Table 1](https://arxiv.org/html/1706.03762v7) 与 [Shazeer，§2.4](https://arxiv.org/html/1911.02150v1) 绘制 | 因果位置对与单步 KV 读取量，非实测性能 |
@@ -91,7 +91,7 @@ Vaswani et al. 原论文首页允许署名后的学术图表转载；GQA 原图�
 
 公开书页直接链接原论文和作者页面。本地原文放在仓库 `sources/` 中，由 `sources/INDEX.md` 提供真实文件链接；来源 ID 与上述条目一致。原文文件默认不随 Git 仓库发布。
 
-当前图示归档状态：正文使用的十二张本地图已随书保存，Scaled Dot-Product Attention 与 GQA 两张论文图仍通过远程地址引用。必备论文 PDF 与原论文图的归档缺口仍保留在来源索引中。
+当前图示归档状态：正文使用的十一张本地图已随书保存；自回归 GIF、Scaled Dot-Product Attention 与 GQA 两张论文图通过远程地址引用。必备论文 PDF 与原论文图的归档缺口仍保留在来源索引中。
 
 在允许联网的环境中，可在仓库根目录执行 `python3 scripts/sources.py --download` 获取必备原文及引用图片，再执行 `python3 scripts/sources.py` 更新索引。选读资料使用 `--download --all`。工具说明和后续归档要求见仓库 `references/README.md`。
 
