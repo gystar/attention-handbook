@@ -6,7 +6,7 @@
 
 ## 阅读入口
 
-- [第 1 章 大模型 Attention 的总体框架与技术演进](chapters/overview/README.md)
+- [第 1 章 Attention 机制的演进与主要发展方向](chapters/overview/README.md)
 - [附录 A 英文术语、数学符号与补充推导](appendices/foundations.md)
 - [附录 B 技术演进时间线与方法对照表](appendices/timeline.md)
 - [附录 C 参考文献、教学资源与本地源文件索引](appendices/references.md)
@@ -15,7 +15,7 @@
 
 | 主题 | 章节 |
 | --- | --- |
-| 总览 | [第 1 章 大模型 Attention 的总体框架与技术演进](chapters/overview/README.md) |
+| 总览 | [第 1 章 Attention 机制的演进与主要发展方向](chapters/overview/README.md) |
 | 原理与结构改进 | [第 2 章 Transformer Attention 的基本原理与计算过程](chapters/transformer-attention/README.md) |
 | 原理与结构改进 | [第 3 章 Position Encoding 的演进与 Context Extension](chapters/position-encoding/README.md) |
 | 原理与结构改进 | [第 4 章 Key–Value 表示优化：MHA、MQA、GQA 与 MLA](chapters/kv-representations/README.md) |

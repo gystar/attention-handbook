@@ -4,11 +4,11 @@
 
 ## 总览
 
-* [第 1 章 大模型 Attention 的总体框架与技术演进](chapters/overview/README.md)
+* [第 1 章 Attention 机制的演进与主要发展方向](chapters/overview/README.md)
   * [1.1 从 Representation Learning 到 Attention 机制](chapters/overview/introduction.md)
   * [1.2 从 RNN 到 Transformer](chapters/overview/from-seq2seq-to-transformer.md)
   * [1.3 LLM 中的 Attention 成本与长上下文需求](chapters/overview/bottlenecks-and-context.md)
-  * [1.4 Attention 的主要改进方向与方法关系](chapters/overview/optimization-landscape.md)
+  * [1.4 Attention 机制的主要发展方向与技术路线](chapters/overview/optimization-landscape.md)
 
 ## 原理与结构改进
 

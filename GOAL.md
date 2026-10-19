@@ -8,14 +8,14 @@
 
 ## 本阶段目标
 
-搭建可用于 GitBook Git Sync 的 Markdown 内容框架，完成第 1 章“大模型 Attention 的总体框架与技术演进”，并执行逐章 Review、修正与复查。
+搭建可用于 GitBook Git Sync 的 Markdown 内容框架，完成第 1 章“Attention 机制的演进与主要发展方向”，并执行逐章 Review、修正与复查。
 
 第 1 章包含：
 
 1. 从 Representation Learning 到 Attention 机制。
 2. 从 RNN 到 Transformer。
 3. LLM 中的 Attention 成本与长上下文需求。
-4. Attention 的主要改进方向与方法关系。
+4. Attention 机制的主要发展方向与技术路线。
 
 ## 内容与文件安排
 
@@ -62,3 +62,5 @@
 仓库已有 GitBook 站点；本轮修订的同步与目标页面呈现待发布后核查。
 
 本轮四节结构与内容迁移记录见[第一章结构重写 Review](reviews/overview-restructure.md)。
+
+下一步：按已确定的“Attention 机制的主要发展方向与技术路线”重写 1.4，后续会话继续。

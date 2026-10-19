@@ -15,12 +15,12 @@
 | Causal Mask | 只允许访问当前位置及此前位置的访问约束 | [1.2 从 RNN 到 Transformer](../chapters/overview/from-seq2seq-to-transformer.md) |
 | Prefill / Decode | 处理已知 Prompt / 逐步处理生成 Token 的两个阶段 | [1.3 LLM 中的 Attention 成本与长上下文需求](../chapters/overview/bottlenecks-and-context.md) |
 | Multi-Head Attention（MHA） | 多个 Head 分别计算 Attention 后组合输出 | [第 2 章 Transformer Attention 的基本原理与计算过程](../chapters/transformer-attention/README.md) |
-| Multi-Query Attention（MQA） | 多个 Query Head 共享一组 KV | [1.4 Attention 的主要改进方向与方法关系](../chapters/overview/optimization-landscape.md) |
-| Grouped-Query Attention（GQA） | 每组 Query Head 共享一组 KV | [1.4 Attention 的主要改进方向与方法关系](../chapters/overview/optimization-landscape.md) |
-| Multi-Head Latent Attention（MLA） | 采用联合低秩 KV 表示，并处理位置相关分量的 Attention 设计 | [1.4 Attention 的主要改进方向与方法关系](../chapters/overview/optimization-landscape.md) |
+| Multi-Query Attention（MQA） | 多个 Query Head 共享一组 KV | [1.4 Attention 机制的主要发展方向与技术路线](../chapters/overview/optimization-landscape.md) |
+| Grouped-Query Attention（GQA） | 每组 Query Head 共享一组 KV | [1.4 Attention 机制的主要发展方向与技术路线](../chapters/overview/optimization-landscape.md) |
+| Multi-Head Latent Attention（MLA） | 采用联合低秩 KV 表示，并处理位置相关分量的 Attention 设计 | [1.4 Attention 机制的主要发展方向与技术路线](../chapters/overview/optimization-landscape.md) |
 | KV Cache | 为后续推理复用而保存的逐层历史 KV 或相应压缩表示 | [1.3 LLM 中的 Attention 成本与长上下文需求](../chapters/overview/bottlenecks-and-context.md) |
-| IO / HBM | 数据传输 / GPU 的 High Bandwidth Memory；区别于算术运算量 | [1.4 Attention 的主要改进方向与方法关系](../chapters/overview/optimization-landscape.md) |
-| Recurrent Formulation | 用上一步状态与当前输入表达下一步状态和输出 | [1.4 Attention 的主要改进方向与方法关系](../chapters/overview/optimization-landscape.md) |
+| IO / HBM | 数据传输 / GPU 的 High Bandwidth Memory；区别于算术运算量 | [1.4 Attention 机制的主要发展方向与技术路线](../chapters/overview/optimization-landscape.md) |
+| Recurrent Formulation | 用上一步状态与当前输入表达下一步状态和输出 | [1.4 Attention 机制的主要发展方向与技术路线](../chapters/overview/optimization-landscape.md) |
 
 <p align="center">表 A-1　常用术语</p>
 
@@ -65,7 +65,7 @@ o_t^\top
 \end{aligned}
 $$
 
-右侧两项历史求和分别定义为 $$S_t$$、$$z_t$$。从 $$t-1$$ 到 $$t$$，各追加当前项，就得到 [1.4 Attention 的主要改进方向与方法关系](../chapters/overview/optimization-landscape.md) 的递推公式。这一步只使用分配律与有限求和；得到固定大小状态还要求 $$d_\phi,d_v$$ 不随序列长度增加。[Katharopoulos et al., 2020，§3.2—3.4，式 (9)—(20)](https://proceedings.mlr.press/v119/katharopoulos20a/katharopoulos20a.pdf)
+右侧两项历史求和分别定义为 $$S_t$$、$$z_t$$。从 $$t-1$$ 到 $$t$$，各追加当前项，就得到 [第 9 章 Linear Attention 的 Recurrent Formulation 与 State Update](../chapters/linear-attention/README.md) 的递推公式。这一步只使用分配律与有限求和；得到固定大小状态还要求 $$d_\phi,d_v$$ 不随序列长度增加。[Katharopoulos et al., 2020，§3.2—3.4，式 (9)—(20)](https://proceedings.mlr.press/v119/katharopoulos20a/katharopoulos20a.pdf)
 
 ## 容量计算的适用条件
 

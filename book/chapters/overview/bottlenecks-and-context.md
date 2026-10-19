@@ -65,4 +65,4 @@ Lost in the Middle 在多文档问答中移动含答案文档的位置，发现�
 
 图示来源与许可见[图表来源](../../appendices/references.md#图表来源)。
 
-下一节：[1.4 Attention 的主要改进方向与方法关系](optimization-landscape.md)。
+下一节：[1.4 Attention 机制的主要发展方向与技术路线](optimization-landscape.md)。

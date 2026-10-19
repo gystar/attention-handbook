@@ -37,7 +37,7 @@
 
 <p align="center">表 B-2　按改变的对象查找</p>
 
-方法区别的原始依据集中在 [1.4 Attention 的主要改进方向与方法关系](../chapters/overview/optimization-landscape.md)。性能比较需同时指定阶段、长度、Batch、硬件、精度及能力指标。
+方法区别的原始依据集中在 [1.4 Attention 机制的主要发展方向与技术路线](../chapters/overview/optimization-landscape.md)。性能比较需同时指定阶段、长度、Batch、硬件、精度及能力指标。
 
 ## 方法比较的条件与指标
 
