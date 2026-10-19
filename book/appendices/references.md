@@ -66,7 +66,7 @@
 
 | 本书图号 | 来源与原图位置 | 解释对象 |
 | --- | --- | --- |
-| 图 1-1 | 本书依据 [Vaswani et al. §3.4](https://arxiv.org/html/1706.03762v7) 绘制，SVG 为可编辑源文件 | Embedding 查表及训练与推理的区别；数值为教学设定 |
+| 图 1-1 | [Jay Alammar，The Illustrated GPT-2](https://jalammar.github.io/illustrated-gpt2/#input-encoding)，CC BY-NC-SA 4.0；原图未修改 | Token Embedding 矩阵的行与维度；英文词条为示意 |
 | 图 1-2 | 本书使用 AI 生成的上下文词义示意；概念参照 [3Blue1Brown，Motivating Examples](https://www.3blue1brown.com/lessons/attention/) | 同一词形在水果与公司语境中的不同含义，非实验数据 |
 | 图 1-3 | [Jay Alammar，The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)，CC BY-NC-SA 4.0；原图未修改 | Self-Attention 可视化 |
 | 图 1-4 | [Jay Alammar，The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)，CC BY-NC-SA 4.0；原图未修改 | Encoder 层内数据流 |

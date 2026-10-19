@@ -8,7 +8,7 @@
 
 | 图号 | 文件或原始位置 | 来源与存储状态 |
 | --- | --- | --- |
-| 1-1 | [representation-learning.svg](overview/representation-learning.svg) | 本书原创教学算例，依据 Transformer §3.4；SVG 为可编辑源文件 |
+| 1-1 | [alammar-token-embeddings.png](overview/alammar-token-embeddings.png) | Jay Alammar，The Illustrated GPT-2，Input Encoding；CC BY-NC-SA 4.0，原图未修改 |
 | 1-2 | [context-apple.png](overview/context-apple.png) | 本书使用内置 imagegen 生成；上下文词义教学示意，非真实事件或实测数据；提示词见 [context-apple.prompt.txt](overview/context-apple.prompt.txt) |
 | 1-3 | [alammar-self-attention.png](overview/alammar-self-attention.png) | Jay Alammar 教程原图，CC BY-NC-SA 4.0；Encoder 场景的可视化 |
 | 1-4 | [alammar-encoder.png](overview/alammar-encoder.png) | Jay Alammar 教程原图，CC BY-NC-SA 4.0；简化 Encoder 层，非 Decoder-only 全图 |
@@ -27,4 +27,4 @@ Transformer 图表使用条件见原论文首页的转载声明。三张原图�
 
 三张 Alammar 原图来自 [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)，以 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 原样收录；署名见正文图注，禁止据本书其他文件的许可将这些素材视为可商用。源仓库为 `jalammar/jalammar.github.io`，来源路径、Git blob 与 SHA-256 见 catalog.yaml。原 `attention-context.svg` 保留为历史素材，当前正文不再引用。
 
-原 `alammar-embeddings.png` 保留为已归档参考素材，图 1-1 已替换为展示可训练参数与查表过程的原创示意。
+原 `alammar-embeddings.png` 和 `representation-learning.svg` 保留为历史素材，当前正文不再引用。图 1-1 使用 [The Illustrated GPT-2](https://jalammar.github.io/illustrated-gpt2/) 的英文原图，下载路径与校验值见 catalog.yaml；原图的英文词条为示意，正文另用子词分词例子说明单词与 Token 的区别。

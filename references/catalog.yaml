@@ -406,6 +406,27 @@ sources:
   checked_sections:
   - Chapter 1：machine learning, representation learning, deep learning
   checked_on: '2026-10-19'
+- id: alammar2019gpt2
+  kind: blog
+  title: The Illustrated GPT-2 (Visualizing Transformer Language Models)
+  authors: Jay Alammar
+  first_public_year: 2019
+  url: https://jalammar.github.io/illustrated-gpt2/
+  required_local: false
+  archive_status: link_only
+  checked_sections:
+  - Input Encoding；页尾许可
+  checked_on: '2026-10-19'
+- id: huggingface-transformer-architectures
+  kind: course
+  title: Transformer Architectures
+  authors: Hugging Face
+  url: https://huggingface.co/learn/llm-course/chapter1/6
+  required_local: false
+  archive_status: link_only
+  checked_sections:
+  - Encoder models；Decoder models；Sequence-to-sequence models
+  checked_on: '2026-10-19'
 assets:
 - id: transformer-architecture
   source_id: vaswani2017attention
@@ -484,4 +505,17 @@ assets:
   sha256: 04a418fa25e13d530e606a1a14b935b5653a718772c15ff966ffd45cc664e99a
   bytes: 1675130
   attribution: 本书使用内置 imagegen 生成的词义教学示意，非真实事件照片或实测数据。
+  display_mode: local_file
+- id: alammar-token-embeddings
+  source_id: alammar2019gpt2
+  locator: Input Encoding
+  download_url: https://jalammar.github.io/images/gpt2/gpt2-token-embeddings-wte-2.png
+  source_url: https://github.com/jalammar/jalammar.github.io/blob/master/images/gpt2/gpt2-token-embeddings-wte-2.png
+  local_path: book/assets/overview/alammar-token-embeddings.png
+  archive_status: downloaded
+  sha256: c356d842c1c04784f35afacf0090511d687c8f52f9c9548338a30115dc646d89
+  git_blob: 6e7b8c6e04e69a1a4e7a80b487b8837446614882
+  bytes: 65486
+  attribution: Jay Alammar, The Illustrated GPT-2 (2019), CC BY-NC-SA 4.0; 原图未修改。
+  license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
   display_mode: local_file

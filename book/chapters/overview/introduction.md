@@ -8,11 +8,13 @@
 
 模型需要先将文本、图像等输入转换为可计算的数值形式，这种形式称为表示（Representation）。表示学习（Representation Learning）让模型通过训练学习这些表示，使其中的特征能够支持预测、分类等任务，而不完全依赖人工设计特征。[Goodfellow et al., 2016，Chapter 1](https://www.deeplearningbook.org/contents/intro.html)
 
-文本中的 Embedding 是一个具体例子。Token 是文本处理单元，可以对应一个词、词的一部分或标点。分词器（Tokenizer）先将文本转换为 Token 编号，嵌入层（Embedding Layer）再用编号查找参数矩阵中的对应行，得到一个向量。编号只用于定位；向量中的数值才参与后续网络计算。[Hugging Face，Tokenizers](https://huggingface.co/learn/llm-course/chapter2/4?fw=pt)；[Vaswani et al., 2017，§3.4](https://arxiv.org/html/1706.03762v7)
+文本中的嵌入（Embedding）是一个具体例子。分词器（Tokenizer）将文本切分为 Token，并转换为词表中的编号；嵌入层（Embedding Layer）再按编号读取参数矩阵中的一行，得到一个向量。编号用于定位，向量才参与后续网络计算。[Vaswani et al., 2017，§3.4](https://arxiv.org/html/1706.03762v7)
 
-![教学词表中猫的编号为2，从Embedding矩阵取出第2行得到四维向量；训练更新矩阵参数，常规推理固定参数查表](../../assets/overview/representation-learning.svg)
+**Token 不固定对应一个字或一个单词。** 例如，Hugging Face 课程用英文单词 `tokenization` 说明子词分词（Subword Tokenization）：它可以拆成 `token` 和 `ization` 两个 Token，各自对应一个编号和一个向量。具体如何切分取决于所用 Tokenizer 与词表。[Hugging Face，Tokenizers：Subword tokenization](https://huggingface.co/learn/llm-course/chapter2/4?fw=pt#subword-tokenization)
 
-图 1-1　以 Embedding 说明可学习的表示。本书依据 Transformer 原论文 §3.4 绘制；词表、编号与向量数值均为教学设定，不是模型实测结果，也不表示某一维必然对应特定语义。
+![Jay Alammar 的 Token Embedding 矩阵示意：行数对应词表大小，列数对应向量维度](../../assets/overview/alammar-token-embeddings.png)
+
+图 1-1　Token Embedding 矩阵。每一行存放一个 Token 的向量，列数为向量维度；图中的词表大小和维度对应 GPT-2 系列。右侧英文单词仅作示意，不是实际词表条目的逐行展示，也不表示每个单词都是一个 Token。引自 Jay Alammar，*The Illustrated GPT-2*，Input Encoding，原图未修改，CC BY-NC-SA 4.0。[原文](https://jalammar.github.io/illustrated-gpt2/#input-encoding)；[许可](https://creativecommons.org/licenses/by-nc-sa/4.0/)。
 
 训练时，任务误差通过反向传播影响 Embedding 等参数的更新；常规推理时，参数保持固定，根据编号取得向量。因此，表示学习不仅涉及“把文字变成数字”，更涉及这些数值如何通过训练适应任务。深度学习（Deep Learning）进一步使用多层可学习的变换提取和组合特征，使表示可以在网络中逐层更新。[Goodfellow et al., 2016，Chapter 1](https://www.deeplearningbook.org/contents/intro.html)
 
@@ -38,19 +40,21 @@ Attention 机制根据当前输入计算权重，并组合相应的向量。对�
 
 这种汇总是动态的。模型训练得到的投影等参数在常规推理中保持固定，但更换输入或当前位置后，匹配分数和权重会随之变化。区分“训练得到的参数”与“根据输入计算的权重”，是理解 Attention 机制的关键。[Shazeer, 2019，§2.1—2.3](https://arxiv.org/html/1911.02150v1)
 
-## Attention 机制在 Transformer 与 LLM 中的位置
+## 基于 Transformer 的语言模型
 
-Attention 是一种计算机制，Transformer 是组织这些计算的网络架构。Self-Attention 在同一序列的位置之间汇总信息，前馈网络（Feed-Forward Network，FFN）则对各位置的表示分别进行变换。残差连接与归一化等组件也参与层内计算；多层网络进一步更新表示。[Vaswani et al., 2017，§3.1—3.3](https://arxiv.org/html/1706.03762v7)
+Transformer 将 Attention 机制与其他网络组件组合起来，用于处理序列。大语言模型（Large Language Model，LLM）则是一类经过大规模训练的语言模型，Transformer 是构建这类模型的常用架构；LLM 这个名称本身并不限定网络结构。
+
+原始 Transformer 包含编码器（Encoder）和解码器（Decoder）：前者计算输入序列的表示，后者结合这些表示逐步生成输出序列。由此形成三种常见结构：Encoder–Decoder 同时使用两者，Encoder-only 侧重输入表示的计算，Decoder-only 则无需单独的 Encoder，直接根据已有 Token 预测后续 Token。[Hugging Face，Transformer Architectures](https://huggingface.co/learn/llm-course/chapter1/6)
+
+这些结构的基本层都包含 Attention 与前馈网络（Feed-Forward Network，FFN）。以图 1-4 的 Encoder 层为例，Self-Attention 汇总不同位置的信息，FFN 则对各位置的表示分别进行变换；配合残差连接与归一化，多层网络逐层更新序列表示。[Vaswani et al., 2017，§3.1—3.3](https://arxiv.org/html/1706.03762v7)
 
 ![两个位置的向量先经过共同的 Self-Attention 模块，再分别经过 Feed Forward Neural Network，输出传入下一层 Encoder](../../assets/overview/alammar-encoder.png)
 
-图 1-4　Encoder 层内的简化数据流。先观察 Self-Attention 的跨位置计算，再观察 FFN 的逐位置变换；图中省略了残差连接与归一化。该图用于定位组件，不是 Decoder-only LLM 的完整架构。引自 Jay Alammar，*The Illustrated Transformer*，原图未修改，CC BY-NC-SA 4.0。[原文](https://jalammar.github.io/illustrated-transformer/)；[许可](https://creativecommons.org/licenses/by-nc-sa/4.0/)。
+图 1-4　Encoder 层内的简化数据流。Self-Attention 进行跨位置的信息汇总，FFN 对各位置分别进行变换；图中省略了残差连接与归一化，也未展示完整模型。引自 Jay Alammar，*The Illustrated Transformer*，原图未修改，CC BY-NC-SA 4.0。[原文](https://jalammar.github.io/illustrated-transformer/)；[许可](https://creativecommons.org/licenses/by-nc-sa/4.0/)。
 
-本书主要讨论基于 Transformer 的自回归大语言模型（Large Language Model，LLM）。生成时，模型根据已有文本计算下一个 Token 的概率，生成策略据此选择一个 Token，将其加入上下文，再继续预测。Decoder-only 架构直接处理这一序列，无需另设用于编码输入序列的 Encoder。
+本书重点讨论采用 Decoder-only 架构的自回归 LLM。这里的“自回归”指模型每次根据已有文本预测下一个 Token：输出层将最后一个位置的最终表示转换为预测分数，得到下一 Token 的概率分布；生成策略据此选出一个 Token，将其加入序列，再继续预测。
 
-在这种架构中，Causal Self-Attention 只允许当前位置访问自身及此前位置；最后一个位置的最终表示用于计算下一 Token 的概率。Attention 层参与上下文信息汇总，输出层负责将最终表示转换为预测分数，二者承担不同作用。[Shazeer, 2019，§2.4](https://arxiv.org/html/1911.02150v1)；[Vaswani et al., 2017，§3.4](https://arxiv.org/html/1706.03762v7)
-
-这些概念分别描述不同层面：深度学习是一类机器学习方法，Transformer 是网络架构，Attention 是计算机制，LLM 是模型类别。LLM 不规定唯一架构，Attention 机制也可以用于其他模型和任务。
+为满足这一预测方式，模型使用因果自注意力（Causal Self-Attention），使每个位置只能访问自身及此前位置，不能读取尚待预测的 Token。因此，Attention 层负责汇总可用的上下文信息，输出层负责形成预测；文本生成是整个模型共同计算的结果。[Shazeer, 2019，§2.4](https://arxiv.org/html/1911.02150v1)；[Vaswani et al., 2017，§3.4](https://arxiv.org/html/1706.03762v7)
 
 随着上下文变长，需要处理的位置关系增多；逐步生成还涉及历史计算结果的保存与复用。后续章节将分析这些成本，并说明不同方法如何调整信息表示、连接范围、计算实现和缓存管理。
 
