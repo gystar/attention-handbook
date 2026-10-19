@@ -438,6 +438,30 @@ sources:
   checked_sections:
   - How a single prediction is calculated；Flowing Through DistilBERT；Slicing the important part；页尾许可
   checked_on: '2026-10-19'
+- id: d2l-seq2seq
+  kind: book
+  title: Dive into Deep Learning — Sequence-to-Sequence Learning for Machine Translation
+  authors: Aston Zhang, Zachary C. Lipton, Mu Li & Alexander J. Smola
+  url: https://d2l.ai/chapter_recurrent-modern/seq2seq.html
+  required_local: false
+  archive_status: link_only
+  checked_sections:
+  - §10.7 架构说明与 Figure 10.7.1
+  - 作者仓库 LICENSE
+  checked_on: '2026-10-19'
+- id: alammar2018seq2seq
+  kind: blog
+  title: Visualizing A Neural Machine Translation Model
+  authors: Jay Alammar
+  first_public_year: 2018
+  url: https://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/
+  required_local: false
+  archive_status: link_only
+  checked_sections:
+  - Looking under the hood
+  - Let’s Pay Attention Now
+  - 页尾许可
+  checked_on: '2026-10-19'
 assets:
 - id: transformer-architecture
   source_id: vaswani2017attention
@@ -553,4 +577,41 @@ assets:
   bytes: 38751
   attribution: Jay Alammar, The Illustrated Transformer (2018), CC BY-NC-SA 4.0; 原图未修改。
   license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+  display_mode: local_file
+- id: d2l-seq2seq-figure
+  source_id: d2l-seq2seq
+  locator: Figure 10.7.1
+  download_url: https://raw.githubusercontent.com/d2l-ai/d2l-en/master/img/seq2seq.svg
+  local_path: book/assets/overview/d2l-seq2seq.svg
+  archive_status: downloaded
+  sha256: aebcb5867aaed90b6e71cc4a186248dded1668f4c617d58f51c2fb2ba479b775
+  git_blob: abe3c8fa3a9218c66e79e9536912b39b1394c705
+  bytes: 41675
+  attribution: Zhang, Lipton, Li & Smola, Dive into Deep Learning; CC BY-SA 4.0; 原图未修改。
+  license_url: https://creativecommons.org/licenses/by-sa/4.0/
+  display_mode: local_file
+- id: alammar-translation-attention
+  source_id: alammar2018seq2seq
+  locator: Let’s Pay Attention Now
+  download_url: https://jalammar.github.io/images/attention.png
+  local_path: book/assets/overview/alammar-translation-attention.png
+  archive_status: downloaded
+  sha256: a8f6f6d6eaa9def7e09fadc707fe45dac278d6c7544ba24cd71d3f790f73f8c7
+  git_blob: e587e16ab05d5f7dc3f25d4a55a42536fd8de75a
+  bytes: 73300
+  attribution: Jay Alammar (2018), CC BY-NC-SA 4.0; 原图未修改。
+  license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+  display_mode: local_file
+- id: d2l-seq2seq-render
+  source_id: d2l-seq2seq
+  locator: Figure 10.7.1
+  local_path: book/assets/overview/d2l-seq2seq.png
+  archive_status: downloaded
+  archive_note: SVG 原文件的白底栅格化显示版本，不是额外下载的原图。
+  creation_mode: svg_rasterization
+  derived_from: book/assets/overview/d2l-seq2seq.svg
+  sha256: 51b219b71a9db5f3576305acea1f043713c6f844066b721c2e82c1aa77797448
+  bytes: 44630
+  attribution: Zhang, Lipton, Li & Smola; CC BY-SA 4.0; SVG 白底栅格化，图中内容未改动。
+  license_url: https://creativecommons.org/licenses/by-sa/4.0/
   display_mode: local_file

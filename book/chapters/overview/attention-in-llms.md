@@ -15,6 +15,8 @@
 | Value，$$V$$ | $$n_k \times d_v$$ | 被加权汇总的内容 |
 | Attention 输出，$$O$$ | $$n_q \times d_v$$ | 每个 Query 对应的汇总结果 |
 
+<p align="center">表 1-4　QKV 与输出的形状</p>
+
 这里，$$n_q$$ 和 $$n_k$$ 分别是 Query 与 Key 的数量，$$d_k$$ 是匹配向量维度，$$d_v$$ 是 Value 维度。Key 和 Value（合称 KV）按位置配对，所以行数相同；Query 与 Key 的数量可以不同。
 
 Query 与 Key 的点积经缩放得到匹配分数；Softmax 将每行分数转换为和为 1 的非负权重，再对 Value 加权求和。相应的 Scaled Dot-Product Attention 为：
@@ -26,9 +28,12 @@ $$
 
 $$M\in\mathbb{R}^{n_q\times n_k}$$ 是加性 Mask：允许的位置取 $$0$$，禁止的位置在数学表达中取 $$-\infty$$。Softmax 沿每一行的 Key 维度计算；每个 Query 至少需要一个允许访问的 Key。[Vaswani et al., 2017，§3.2](https://arxiv.org/html/1706.03762v7)；[Shazeer, 2019，§2.3](https://arxiv.org/html/1911.02150v1)
 
-![原论文图 2 左图：Q 与 K 经 MatMul、Scale、可选 Mask 和 Softmax 后，再与 V 相乘](https://arxiv.org/html/1706.03762v7/Figures/ModalNet-19.png)
+<figure align="center">
+<img src="https://arxiv.org/html/1706.03762v7/Figures/ModalNet-19.png" alt="原论文图 2 左图：Q 与 K 经 MatMul、Scale、可选 Mask 和 Softmax 后，再与 V 相乘">
+<figcaption><p align="center">图 1-7　Scaled Dot-Product Attention</p></figcaption>
+</figure>
 
-图 1-5　Scaled Dot-Product Attention，引用自 Vaswani et al.，Figure 2 左图。计算沿箭头依次完成权重计算与 Value 汇总。原论文首页给出了署名后用于学术作品的图表转载许可。[原图及出处](https://arxiv.org/html/1706.03762v7)
+计算沿箭头依次完成分数计算、缩放、可选 Mask、Softmax 和 Value 汇总。
 
 Q、K、V 是当前输入经过投影得到的激活值。训练学到的是投影等参数；推理时参数通常保持不变，Attention 权重仍会随输入改变。不能把 Attention 权重与模型参数混为一谈。[Shazeer, 2019，§2.1—2.3](https://arxiv.org/html/1911.02150v1)
 
@@ -55,6 +60,8 @@ $$
 | 计算与推理优化 | 运算量、显存访问、KV Cache 和服务系统中的资源管理 |
 | Linear Attention 与 Hybrid Architectures | 历史信息如何进入状态，以及不同序列模块如何组合 |
 
+<p align="center">表 1-5　本书的讨论范围</p>
+
 视觉、语音和多模态中的 Attention 机制在需要比较机制时引入。State Space Models（SSMs）作为相关序列建模路线和混合模块讨论；具体联系需要说明模型形式与假设。[Dao & Gu, 2024，§4.1、§5.1—5.2](https://arxiv.org/html/2405.21060v1)
 
 ## 配合视频理解 QKV
@@ -68,6 +75,10 @@ $$
 | 13:40—15:10 | Value 的加权组合 |
 | 20:30—22:30 | 多个 Head 如何并行工作 |
 
+<p align="center">表 1-6　QKV 视频阅读指引</p>
+
 视频的示意图使用了自己的向量排列方式；本书统一按 Token 占据矩阵行来书写，Softmax 沿 Key 维度归一化。视频及[作者配套图文](https://www.3blue1brown.com/lessons/attention/)用于理解计算过程，精确定义以上述公式为准。时间段依据[作者字幕](https://github.com/3b1b/captions/blob/main/2024/attention/english/captions.srt)核对。
+
+图示来源与许可见[首章图表来源](../../appendices/references.md#首章图表来源)。
 
 下一节：[1.4 LLM 中的计算瓶颈、KV Cache 与 Long Context](bottlenecks-and-context.md)。

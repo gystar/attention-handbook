@@ -56,11 +56,13 @@
 | 图文：[Jay Alammar，The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)，2018 | Encoder–Decoder 总图与 Multi-Head 图解 | 配合本书 1.2 节理解模块关系 |
 | 视频：[3Blue1Brown，Attention in transformers, step-by-step](https://www.youtube.com/watch?v=eMlx5fFNoYc)，2024 | 06:32—10:40 Q/K；11:30—12:45 Mask；13:40—15:10 Value；20:30—22:30 Multi-Head | 配合本书 1.3 节观察逐步计算；时间段依据作者英文字幕核对 |
 
+<p align="center">表 C-1　教学资源</p>
+
 背景补充：[Goodfellow、Bengio 与 Courville，Deep Learning，Chapter 1](https://www.deeplearningbook.org/contents/intro.html)（来源 ID：`goodfellow2016deep-learning`），用于区分机器学习、表示学习与深度学习。
 
 入门补充：[Hugging Face LLM Course — Tokenizers](https://huggingface.co/learn/llm-course/chapter2/4?fw=pt)（来源 ID：`huggingface-tokenizers`），用于理解文本切分、Token 编号与文本还原，对应 1.1 的输入处理流程。
 
-教学材料用于帮助理解，核心公式和方法归属仍以原始论文为据。D2L 当前核查了章节目录与 §11.1；未将其全部实现标为已运行。视频没有作为独立实验依据。
+教学材料用于帮助理解，核心公式和方法归属仍以原始论文为据。D2L 当前核查了章节目录、§11.1 及 §10.7 的架构说明与 Figure 10.7.1；未将其全部实现标为已运行。视频没有作为独立实验依据。
 
 ## 首章图表来源
 
@@ -69,11 +71,15 @@
 | 图 1-1 | [Jay Alammar，A Visual Guide to Using BERT for the First Time](https://jalammar.github.io/a-visual-guide-to-using-bert-for-the-first-time/)，CC BY-NC-SA 4.0；原图未修改 | 英文句子的 Token、编号及模型输出向量 |
 | 图 1-2 | 本书使用 AI 生成的上下文词义示意；概念参照 [3Blue1Brown，Motivating Examples](https://www.3blue1brown.com/lessons/attention/) | 同一词形在水果与公司语境中的不同含义，非实验数据 |
 | 图 1-3 | [Jay Alammar，The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)，CC BY-NC-SA 4.0；原图未修改 | Self-Attention 可视化 |
-| 图 1-4 | [Jay Alammar，The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/#a-high-level-look)，CC BY-NC-SA 4.0；原图未修改 | Encoder 与 Decoder 中的 Self-Attention、跨序列 Attention |
-| 图 1-5 | [Vaswani et al.，Figure 2 左图](https://arxiv.org/html/1706.03762v7) | Scaled Dot-Product Attention 的计算步骤 |
-| 图 1-6 | 本书依据 [Kwon et al.，§2.2](https://arxiv.org/html/2309.06180v1) 绘制 | Prefill 与 Decode 的位置关系 |
-| 图 1-7 | 本书绘制，SVG 源文件随书保存 | 设计问题与章节关系 |
-| 图 1-8 | [Ainslie et al.，Figure 2](https://arxiv.org/html/2305.13245v3) | MHA、GQA、MQA 的 Head 组织 |
+| 图 1-4 | [Zhang, Lipton, Li & Smola，Dive into Deep Learning，§10.7，Figure 10.7.1](https://d2l.ai/chapter_recurrent-modern/seq2seq.html)，[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)；SVG 白底栅格化，图中内容未改动 | RNN Encoder–Decoder 的固定表示传递 |
+| 图 1-5 | [Jay Alammar，Visualizing A Neural Machine Translation Model，Let’s Pay Attention Now](https://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/)，[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)；原图未修改 | 生成译文时按需读取原文 |
+| 图 1-6 | [Jay Alammar，The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/#a-high-level-look)，CC BY-NC-SA 4.0；原图未修改 | Encoder 与 Decoder 中的 Self-Attention、跨序列 Attention |
+| 图 1-7 | [Vaswani et al.，Figure 2 左图](https://arxiv.org/html/1706.03762v7) | Scaled Dot-Product Attention 的计算步骤 |
+| 图 1-8 | 本书依据 [Kwon et al.，§2.2](https://arxiv.org/html/2309.06180v1) 绘制 | Prefill 与 Decode 的位置关系 |
+| 图 1-9 | 本书绘制，SVG 源文件随书保存 | 设计问题与章节关系 |
+| 图 1-10 | [Ainslie et al.，Figure 2](https://arxiv.org/html/2305.13245v3) | MHA、GQA、MQA 的 Head 组织 |
+
+<p align="center">表 C-2　首章图表来源</p>
 
 Vaswani et al. 原论文首页允许署名后的学术图表转载；GQA 原图随论文以 CC BY 4.0 提供。图表的文件路径、转载条件和存储状态见仓库的 `references/catalog.yaml` 与 `book/assets/README.md`。
 
@@ -81,7 +87,7 @@ Vaswani et al. 原论文首页允许署名后的学术图表转载；GQA 原图�
 
 公开书页直接链接原论文和作者页面。本地原文放在仓库 `sources/` 中，由 `sources/INDEX.md` 提供真实文件链接；来源 ID 与上述条目一致。原文文件默认不随 Git 仓库发布。
 
-当前归档状态：已保存三张 Jay Alammar 教程原图及 3Blue1Brown 作者英文字幕；9 篇必备论文 PDF、10 篇选读论文 PDF 和 3 张引用原图尚未下载。正文中的三张原图目前依赖远程地址，不能保证离线显示。内容核对使用了原始资料的在线正文，但这不等于完成本地归档。
+当前图示归档状态：正文使用的八张本地图已随书保存，Scaled Dot-Product Attention 与 GQA 两张论文图仍通过远程地址引用。必备论文 PDF 与原论文图的归档缺口仍保留在来源索引中；在线核查不等于本地归档。
 
 在允许联网的环境中，可在仓库根目录执行 `python3 scripts/sources.py --download` 获取必备原文及引用图片，再执行 `python3 scripts/sources.py` 更新索引。选读资料使用 `--download --all`。工具说明和后续归档要求见仓库 `references/README.md`。
 

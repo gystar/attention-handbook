@@ -18,6 +18,8 @@ Attention 的发展包含多条并行路线。时间线说明工作出现的先�
 | 2024 | [MLA](https://arxiv.org/abs/2405.04434)、[Mamba-2/SSD](https://arxiv.org/abs/2405.21060)、[Gated DeltaNet](https://arxiv.org/abs/2412.06464) | Latent 压缩、结构化状态计算与状态更新 |
 | 2025 | [Native Sparse Attention](https://arxiv.org/abs/2502.11089)、[Gated Attention](https://arxiv.org/abs/2505.06708) | 硬件适配的稀疏选择，以及对 Softmax Attention 中 Gating 位置的系统研究 |
 
+<p align="center">表 1-13　代表性时间节点</p>
+
 2025 年这项 Gated Attention 工作研究的是特定设计与实验，不代表 Gating 概念始于该年。表中也未将代表性节点当作完整论文年表。
 
 ## 可以组合的方法与需要验证的接口
@@ -30,6 +32,8 @@ Mistral 7B 的原始技术报告同时采用 GQA 与 Sliding Window Attention：
 | FlashAttention + KV 分页管理 | Attention 计算与 KV 布局 | Kernel 是否支持对应的缓存布局与运行阶段 |
 | Position Encoding + Context Extension | 位置表达与更长范围的适配 | 位置索引、训练长度、精度及长文本评估 |
 | Attention + Recurrent/SSM 模块 | 不同方式的历史信息读取 | 层间表示、状态维护、训练与推理实现 |
+
+<p align="center">表 1-14　方法组合与接口</p>
 
 表中后几项列的是组合时需要验证的问题，不是无需修改即可兼容的保证。同样，MQA/GQA/MLA 也不应仅被理解为可对任意既有模型检查点（Checkpoint）直接启用且无损的运行时选项；结构转换、训练适应与实现支持需要分别核查。[Ainslie et al., 2023，§2.1](https://arxiv.org/html/2305.13245v3)
 
@@ -45,6 +49,8 @@ Mistral 7B 的原始技术报告同时采用 GQA 与 Sliding Window Attention：
 | 长上下文 | 长度范围、相关信息位置及任务类型 | 将可接受的窗口长度等同于有效利用能力 |
 | 实现条件 | 硬件、软件版本、Kernel、数据类型 | 忽略理论复杂度与实际执行之间的差别 |
 
+<p align="center">表 1-15　方法比较的条件与指标</p>
+
 例如，报告“更快”之前，需要说明是 Attention Kernel、整层、单次请求还是完整服务系统更快。FlashAttention 与 PagedAttention 论文分别考察了运算实现和服务系统层面的成本，评估对象不同。[Dao et al., 2022，§4](https://arxiv.org/html/2205.14135v2)；[Kwon et al., 2023，§6](https://arxiv.org/html/2309.06180v1)
 
 ## 按问题进入后续章节
@@ -57,3 +63,5 @@ Mistral 7B 的原始技术报告同时采用 GQA 与 Sliding Window Attention：
 | 为什么显存访问、连接模式与缓存管理要分开分析 | [第 6 章 FlashAttention：Exact Attention 的 IO 优化](../flash-attention/README.md)—[第 8 章 KV Cache 的存储管理与推理优化](../kv-cache/README.md) |
 | 用状态替代逐位置历史读取会改变什么 | [第 9 章 Linear Attention 的 Recurrent Formulation 与 State Update](../linear-attention/README.md) |
 | 怎样组合不同序列模块并比较整体收益 | [第 10 章 Hybrid Architectures 的结构设计与方法比较](../hybrid-architectures/README.md) |
+
+<p align="center">表 1-16　后续章节阅读指引</p>

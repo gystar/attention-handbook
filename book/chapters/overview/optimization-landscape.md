@@ -2,9 +2,12 @@
 
 Attention 方法可按其改变的计算对象分类。调整 KV 表示、减少位置对、重排 GPU 计算与改变状态更新，解决的是不同问题；方法名称相近不代表作用相同。
 
-![Attention 技术路线图，按表示、连接、实现、缓存与状态更新划分](../../assets/overview/attention-landscape.svg)
+<figure align="center">
+<img src="../../assets/overview/attention-landscape.svg" alt="Attention 技术路线图，按表示、连接、实现、缓存与状态更新划分">
+<figcaption><p align="center">图 1-9　Attention 技术路线</p></figcaption>
+</figure>
 
-图 1-7　本书绘制的技术路线图，用于定位设计问题与后续章节，不表示历史继承关系。
+图中按设计问题组织技术路线与后续章节，不表示历史继承关系。
 
 ## 按设计问题定位方法
 
@@ -19,15 +22,20 @@ Attention 方法可按其改变的计算对象分类。调整 KV 表示、减少
 | 历史怎样进入状态 | Linear Attention、Gated DeltaNet | 用状态更新与读取组织计算 | [第 9 章 Linear Attention 的 Recurrent Formulation 与 State Update](../linear-attention/README.md) |
 | 不同序列模块怎样组合 | Hybrid Architectures | Layer 或模块的组合 | [第 10 章 Hybrid Architectures 的结构设计与方法比较](../hybrid-architectures/README.md) |
 
+<p align="center">表 1-11　Attention 优化路线</p>
+
 下文给出这些分类的具体依据。表中的分组用于定位问题，不要求一个方法只能属于一组。
 
 ## KV 表示与 KV 管理
 
 MQA 让多个 Query Head 共用一组 Key 和 Value；GQA 为每组 Query Head 分配一组 KV。两者改变模型的 Head 组织。[Shazeer, 2019，§3](https://arxiv.org/html/1911.02150v1)；[Ainslie et al., 2023，§2.2](https://arxiv.org/html/2305.13245v3)
 
-![GQA 原论文图 2：MHA 的 Query 与 KV 一一对应，GQA 分组共享 KV，MQA 全部共享一组 KV](https://arxiv.org/html/2305.13245v3/images/gmq_architecture.png)
+<figure align="center">
+<img src="https://arxiv.org/html/2305.13245v3/images/gmq_architecture.png" alt="GQA 原论文图 2：MHA 的 Query 与 KV 一一对应，GQA 分组共享 KV，MQA 全部共享一组 KV">
+<figcaption><p align="center">图 1-10　MHA、GQA 与 MQA</p></figcaption>
+</figure>
 
-图 1-8　MHA、GQA 与 MQA 的 Head 组织，引用自 Ainslie et al.，Figure 2，CC BY 4.0。图中 Query Head 数保持一致，KV Head 数随共享方式变化；减少 KV Head 不等于按同样比例减少 Query 的读取次数。[原图及出处](https://arxiv.org/html/2305.13245v3)
+图中 Query Head 数保持一致，KV Head 数随共享方式变化；减少 KV Head 不等于按同样比例减少 Query 的读取次数。[Ainslie et al.，Figure 2](https://arxiv.org/html/2305.13245v3)
 
 MLA 联合压缩 Key 与 Value 的表示，推理时缓存压缩后的 Latent 及必要的位置相关信息。它与 Head 共享的实现方式不同。[DeepSeek-AI, 2024，§2.1](https://arxiv.org/html/2405.04434v5)
 
@@ -44,6 +52,8 @@ Sparse Attention 改变允许参与计算的位置对。固定模式可以采用
 | 是否保留 Dense Attention 的目标连接 | 保留给定 Mask 下的连接 | 按稀疏规则减少连接 |
 | 主要节省的资源 | 中间矩阵读写与存储 | 被省略位置对的计算 |
 | 需要注意的成本 | 硬件、数据布局与 Kernel 实现 | 选择开销、不规则访存及质量变化 |
+
+<p align="center">表 1-12　Exact Attention 与 Sparse Attention</p>
 
 这两类思路可以结合。减少连接之后，剩余连接仍需要有效的计算实现；FlashAttention 原论文也讨论了 Block-Sparse 扩展。[Dao et al., 2022，§3.3](https://arxiv.org/html/2205.14135v2)
 
@@ -76,5 +86,7 @@ Gated DeltaNet 将控制状态衰减的 Gate 与 Delta Rule 结合；Softmax Att
 ## Hybrid Architectures
 
 Hybrid 设计允许模型在不同 Layer 或模块中使用不同的序列运算，例如将 Attention 与状态更新模块组合。收益取决于组合位置、比例、训练和实现，不能仅凭“混合”推断能力或速度更好。Mamba-2 论文研究了 Structured State Space Duality（SSD）对应的状态模块、Attention 和 Multi-Layer Perceptron（MLP）的组合，提供了具体实例。[Dao & Gu, 2024，§9.2.3](https://arxiv.org/html/2405.21060v1)
+
+图示来源与许可见[首章图表来源](../../appendices/references.md#首章图表来源)。
 
 下一节：[1.6 主要技术路线的演进关系与比较维度](evolution-and-comparison.md)。

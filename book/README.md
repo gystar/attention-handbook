@@ -26,6 +26,8 @@
 | Linear Attention 与混合架构 | [第 9 章 Linear Attention 的 Recurrent Formulation 与 State Update](chapters/linear-attention/README.md) |
 | Linear Attention 与混合架构 | [第 10 章 Hybrid Architectures 的结构设计与方法比较](chapters/hybrid-architectures/README.md) |
 
+<p align="center">章节导航</p>
+
 ## 内容进度
 
 第 1 章已有概览和六节正文，已进行技术核对与作者自查修正；本地原文归档和 GitBook 发布检查尚待完成。第 2—10 章提供章节定位和节级目录，尚未展开正文。附录当前覆盖首章内容。

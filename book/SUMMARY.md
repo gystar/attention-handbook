@@ -6,7 +6,7 @@
 
 * [第 1 章 大模型 Attention 的总体框架与技术演进](chapters/overview/README.md)
   * [1.1 从 Representation Learning 到 Attention 机制](chapters/overview/introduction.md)
-  * [1.2 从 Seq2Seq 中的 Attention 到 Transformer](chapters/overview/from-seq2seq-to-transformer.md)
+  * [1.2 从 RNN 到 Transformer](chapters/overview/from-seq2seq-to-transformer.md)
   * [1.3 Transformer 中的 Attention 计算](chapters/overview/attention-in-llms.md)
   * [1.4 LLM 中的计算瓶颈、KV Cache 与 Long Context](chapters/overview/bottlenecks-and-context.md)
   * [1.5 Attention 的结构改进、计算优化与架构扩展](chapters/overview/optimization-landscape.md)

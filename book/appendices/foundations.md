@@ -7,12 +7,12 @@
 | 术语 | 本书中的含义 | 对应正文 |
 | --- | --- | --- |
 | Attention Mechanism | 根据当前输入计算匹配权重并汇总信息的机制；本书首先介绍 Softmax Attention | [1.1 从 Representation Learning 到 Attention 机制](../chapters/overview/introduction.md) |
-| Large Language Model（LLM） | 大语言模型；本书主要分析 Decoder-only 自回归场景 | [1.1 从 Representation Learning 到 Attention 机制](../chapters/overview/introduction.md) |
+| Large Language Model（LLM） | 大语言模型；本书主要分析 Decoder-only 自回归场景 | [1.4 LLM 中的计算瓶颈、KV Cache 与 Long Context](../chapters/overview/bottlenecks-and-context.md) |
 | Token | 模型处理的离散序列单元，不必对应完整单词或汉字 | [1.1 从 Representation Learning 到 Attention 机制](../chapters/overview/introduction.md) |
-| Sequence-to-Sequence（Seq2Seq） | 从输入序列生成输出序列的建模框架 | [1.2 从 Seq2Seq 中的 Attention 到 Transformer](../chapters/overview/from-seq2seq-to-transformer.md) |
+| Sequence-to-Sequence（Seq2Seq） | 从输入序列生成输出序列的建模框架 | [1.2 从 RNN 到 Transformer](../chapters/overview/from-seq2seq-to-transformer.md) |
 | Query / Key / Value（QKV） | 发起匹配、参与匹配和被汇总的向量表示 | [1.3 Transformer 中的 Attention 计算](../chapters/overview/attention-in-llms.md) |
-| Self-Attention / Cross-Attention | 按 Query 与 KV 来自同一序列还是不同序列区分 | [1.2 从 Seq2Seq 中的 Attention 到 Transformer](../chapters/overview/from-seq2seq-to-transformer.md) |
-| Causal Mask | 只允许访问当前位置及此前位置的访问约束 | [1.2 从 Seq2Seq 中的 Attention 到 Transformer](../chapters/overview/from-seq2seq-to-transformer.md) |
+| Self-Attention / Cross-Attention | 按 Query 与 KV 来自同一序列还是不同序列区分 | [1.2 从 RNN 到 Transformer](../chapters/overview/from-seq2seq-to-transformer.md) |
+| Causal Mask | 只允许访问当前位置及此前位置的访问约束 | [1.2 从 RNN 到 Transformer](../chapters/overview/from-seq2seq-to-transformer.md) |
 | Prefill / Decode | 处理已知 Prompt / 逐步处理生成 Token 的两个阶段 | [1.4 LLM 中的计算瓶颈、KV Cache 与 Long Context](../chapters/overview/bottlenecks-and-context.md) |
 | Multi-Head Attention（MHA） | 多个 Head 分别计算 Attention 后组合输出 | [1.5 Attention 的结构改进、计算优化与架构扩展](../chapters/overview/optimization-landscape.md) |
 | Multi-Query Attention（MQA） | 多个 Query Head 共享一组 KV | [1.5 Attention 的结构改进、计算优化与架构扩展](../chapters/overview/optimization-landscape.md) |
@@ -21,6 +21,8 @@
 | KV Cache | 为后续推理复用而保存的逐层历史 KV 或相应压缩表示 | [1.4 LLM 中的计算瓶颈、KV Cache 与 Long Context](../chapters/overview/bottlenecks-and-context.md) |
 | IO / HBM | 数据传输 / GPU 的 High Bandwidth Memory；区别于算术运算量 | [1.5 Attention 的结构改进、计算优化与架构扩展](../chapters/overview/optimization-landscape.md) |
 | Recurrent Formulation | 用上一步状态与当前输入表达下一步状态和输出 | [1.5 Attention 的结构改进、计算优化与架构扩展](../chapters/overview/optimization-landscape.md) |
+
+<p align="center">表 A-1　常用术语</p>
 
 ## 符号与维度
 
@@ -37,6 +39,8 @@
 | $$M$$ | 加性 Mask，形状 $$n_q\times n_k$$；允许项为 $$0$$，禁止项为 $$-\infty$$ |
 | $$d_\phi$$ | Linear Attention 特征映射的输出维度 |
 | $$S_t,z_t$$ | 历史状态与归一化状态，形状分别为 $$d_\phi\times d_v$$、$$d_\phi$$ |
+
+<p align="center">表 A-2　符号与维度</p>
 
 $$\operatorname{softmax}_{\mathrm{row}}$$ 表示对每个 Query 沿 Key 维度归一化。对有限有效分数 $$x_j$$，可用减去最大值的形式计算：
 
@@ -68,3 +72,22 @@ $$
 [1.4 LLM 中的计算瓶颈、KV Cache 与 Long Context](../chapters/overview/bottlenecks-and-context.md) 的 KV 容量是元素数乘以每元素字节数。单层的 Key 张量与 Value 张量各含 $$BNh_{kv}d_h$$ 个元素，乘以两份缓存、$$L$$ 层和 $$s$$ 字节，即得 $$2LBNh_{kv}d_hs$$。
 
 这要求各层配置一致、请求长度一致且保留全部位置。按层、按请求长度不同的情况需要分别求和；MLA、窗口缓存及量化元数据也需按实际表示单独计算。
+
+## Bahdanau Attention 的计算
+
+在 Bahdanau Attention 中，第 $$i$$ 个输出步骤的 Context 为：
+
+$$
+\begin{aligned}
+c_i&=\sum_{j=1}^{n_x}\alpha_{ij}h_j,\\[4pt]
+\alpha_{ij}&=
+\frac{\exp(e_{ij})}{\sum_{r=1}^{n_x}\exp(e_{ir})},
+\\[4pt]
+e_{ij}&=a(s_{i-1},h_j).
+\end{aligned}
+$$
+
+$$n_x$$ 是输入长度，$$h_j$$ 是 Encoder 状态，$$s_{i-1}$$ 是前一步 Decoder 状态，$$a$$ 是学习得到的打分函数。$$\alpha_{ij}$$ 随生成步骤变化，使 Decoder 能够直接组合不同输入位置的信息。[Bahdanau et al., 2014，§3.1，式 (4)—(6)](https://arxiv.org/html/1409.0473v7)
+
+
+这里的 Alignment 表示输出步骤与输入位置之间学到的软对应关系，并非 Seq2Seq 的同义词。

@@ -2,6 +2,7 @@
 """检查本地导航、Markdown 文件链接、来源记录和 SVG；不代替内容 Review 或 GitBook 预览。"""
 import argparse
 import hashlib
+from html import unescape
 from pathlib import Path
 import re
 from urllib.parse import unquote, urlsplit
@@ -32,7 +33,8 @@ def main():
             errors.append(f"正文存在单美元公式定界符：{doc.relative_to(ROOT)}")
         if doc.is_relative_to(BOOK) and body.count("$$") % 2:
             errors.append(f"公式定界符未配对：{doc.relative_to(ROOT)}")
-        for target in LINK.findall(body):
+        for target in LINK.findall(body) + re.findall(r'(?i)(?:src|href)=["\']([^"\']+)["\']', body):
+            target = unescape(target)
             url = urlsplit(target.strip("<>"))
             if url.scheme or url.netloc or not url.path:
                 continue
