@@ -4,7 +4,7 @@
 
 ## 时间线入口
 
-[1.5 主要技术路线的演进关系与比较维度](../chapters/overview/evolution-and-comparison.md) 按首次公开年份列出 2014—2025 年的主要例子；[附录 C 参考文献、教学资源与本地源文件索引](references.md) 记录实际引用的论文版本。年份先后不能单独证明方法之间存在继承关系。
+[1.6 主要技术路线的演进关系与比较维度](../chapters/overview/evolution-and-comparison.md) 按首次公开年份列出 2014—2025 年的主要例子；[附录 C 参考文献、教学资源与本地源文件索引](references.md) 记录实际引用的论文版本。年份先后不能单独证明方法之间存在继承关系。
 
 ## 按改变的对象查找
 
@@ -19,4 +19,4 @@
 | 状态更新与读取 | Linear Attention、Gated DeltaNet | 状态容量、计算方式与信息读取能力 | [第 9 章 Linear Attention 的 Recurrent Formulation 与 State Update](../chapters/linear-attention/README.md) |
 | 模块组合 | Attention、Recurrent、SSM 的组合 | 配置、训练及整模型表现 | [第 10 章 Hybrid Architectures 的结构设计与方法比较](../chapters/hybrid-architectures/README.md) |
 
-方法区别的原始依据集中在 [1.4 Attention 的结构改进、计算优化与架构扩展](../chapters/overview/optimization-landscape.md)。上表用于查找讨论位置，不能用来直接给方法排名；性能比较需同时指定阶段、长度、Batch、硬件、精度及能力指标。
+方法区别的原始依据集中在 [1.5 Attention 的结构改进、计算优化与架构扩展](../chapters/overview/optimization-landscape.md)。上表用于查找讨论位置，不能用来直接给方法排名；性能比较需同时指定阶段、长度、Batch、硬件、精度及能力指标。

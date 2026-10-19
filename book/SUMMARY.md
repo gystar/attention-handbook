@@ -5,11 +5,12 @@
 ## 总览
 
 * [第 1 章 大模型 Attention 的总体框架与技术演进](chapters/overview/README.md)
-  * [1.1 Attention 机制的基本思想与模型中的作用](chapters/overview/attention-in-llms.md)
-  * [1.2 从 Seq2Seq 中的 Attention 到 Transformer](chapters/overview/from-seq2seq-to-transformer.md)
-  * [1.3 LLM 中的计算瓶颈、KV Cache 与 Long Context](chapters/overview/bottlenecks-and-context.md)
-  * [1.4 Attention 的结构改进、计算优化与架构扩展](chapters/overview/optimization-landscape.md)
-  * [1.5 主要技术路线的演进关系与比较维度](chapters/overview/evolution-and-comparison.md)
+  * [1.1 从表示学习到 Attention 机制](chapters/overview/introduction.md)
+  * [1.2 Attention 机制的基本计算](chapters/overview/attention-in-llms.md)
+  * [1.3 从 Seq2Seq 中的 Attention 到 Transformer](chapters/overview/from-seq2seq-to-transformer.md)
+  * [1.4 LLM 中的计算瓶颈、KV Cache 与 Long Context](chapters/overview/bottlenecks-and-context.md)
+  * [1.5 Attention 的结构改进、计算优化与架构扩展](chapters/overview/optimization-landscape.md)
+  * [1.6 主要技术路线的演进关系与比较维度](chapters/overview/evolution-and-comparison.md)
 
 ## 原理与结构改进
 

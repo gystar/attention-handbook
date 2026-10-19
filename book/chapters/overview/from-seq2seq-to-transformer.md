@@ -1,4 +1,4 @@
-# 1.2 从 Seq2Seq 中的 Attention 到 Transformer
+# 1.3 从 Seq2Seq 中的 Attention 到 Transformer
 
 本节从神经机器翻译中的 Seq2Seq 模型切入。需要区分两个问题：Decoder 如何读取输入序列，以及序列内部的表示如何计算。早期 Attention 首先改善前者；Transformer 将 Attention 用于输入与输出序列内部的表示计算。
 
@@ -57,4 +57,4 @@ $$n_x$$ 是输入长度，$$h_j$$ 是 Encoder 状态，$$s_{i-1}$$ 是前一步 
 
 延伸图解：[Jay Alammar，The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)。重点对应本节图 1-3 中的 Encoder、Decoder 和 Multi-Head 结构。
 
-下一节：[1.3 LLM 中的计算瓶颈、KV Cache 与 Long Context](bottlenecks-and-context.md)。
+下一节：[1.4 LLM 中的计算瓶颈、KV Cache 与 Long Context](bottlenecks-and-context.md)。

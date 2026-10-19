@@ -1,4 +1,4 @@
-# 1.3 LLM 中的计算瓶颈、KV Cache 与 Long Context
+# 1.4 LLM 中的计算瓶颈、KV Cache 与 Long Context
 
 讨论 Attention 成本时，先确定计算阶段。一次处理完整输入，与每次只处理一个新 Token，使用的参数可以相同，但矩阵形状、缓存行为和瓶颈不同。
 
@@ -68,4 +68,4 @@ Position Interpolation 针对 Rotary Position Embedding（RoPE）的位置范围
 
 Lost in the Middle 在其研究的模型和任务中发现，相关信息的位置会影响回答表现。这说明接受更长输入与有效利用其中信息需要分别评估；该论文的结果不能自动推广为所有后续模型的固定行为。[Liu et al., 2023，§3.1—3.3](https://arxiv.org/html/2307.03172v1)
 
-下一节：[1.4 Attention 的结构改进、计算优化与架构扩展](optimization-landscape.md)。
+下一节：[1.5 Attention 的结构改进、计算优化与架构扩展](optimization-landscape.md)。

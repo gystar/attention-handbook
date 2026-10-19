@@ -53,8 +53,8 @@
 | 形式与来源 | 推荐阅读或观看位置 | 用途 |
 | --- | --- | --- |
 | 书籍：[Zhang、Lipton、Li、Smola，Dive into Deep Learning](https://d2l.ai/chapter_attention-mechanisms-and-transformers/index.html)，在线版 1.0.3 | §11.1 Queries, Keys, and Values；按需进入本章后续小节 | 从加权读取建立 QKV 概念，配合公式与代码学习 |
-| 图文：[Jay Alammar，The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)，2018 | Encoder–Decoder 总图与 Multi-Head 图解 | 配合本书 1.2 节理解模块关系 |
-| 视频：[3Blue1Brown，Attention in transformers, step-by-step](https://www.youtube.com/watch?v=eMlx5fFNoYc)，2024 | 06:32—10:40 Q/K；11:30—12:45 Mask；13:40—15:10 Value；20:30—22:30 Multi-Head | 配合本书 1.1 节观察逐步计算；时间段依据作者英文字幕核对 |
+| 图文：[Jay Alammar，The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)，2018 | Encoder–Decoder 总图与 Multi-Head 图解 | 配合本书 1.1 与 1.3 节理解模块关系 |
+| 视频：[3Blue1Brown，Attention in transformers, step-by-step](https://www.youtube.com/watch?v=eMlx5fFNoYc)，2024 | 06:32—10:40 Q/K；11:30—12:45 Mask；13:40—15:10 Value；20:30—22:30 Multi-Head | 配合本书 1.2 节观察逐步计算；时间段依据作者英文字幕核对 |
 
 背景补充：[Goodfellow、Bengio 与 Courville，Deep Learning，Chapter 1](https://www.deeplearningbook.org/contents/intro.html)（来源 ID：`goodfellow2016deep-learning`），用于区分机器学习、表示学习与深度学习。
 
@@ -66,8 +66,8 @@
 
 | 本书图号 | 来源与原图位置 | 解释对象 |
 | --- | --- | --- |
-| 图 1-1a | 本书依据 [Deep Learning Chapter 1](https://www.deeplearningbook.org/contents/intro.html) 与 [Transformer §3](https://arxiv.org/html/1706.03762v7) 绘制 | 学习方法、架构与组件关系 |
-| 图 1-1b | 本书绘制，SVG 源文件随书保存 | 设计问题与章节关系 |
+| 图 1-1a—1-1c | [Jay Alammar，The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)，CC BY-NC-SA 4.0；原图未修改 | Embedding、Self-Attention 可视化与 Encoder 层内数据流 |
+| 图 1-1d | 本书绘制，SVG 源文件随书保存 | 设计问题与章节关系 |
 | 图 1-2 | [Vaswani et al.，Figure 2 左图](https://arxiv.org/html/1706.03762v7) | Scaled Dot-Product Attention 的计算步骤 |
 | 图 1-3 | [Vaswani et al.，Figure 1](https://arxiv.org/html/1706.03762v7) | 原始 Encoder–Decoder Transformer |
 | 图 1-4 | 本书依据 [Kwon et al.，§2.2](https://arxiv.org/html/2309.06180v1) 绘制 | Prefill 与 Decode 的位置关系 |
@@ -79,7 +79,7 @@ Vaswani et al. 原论文首页允许署名后的学术图表转载；GQA 原图�
 
 公开书页直接链接原论文和作者页面。本地原文放在仓库 `sources/` 中，由 `sources/INDEX.md` 提供真实文件链接；来源 ID 与上述条目一致。原文文件默认不随 Git 仓库发布。
 
-当前归档状态：已保存 3Blue1Brown 作者英文字幕；9 篇必备论文 PDF、10 篇选读论文 PDF 和 3 张引用原图尚未下载。正文中的三张原图目前依赖远程地址，不能保证离线显示。内容核对使用了原始资料的在线正文，但这不等于完成本地归档。
+当前归档状态：已保存三张 Jay Alammar 教程原图及 3Blue1Brown 作者英文字幕；9 篇必备论文 PDF、10 篇选读论文 PDF 和 3 张引用原图尚未下载。正文中的三张原图目前依赖远程地址，不能保证离线显示。内容核对使用了原始资料的在线正文，但这不等于完成本地归档。
 
 在允许联网的环境中，可在仓库根目录执行 `python3 scripts/sources.py --download` 获取必备原文及引用图片，再执行 `python3 scripts/sources.py` 更新索引。选读资料使用 `--download --all`。工具说明和后续归档要求见仓库 `references/README.md`。
 

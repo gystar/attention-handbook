@@ -434,3 +434,42 @@ assets:
   sha256: null
   attribution: CC BY 4.0，按原作者与原图署名。
   display_mode: remote_url
+- id: alammar-embeddings
+  source_id: alammar2018illustrated
+  locator: Bringing The Tensors Into The Picture
+  download_url: https://jalammar.github.io/images/t/embeddings.png
+  source_url: https://jalammar.github.io/images/t/embeddings.png
+  local_path: book/assets/overview/alammar-embeddings.png
+  archive_status: downloaded
+  sha256: 259c450a90b5c0700acf0f8499538188a1c58d5c10c733a528bb20f89a848627
+  git_blob: 47005ef364a4772e6b0cd39fcbce22b74f4f3983
+  bytes: 13335
+  attribution: Jay Alammar, The Illustrated Transformer (2018), CC BY-NC-SA 4.0; 原图未修改。
+  license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+  display_mode: local_file
+- id: alammar-self-attention
+  source_id: alammar2018illustrated
+  locator: Self-Attention at a High Level
+  download_url: https://jalammar.github.io/images/t/transformer_self-attention_visualization.png
+  source_url: https://jalammar.github.io/images/t/transformer_self-attention_visualization.png
+  local_path: book/assets/overview/alammar-self-attention.png
+  archive_status: downloaded
+  sha256: 5f85f00a27e48125cd9445f562943b2ca8e7a73d61e9de381fc106a21463e5c4
+  git_blob: d89ccb3916677b54afd5b77c63f6ae9239a5e362
+  bytes: 50075
+  attribution: Jay Alammar, The Illustrated Transformer (2018), CC BY-NC-SA 4.0; 原图未修改。
+  license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+  display_mode: local_file
+- id: alammar-encoder
+  source_id: alammar2018illustrated
+  locator: Now We’re Encoding!
+  download_url: https://jalammar.github.io/images/t/encoder_with_tensors_2.png
+  source_url: https://jalammar.github.io/images/t/encoder_with_tensors_2.png
+  local_path: book/assets/overview/alammar-encoder.png
+  archive_status: downloaded
+  sha256: c493c7de18b5af3b4371bed0ce2222f2005905ad14078d06f2e2c82f13ca7b0a
+  git_blob: 76db8b5b14d6d42ade59bbe015d2e7d6730a0b9d
+  bytes: 79065
+  attribution: Jay Alammar, The Illustrated Transformer (2018), CC BY-NC-SA 4.0; 原图未修改。
+  license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+  display_mode: local_file

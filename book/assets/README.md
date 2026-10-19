@@ -8,8 +8,10 @@
 
 | 图号 | 文件或原始位置 | 来源与存储状态 |
 | --- | --- | --- |
-| 1-1a | [attention-context.svg](overview/attention-context.svg) | 本书原创；依据 [Deep Learning Chapter 1](https://www.deeplearningbook.org/contents/intro.html) 与 [Transformer §3](https://arxiv.org/html/1706.03762v7) 区分学习方法、架构与组件；SVG 为源文件 |
-| 1-1b | [attention-landscape.svg](overview/attention-landscape.svg) | 本书原创，SVG 即可编辑源文件；按设计问题组织章节 |
+| 1-1a | [alammar-embeddings.png](overview/alammar-embeddings.png) | Jay Alammar 教程原图，本地保存，CC BY-NC-SA 4.0 |
+| 1-1b | [alammar-self-attention.png](overview/alammar-self-attention.png) | 同上；Encoder 场景的可视化 |
+| 1-1c | [alammar-encoder.png](overview/alammar-encoder.png) | 同上；简化 Encoder 层，非 Decoder-only 全图 |
+| 1-1d | [attention-landscape.svg](overview/attention-landscape.svg) | 本书原创，移至方法分类小节 |
 | 1-2 | [Transformer Figure 2 左图](https://arxiv.org/html/1706.03762v7/Figures/ModalNet-19.png) | Vaswani et al.，原图远程引用，待本地归档 |
 | 1-3 | [Transformer Figure 1](https://arxiv.org/html/1706.03762v7/Figures/ModalNet-21.png) | Vaswani et al.，原图远程引用，待本地归档 |
 | 1-4 | [prefill-decode.svg](overview/prefill-decode.svg) | 本书依据 [Kwon et al. §2.2](https://arxiv.org/html/2309.06180v1) 绘制；只展示位置关系，省略其余网络计算 |
@@ -21,3 +23,5 @@ Transformer 图表使用条件见原论文首页的转载声明。三张原图�
 
 
 新增概念关系图 `attention-context.svg` 已经 GdkPixbuf 加载、生成 PNG 并检查文字与连线；复查证据见仓库 `reviews/previews/attention-context.png`。
+
+三张 Alammar 原图来自 [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)，以 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 原样收录；署名见正文图注，禁止据本书其他文件的许可将这些素材视为可商用。源仓库为 `jalammar/jalammar.github.io`，来源路径、Git blob 与 SHA-256 见 catalog.yaml。原 `attention-context.svg` 保留为历史素材，当前正文不再引用。

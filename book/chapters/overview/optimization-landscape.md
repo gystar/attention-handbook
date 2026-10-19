@@ -1,6 +1,10 @@
-# 1.4 Attention 的结构改进、计算优化与架构扩展
+# 1.5 Attention 的结构改进、计算优化与架构扩展
 
 Attention 方法可按其改变的计算对象分类。调整 KV 表示、减少位置对、重排 GPU 计算与改变状态更新，解决的是不同问题；方法名称相近不代表作用相同。
+
+![Attention 技术路线图，按表示、连接、实现、缓存与状态更新划分](../../assets/overview/attention-landscape.svg)
+
+图 1-1d　本书绘制的技术路线图，用于定位设计问题与后续章节，不表示历史继承关系。
 
 ## 按设计问题定位方法
 
@@ -73,4 +77,4 @@ Gated DeltaNet 将控制状态衰减的 Gate 与 Delta Rule 结合；Softmax Att
 
 Hybrid 设计允许模型在不同 Layer 或模块中使用不同的序列运算，例如将 Attention 与状态更新模块组合。收益取决于组合位置、比例、训练和实现，不能仅凭“混合”推断能力或速度更好。Mamba-2 论文研究了 Structured State Space Duality（SSD）对应的状态模块、Attention 和 Multi-Layer Perceptron（MLP）的组合，提供了具体实例。[Dao & Gu, 2024，§9.2.3](https://arxiv.org/html/2405.21060v1)
 
-下一节：[1.5 主要技术路线的演进关系与比较维度](evolution-and-comparison.md)。
+下一节：[1.6 主要技术路线的演进关系与比较维度](evolution-and-comparison.md)。
