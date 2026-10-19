@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="660" viewBox="0 0 1080 660" role="img" aria-labelledby="title desc">
+  <title id="title">Attention 的设计问题与章节关系</title>
+  <desc id="desc">以 Transformer Attention 为共同基础，分为原理与结构、计算与缓存、状态与组合三组。连线表示分类，不表示时间先后。</desc>
+  <defs>
+    <style>
+      text { font-family: 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif; fill: #193047; }
+      .title { font-size: 27px; font-weight: 700; }
+      .group { font-size: 23px; font-weight: 700; }
+      .name { font-size: 20px; font-weight: 600; }
+      .body { font-size: 18px; }
+      .muted { fill: #526477; font-size: 17px; }
+      .line { fill: none; stroke: #8599ac; stroke-width: 2; }
+    </style>
+  </defs>
+  <rect width="1080" height="660" rx="16" fill="#f7f9fc"/>
+  <rect x="240" y="26" width="600" height="103" rx="12" fill="#e5edf8" stroke="#a9bdd5"/>
+  <text x="540" y="65" text-anchor="middle" class="title">Transformer Attention</text>
+  <text x="540" y="99" text-anchor="middle" class="body">第 1 章建立框架 · 第 2 章展开基本原理</text>
+  <path d="M540 129 V157 H187 V185 M540 157 V185 M540 157 H893 V185" class="line"/>
+  <rect x="20" y="185" width="334" height="402" rx="12" fill="#edf7f4" stroke="#b9d7cb"/>
+  <rect x="373" y="185" width="334" height="402" rx="12" fill="#eef3fc" stroke="#bdcde6"/>
+  <rect x="726" y="185" width="334" height="402" rx="12" fill="#f7f1fb" stroke="#d4c3e3"/>
+  <text x="43" y="226" class="group">原理与结构</text>
+  <text x="43" y="257" class="muted">改变表示及其计算方式</text>
+  <text x="43" y="308" class="name">第 3 章 · Position Encoding</text>
+  <text x="43" y="338" class="body">位置关系与 Context Extension</text>
+  <text x="43" y="397" class="name">第 4 章 · KV 表示</text>
+  <text x="43" y="427" class="body">MHA → MQA / GQA / MLA</text>
+  <text x="43" y="486" class="name">第 5 章 · Gated Attention</text>
+  <text x="43" y="516" class="body">在 Attention 中调节信息</text>
+  <text x="396" y="226" class="group">计算与缓存</text>
+  <text x="396" y="257" class="muted">分别分析运算、连接与存储</text>
+  <text x="396" y="308" class="name">第 6 章 · FlashAttention</text>
+  <text x="396" y="338" class="body">减少显存访问和中间存储</text>
+  <text x="396" y="397" class="name">第 7 章 · Sparse Attention</text>
+  <text x="396" y="427" class="body">限制或选择参与计算的位置对</text>
+  <text x="396" y="486" class="name">第 8 章 · KV Cache</text>
+  <text x="396" y="516" class="body">布局、量化、保留与复用</text>
+  <text x="749" y="226" class="group">状态与组合</text>
+  <text x="749" y="257" class="muted">组织历史信息与序列模块</text>
+  <text x="749" y="308" class="name">第 9 章 · Linear Attention</text>
+  <text x="749" y="338" class="body">Recurrent Formulation</text>
+  <text x="749" y="369" class="body">State Update · Gated DeltaNet</text>
+  <text x="749" y="442" class="name">第 10 章 · Hybrid Architectures</text>
+  <text x="749" y="473" class="body">Attention、Recurrent 与 SSM</text>
+  <text x="749" y="504" class="body">模块的组合与比较</text>
+  <text x="540" y="628" text-anchor="middle" class="muted">按设计问题分类；不同路线可以交叉，组合时需检查结构与实现条件。</text>
+</svg>

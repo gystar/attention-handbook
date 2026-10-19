@@ -1,0 +1,84 @@
+Attention Handbook / Chapter 1
+Date: 2026-10-19
+Python: 3.12.3
+PyYAML: 6.0.1
+Reviewed files in overview-after.sha256: 37
+
+$ python3 scripts/check_handbook.py
+检查 30 个 Markdown 文件、111 个本地文件链接、19 个导航入口。
+来源记录 22 项；引用图片记录 3 项；必备资料及引用图片待归档 12 项。
+本地结构检查：通过。外链可用性、链接锚点和 GitBook 页面呈现须另行核查。
+exit_code=0
+
+$ python3 scripts/verify_examples.py
+{
+  "weighted_sum": [
+    0.7999999999999999,
+    0.8999999999999999
+  ],
+  "kv_bytes": {
+    "MHA": 4294967296,
+    "GQA": 1073741824,
+    "MQA": 134217728
+  },
+  "causal_pairs_N5": 15,
+  "linear_attention_steps": 4,
+  "linear_attention_max_abs_error": 2.220446049250313e-16,
+  "result": "passed"
+}
+exit_code=0
+
+$ python3 scripts/sources.py
+已归档 1 项；必备原文待归档 9 项。索引：sources/INDEX.md
+exit_code=0
+
+$ python3 -m py_compile scripts/check_handbook.py scripts/sources.py scripts/verify_examples.py
+exit_code=0
+
+$ python3 scripts/check_handbook.py --require-archives
+检查 30 个 Markdown 文件、111 个本地文件链接、19 个导航入口。
+来源记录 22 项；引用图片记录 3 项；必备资料及引用图片待归档 12 项。
+错误：必备资料及引用图片未归档：sutskever2014seq2seq, bahdanau2014attention, vaswani2017attention, shazeer2019mqa, katharopoulos2020linear, dao2022flashattention, ainslie2023gqa, kwon2023pagedattention, deepseek2024mla, transformer-architecture, scaled-dot-product, gqa-heads
+本地结构检查：未通过。外链可用性、链接锚点和 GitBook 页面呈现须另行核查。
+exit_code=1
+
+$ sha256sum --check reviews/overview-after.sha256
+.gitbook.yaml: OK
+.gitignore: OK
+AGENTS.md: OK
+CONTRIBUTING.md: OK
+GOAL.md: OK
+README.md: OK
+book/README.md: OK
+book/SUMMARY.md: OK
+book/appendices/foundations.md: OK
+book/appendices/references.md: OK
+book/appendices/timeline.md: OK
+book/assets/README.md: OK
+book/assets/overview/attention-landscape.svg: OK
+book/assets/overview/prefill-decode.svg: OK
+book/chapters/flash-attention/README.md: OK
+book/chapters/gated-attention/README.md: OK
+book/chapters/hybrid-architectures/README.md: OK
+book/chapters/kv-cache/README.md: OK
+book/chapters/kv-representations/README.md: OK
+book/chapters/linear-attention/README.md: OK
+book/chapters/overview/README.md: OK
+book/chapters/overview/attention-in-llms.md: OK
+book/chapters/overview/bottlenecks-and-context.md: OK
+book/chapters/overview/evolution-and-comparison.md: OK
+book/chapters/overview/from-seq2seq-to-transformer.md: OK
+book/chapters/overview/optimization-landscape.md: OK
+book/chapters/position-encoding/README.md: OK
+book/chapters/sparse-attention/README.md: OK
+book/chapters/transformer-attention/README.md: OK
+references/README.md: OK
+references/catalog.yaml: OK
+reviews/previews/attention-landscape.png: OK
+reviews/previews/prefill-decode.png: OK
+scripts/check_handbook.py: OK
+scripts/sources.py: OK
+scripts/verify_examples.py: OK
+sources/README.md: OK
+exit_code=0
+

@@ -1,0 +1,22 @@
+# 附录 B 技术演进时间线与方法对照表
+
+本页提供跨章检索入口。当前时间线覆盖首章引用的代表工作，后续随专题章节补充，不作为完整文献年表。
+
+## 时间线入口
+
+[1.5 节的代表性时间节点](../chapters/overview/evolution-and-comparison.md) 按首次公开年份列出 2014—2025 年的主要例子；[附录 C](references.md) 记录实际引用的论文版本。年份先后不能单独证明方法之间存在继承关系。
+
+## 按改变的对象查找
+
+| 改变的对象 | 代表方法 | 主要比较问题 | 专题 |
+| --- | --- | --- | --- |
+| 位置表示与距离信息 | RoPE、ALiBi、Position Interpolation | 使用范围如何变化，长文本能力怎样评估 | [第 3 章](../chapters/position-encoding/README.md) |
+| KV Head 或表示 | MQA、GQA、MLA | 缓存保存什么，能力与容量如何权衡 | [第 4 章](../chapters/kv-representations/README.md) |
+| Attention 内部的 Gate | Gated Attention | Gate 的输入、作用位置与实验依据 | [第 5 章](../chapters/gated-attention/README.md) |
+| 运算调度与中间存储 | FlashAttention | 目标算子是否相同，IO 减少多少 | [第 6 章](../chapters/flash-attention/README.md) |
+| 可访问的位置对 | Sparse Attention | 选择开销、实际稀疏度与质量变化 | [第 7 章](../chapters/sparse-attention/README.md) |
+| KV 的物理存储和保留 | PagedAttention、KV 量化与淘汰 | 分别改变布局、精度还是历史覆盖 | [第 8 章](../chapters/kv-cache/README.md) |
+| 状态更新与读取 | Linear Attention、Gated DeltaNet | 状态容量、计算方式与信息读取能力 | [第 9 章](../chapters/linear-attention/README.md) |
+| 模块组合 | Attention、Recurrent、SSM 的组合 | 配置、训练及整模型表现 | [第 10 章](../chapters/hybrid-architectures/README.md) |
+
+方法区别的原始依据集中在 [1.4 节](../chapters/overview/optimization-landscape.md)。上表用于查找讨论位置，不能用来直接给方法排名；性能比较需同时指定阶段、长度、Batch、硬件、精度及能力指标。

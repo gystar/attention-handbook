@@ -1,0 +1,412 @@
+schema_version: 1
+checked_on: '2026-10-19'
+sources:
+- id: sutskever2014seq2seq
+  kind: paper
+  title: Sequence to Sequence Learning with Neural Networks
+  authors: Sutskever, Vinyals & Le
+  first_public_year: 2014
+  version: 1409.3215v3
+  url: https://arxiv.org/abs/1409.3215v3
+  full_text_url: https://arxiv.org/html/1409.3215v3
+  download_url: https://arxiv.org/pdf/1409.3215v3
+  local_path: sources/papers/sutskever2014seq2seq-v3.pdf
+  required_local: true
+  archive_status: pending
+  archive_note: 终端网络连接受权限限制；尚未获得原始 PDF。
+  sha256: null
+  checked_sections:
+  - §2
+  checked_on: '2026-10-19'
+- id: bahdanau2014attention
+  kind: paper
+  title: Neural Machine Translation by Jointly Learning to Align and Translate
+  authors: Bahdanau, Cho & Bengio
+  first_public_year: 2014
+  version: 1409.0473v7
+  url: https://arxiv.org/abs/1409.0473v7
+  full_text_url: https://arxiv.org/html/1409.0473v7
+  download_url: https://arxiv.org/pdf/1409.0473v7
+  local_path: sources/papers/bahdanau2014attention-v7.pdf
+  required_local: true
+  archive_status: pending
+  archive_note: 终端网络连接受权限限制；尚未获得原始 PDF。
+  sha256: null
+  checked_sections:
+  - §3.1, equations (4)–(6)
+  checked_on: '2026-10-19'
+- id: vaswani2017attention
+  kind: paper
+  title: Attention Is All You Need
+  authors: Vaswani et al.
+  first_public_year: 2017
+  version: 1706.03762v7
+  url: https://arxiv.org/abs/1706.03762v7
+  full_text_url: https://arxiv.org/html/1706.03762v7
+  download_url: https://arxiv.org/pdf/1706.03762v7
+  local_path: sources/papers/vaswani2017attention-v7.pdf
+  required_local: true
+  archive_status: pending
+  archive_note: 终端网络连接受权限限制；尚未获得原始 PDF。
+  sha256: null
+  checked_sections:
+  - §3.1–3.2.3
+  - Table 1
+  - Figures 1–2
+  - Figure reuse statement on page 1
+  checked_on: '2026-10-19'
+- id: child2019sparse
+  kind: paper
+  title: Generating Long Sequences with Sparse Transformers
+  authors: Child et al.
+  first_public_year: 2019
+  version: 1904.10509v1
+  url: https://arxiv.org/abs/1904.10509v1
+  full_text_url: https://arxiv.org/html/1904.10509v1
+  download_url: https://arxiv.org/pdf/1904.10509v1
+  local_path: sources/papers/child2019sparse-v1.pdf
+  required_local: false
+  archive_status: pending
+  archive_note: 终端网络连接受权限限制；尚未获得原始 PDF。
+  sha256: null
+  checked_sections:
+  - §4
+  checked_on: '2026-10-19'
+- id: shazeer2019mqa
+  kind: paper
+  title: 'Fast Transformer Decoding: One Write-Head is All You Need'
+  authors: Noam Shazeer
+  first_public_year: 2019
+  version: 1911.02150v1
+  url: https://arxiv.org/abs/1911.02150v1
+  full_text_url: https://arxiv.org/html/1911.02150v1
+  download_url: https://arxiv.org/pdf/1911.02150v1
+  local_path: sources/papers/shazeer2019mqa-v1.pdf
+  required_local: true
+  archive_status: pending
+  archive_note: 终端网络连接受权限限制；尚未获得原始 PDF。
+  sha256: null
+  checked_sections:
+  - §2.1–2.4.1
+  - §3
+  checked_on: '2026-10-19'
+- id: katharopoulos2020linear
+  kind: paper
+  title: 'Transformers are RNNs: Fast Autoregressive Transformers with Linear Attention'
+  authors: Katharopoulos et al.
+  first_public_year: 2020
+  version: PMLR 119, 2020
+  url: https://proceedings.mlr.press/v119/katharopoulos20a.html
+  full_text_url: https://proceedings.mlr.press/v119/katharopoulos20a/katharopoulos20a.pdf
+  download_url: https://proceedings.mlr.press/v119/katharopoulos20a/katharopoulos20a.pdf
+  local_path: sources/papers/katharopoulos2020linear-pmlr.pdf
+  required_local: true
+  archive_status: pending
+  archive_note: 终端网络连接受权限限制；尚未获得原始 PDF。
+  sha256: null
+  checked_sections:
+  - §3.2–3.4, equations (4)–(12), (16)–(20)
+  checked_on: '2026-10-19'
+- id: su2021rope
+  kind: paper
+  title: 'RoFormer: Enhanced Transformer with Rotary Position Embedding'
+  authors: Su et al.
+  first_public_year: 2021
+  version: 2104.09864v5
+  url: https://arxiv.org/abs/2104.09864v5
+  full_text_url: https://arxiv.org/html/2104.09864v5
+  download_url: https://arxiv.org/pdf/2104.09864v5
+  local_path: sources/papers/su2021rope-v5.pdf
+  required_local: false
+  archive_status: pending
+  archive_note: 终端网络连接受权限限制；尚未获得原始 PDF。
+  sha256: null
+  checked_sections:
+  - §3.2
+  checked_on: '2026-10-19'
+- id: press2021alibi
+  kind: paper
+  title: 'Train Short, Test Long: Attention with Linear Biases Enables Input Length Extrapolation'
+  authors: Press, Smith & Lewis
+  first_public_year: 2021
+  version: 2108.12409v2
+  url: https://arxiv.org/abs/2108.12409v2
+  full_text_url: https://arxiv.org/html/2108.12409v2
+  download_url: https://arxiv.org/pdf/2108.12409v2
+  local_path: sources/papers/press2021alibi-v2.pdf
+  required_local: false
+  archive_status: pending
+  archive_note: 终端网络连接受权限限制；尚未获得原始 PDF。
+  sha256: null
+  checked_sections:
+  - §3
+  checked_on: '2026-10-19'
+- id: dao2022flashattention
+  kind: paper
+  title: 'FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness'
+  authors: Dao et al.
+  first_public_year: 2022
+  version: 2205.14135v2
+  url: https://arxiv.org/abs/2205.14135v2
+  full_text_url: https://arxiv.org/html/2205.14135v2
+  download_url: https://arxiv.org/pdf/2205.14135v2
+  local_path: sources/papers/dao2022flashattention-v2.pdf
+  required_local: true
+  archive_status: pending
+  archive_note: 终端网络连接受权限限制；尚未获得原始 PDF。
+  sha256: null
+  checked_sections:
+  - §3.1, Theorem 1
+  - §3.3
+  - §4
+  checked_on: '2026-10-19'
+- id: ainslie2023gqa
+  kind: paper
+  title: 'GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints'
+  authors: Ainslie et al.
+  first_public_year: 2023
+  version: 2305.13245v3
+  url: https://arxiv.org/abs/2305.13245v3
+  full_text_url: https://arxiv.org/html/2305.13245v3
+  download_url: https://arxiv.org/pdf/2305.13245v3
+  local_path: sources/papers/ainslie2023gqa-v3.pdf
+  required_local: true
+  archive_status: pending
+  archive_note: 终端网络连接受权限限制；尚未获得原始 PDF。
+  sha256: null
+  checked_sections:
+  - §2.1–2.2
+  - Figure 2
+  checked_on: '2026-10-19'
+- id: chen2023pi
+  kind: paper
+  title: Extending Context Window of Large Language Models via Position Interpolation
+  authors: Chen et al.
+  first_public_year: 2023
+  version: 2306.15595v2
+  url: https://arxiv.org/abs/2306.15595v2
+  full_text_url: https://arxiv.org/html/2306.15595v2
+  download_url: https://arxiv.org/pdf/2306.15595v2
+  local_path: sources/papers/chen2023pi-v2.pdf
+  required_local: false
+  archive_status: pending
+  archive_note: 终端网络连接受权限限制；尚未获得原始 PDF。
+  sha256: null
+  checked_sections:
+  - §2.3
+  checked_on: '2026-10-19'
+- id: liu2023lostmiddle
+  kind: paper
+  title: 'Lost in the Middle: How Language Models Use Long Contexts'
+  authors: Liu et al.
+  first_public_year: 2023
+  version: 2307.03172v1
+  url: https://arxiv.org/abs/2307.03172v1
+  full_text_url: https://arxiv.org/html/2307.03172v1
+  download_url: https://arxiv.org/pdf/2307.03172v1
+  local_path: sources/papers/liu2023lostmiddle-v1.pdf
+  required_local: false
+  archive_status: pending
+  archive_note: 终端网络连接受权限限制；尚未获得原始 PDF。
+  sha256: null
+  checked_sections:
+  - §3.1–3.3
+  checked_on: '2026-10-19'
+- id: kwon2023pagedattention
+  kind: paper
+  title: Efficient Memory Management for Large Language Model Serving with PagedAttention
+  authors: Kwon et al.
+  first_public_year: 2023
+  version: 2309.06180v1
+  url: https://arxiv.org/abs/2309.06180v1
+  full_text_url: https://arxiv.org/html/2309.06180v1
+  download_url: https://arxiv.org/pdf/2309.06180v1
+  local_path: sources/papers/kwon2023pagedattention-v1.pdf
+  required_local: true
+  archive_status: pending
+  archive_note: 终端网络连接受权限限制；尚未获得原始 PDF。
+  sha256: null
+  checked_sections:
+  - §2.1–2.2
+  - §4.1–4.2
+  - §6.1
+  checked_on: '2026-10-19'
+- id: jiang2023mistral
+  kind: paper
+  title: Mistral 7B
+  authors: Jiang et al.
+  first_public_year: 2023
+  version: 2310.06825v1
+  url: https://arxiv.org/abs/2310.06825v1
+  full_text_url: https://arxiv.org/html/2310.06825v1
+  download_url: https://arxiv.org/pdf/2310.06825v1
+  local_path: sources/papers/jiang2023mistral-v1.pdf
+  required_local: false
+  archive_status: pending
+  archive_note: 终端网络连接受权限限制；尚未获得原始 PDF。
+  sha256: null
+  checked_sections:
+  - §2, Table 1
+  checked_on: '2026-10-19'
+- id: deepseek2024mla
+  kind: paper
+  title: 'DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model'
+  authors: DeepSeek-AI
+  first_public_year: 2024
+  version: 2405.04434v5
+  url: https://arxiv.org/abs/2405.04434v5
+  full_text_url: https://arxiv.org/html/2405.04434v5
+  download_url: https://arxiv.org/pdf/2405.04434v5
+  local_path: sources/papers/deepseek2024mla-v5.pdf
+  required_local: true
+  archive_status: pending
+  archive_note: 终端网络连接受权限限制；尚未获得原始 PDF。
+  sha256: null
+  checked_sections:
+  - §2.1.1–2.1.4
+  checked_on: '2026-10-19'
+- id: dao2024ssd
+  kind: paper
+  title: 'Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality'
+  authors: Tri Dao & Albert Gu
+  first_public_year: 2024
+  version: 2405.21060v1
+  url: https://arxiv.org/abs/2405.21060v1
+  full_text_url: https://arxiv.org/html/2405.21060v1
+  download_url: https://arxiv.org/pdf/2405.21060v1
+  local_path: sources/papers/dao2024ssd-v1.pdf
+  required_local: false
+  archive_status: pending
+  archive_note: 终端网络连接受权限限制；尚未获得原始 PDF。
+  sha256: null
+  checked_sections:
+  - §4.1
+  - §5.1–5.2
+  - §9.2.3
+  checked_on: '2026-10-19'
+- id: yang2024gateddelta
+  kind: paper
+  title: 'Gated Delta Networks: Improving Mamba2 with Delta Rule'
+  authors: Yang et al.
+  first_public_year: 2024
+  version: 2412.06464v1
+  url: https://arxiv.org/abs/2412.06464v1
+  full_text_url: https://arxiv.org/html/2412.06464v1
+  download_url: https://arxiv.org/pdf/2412.06464v1
+  local_path: sources/papers/yang2024gateddelta-v1.pdf
+  required_local: false
+  archive_status: pending
+  archive_note: 终端网络连接受权限限制；尚未获得原始 PDF。
+  sha256: null
+  checked_sections:
+  - §2.3
+  - §3.1, equation (8)
+  checked_on: '2026-10-19'
+- id: yuan2025nsa
+  kind: paper
+  title: 'Native Sparse Attention: Hardware-Aligned and Natively Trainable Sparse Attention'
+  authors: Yuan et al.
+  first_public_year: 2025
+  version: 2502.11089v1
+  url: https://arxiv.org/abs/2502.11089v1
+  full_text_url: https://arxiv.org/html/2502.11089v1
+  download_url: https://arxiv.org/pdf/2502.11089v1
+  local_path: sources/papers/yuan2025nsa-v1.pdf
+  required_local: false
+  archive_status: pending
+  archive_note: 终端网络连接受权限限制；尚未获得原始 PDF。
+  sha256: null
+  checked_sections:
+  - §3.2–3.3.2
+  checked_on: '2026-10-19'
+- id: qiu2025gatedattention
+  kind: paper
+  title: 'Gated Attention for Large Language Models: Non-linearity, Sparsity, and Attention-Sink-Free'
+  authors: Qiu et al.
+  first_public_year: 2025
+  version: 2505.06708v1
+  url: https://arxiv.org/abs/2505.06708v1
+  full_text_url: https://arxiv.org/html/2505.06708v1
+  download_url: https://arxiv.org/pdf/2505.06708v1
+  local_path: sources/papers/qiu2025gatedattention-v1.pdf
+  required_local: false
+  archive_status: pending
+  archive_note: 终端网络连接受权限限制；尚未获得原始 PDF。
+  sha256: null
+  checked_sections:
+  - §2.2, equation (5)
+  checked_on: '2026-10-19'
+- id: sanderson2024attention
+  kind: video
+  title: Attention in transformers, step-by-step
+  authors: Grant Sanderson / 3Blue1Brown
+  first_public_year: 2024
+  version: English caption Git blob c0e2617102bdfac0227ad747a65d5c882de6bcc5
+  url: https://www.youtube.com/watch?v=eMlx5fFNoYc
+  full_text_url: https://www.3blue1brown.com/lessons/attention/
+  download_url: https://raw.githubusercontent.com/3b1b/captions/main/2024/attention/english/captions.srt
+  local_path: sources/videos/3blue1brown-attention.en.srt
+  required_local: false
+  archive_status: downloaded
+  archive_note: 作者英文字幕，非视频文件；通过 GitHub 连接读取，已核对与记录的 Git blob 字节一致。
+  sha256: 690b3a23cbf4f02ab216e740cd66a6d92d085f5d6d296209ee11251370a1bab1
+  checked_sections:
+  - 06:32–10:40 Q/K and Softmax
+  - 11:30–12:45 masking
+  - 13:40–15:10 values
+  - 20:30–22:30 multi-head
+  checked_on: '2026-10-19'
+  bytes: 42646
+- id: alammar2018illustrated
+  kind: tutorial
+  title: The Illustrated Transformer
+  authors: Jay Alammar
+  first_public_year: 2018
+  version: 网页访问版本，2026-10-19
+  url: https://jalammar.github.io/illustrated-transformer/
+  required_local: false
+  archive_status: link_only
+  checked_sections:
+  - Encoder–Decoder architecture and Multi-Head Attention
+  checked_on: '2026-10-19'
+- id: d2l-attention
+  kind: book
+  title: Dive into Deep Learning — Attention Mechanisms and Transformers
+  authors: Zhang, Lipton, Li & Smola
+  version: Online edition 1.0.3，访问日期 2026-10-19
+  url: https://d2l.ai/chapter_attention-mechanisms-and-transformers/index.html
+  full_text_url: https://d2l.ai/chapter_attention-mechanisms-and-transformers/queries-keys-values.html
+  required_local: false
+  archive_status: link_only
+  checked_sections:
+  - Chapter 11 contents
+  - §11.1 Queries, Keys, and Values
+  checked_on: '2026-10-19'
+assets:
+- id: transformer-architecture
+  source_id: vaswani2017attention
+  locator: Figure 1
+  download_url: https://arxiv.org/html/1706.03762v7/Figures/ModalNet-21.png
+  local_path: book/assets/overview/transformer-architecture-original.png
+  archive_status: pending
+  sha256: null
+  attribution: 原论文首页允许署名后在新闻或学术作品中转载图表。
+  display_mode: remote_url
+- id: scaled-dot-product
+  source_id: vaswani2017attention
+  locator: Figure 2, left
+  download_url: https://arxiv.org/html/1706.03762v7/Figures/ModalNet-19.png
+  local_path: book/assets/overview/scaled-dot-product-original.png
+  archive_status: pending
+  sha256: null
+  attribution: 原论文首页允许署名后在新闻或学术作品中转载图表。
+  display_mode: remote_url
+- id: gqa-heads
+  source_id: ainslie2023gqa
+  locator: Figure 2
+  download_url: https://arxiv.org/html/2305.13245v3/images/gmq_architecture.png
+  local_path: book/assets/overview/gqa-heads-original.png
+  archive_status: pending
+  sha256: null
+  attribution: CC BY 4.0，按原作者与原图署名。
+  display_mode: remote_url

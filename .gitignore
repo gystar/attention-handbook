@@ -1,0 +1,11 @@
+/sources/*
+!/sources/README.md
+/build/
+/.venv/
+__pycache__/
+*.pyc
+.DS_Store
+/.agents/
+/.codex/
+/.aws/
+

@@ -1,0 +1,20 @@
+# 图表来源与源文件
+
+随书图表按章节放置。引用图在图注中标明原作者与定位信息，改绘注明来源及改绘，原创示意图保留可编辑 SVG 或生成脚本。
+
+本书自己的图表用于解释结构、计算流程或方法关系，示意图不代表实测性能。无法下载的外部原图保留原始链接，来源索引如实记录归档状态。
+
+## 首章素材清单
+
+| 图号 | 文件或原始位置 | 来源与存储状态 |
+| --- | --- | --- |
+| 1-1 | [attention-landscape.svg](overview/attention-landscape.svg) | 本书原创，SVG 即可编辑源文件；按设计问题组织章节 |
+| 1-2 | [Transformer Figure 2 左图](https://arxiv.org/html/1706.03762v7/Figures/ModalNet-19.png) | Vaswani et al.，原图远程引用，待本地归档 |
+| 1-3 | [Transformer Figure 1](https://arxiv.org/html/1706.03762v7/Figures/ModalNet-21.png) | Vaswani et al.，原图远程引用，待本地归档 |
+| 1-4 | [prefill-decode.svg](overview/prefill-decode.svg) | 本书依据 [Kwon et al. §2.2](https://arxiv.org/html/2309.06180v1) 绘制；只展示位置关系，省略其余网络计算 |
+| 1-5 | [GQA Figure 2](https://arxiv.org/html/2305.13245v3/images/gmq_architecture.png) | Ainslie et al.，CC BY 4.0；原图远程引用，待本地归档 |
+
+Transformer 图表使用条件见原论文首页的转载声明。三张原图的目标路径和来源 ID 已记录在仓库 `references/catalog.yaml`，没有将尚不存在的本地文件作为链接。
+
+两张原创 SVG 已通过 librsvg 2.58 本地栅格预览检查；此记录只覆盖图本身，不代表 GitBook 页面中的实际显示已检查。
+
