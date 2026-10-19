@@ -1,6 +1,6 @@
 # 附录 C 参考文献、教学资源与本地源文件索引
 
-本页收录第 1 章实际使用的来源。论文年份按首次公开年份填写；引用依据为列出的具体版本。核查范围限于与本章论述相关的正文、公式和图表，不能据此推断已审核全文的所有结论。
+本页收录第 1 章实际使用的来源。论文年份按首次公开年份填写；引用依据为列出的具体版本。核查范围限于与本章论述相关的正文、公式和图表。
 
 ## 必备原文
 
@@ -72,8 +72,8 @@
 | 图 1-2 | 本书使用 AI 生成的上下文词义示意；概念参照 [3Blue1Brown，Motivating Examples](https://www.3blue1brown.com/lessons/attention/) | 同一词形在水果与公司语境中的不同含义，非实验数据 |
 | 图 1-3 | [Jay Alammar，The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)，CC BY-NC-SA 4.0；原图未修改 | Self-Attention 可视化 |
 | 图 1-4 | [Zhang, Lipton, Li & Smola，Dive into Deep Learning，§10.7，Figure 10.7.1](https://d2l.ai/chapter_recurrent-modern/seq2seq.html)，[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)；SVG 白底栅格化，图中内容未改动 | RNN Encoder–Decoder 的固定表示传递 |
-| 图 1-5 | [Jay Alammar，Visualizing A Neural Machine Translation Model，Let’s Pay Attention Now](https://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/)，[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)；原图未修改 | 生成译文时按需读取原文 |
-| 图 1-6 | [Jay Alammar，The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/#a-high-level-look)，CC BY-NC-SA 4.0；原图未修改 | Encoder 与 Decoder 中的 Self-Attention、跨序列 Attention |
+| 图 1-5 | 本书依据 [Bahdanau et al.，§3.1，式 (4)—(6)](https://arxiv.org/html/1409.0473v7#S3.SS1) 绘制；词语切分与权重为教学设定 | 英中翻译中逐步变化的读取权重 |
+| 图 1-6 | [Jay Alammar，The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/#a-high-level-look)，CC BY-NC-SA 4.0；原图未修改 | Attention 承担原文、译文及跨序列的信息交互 |
 | 图 1-7 | [Vaswani et al.，Figure 2 左图](https://arxiv.org/html/1706.03762v7) | Scaled Dot-Product Attention 的计算步骤 |
 | 图 1-8 | 本书依据 [Kwon et al.，§2.2](https://arxiv.org/html/2309.06180v1) 绘制 | Prefill 与 Decode 的位置关系 |
 | 图 1-9 | 本书绘制，SVG 源文件随书保存 | 设计问题与章节关系 |
@@ -87,7 +87,7 @@ Vaswani et al. 原论文首页允许署名后的学术图表转载；GQA 原图�
 
 公开书页直接链接原论文和作者页面。本地原文放在仓库 `sources/` 中，由 `sources/INDEX.md` 提供真实文件链接；来源 ID 与上述条目一致。原文文件默认不随 Git 仓库发布。
 
-当前图示归档状态：正文使用的八张本地图已随书保存，Scaled Dot-Product Attention 与 GQA 两张论文图仍通过远程地址引用。必备论文 PDF 与原论文图的归档缺口仍保留在来源索引中；在线核查不等于本地归档。
+当前图示归档状态：正文使用的八张本地图已随书保存，Scaled Dot-Product Attention 与 GQA 两张论文图仍通过远程地址引用。必备论文 PDF 与原论文图的归档缺口仍保留在来源索引中。
 
 在允许联网的环境中，可在仓库根目录执行 `python3 scripts/sources.py --download` 获取必备原文及引用图片，再执行 `python3 scripts/sources.py` 更新索引。选读资料使用 `--download --all`。工具说明和后续归档要求见仓库 `references/README.md`。
 

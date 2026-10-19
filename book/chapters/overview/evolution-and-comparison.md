@@ -20,7 +20,7 @@ Attention 的发展包含多条并行路线。时间线说明工作出现的先�
 
 <p align="center">表 1-13　代表性时间节点</p>
 
-2025 年这项 Gated Attention 工作研究的是特定设计与实验，不代表 Gating 概念始于该年。表中也未将代表性节点当作完整论文年表。
+表中 2025 年的 Gated Attention 条目对应该论文研究的具体门控设计，Gating 概念的使用早于这一工作。
 
 ## 可以组合的方法与需要验证的接口
 
@@ -35,7 +35,7 @@ Mistral 7B 的原始技术报告同时采用 GQA 与 Sliding Window Attention：
 
 <p align="center">表 1-14　方法组合与接口</p>
 
-表中后几项列的是组合时需要验证的问题，不是无需修改即可兼容的保证。同样，MQA/GQA/MLA 也不应仅被理解为可对任意既有模型检查点（Checkpoint）直接启用且无损的运行时选项；结构转换、训练适应与实现支持需要分别核查。[Ainslie et al., 2023，§2.1](https://arxiv.org/html/2305.13245v3)
+组合上述方法时，需要核查表中列出的接口。将既有模型检查点（Checkpoint）转换为 MQA/GQA/MLA 等结构时，还需评估结构转换、训练适应与实现支持。[Ainslie et al., 2023，§2.1](https://arxiv.org/html/2305.13245v3)
 
 ## 方法比较的条件与指标
 

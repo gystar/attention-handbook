@@ -41,7 +41,7 @@ Prefill 也可以按块执行；上述区别关注的是已知 Prompt 与新生�
 
 Causal Mask 将有效位置对限制为三角区域，但仍有 $$N(N+1)/2$$ 个位置对，渐近阶仍为二次。上表最后一行描述显式保存矩阵的实现；FlashAttention 可避免将完整矩阵写入显存，因此二次运算量不意味着必须占用二次规模的中间显存。[Vaswani et al., 2017，Table 1](https://arxiv.org/html/1706.03762v7)；[Dao et al., 2022，§3](https://arxiv.org/html/2205.14135v2)
 
-单步 Decode 的成本随历史长度增长。生成整个回答时，还要累加各步骤的成本，不能用“一步关于 $$N$$ 为线性”推断任意长度生成的总成本也是线性。
+单步 Decode 的成本随历史长度增长。生成整个回答的成本需要累加各步骤的计算量，并考虑历史长度随生成过程增长。
 
 小 Batch 的 Decode 可能受到读取模型参数与 KV 的带宽限制；瓶颈随 Batch、上下文长度、硬件与 Kernel 实现变化。[Shazeer, 2019，§2.4.1](https://arxiv.org/html/1911.02150v1)
 
@@ -67,9 +67,9 @@ $$
 
 <p align="center">表 1-9　KV Cache 的内容与容量</p>
 
-其中 $$1$$ GiB 为 $$2^{30}$$ 字节，$$1$$ MiB 为 $$2^{20}$$ 字节。这是容量计算，不是实测显存或速度结果。GQA/MQA 通过共享 KV Head 改变这一项成本；容量缩小的倍数不能直接当作推理加速倍数。[Ainslie et al., 2023，§2.2](https://arxiv.org/html/2305.13245v3)
+其中 $$1$$ GiB 为 $$2^{30}$$ 字节，$$1$$ MiB 为 $$2^{20}$$ 字节。这是根据缓存形状与数据类型得到的理论容量。GQA/MQA 通过共享 KV Head 改变这一项成本；实际推理加速还取决于计算、访存与实现。[Ainslie et al., 2023，§2.2](https://arxiv.org/html/2305.13245v3)
 
-Multi-Head Latent Attention（MLA）采用另一种缓存表示，其容量不能通过将上式中的 $$h_{kv}$$ 设为 $$1$$ 来估算；需要计入 Latent 表示与位置相关的缓存项。[DeepSeek-AI, 2024，§2.1.2—2.1.4](https://arxiv.org/html/2405.04434v5)
+Multi-Head Latent Attention（MLA）采用另一种缓存表示，其容量需根据 Latent 表示与位置相关的缓存项单独计算。[DeepSeek-AI, 2024，§2.1.2—2.1.4](https://arxiv.org/html/2405.04434v5)
 
 ## Long Context 的三个条件
 
@@ -83,7 +83,7 @@ Multi-Head Latent Attention（MLA）采用另一种缓存表示，其容量不�
 
 Position Interpolation 针对 Rotary Position Embedding（RoPE）的位置范围提出重映射并配合适应训练，其作用应与计算、缓存优化区分。[Chen et al., 2023，§2.3](https://arxiv.org/html/2306.15595v2)
 
-Lost in the Middle 在其研究的模型和任务中发现，相关信息的位置会影响回答表现。这说明接受更长输入与有效利用其中信息需要分别评估；该论文的结果不能自动推广为所有后续模型的固定行为。[Liu et al., 2023，§3.1—3.3](https://arxiv.org/html/2307.03172v1)
+Lost in the Middle 在其研究的模型和任务中发现，相关信息的位置会影响回答表现。这说明接受更长输入与有效利用其中信息需要分别评估；其他模型需要在相应任务上单独评估。[Liu et al., 2023，§3.1—3.3](https://arxiv.org/html/2307.03172v1)
 
 图示来源与许可见[首章图表来源](../../appendices/references.md#首章图表来源)。
 

@@ -2,8 +2,6 @@
 
 > 状态：已规划，正文待写。
 
-本章目录如下，内容将在撰写并完成 Review 后补充。
-
 6.1 Exact Attention 的计算成本与优化目标
 
 6.2 Memory Hierarchy 与 IO Complexity

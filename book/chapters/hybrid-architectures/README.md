@@ -2,8 +2,6 @@
 
 > 状态：已规划，正文待写。
 
-本章目录如下，内容将在撰写并完成 Review 后补充。
-
 10.1 Hybrid Architectures 的设计目标与组合方式
 
 10.2 Full Attention 与 Sparse Attention 的组合

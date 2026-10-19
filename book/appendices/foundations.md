@@ -90,4 +90,4 @@ $$
 $$n_x$$ 是输入长度，$$h_j$$ 是 Encoder 状态，$$s_{i-1}$$ 是前一步 Decoder 状态，$$a$$ 是学习得到的打分函数。$$\alpha_{ij}$$ 随生成步骤变化，使 Decoder 能够直接组合不同输入位置的信息。[Bahdanau et al., 2014，§3.1，式 (4)—(6)](https://arxiv.org/html/1409.0473v7)
 
 
-这里的 Alignment 表示输出步骤与输入位置之间学到的软对应关系，并非 Seq2Seq 的同义词。
+这里的 Alignment 表示输出步骤与输入位置之间学到的软对应关系。

@@ -2,8 +2,6 @@
 
 > 状态：已规划，正文待写。
 
-本章目录如下，内容将在撰写并完成 Review 后补充。
-
 8.1 KV Cache 的工作机制与优化层次
 
 8.2 Cache Layout 与 PagedAttention

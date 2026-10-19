@@ -2,8 +2,6 @@
 
 > 状态：已规划，正文待写。
 
-本章目录如下，内容将在撰写并完成 Review 后补充。
-
 3.1 Position Encoding 的作用与主要方法
 
 3.2 Absolute 与 Relative Position Encoding

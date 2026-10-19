@@ -2,8 +2,6 @@
 
 > 状态：已规划，正文待写。
 
-本章目录如下，内容将在撰写并完成 Review 后补充。
-
 9.1 Linear Attention 的计算框架与主要路线
 
 9.2 从 Kernel Feature Maps 到 Recurrent Formulation

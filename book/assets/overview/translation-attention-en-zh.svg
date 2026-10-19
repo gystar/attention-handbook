@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="420" viewBox="0 0 1120 420">
+<rect width="1120" height="420" fill="white"/>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#6b7785"/></marker></defs>
+<g font-family="Noto Sans CJK SC, sans-serif" fill="#243342">
+<text x="35" y="35" font-size="21" fill="#243342" text-anchor="start">原文：I like tea</text>
+<text x="1085" y="35" font-size="21" fill="#243342" text-anchor="end">译文：我喜欢茶</text>
+<text x="145" y="91" font-size="18" fill="#243342" text-anchor="middle">已生成的译文</text>
+<text x="480" y="77" font-size="18" fill="#243342" text-anchor="middle">Encoder 各位置状态的读取权重</text>
+<text x="370" y="113" font-size="21" fill="#243342" text-anchor="middle">I</text>
+<text x="480" y="113" font-size="21" fill="#243342" text-anchor="middle">like</text>
+<text x="590" y="113" font-size="21" fill="#243342" text-anchor="middle">tea</text>
+<text x="785" y="91" font-size="18" fill="#243342" text-anchor="middle">加权汇总</text>
+<text x="1000" y="91" font-size="18" fill="#243342" text-anchor="middle">下一译文单元</text>
+<rect x="45" y="145" width="200" height="64" rx="5" fill="#f4f6f8" stroke="#d8e1e9"/>
+<text x="145" y="185" font-size="23" fill="#243342" text-anchor="middle">我</text>
+<line x1="255" y1="177" x2="308" y2="177" stroke="#6b7785" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="325" y="145" width="90" height="64" rx="5" fill="#edf3f6" stroke="#d8e1e9"/>
+<text x="370" y="185" font-size="23" fill="#425969" text-anchor="middle">0.10</text>
+<rect x="435" y="145" width="90" height="64" rx="5" fill="#286681" stroke="#d8e1e9"/>
+<text x="480" y="185" font-size="23" fill="white" text-anchor="middle">0.80</text>
+<rect x="545" y="145" width="90" height="64" rx="5" fill="#edf3f6" stroke="#d8e1e9"/>
+<text x="590" y="185" font-size="23" fill="#425969" text-anchor="middle">0.10</text>
+<line x1="650" y1="177" x2="709" y2="177" stroke="#6b7785" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="720" y="145" width="130" height="64" rx="5" fill="#f1f5f7" stroke="#d8e1e9"/>
+<text x="785" y="185" font-size="20" fill="#243342" text-anchor="middle">Context</text>
+<line x1="860" y1="177" x2="925" y2="177" stroke="#6b7785" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="940" y="145" width="120" height="64" rx="5" fill="#e6f0eb" stroke="#8eaf9f"/>
+<text x="1000" y="185" font-size="24" fill="#243342" text-anchor="middle">喜欢</text>
+<text x="900" y="136" font-size="14" fill="#617080" text-anchor="middle">预测</text>
+<rect x="45" y="255" width="200" height="64" rx="5" fill="#f4f6f8" stroke="#d8e1e9"/>
+<text x="145" y="295" font-size="23" fill="#243342" text-anchor="middle">我 喜欢</text>
+<line x1="255" y1="287" x2="308" y2="287" stroke="#6b7785" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="325" y="255" width="90" height="64" rx="5" fill="#edf3f6" stroke="#d8e1e9"/>
+<text x="370" y="295" font-size="23" fill="#425969" text-anchor="middle">0.05</text>
+<rect x="435" y="255" width="90" height="64" rx="5" fill="#edf3f6" stroke="#d8e1e9"/>
+<text x="480" y="295" font-size="23" fill="#425969" text-anchor="middle">0.10</text>
+<rect x="545" y="255" width="90" height="64" rx="5" fill="#286681" stroke="#d8e1e9"/>
+<text x="590" y="295" font-size="23" fill="white" text-anchor="middle">0.85</text>
+<line x1="650" y1="287" x2="709" y2="287" stroke="#6b7785" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="720" y="255" width="130" height="64" rx="5" fill="#f1f5f7" stroke="#d8e1e9"/>
+<text x="785" y="295" font-size="20" fill="#243342" text-anchor="middle">Context</text>
+<line x1="860" y1="287" x2="925" y2="287" stroke="#6b7785" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="940" y="255" width="120" height="64" rx="5" fill="#e6f0eb" stroke="#8eaf9f"/>
+<text x="1000" y="295" font-size="24" fill="#243342" text-anchor="middle">茶</text>
+<text x="900" y="246" font-size="14" fill="#617080" text-anchor="middle">预测</text>
+<text x="35" y="374" font-size="16" fill="#617080" text-anchor="start">深色表示较高权重；每行权重之和为 1。</text>
+<text x="1085" y="400" font-size="15" fill="#617080" text-anchor="end">教学设定：词语切分与权重用于示意</text>
+</g></svg>

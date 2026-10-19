@@ -1,13 +1,13 @@
 # 1.5 Attention 的结构改进、计算优化与架构扩展
 
-Attention 方法可按其改变的计算对象分类。调整 KV 表示、减少位置对、重排 GPU 计算与改变状态更新，解决的是不同问题；方法名称相近不代表作用相同。
+Attention 方法可按其改变的计算对象分类。调整 KV 表示、减少位置对、重排 GPU 计算与改变状态更新，解决的是不同问题。
 
 <figure align="center">
 <img src="../../assets/overview/attention-landscape.svg" alt="Attention 技术路线图，按表示、连接、实现、缓存与状态更新划分">
 <figcaption><p align="center">图 1-9　Attention 技术路线</p></figcaption>
 </figure>
 
-图中按设计问题组织技术路线与后续章节，不表示历史继承关系。
+图中按设计问题组织技术路线与后续章节。
 
 ## 按设计问题定位方法
 
@@ -24,7 +24,7 @@ Attention 方法可按其改变的计算对象分类。调整 KV 表示、减少
 
 <p align="center">表 1-11　Attention 优化路线</p>
 
-下文给出这些分类的具体依据。表中的分组用于定位问题，不要求一个方法只能属于一组。
+一个方法可以同时涉及多类设计问题。
 
 ## KV 表示与 KV 管理
 
@@ -35,11 +35,11 @@ MQA 让多个 Query Head 共用一组 Key 和 Value；GQA 为每组 Query Head �
 <figcaption><p align="center">图 1-10　MHA、GQA 与 MQA</p></figcaption>
 </figure>
 
-图中 Query Head 数保持一致，KV Head 数随共享方式变化；减少 KV Head 不等于按同样比例减少 Query 的读取次数。[Ainslie et al.，Figure 2](https://arxiv.org/html/2305.13245v3)
+图中 Query Head 数保持一致，KV Head 数随共享方式变化；各 Query Head 仍分别执行 Attention 计算。[Ainslie et al.，Figure 2](https://arxiv.org/html/2305.13245v3)
 
 MLA 联合压缩 Key 与 Value 的表示，推理时缓存压缩后的 Latent 及必要的位置相关信息。它与 Head 共享的实现方式不同。[DeepSeek-AI, 2024，§2.1](https://arxiv.org/html/2405.04434v5)
 
-PagedAttention 则允许 KV Cache 存储在不连续的物理块中，通过逻辑块到物理块的映射读取。它主要处理分配、碎片和共享问题；单纯采用分页布局并不删除历史 Token，也不等于 KV 量化。[Kwon et al., 2023，§4.1—4.2](https://arxiv.org/html/2309.06180v1)
+PagedAttention 则允许 KV Cache 存储在不连续的物理块中，通过逻辑块到物理块的映射读取。它主要处理分配、碎片和共享问题；分页布局保持缓存中的 Token 内容与数值精度。[Kwon et al., 2023，§4.1—4.2](https://arxiv.org/html/2309.06180v1)
 
 ## Exact Attention 与 Sparse Attention
 
@@ -77,7 +77,7 @@ $$
 
 其中 $$q_t,k_t\in\mathbb{R}^{d_k}$$、$$v_t\in\mathbb{R}^{d_v}$$ 均按列向量书写；$$S_t\in\mathbb{R}^{d_\phi\times d_v}$$，$$z_t\in\mathbb{R}^{d_\phi}$$，初始状态为零，分母需非零。状态累积历史信息，读取时无需再次逐个访问全部历史 KV。固定特征与状态维度后，该构造的状态大小不随序列长度增加。[Katharopoulos et al., 2020，§3.2—3.4](https://proceedings.mlr.press/v119/katharopoulos20a/katharopoulos20a.pdf)
 
-从显式历史求和到上述递推式的步骤见[附录 A 英文术语、数学符号与补充推导](../../appendices/foundations.md)。固定大小描述的是逐步推理时的状态，不表示训练时所有 Token 的激活存储也为常数。
+从显式历史求和到上述递推式的步骤见[附录 A 英文术语、数学符号与补充推导](../../appendices/foundations.md)。固定大小描述的是逐步推理时的状态；训练所需的激活存储还取决于序列长度与实现。
 
 上述递推依赖可分解的核形式。标准 Softmax Attention 不具备同样的分解，不能通过交换矩阵乘法顺序直接得到这一固定大小状态的实现。后续方法还会改变状态的衰减、写入与更新方式。
 
@@ -85,7 +85,7 @@ Gated DeltaNet 将控制状态衰减的 Gate 与 Delta Rule 结合；Softmax Att
 
 ## Hybrid Architectures
 
-Hybrid 设计允许模型在不同 Layer 或模块中使用不同的序列运算，例如将 Attention 与状态更新模块组合。收益取决于组合位置、比例、训练和实现，不能仅凭“混合”推断能力或速度更好。Mamba-2 论文研究了 Structured State Space Duality（SSD）对应的状态模块、Attention 和 Multi-Layer Perceptron（MLP）的组合，提供了具体实例。[Dao & Gu, 2024，§9.2.3](https://arxiv.org/html/2405.21060v1)
+Hybrid 设计允许模型在不同 Layer 或模块中使用不同的序列运算，例如将 Attention 与状态更新模块组合。收益取决于组合位置、比例、训练和实现，需要通过具体实验评估。Mamba-2 论文研究了 Structured State Space Duality（SSD）对应的状态模块、Attention 和 Multi-Layer Perceptron（MLP）的组合，提供了具体实例。[Dao & Gu, 2024，§9.2.3](https://arxiv.org/html/2405.21060v1)
 
 图示来源与许可见[首章图表来源](../../appendices/references.md#首章图表来源)。
 

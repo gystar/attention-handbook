@@ -2,8 +2,6 @@
 
 > 状态：已规划，正文待写。
 
-本章目录如下，内容将在撰写并完成 Review 后补充。
-
 5.1 Gated Attention 的设计目标与基本结构
 
 5.2 Gate Placement 与参数化方式

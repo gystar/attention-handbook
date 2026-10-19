@@ -615,3 +615,27 @@ assets:
   attribution: Zhang, Lipton, Li & Smola; CC BY-SA 4.0; SVG 白底栅格化，图中内容未改动。
   license_url: https://creativecommons.org/licenses/by-sa/4.0/
   display_mode: local_file
+- id: translation-attention-en-zh-svg
+  source_id: bahdanau2014attention
+  locator: §3.1, equations (4)–(6); 本书教学示意
+  local_path: book/assets/overview/translation-attention-en-zh.svg
+  archive_status: downloaded
+  archive_note: 本书生成的本地教学图，不是原论文图片下载。
+  creation_mode: original_diagram
+  generator_path: scripts/render_translation_attention.py
+  sha256: f7acd978e9c7e7f690bf800affbed61fed0570fd35d32551b103bf32fba47206
+  bytes: 4382
+  attribution: 本书绘制；依据 Bahdanau et al. 的动态 Context 汇总机制，分词与权重为教学设定。
+  display_mode: local_file
+- id: translation-attention-en-zh-png
+  source_id: bahdanau2014attention
+  locator: §3.1, equations (4)–(6); 本书教学示意
+  local_path: book/assets/overview/translation-attention-en-zh.png
+  archive_status: downloaded
+  archive_note: 本书生成的本地教学图，不是原论文图片下载。
+  creation_mode: original_diagram
+  generator_path: scripts/render_translation_attention.py
+  sha256: 6cb8920aa850a70f5977683fcaa5d6e23ecc8d5c9406d81b534753a6e312aab8
+  bytes: 61231
+  attribution: 本书绘制；依据 Bahdanau et al. 的动态 Context 汇总机制，分词与权重为教学设定。
+  display_mode: local_file

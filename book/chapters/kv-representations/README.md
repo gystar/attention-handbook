@@ -2,8 +2,6 @@
 
 > 状态：已规划，正文待写。
 
-本章目录如下，内容将在撰写并完成 Review 后补充。
-
 4.1 Key–Value 表示的设计目标与优化路线
 
 4.2 MHA 的 Key–Value Projections 与缓存成本
