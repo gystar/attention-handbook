@@ -14,8 +14,12 @@
 | 1-4 | [d2l-seq2seq.png](overview/d2l-seq2seq.png)／[SVG 原文件](overview/d2l-seq2seq.svg) | Zhang, Lipton, Li & Smola，Dive into Deep Learning，Figure 10.7.1；CC BY-SA 4.0，SVG 白底栅格化，图中内容未改动 |
 | 1-5 | [PNG](overview/translation-attention-en-zh.png)／[SVG 源文件](overview/translation-attention-en-zh.svg) | 本书依据 Bahdanau §3.1 绘制；I like tea → 我喜欢茶，切分与权重为教学设定 |
 | 1-6 | [alammar-encoder-decoder.png](overview/alammar-encoder-decoder.png) | Jay Alammar 教程原图，CC BY-NC-SA 4.0；Encoder 与 Decoder 中三处 Attention 的位置 |
-| 1-7 | [prefill-decode.svg](overview/prefill-decode.svg) | 本书依据 [Kwon et al. §2.2](https://arxiv.org/html/2309.06180v1) 绘制；只展示位置关系，省略其余网络计算 |
-| 1-8 | [attention-landscape.svg](overview/attention-landscape.svg) | 本书原创，移至方法分类小节 |
+| 1-7 | [PNG](overview/autoregressive-steps.png)／[SVG](overview/autoregressive-steps.svg) | 本书依据 Kwon §2.1—2.2 绘制；生成脚本 scripts/render_context_figures.py |
+| 1-8 | [alammar-kv-cache.png](overview/alammar-kv-cache.png) | Jay Alammar，The Illustrated GPT-2；CC BY-NC-SA 4.0，原图未修改 |
+| 1-9 | [prefill-decode.svg](overview/prefill-decode.svg) | 本书依据 [Kwon et al. §2.2](https://arxiv.org/html/2309.06180v1) 绘制；只展示位置关系，省略其余网络计算 |
+| 1-10 | [PNG](overview/context-costs.png)／[SVG](overview/context-costs.svg) | 本书绘制；单 Head、固定配置、缓存全部历史的计数示意 |
+| 1-11 | [PNG](overview/context-evidence-position.png)／[SVG](overview/context-evidence-position.svg) | 本书依据 Lost in the Middle §3.1 绘制实验设置；未描绘实验结果 |
+| 1-12 | [attention-landscape.svg](overview/attention-landscape.svg) | 本书原创，移至方法分类小节 |
 | 2-1 | [Transformer Figure 2 左图](https://arxiv.org/html/1706.03762v7/Figures/ModalNet-19.png) | Vaswani et al.，原图远程引用，待本地归档 |
 | 4-1 | [GQA Figure 2](https://arxiv.org/html/2305.13245v3/images/gmq_architecture.png) | Ainslie et al.，CC BY 4.0；原图远程引用，待本地归档 |
 
@@ -37,3 +41,5 @@ Transformer 图表使用条件见原论文首页的转载声明。三张论文�
 新增 D2L SVG 来自作者仓库 `d2l-ai/d2l-en/img/seq2seq.svg`；许可见该仓库 LICENSE。新增翻译 Attention 图来自 `jalammar/jalammar.github.io/images/attention.png`；两者均保留原文件，Git blob 与 SHA-256 见 catalog.yaml。
 
 图 1-5 的生成脚本为仓库 `scripts/render_translation_attention.py`。原法英翻译图 `alammar-translation-attention.png` 保留为历史素材。
+
+图 1-7、1-10、1-11 的可编辑 SVG 与 PNG 由 `scripts/render_context_figures.py` 生成。图 1-8 通过作者 GitHub 仓库下载，源路径与校验值见 catalog.yaml。

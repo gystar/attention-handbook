@@ -126,7 +126,8 @@ sources:
   checked_on: '2026-10-19'
 - id: press2021alibi
   kind: paper
-  title: 'Train Short, Test Long: Attention with Linear Biases Enables Input Length Extrapolation'
+  title: 'Train Short, Test Long: Attention with Linear Biases Enables Input Length
+    Extrapolation'
   authors: Press, Smith & Lewis
   first_public_year: 2021
   version: 2108.12409v2
@@ -162,7 +163,8 @@ sources:
   checked_on: '2026-10-19'
 - id: ainslie2023gqa
   kind: paper
-  title: 'GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints'
+  title: 'GQA: Training Generalized Multi-Query Transformer Models from Multi-Head
+    Checkpoints'
   authors: Ainslie et al.
   first_public_year: 2023
   version: 2305.13245v3
@@ -250,7 +252,8 @@ sources:
   checked_on: '2026-10-19'
 - id: deepseek2024mla
   kind: paper
-  title: 'DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model'
+  title: 'DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language
+    Model'
   authors: DeepSeek-AI
   first_public_year: 2024
   version: 2405.04434v5
@@ -267,7 +270,8 @@ sources:
   checked_on: '2026-10-19'
 - id: dao2024ssd
   kind: paper
-  title: 'Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality'
+  title: 'Transformers are SSMs: Generalized Models and Efficient Algorithms Through
+    Structured State Space Duality'
   authors: Tri Dao & Albert Gu
   first_public_year: 2024
   version: 2405.21060v1
@@ -304,7 +308,8 @@ sources:
   checked_on: '2026-10-19'
 - id: yuan2025nsa
   kind: paper
-  title: 'Native Sparse Attention: Hardware-Aligned and Natively Trainable Sparse Attention'
+  title: 'Native Sparse Attention: Hardware-Aligned and Natively Trainable Sparse
+    Attention'
   authors: Yuan et al.
   first_public_year: 2025
   version: 2502.11089v1
@@ -321,7 +326,8 @@ sources:
   checked_on: '2026-10-19'
 - id: qiu2025gatedattention
   kind: paper
-  title: 'Gated Attention for Large Language Models: Non-linearity, Sparsity, and Attention-Sink-Free'
+  title: 'Gated Attention for Large Language Models: Non-linearity, Sparsity, and
+    Attention-Sink-Free'
   authors: Qiu et al.
   first_public_year: 2025
   version: 2505.06708v1
@@ -436,7 +442,8 @@ sources:
   required_local: false
   archive_status: link_only
   checked_sections:
-  - How a single prediction is calculated；Flowing Through DistilBERT；Slicing the important part；页尾许可
+  - How a single prediction is calculated；Flowing Through DistilBERT；Slicing the important
+    part；页尾许可
   checked_on: '2026-10-19'
 - id: d2l-seq2seq
   kind: book
@@ -638,4 +645,81 @@ assets:
   sha256: 6cb8920aa850a70f5977683fcaa5d6e23ecc8d5c9406d81b534753a6e312aab8
   bytes: 61231
   attribution: 本书绘制；依据 Bahdanau et al. 的动态 Context 汇总机制，分词与权重为教学设定。
+  display_mode: local_file
+- id: autoregressive-steps-svg
+  source_id: kwon2023pagedattention
+  locator: §2.1—2.2
+  local_path: book/assets/overview/autoregressive-steps.svg
+  archive_status: downloaded
+  creation_mode: original_diagram
+  generator_path: scripts/render_context_figures.py
+  sha256: d1390abf2cde91bfe81d6d3384aa10d7b96002a78dce702dc28636ef76cb177c
+  bytes: 2026
+  attribution: 本书绘制；教学示意，非实测数据。
+  display_mode: local_file
+- id: autoregressive-steps-png
+  source_id: kwon2023pagedattention
+  locator: §2.1—2.2
+  local_path: book/assets/overview/autoregressive-steps.png
+  archive_status: downloaded
+  creation_mode: original_diagram
+  generator_path: scripts/render_context_figures.py
+  sha256: 02a54b35292a766fd1c8bc6748f9c6dcdabb842a7ff7afb40b183cf27bac2351
+  bytes: 52488
+  attribution: 本书绘制；教学示意，非实测数据。
+  display_mode: local_file
+- id: context-costs-svg
+  source_id: shazeer2019mqa
+  locator: §2.4；因果位置对计数
+  local_path: book/assets/overview/context-costs.svg
+  archive_status: downloaded
+  creation_mode: original_diagram
+  generator_path: scripts/render_context_figures.py
+  sha256: e164575b934b8cb9713dac3144e1aa9c8fcd969c6a25aef73b623fbf3e61fa53
+  bytes: 9675
+  attribution: 本书绘制；教学示意，非实测数据。
+  display_mode: local_file
+- id: context-costs-png
+  source_id: shazeer2019mqa
+  locator: §2.4；因果位置对计数
+  local_path: book/assets/overview/context-costs.png
+  archive_status: downloaded
+  creation_mode: original_diagram
+  generator_path: scripts/render_context_figures.py
+  sha256: 2fd356f11f0743d5a0bd8c40fc54251210e4f7ec83cb35bab50f9fbd7d9f4932
+  bytes: 74013
+  attribution: 本书绘制；教学示意，非实测数据。
+  display_mode: local_file
+- id: context-evidence-position-svg
+  source_id: liu2023lostmiddle
+  locator: §3.1；实验设置示意
+  local_path: book/assets/overview/context-evidence-position.svg
+  archive_status: downloaded
+  creation_mode: original_diagram
+  generator_path: scripts/render_context_figures.py
+  sha256: d9afb53cf3f514507ffbff68c849ec9394c72c8b1e3aa6e2a9c19bf008d5ecb9
+  bytes: 3659
+  attribution: 本书绘制；教学示意，非实测数据。
+  display_mode: local_file
+- id: context-evidence-position-png
+  source_id: liu2023lostmiddle
+  locator: §3.1；实验设置示意
+  local_path: book/assets/overview/context-evidence-position.png
+  archive_status: downloaded
+  creation_mode: original_diagram
+  generator_path: scripts/render_context_figures.py
+  sha256: 22c92bc9d62089c24b738f6605f3e1d917cac2755cc9f579fa57048e91e88e63
+  bytes: 45971
+  attribution: 本书绘制；教学示意，非实测数据。
+  display_mode: local_file
+- id: alammar-kv-cache
+  source_id: alammar2019gpt2
+  locator: 'Evaluation Time: Processing One Token at a Time'
+  download_url: https://jalammar.github.io/images/gpt2/gpt2-self-attention-qkv-3-2.png
+  local_path: book/assets/overview/alammar-kv-cache.png
+  archive_status: downloaded
+  sha256: 6c608bc2633dd7ce6a4c3469fc63d0e900632ee0caf3c99298f5a666e300888b
+  bytes: 87498
+  attribution: Jay Alammar, The Illustrated GPT-2; CC BY-NC-SA 4.0；原图未修改。
+  license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
   display_mode: local_file

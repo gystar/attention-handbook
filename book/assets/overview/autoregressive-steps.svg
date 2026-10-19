@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="330" viewBox="0 0 1080 330"><rect width="1080" height="330" fill="white"/><g font-family="Noto Sans CJK SC, sans-serif" fill="#243342">
+<text x="28" y="35" font-size="19">已有序列</text>
+<text x="590" y="35" font-size="19">模型输出</text>
+<text x="875" y="35" font-size="19">选取并追加</text>
+<rect x="28" y="65" width="355" height="58" rx="3" fill="#edf2f5" stroke="#cad5dd"/>
+<text x="45" y="102" font-size="24">The cat sat</text>
+<text x="401" y="101" font-size="27">→</text>
+<rect x="445" y="65" width="96" height="58" rx="3" fill="#edf2f5" stroke="#cad5dd"/>
+<text x="459" y="101" font-size="23">LLM</text>
+<text x="552" y="101" font-size="27">→</text>
+<rect x="590" y="65" width="240" height="58" rx="3" fill="#edf2f5" stroke="#cad5dd"/>
+<text x="610" y="101" font-size="21">词表上的概率分布</text>
+<text x="844" y="101" font-size="27">→</text>
+<rect x="885" y="65" width="160" height="58" rx="3" fill="#e3efe9" stroke="#cad5dd"/>
+<text x="912" y="102" font-size="24">on</text>
+<rect x="28" y="145" width="355" height="58" rx="3" fill="#edf2f5" stroke="#cad5dd"/>
+<text x="45" y="182" font-size="24">The cat sat on</text>
+<text x="401" y="181" font-size="27">→</text>
+<rect x="445" y="145" width="96" height="58" rx="3" fill="#edf2f5" stroke="#cad5dd"/>
+<text x="459" y="181" font-size="23">LLM</text>
+<text x="552" y="181" font-size="27">→</text>
+<rect x="590" y="145" width="240" height="58" rx="3" fill="#edf2f5" stroke="#cad5dd"/>
+<text x="610" y="181" font-size="21">词表上的概率分布</text>
+<text x="844" y="181" font-size="27">→</text>
+<rect x="885" y="145" width="160" height="58" rx="3" fill="#e3efe9" stroke="#cad5dd"/>
+<text x="912" y="182" font-size="24">the</text>
+<text x="28" y="258" font-size="20">每轮选出的 Token 成为下一轮输入的一部分。</text>
+<text x="28" y="302" font-size="17">教学示例：按 on、the 分步展示；实际 Token 边界取决于 Tokenizer。</text>
+</g></svg>

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="330" viewBox="0 0 1080 330"><rect width="1080" height="330" fill="white"/><g font-family="Noto Sans CJK SC, sans-serif" fill="#243342">
+<text x="28" y="34" font-size="22">同一个问题 + 相同文档集合</text>
+<text x="750" y="34" font-size="20">只移动含答案的文档</text>
+<text x="28" y="102" font-size="21">开头</text>
+<rect x="115" y="70" width="111" height="48" rx="3" fill="#dcece4" stroke="#cad5dd"/>
+<text x="127" y="100" font-size="18">相关文档</text>
+<rect x="238" y="70" width="111" height="48" rx="3" fill="#f1f4f6" stroke="#cad5dd"/>
+<text x="250" y="100" font-size="18">其他文档</text>
+<rect x="361" y="70" width="111" height="48" rx="3" fill="#f1f4f6" stroke="#cad5dd"/>
+<text x="373" y="100" font-size="18">其他文档</text>
+<rect x="484" y="70" width="111" height="48" rx="3" fill="#f1f4f6" stroke="#cad5dd"/>
+<text x="496" y="100" font-size="18">其他文档</text>
+<rect x="607" y="70" width="111" height="48" rx="3" fill="#f1f4f6" stroke="#cad5dd"/>
+<text x="619" y="100" font-size="18">其他文档</text>
+<rect x="730" y="70" width="111" height="48" rx="3" fill="#f1f4f6" stroke="#cad5dd"/>
+<text x="742" y="100" font-size="18">其他文档</text>
+<rect x="853" y="70" width="111" height="48" rx="3" fill="#f1f4f6" stroke="#cad5dd"/>
+<text x="865" y="100" font-size="18">其他文档</text>
+<text x="28" y="177" font-size="21">中间</text>
+<rect x="115" y="145" width="111" height="48" rx="3" fill="#f1f4f6" stroke="#cad5dd"/>
+<text x="127" y="175" font-size="18">其他文档</text>
+<rect x="238" y="145" width="111" height="48" rx="3" fill="#f1f4f6" stroke="#cad5dd"/>
+<text x="250" y="175" font-size="18">其他文档</text>
+<rect x="361" y="145" width="111" height="48" rx="3" fill="#f1f4f6" stroke="#cad5dd"/>
+<text x="373" y="175" font-size="18">其他文档</text>
+<rect x="484" y="145" width="111" height="48" rx="3" fill="#dcece4" stroke="#cad5dd"/>
+<text x="496" y="175" font-size="18">相关文档</text>
+<rect x="607" y="145" width="111" height="48" rx="3" fill="#f1f4f6" stroke="#cad5dd"/>
+<text x="619" y="175" font-size="18">其他文档</text>
+<rect x="730" y="145" width="111" height="48" rx="3" fill="#f1f4f6" stroke="#cad5dd"/>
+<text x="742" y="175" font-size="18">其他文档</text>
+<rect x="853" y="145" width="111" height="48" rx="3" fill="#f1f4f6" stroke="#cad5dd"/>
+<text x="865" y="175" font-size="18">其他文档</text>
+<text x="28" y="252" font-size="21">结尾</text>
+<rect x="115" y="220" width="111" height="48" rx="3" fill="#f1f4f6" stroke="#cad5dd"/>
+<text x="127" y="250" font-size="18">其他文档</text>
+<rect x="238" y="220" width="111" height="48" rx="3" fill="#f1f4f6" stroke="#cad5dd"/>
+<text x="250" y="250" font-size="18">其他文档</text>
+<rect x="361" y="220" width="111" height="48" rx="3" fill="#f1f4f6" stroke="#cad5dd"/>
+<text x="373" y="250" font-size="18">其他文档</text>
+<rect x="484" y="220" width="111" height="48" rx="3" fill="#f1f4f6" stroke="#cad5dd"/>
+<text x="496" y="250" font-size="18">其他文档</text>
+<rect x="607" y="220" width="111" height="48" rx="3" fill="#f1f4f6" stroke="#cad5dd"/>
+<text x="619" y="250" font-size="18">其他文档</text>
+<rect x="730" y="220" width="111" height="48" rx="3" fill="#f1f4f6" stroke="#cad5dd"/>
+<text x="742" y="250" font-size="18">其他文档</text>
+<rect x="853" y="220" width="111" height="48" rx="3" fill="#dcece4" stroke="#cad5dd"/>
+<text x="865" y="250" font-size="18">相关文档</text>
+<text x="28" y="311" font-size="18">比较不同位置的回答正确率；此图展示实验设置，不表示模型得分。</text>
+</g></svg>

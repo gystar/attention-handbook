@@ -4,7 +4,7 @@
 
 <figure align="center">
 <img src="../../assets/overview/attention-landscape.svg" alt="Attention 技术路线图，按表示、连接、实现、缓存与状态更新划分">
-<figcaption><p align="center">图 1-8　Attention 技术路线</p></figcaption>
+<figcaption><p align="center">图 1-12　Attention 技术路线</p></figcaption>
 </figure>
 
 ## 按设计问题定位方法
