@@ -6,9 +6,9 @@
 
 | 术语 | 本书中的含义 | 对应正文 |
 | --- | --- | --- |
-| Attention Mechanism | 根据当前输入计算匹配权重并汇总信息的机制；本书首先介绍 Softmax Attention | [1.1 从表示学习到 Attention 机制](../chapters/overview/introduction.md) |
-| Large Language Model（LLM） | 大语言模型；本书主要分析 Decoder-only 自回归场景 | [1.1 从表示学习到 Attention 机制](../chapters/overview/introduction.md) |
-| Token | 模型处理的离散序列单元，不必对应完整单词或汉字 | [1.1 从表示学习到 Attention 机制](../chapters/overview/introduction.md) |
+| Attention Mechanism | 根据当前输入计算匹配权重并汇总信息的机制；本书首先介绍 Softmax Attention | [1.1 从 Representation Learning 到 Attention 机制](../chapters/overview/introduction.md) |
+| Large Language Model（LLM） | 大语言模型；本书主要分析 Decoder-only 自回归场景 | [1.1 从 Representation Learning 到 Attention 机制](../chapters/overview/introduction.md) |
+| Token | 模型处理的离散序列单元，不必对应完整单词或汉字 | [1.1 从 Representation Learning 到 Attention 机制](../chapters/overview/introduction.md) |
 | Sequence-to-Sequence（Seq2Seq） | 从输入序列生成输出序列的建模框架 | [1.3 从 Seq2Seq 中的 Attention 到 Transformer](../chapters/overview/from-seq2seq-to-transformer.md) |
 | Query / Key / Value（QKV） | 发起匹配、参与匹配和被汇总的向量表示 | [1.2 Attention 机制的基本计算](../chapters/overview/attention-in-llms.md) |
 | Self-Attention / Cross-Attention | 按 Query 与 KV 来自同一序列还是不同序列区分 | [1.3 从 Seq2Seq 中的 Attention 到 Transformer](../chapters/overview/from-seq2seq-to-transformer.md) |

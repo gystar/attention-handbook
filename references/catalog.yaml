@@ -473,3 +473,15 @@ assets:
   attribution: Jay Alammar, The Illustrated Transformer (2018), CC BY-NC-SA 4.0; 原图未修改。
   license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
   display_mode: local_file
+- id: context-apple
+  source_id: sanderson2024attention
+  locator: Motivating Examples（概念参考，非原图改绘）
+  local_path: book/assets/overview/context-apple.png
+  archive_status: downloaded
+  archive_note: 此状态表示已取得本地文件；图片由内置 imagegen 生成，不是从参考来源下载的原图。
+  creation_mode: ai_generated
+  prompt_path: book/assets/overview/context-apple.prompt.txt
+  sha256: 04a418fa25e13d530e606a1a14b935b5653a718772c15ff966ffd45cc664e99a
+  bytes: 1675130
+  attribution: 本书使用内置 imagegen 生成的词义教学示意，非真实事件照片或实测数据。
+  display_mode: local_file

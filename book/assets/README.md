@@ -9,9 +9,10 @@
 | 图号 | 文件或原始位置 | 来源与存储状态 |
 | --- | --- | --- |
 | 1-1a | [alammar-embeddings.png](overview/alammar-embeddings.png) | Jay Alammar 教程原图，本地保存，CC BY-NC-SA 4.0 |
-| 1-1b | [alammar-self-attention.png](overview/alammar-self-attention.png) | 同上；Encoder 场景的可视化 |
-| 1-1c | [alammar-encoder.png](overview/alammar-encoder.png) | 同上；简化 Encoder 层，非 Decoder-only 全图 |
-| 1-1d | [attention-landscape.svg](overview/attention-landscape.svg) | 本书原创，移至方法分类小节 |
+| 1-1b | [context-apple.png](overview/context-apple.png) | 本书使用内置 imagegen 生成；上下文词义教学示意，非真实事件或实测数据；提示词见 [context-apple.prompt.txt](overview/context-apple.prompt.txt) |
+| 1-1c | [alammar-self-attention.png](overview/alammar-self-attention.png) | 同上；Encoder 场景的可视化 |
+| 1-1d | [alammar-encoder.png](overview/alammar-encoder.png) | 同上；简化 Encoder 层，非 Decoder-only 全图 |
+| 1-1e | [attention-landscape.svg](overview/attention-landscape.svg) | 本书原创，移至方法分类小节 |
 | 1-2 | [Transformer Figure 2 左图](https://arxiv.org/html/1706.03762v7/Figures/ModalNet-19.png) | Vaswani et al.，原图远程引用，待本地归档 |
 | 1-3 | [Transformer Figure 1](https://arxiv.org/html/1706.03762v7/Figures/ModalNet-21.png) | Vaswani et al.，原图远程引用，待本地归档 |
 | 1-4 | [prefill-decode.svg](overview/prefill-decode.svg) | 本书依据 [Kwon et al. §2.2](https://arxiv.org/html/2309.06180v1) 绘制；只展示位置关系，省略其余网络计算 |

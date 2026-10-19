@@ -4,7 +4,7 @@
 
 | 本节 | 要回答的问题 |
 | --- | --- |
-| [1.1 从表示学习到 Attention 机制](introduction.md) | 模型为何需要上下文，Attention 机制处于什么位置？ |
+| [1.1 从 Representation Learning 到 Attention 机制](introduction.md) | 模型为何需要上下文，Attention 机制处于什么位置？ |
 | [1.2 Attention 机制的基本计算](attention-in-llms.md) | QKV、Mask 与加权求和如何形成 Attention 输出？ |
 | [1.3 从 Seq2Seq 中的 Attention 到 Transformer](from-seq2seq-to-transformer.md) | 从动态读取 Encoder 状态到 Self-Attention，架构发生了什么改变？ |
 | [1.4 LLM 中的计算瓶颈、KV Cache 与 Long Context](bottlenecks-and-context.md) | 为什么长输入、逐 Token 生成和长上下文能力需要分别分析？ |

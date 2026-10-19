@@ -13,3 +13,7 @@
 | 页面呈现 | 本地三张原图已查看；GitBook 页面宽度、图片缩放和同步后的导航尚待检查 |
 
 本轮新增引言完成作者自查。实际下载的是三张教程原图，原有 9 篇必备 PDF 与 3 张论文原图仍未归档，不能将本轮结果视为整章全部通过。没有重用未确认转载条件的教材或视频截图，3Blue1Brown 材料以原始链接提供。
+
+## Representation Learning 术语补充复查
+
+2026-10-19，作者自查：1.1 标题保留英文术语 Representation Learning，替换“从数据中学习表示”小标题；先用两句话定义 Representation 与 Representation Learning，再说明 Deep Learning 的关系。补充 Tokenizer 与 Embedding Layer 的中文引入，相关入口同步采用正文标题。依据仍为已核查的 Goodfellow Chapter 1，未增加实验结论。此补充版本见 [representation-learning.sha256](representation-learning.sha256)，前述清单保留为修改前快照。本地结构和链接名称检查通过，线上呈现待同步确认。
