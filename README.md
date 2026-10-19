@@ -40,9 +40,9 @@ python3 scripts/sources.py
 
 ## GitBook 接入
 
-初始配置将仓库根目录作为一个 Space 的映射目录，`.gitbook.yaml` 的内容根目录设为 `book/`。将仓库推送到 GitHub 或 GitLab 后，在 GitBook 选择对应仓库、分支并核对映射，首次同步选择 Repository → GitBook。站点映射文件按实际连接结果维护。[GitBook 内容配置](https://gitbook.com/docs/docs-as-code/git-sync/content-configuration)
+`gitbook-docs.yaml` 将仓库根目录映射为一个 Space，`.gitbook.yaml` 的内容根目录设为 `book/`。两个配置文件都需推送到同步分支。在 GitBook 选择对应仓库、分支并核对映射，首次同步选择 Repository → GitBook。[GitBook 内容配置](https://gitbook.com/docs/docs-as-code/git-sync/content-configuration)
 
-目前尚未接入远程仓库或 GitBook 站点；发布检查在接入后执行。
+远程同步及 GitBook 页面呈现仍待验证；发布检查在同步成功后执行。
 
 首次连接的目录设置、预览项目和更新流程见 [DEPLOYMENT.md](DEPLOYMENT.md)。
 

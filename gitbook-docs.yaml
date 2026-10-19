@@ -1,0 +1,12 @@
+$schema: https://api.gitbook.com/gitbook-docs.yaml
+site:
+  title: 大模型 Attention：原理、演进与优化
+  structure:
+    - type: space
+      key: attention-handbook
+      title: 大模型 Attention：原理、演进与优化
+      path: handbook
+      default: true
+      content:
+        directory: ./
+        language: zh
