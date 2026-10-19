@@ -4,7 +4,7 @@ Attention 方法可按其改变的计算对象分类。调整 KV 表示、减少
 
 ![Attention 技术路线图，按表示、连接、实现、缓存与状态更新划分](../../assets/overview/attention-landscape.svg)
 
-图 1-8　本书绘制的技术路线图，用于定位设计问题与后续章节，不表示历史继承关系。
+图 1-7　本书绘制的技术路线图，用于定位设计问题与后续章节，不表示历史继承关系。
 
 ## 按设计问题定位方法
 
@@ -27,7 +27,7 @@ MQA 让多个 Query Head 共用一组 Key 和 Value；GQA 为每组 Query Head �
 
 ![GQA 原论文图 2：MHA 的 Query 与 KV 一一对应，GQA 分组共享 KV，MQA 全部共享一组 KV](https://arxiv.org/html/2305.13245v3/images/gmq_architecture.png)
 
-图 1-9　MHA、GQA 与 MQA 的 Head 组织，引用自 Ainslie et al.，Figure 2，CC BY 4.0。图中 Query Head 数保持一致，KV Head 数随共享方式变化；减少 KV Head 不等于按同样比例减少 Query 的读取次数。[原图及出处](https://arxiv.org/html/2305.13245v3)
+图 1-8　MHA、GQA 与 MQA 的 Head 组织，引用自 Ainslie et al.，Figure 2，CC BY 4.0。图中 Query Head 数保持一致，KV Head 数随共享方式变化；减少 KV Head 不等于按同样比例减少 Query 的读取次数。[原图及出处](https://arxiv.org/html/2305.13245v3)
 
 MLA 联合压缩 Key 与 Value 的表示，推理时缓存压缩后的 Latent 及必要的位置相关信息。它与 Head 共享的实现方式不同。[DeepSeek-AI, 2024，§2.1](https://arxiv.org/html/2405.04434v5)
 

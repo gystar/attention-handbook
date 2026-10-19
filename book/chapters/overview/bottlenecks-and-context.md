@@ -6,7 +6,7 @@
 
 ![Prefill 与 Decode 示意图：Prefill 同时处理已知前缀的多个 Query；Decode 处理一个新 Query，并读取缓存和当前 Token 的 KV](../../assets/overview/prefill-decode.svg)
 
-图 1-7　本书绘制的单层计算示意。Prefill 的最后一个位置用于产生首个新 Token 的预测；随后每个 Decode 步骤处理新输入 Token 并预测再下一个 Token。图中仅展示 Attention 的位置关系，预测还需经过模型后续计算及输出头；Batch、其他 Head、投影和 FFN 均省略。计算阶段依据 [Kwon et al., 2023，§2.2](https://arxiv.org/html/2309.06180v1)。
+图 1-6　本书绘制的单层计算示意。Prefill 的最后一个位置用于产生首个新 Token 的预测；随后每个 Decode 步骤处理新输入 Token 并预测再下一个 Token。图中仅展示 Attention 的位置关系，预测还需经过模型后续计算及输出头；Batch、其他 Head、投影和 FFN 均省略。计算阶段依据 [Kwon et al., 2023，§2.2](https://arxiv.org/html/2309.06180v1)。
 
 | 阶段 | 已知输入与计算方式 | 与缓存相关的特点 |
 | --- | --- | --- |

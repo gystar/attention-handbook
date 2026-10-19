@@ -9,10 +9,10 @@
 | Attention Mechanism | 根据当前输入计算匹配权重并汇总信息的机制；本书首先介绍 Softmax Attention | [1.1 从 Representation Learning 到 Attention 机制](../chapters/overview/introduction.md) |
 | Large Language Model（LLM） | 大语言模型；本书主要分析 Decoder-only 自回归场景 | [1.1 从 Representation Learning 到 Attention 机制](../chapters/overview/introduction.md) |
 | Token | 模型处理的离散序列单元，不必对应完整单词或汉字 | [1.1 从 Representation Learning 到 Attention 机制](../chapters/overview/introduction.md) |
-| Sequence-to-Sequence（Seq2Seq） | 从输入序列生成输出序列的建模框架 | [1.3 从 Seq2Seq 中的 Attention 到 Transformer](../chapters/overview/from-seq2seq-to-transformer.md) |
-| Query / Key / Value（QKV） | 发起匹配、参与匹配和被汇总的向量表示 | [1.2 Attention 机制的基本计算](../chapters/overview/attention-in-llms.md) |
-| Self-Attention / Cross-Attention | 按 Query 与 KV 来自同一序列还是不同序列区分 | [1.3 从 Seq2Seq 中的 Attention 到 Transformer](../chapters/overview/from-seq2seq-to-transformer.md) |
-| Causal Mask | 只允许访问当前位置及此前位置的访问约束 | [1.3 从 Seq2Seq 中的 Attention 到 Transformer](../chapters/overview/from-seq2seq-to-transformer.md) |
+| Sequence-to-Sequence（Seq2Seq） | 从输入序列生成输出序列的建模框架 | [1.2 从 Seq2Seq 中的 Attention 到 Transformer](../chapters/overview/from-seq2seq-to-transformer.md) |
+| Query / Key / Value（QKV） | 发起匹配、参与匹配和被汇总的向量表示 | [1.3 Transformer 中的 Attention 计算](../chapters/overview/attention-in-llms.md) |
+| Self-Attention / Cross-Attention | 按 Query 与 KV 来自同一序列还是不同序列区分 | [1.2 从 Seq2Seq 中的 Attention 到 Transformer](../chapters/overview/from-seq2seq-to-transformer.md) |
+| Causal Mask | 只允许访问当前位置及此前位置的访问约束 | [1.2 从 Seq2Seq 中的 Attention 到 Transformer](../chapters/overview/from-seq2seq-to-transformer.md) |
 | Prefill / Decode | 处理已知 Prompt / 逐步处理生成 Token 的两个阶段 | [1.4 LLM 中的计算瓶颈、KV Cache 与 Long Context](../chapters/overview/bottlenecks-and-context.md) |
 | Multi-Head Attention（MHA） | 多个 Head 分别计算 Attention 后组合输出 | [1.5 Attention 的结构改进、计算优化与架构扩展](../chapters/overview/optimization-landscape.md) |
 | Multi-Query Attention（MQA） | 多个 Query Head 共享一组 KV | [1.5 Attention 的结构改进、计算优化与架构扩展](../chapters/overview/optimization-landscape.md) |

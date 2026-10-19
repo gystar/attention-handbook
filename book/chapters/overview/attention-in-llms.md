@@ -1,10 +1,10 @@
-# 1.2 Attention 机制的基本计算
+# 1.3 Transformer 中的 Attention 计算
 
-上一节说明了 Attention 机制用于结合上下文更新表示。本节给出标准 Transformer 中 QKV、Mask 与加权求和的计算定义；每个 Token 的输入表示是一行向量。
+上一节区分了 Transformer 中不同 Attention 的信息来源与访问范围。本节给出标准 Transformer 中 QKV、Mask 与加权求和的计算定义；每个 Token 的输入表示是一行向量。
 
 ## 从向量表示到 QKV
 
-标准 Transformer 的 Attention 层将输入表示分别映射为 Query、Key 和 Value 三类向量。Query 与 Key 用于计算匹配分数，Value 提供需要汇总的内容。在 Self-Attention 中，三者来自同一序列的表示，但通常使用不同的投影参数。
+标准 Transformer 的 Attention 层将输入表示分别映射为 Query、Key 和 Value 三类向量。Query 与 Key 用于计算匹配分数，Value 提供需要汇总的内容。在 Self-Attention 中，三者来自同一序列的表示，但通常使用不同的投影参数。在 Encoder–Decoder Cross-Attention 中，Query 来自 Decoder，Key 和 Value 来自 Encoder 的最终输出。
 
 一个 Attention Head 是一组这样的匹配与汇总计算；Multi-Head Attention 并行执行多组计算，再组合输出。以下只考虑一个 Head，省略一次同时处理多条序列的 Batch 维度和网络的 Layer 维度。
 
@@ -70,4 +70,4 @@ $$
 
 视频的示意图使用了自己的向量排列方式；本书统一按 Token 占据矩阵行来书写，Softmax 沿 Key 维度归一化。视频及[作者配套图文](https://www.3blue1brown.com/lessons/attention/)用于理解计算过程，精确定义以上述公式为准。时间段依据[作者字幕](https://github.com/3b1b/captions/blob/main/2024/attention/english/captions.srt)核对。
 
-下一节：[1.3 从 Seq2Seq 中的 Attention 到 Transformer](from-seq2seq-to-transformer.md)。
+下一节：[1.4 LLM 中的计算瓶颈、KV Cache 与 Long Context](bottlenecks-and-context.md)。

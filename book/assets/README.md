@@ -8,17 +8,16 @@
 
 | 图号 | 文件或原始位置 | 来源与存储状态 |
 | --- | --- | --- |
-| 1-1 | [alammar-token-embeddings.png](overview/alammar-token-embeddings.png) | Jay Alammar，The Illustrated GPT-2，Input Encoding；CC BY-NC-SA 4.0，原图未修改 |
+| 1-1 | [alammar-sentence-representation.png](overview/alammar-sentence-representation.png) | Jay Alammar，A Visual Guide to Using BERT for the First Time；英文文本到逐 Token 向量，CC BY-NC-SA 4.0，原图未修改 |
 | 1-2 | [context-apple.png](overview/context-apple.png) | 本书使用内置 imagegen 生成；上下文词义教学示意，非真实事件或实测数据；提示词见 [context-apple.prompt.txt](overview/context-apple.prompt.txt) |
 | 1-3 | [alammar-self-attention.png](overview/alammar-self-attention.png) | Jay Alammar 教程原图，CC BY-NC-SA 4.0；Encoder 场景的可视化 |
-| 1-4 | [alammar-encoder.png](overview/alammar-encoder.png) | Jay Alammar 教程原图，CC BY-NC-SA 4.0；简化 Encoder 层，非 Decoder-only 全图 |
+| 1-4 | [alammar-encoder-decoder.png](overview/alammar-encoder-decoder.png) | Jay Alammar 教程原图，CC BY-NC-SA 4.0；Encoder 与 Decoder 中三处 Attention 的位置 |
 | 1-5 | [Transformer Figure 2 左图](https://arxiv.org/html/1706.03762v7/Figures/ModalNet-19.png) | Vaswani et al.，原图远程引用，待本地归档 |
-| 1-6 | [Transformer Figure 1](https://arxiv.org/html/1706.03762v7/Figures/ModalNet-21.png) | Vaswani et al.，原图远程引用，待本地归档 |
-| 1-7 | [prefill-decode.svg](overview/prefill-decode.svg) | 本书依据 [Kwon et al. §2.2](https://arxiv.org/html/2309.06180v1) 绘制；只展示位置关系，省略其余网络计算 |
-| 1-8 | [attention-landscape.svg](overview/attention-landscape.svg) | 本书原创，移至方法分类小节 |
-| 1-9 | [GQA Figure 2](https://arxiv.org/html/2305.13245v3/images/gmq_architecture.png) | Ainslie et al.，CC BY 4.0；原图远程引用，待本地归档 |
+| 1-6 | [prefill-decode.svg](overview/prefill-decode.svg) | 本书依据 [Kwon et al. §2.2](https://arxiv.org/html/2309.06180v1) 绘制；只展示位置关系，省略其余网络计算 |
+| 1-7 | [attention-landscape.svg](overview/attention-landscape.svg) | 本书原创，移至方法分类小节 |
+| 1-8 | [GQA Figure 2](https://arxiv.org/html/2305.13245v3/images/gmq_architecture.png) | Ainslie et al.，CC BY 4.0；原图远程引用，待本地归档 |
 
-Transformer 图表使用条件见原论文首页的转载声明。三张原图的目标路径和来源 ID 已记录在仓库 `references/catalog.yaml`，没有将尚不存在的本地文件作为链接。
+Transformer 图表使用条件见原论文首页的转载声明。三张论文原图的归档目标路径和来源 ID 已记录在仓库 `references/catalog.yaml`，没有将尚不存在的本地文件作为链接。
 
 原有两张原创 SVG 已通过 librsvg 2.58 本地栅格预览检查；此记录只覆盖图本身，不代表 GitBook 页面中的实际显示已检查。
 
@@ -27,4 +26,8 @@ Transformer 图表使用条件见原论文首页的转载声明。三张原图�
 
 三张 Alammar 原图来自 [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)，以 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 原样收录；署名见正文图注，禁止据本书其他文件的许可将这些素材视为可商用。源仓库为 `jalammar/jalammar.github.io`，来源路径、Git blob 与 SHA-256 见 catalog.yaml。原 `attention-context.svg` 保留为历史素材，当前正文不再引用。
 
-原 `alammar-embeddings.png` 和 `representation-learning.svg` 保留为历史素材，当前正文不再引用。图 1-1 使用 [The Illustrated GPT-2](https://jalammar.github.io/illustrated-gpt2/) 的英文原图，下载路径与校验值见 catalog.yaml；原图的英文词条为示意，正文另用子词分词例子说明单词与 Token 的区别。
+原 `alammar-embeddings.png`、`representation-learning.svg` 和 `alammar-token-embeddings.png` 保留为历史素材，当前正文不再引用。图 1-1 使用 [BERT 入门教程](https://jalammar.github.io/a-visual-guide-to-using-bert-for-the-first-time/)的英文原图，下载路径与校验值见 catalog.yaml；展示分词、编号与模型输出向量。
+
+原 `alammar-encoder.png` 保留为历史素材，图 1-4 改用同一教程 A High-Level Look 的 Encoder–Decoder 示意图；原图未修改，许可与校验值见 catalog.yaml。
+
+原论文 Transformer Figure 1 现作为 1.2 节的延伸链接，不再单独编为正文插图；其归档计划保留。图 1-4 已移入 1.2，原图 1-7 至 1-9 顺次改为图 1-6 至 1-8。

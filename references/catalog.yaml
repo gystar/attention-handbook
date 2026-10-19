@@ -427,6 +427,17 @@ sources:
   checked_sections:
   - Encoder models；Decoder models；Sequence-to-sequence models
   checked_on: '2026-10-19'
+- id: alammar2019bertguide
+  kind: blog
+  title: A Visual Guide to Using BERT for the First Time
+  authors: Jay Alammar
+  first_public_year: 2019
+  url: https://jalammar.github.io/a-visual-guide-to-using-bert-for-the-first-time/
+  required_local: false
+  archive_status: link_only
+  checked_sections:
+  - How a single prediction is calculated；Flowing Through DistilBERT；Slicing the important part；页尾许可
+  checked_on: '2026-10-19'
 assets:
 - id: transformer-architecture
   source_id: vaswani2017attention
@@ -517,5 +528,29 @@ assets:
   git_blob: 6e7b8c6e04e69a1a4e7a80b487b8837446614882
   bytes: 65486
   attribution: Jay Alammar, The Illustrated GPT-2 (2019), CC BY-NC-SA 4.0; 原图未修改。
+  license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+  display_mode: local_file
+- id: alammar-sentence-representation
+  source_id: alammar2019bertguide
+  locator: Flowing Through DistilBERT
+  download_url: https://jalammar.github.io/images/distilBERT/bert-model-input-output-1.png
+  local_path: book/assets/overview/alammar-sentence-representation.png
+  archive_status: downloaded
+  sha256: 72cbf2a86e99542ef122c8abfc6709d27ecc036bb76b74927fb52f8c2c546cf4
+  git_blob: abbe14f15461743abd856a43fe7a335a60ffb027
+  bytes: 102135
+  attribution: Jay Alammar (2019), CC BY-NC-SA 4.0; 原图未修改。
+  license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+  display_mode: local_file
+- id: alammar-encoder-decoder
+  source_id: alammar2018illustrated
+  locator: A High-Level Look
+  download_url: https://jalammar.github.io/images/t/Transformer_decoder.png
+  local_path: book/assets/overview/alammar-encoder-decoder.png
+  archive_status: downloaded
+  sha256: 0ea792bf69bb0866b550e332675bb25e207c3f7e5f34a27f73f399a9eb5b8219
+  git_blob: 7bb63c4957a8cbfba924bc7dca0e8263bc796765
+  bytes: 38751
+  attribution: Jay Alammar, The Illustrated Transformer (2018), CC BY-NC-SA 4.0; 原图未修改。
   license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
   display_mode: local_file
