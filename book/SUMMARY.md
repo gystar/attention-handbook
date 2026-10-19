@@ -5,7 +5,7 @@
 ## 总览
 
 * [1. Attention 的总体框架与技术演进](chapters/overview/README.md)
-  * [1.1 Attention 在 LLM 中的作用](chapters/overview/attention-in-llms.md)
+  * [1.1 Attention 机制的基本思想与作用](chapters/overview/attention-in-llms.md)
   * [1.2 从 Seq2Seq 到 Transformer](chapters/overview/from-seq2seq-to-transformer.md)
   * [1.3 计算瓶颈与 Long Context](chapters/overview/bottlenecks-and-context.md)
   * [1.4 Attention 优化的主要方向](chapters/overview/optimization-landscape.md)

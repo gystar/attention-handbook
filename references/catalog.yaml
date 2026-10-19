@@ -394,6 +394,18 @@ sources:
   - Word-based, Character-based, Subword tokenization
   - Encoding and decoding
   checked_on: '2026-10-19'
+- id: goodfellow2016deep-learning
+  kind: book
+  title: Deep Learning — Chapter 1 Introduction
+  authors: Ian Goodfellow, Yoshua Bengio & Aaron Courville
+  first_public_year: 2016
+  version: 在线章节，访问日期 2026-10-19
+  url: https://www.deeplearningbook.org/contents/intro.html
+  required_local: false
+  archive_status: link_only
+  checked_sections:
+  - Chapter 1：machine learning, representation learning, deep learning
+  checked_on: '2026-10-19'
 assets:
 - id: transformer-architecture
   source_id: vaswani2017attention

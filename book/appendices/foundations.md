@@ -6,6 +6,7 @@
 
 | 术语 | 本书中的含义 | 对应正文 |
 | --- | --- | --- |
+| Attention Mechanism | 根据当前输入计算匹配权重并汇总信息的机制；本书首先介绍 Softmax Attention | [1.1](../chapters/overview/attention-in-llms.md) |
 | Large Language Model（LLM） | 大语言模型；本书主要分析 Decoder-only 自回归场景 | [1.1](../chapters/overview/attention-in-llms.md) |
 | Token | 模型处理的离散序列单元，不必对应完整单词或汉字 | [1.1](../chapters/overview/attention-in-llms.md) |
 | Sequence-to-Sequence（Seq2Seq） | 从输入序列生成输出序列的建模框架 | [1.2](../chapters/overview/from-seq2seq-to-transformer.md) |

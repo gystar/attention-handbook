@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="550" viewBox="0 0 900 550" role="img" aria-labelledby="title desc">
+<title id="title">Attention 机制在机器学习与语言模型中的位置</title>
+<desc id="desc">深度学习属于机器学习。Transformer 是深度神经网络的一类架构，包含 Attention 层和 FFN 等组件。本书讨论的 LLM 采用 Transformer 架构。箭头关系不同，不是一条包含链。</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#475569"/></marker></defs>
+<rect width="900" height="550" rx="16" fill="#f8fafc"/>
+<g font-family="Noto Sans CJK SC, sans-serif" text-anchor="middle" fill="#0f172a">
+<text x="450" y="38" font-size="23" font-weight="bold">学习方法、网络架构与计算组件</text>
+<g fill="#e0f2fe" stroke="#0284c7" stroke-width="2">
+<rect x="40" y="70" width="370" height="74" rx="10"/>
+<rect x="40" y="210" width="370" height="74" rx="10"/>
+<rect x="40" y="350" width="370" height="92" rx="10"/>
+</g>
+<g fill="#f0fdf4" stroke="#16a34a" stroke-width="2">
+<rect x="530" y="210" width="330" height="74" rx="10"/>
+<rect x="530" y="350" width="330" height="92" rx="10"/>
+</g>
+<g font-size="20">
+<text x="225" y="101">机器学习 Machine Learning</text><text x="225" y="128" font-size="16">从数据中学习规律</text>
+<text x="225" y="241">深度学习 Deep Learning</text><text x="225" y="268" font-size="16">通过多层变换学习表示</text>
+<text x="225" y="385">Transformer</text><text x="225" y="416" font-size="16">一种深度神经网络架构</text>
+<text x="695" y="241">本书讨论的 LLM</text><text x="695" y="268" font-size="16">基于 Transformer 的自回归模型</text>
+<text x="695" y="382">Attention 层、FFN 等</text><text x="695" y="413" font-size="16">架构中的计算组件</text>
+</g>
+<g fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)">
+<path d="M225 210 V150"/><path d="M225 350 V290"/><path d="M530 247 H468 V375 H416"/><path d="M410 414 H523"/>
+</g>
+<g font-size="16"><text x="265" y="182">属于</text><text x="302" y="322">架构实例</text><text x="493" y="314">采用</text><text x="466" y="439">包含</text></g>
+<text x="450" y="490" font-size="17">Attention 机制用于按输入动态汇总信息，也可用于其他架构。</text>
+<text x="450" y="521" font-size="16" fill="#475569">序列建模是需要表达顺序与上下文依赖的建模问题。</text>
+</g></svg>
