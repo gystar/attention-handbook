@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="470" viewBox="0 0 1080 470" role="img" aria-labelledby="title desc">
+<title id="title">Embedding：从 Token 编号到可学习的向量表示</title><desc id="desc">教学词表中猫的编号为 2，查找 Embedding 矩阵的第 2 行，得到四维向量 0.2、负 0.5、0.8、0.1。训练依据任务误差更新矩阵参数；常规推理固定参数进行查表。数值为人为示例，不给维度指定语义。</desc>
+<defs><marker id="arr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#496378" stroke-width="1.5"/></marker></defs>
+<rect width="1080" height="470" fill="white"/>
+<g font-family="Noto Sans CJK SC, sans-serif" fill="#243746">
+<text x="45" y="42" font-size="20">Embedding：从编号到可学习的向量表示</text>
+<path d="M45 62H1035" stroke="#d6dfe5"/>
+<text x="45" y="105" font-size="18">① Token 与编号</text>
+<text x="365" y="105" font-size="18">② Embedding 矩阵 E</text>
+<text x="800" y="105" font-size="18">③ 取出对应向量</text>
+<rect x="45" y="165" width="205" height="91" rx="6" fill="#eff5f9" stroke="#b5c8d6"/>
+<text x="75" y="204" font-size="25">猫</text><text x="75" y="235" font-size="17">Token ID = 2</text>
+<text x="45" y="286" font-size="15" fill="#657888">编号是索引，不是语义大小</text>
+<path d="M260 208H347" stroke="#496378" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="275" y="192" font-size="15">查表</text>
+<text x="365" y="167" font-size="17">1</text><rect x="402" y="137" width="77" height="48" fill="#f8fafb" stroke="#d6dfe5"/><text x="440.5" y="167" text-anchor="middle" font-size="19">…</text><rect x="479" y="137" width="77" height="48" fill="#f8fafb" stroke="#d6dfe5"/><text x="517.5" y="167" text-anchor="middle" font-size="19">…</text><rect x="556" y="137" width="77" height="48" fill="#f8fafb" stroke="#d6dfe5"/><text x="594.5" y="167" text-anchor="middle" font-size="19">…</text><rect x="633" y="137" width="77" height="48" fill="#f8fafb" stroke="#d6dfe5"/><text x="671.5" y="167" text-anchor="middle" font-size="19">…</text><text x="365" y="215" font-size="17">2</text><rect x="402" y="185" width="77" height="48" fill="#dcebf4" stroke="#d6dfe5"/><text x="440.5" y="215" text-anchor="middle" font-size="19">0.2</text><rect x="479" y="185" width="77" height="48" fill="#edf2f6" stroke="#d6dfe5"/><text x="517.5" y="215" text-anchor="middle" font-size="19">−0.5</text><rect x="556" y="185" width="77" height="48" fill="#a9c9df" stroke="#d6dfe5"/><text x="594.5" y="215" text-anchor="middle" font-size="19">0.8</text><rect x="633" y="185" width="77" height="48" fill="#eaf2f7" stroke="#d6dfe5"/><text x="671.5" y="215" text-anchor="middle" font-size="19">0.1</text><text x="365" y="263" font-size="17">3</text><rect x="402" y="233" width="77" height="48" fill="#f8fafb" stroke="#d6dfe5"/><text x="440.5" y="263" text-anchor="middle" font-size="19">…</text><rect x="479" y="233" width="77" height="48" fill="#f8fafb" stroke="#d6dfe5"/><text x="517.5" y="263" text-anchor="middle" font-size="19">…</text><rect x="556" y="233" width="77" height="48" fill="#f8fafb" stroke="#d6dfe5"/><text x="594.5" y="263" text-anchor="middle" font-size="19">…</text><rect x="633" y="233" width="77" height="48" fill="#f8fafb" stroke="#d6dfe5"/><text x="671.5" y="263" text-anchor="middle" font-size="19">…</text><rect x="401" y="184" width="310" height="50" fill="none" stroke="#527c99" stroke-width="2"/>
+<text x="402" y="306" font-size="15" fill="#657888">每行对应一个 Token 的可训练参数</text>
+<path d="M722 208H785" stroke="#496378" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="800" y="193" font-size="18">e = E[2]</text>
+<text x="800" y="228" font-size="18">[0.2, −0.5, 0.8, 0.1]</text>
+<text x="800" y="264" font-size="15" fill="#657888">作为后续网络的输入</text>
+<rect x="45" y="339" width="990" height="72" rx="6" fill="#f5f7f9"/>
+<text x="65" y="368" font-size="17">训练：任务误差通过反向传播更新 E 中的参数。</text>
+<text x="65" y="395" font-size="17">常规推理：固定 E，根据 Token ID 取得对应向量。</text>
+<text x="45" y="447" font-size="14" fill="#657888">教学示意：词表、编号与四维数值均为人为设定；向量各维不预先指定语义。</text>
+</g></svg>

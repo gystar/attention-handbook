@@ -66,13 +66,15 @@
 
 | 本书图号 | 来源与原图位置 | 解释对象 |
 | --- | --- | --- |
-| 图 1-1a、1-1c、1-1d | [Jay Alammar，The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)，CC BY-NC-SA 4.0；原图未修改 | Embedding、Self-Attention 可视化与 Encoder 层内数据流 |
-| 图 1-1b | 本书使用 AI 生成的上下文词义示意；概念参照 [3Blue1Brown，Motivating Examples](https://www.3blue1brown.com/lessons/attention/) | 同一词形在水果与公司语境中的不同含义，非实验数据 |
-| 图 1-1e | 本书绘制，SVG 源文件随书保存 | 设计问题与章节关系 |
-| 图 1-2 | [Vaswani et al.，Figure 2 左图](https://arxiv.org/html/1706.03762v7) | Scaled Dot-Product Attention 的计算步骤 |
-| 图 1-3 | [Vaswani et al.，Figure 1](https://arxiv.org/html/1706.03762v7) | 原始 Encoder–Decoder Transformer |
-| 图 1-4 | 本书依据 [Kwon et al.，§2.2](https://arxiv.org/html/2309.06180v1) 绘制 | Prefill 与 Decode 的位置关系 |
-| 图 1-5 | [Ainslie et al.，Figure 2](https://arxiv.org/html/2305.13245v3) | MHA、GQA、MQA 的 Head 组织 |
+| 图 1-1 | 本书依据 [Vaswani et al. §3.4](https://arxiv.org/html/1706.03762v7) 绘制，SVG 为可编辑源文件 | Embedding 查表及训练与推理的区别；数值为教学设定 |
+| 图 1-2 | 本书使用 AI 生成的上下文词义示意；概念参照 [3Blue1Brown，Motivating Examples](https://www.3blue1brown.com/lessons/attention/) | 同一词形在水果与公司语境中的不同含义，非实验数据 |
+| 图 1-3 | [Jay Alammar，The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)，CC BY-NC-SA 4.0；原图未修改 | Self-Attention 可视化 |
+| 图 1-4 | [Jay Alammar，The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)，CC BY-NC-SA 4.0；原图未修改 | Encoder 层内数据流 |
+| 图 1-5 | [Vaswani et al.，Figure 2 左图](https://arxiv.org/html/1706.03762v7) | Scaled Dot-Product Attention 的计算步骤 |
+| 图 1-6 | [Vaswani et al.，Figure 1](https://arxiv.org/html/1706.03762v7) | 原始 Encoder–Decoder Transformer |
+| 图 1-7 | 本书依据 [Kwon et al.，§2.2](https://arxiv.org/html/2309.06180v1) 绘制 | Prefill 与 Decode 的位置关系 |
+| 图 1-8 | 本书绘制，SVG 源文件随书保存 | 设计问题与章节关系 |
+| 图 1-9 | [Ainslie et al.，Figure 2](https://arxiv.org/html/2305.13245v3) | MHA、GQA、MQA 的 Head 组织 |
 
 Vaswani et al. 原论文首页允许署名后的学术图表转载；GQA 原图随论文以 CC BY 4.0 提供。图表的文件路径、转载条件和存储状态见仓库的 `references/catalog.yaml` 与 `book/assets/README.md`。
 

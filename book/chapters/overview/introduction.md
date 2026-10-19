@@ -4,19 +4,17 @@
 
 模型如何表示这些信息，又如何将不同位置的信息联系起来？本节先介绍模型如何表示数据，再说明上下文建模的需求，以及注意力机制（Attention Mechanism）在 Transformer 与大语言模型中的作用。
 
-## Representation Learning 与 Deep Learning
+## 表示学习（Representation Learning）
 
-机器学习（Machine Learning）利用数据学习完成任务所需的规律。以图像分类为例，模型接收图像并预测类别；训练根据预测与目标之间的差异调整参数，使模型能够处理未见过的图像。训练完成后，使用模型处理新输入的过程称为推理（Inference）。
+模型需要先将文本、图像等输入转换为可计算的数值形式，这种形式称为表示（Representation）。表示学习（Representation Learning）让模型通过训练学习这些表示，使其中的特征能够支持预测、分类等任务，而不完全依赖人工设计特征。[Goodfellow et al., 2016，Chapter 1](https://www.deeplearningbook.org/contents/intro.html)
 
-表示（Representation）是数据在模型中的表达形式，例如图像的像素数组或文本的向量。表示学习（Representation Learning）指通过训练学习如何从数据中提取和组织特征，得到适合后续任务的表示。
+文本中的 Embedding 是一个具体例子。Token 是文本处理单元，可以对应一个词、词的一部分或标点。分词器（Tokenizer）先将文本转换为 Token 编号，嵌入层（Embedding Layer）再用编号查找参数矩阵中的对应行，得到一个向量。编号只用于定位；向量中的数值才参与后续网络计算。[Hugging Face，Tokenizers](https://huggingface.co/learn/llm-course/chapter2/4?fw=pt)；[Vaswani et al., 2017，§3.4](https://arxiv.org/html/1706.03762v7)
 
-以图像为例，像素记录颜色和亮度，边缘、纹理和形状等特征则描述不同层次的结构。深度学习（Deep Learning）通过多层可学习的变换逐步提取和组合特征，是实现表示学习的一类方法。[Goodfellow et al., 2016，Chapter 1](https://www.deeplearningbook.org/contents/intro.html)
+![教学词表中猫的编号为2，从Embedding矩阵取出第2行得到四维向量；训练更新矩阵参数，常规推理固定参数查表](../../assets/overview/representation-learning.svg)
 
-语言模型同样需要数值输入。分词器（Tokenizer）将文本转换为 Token 序列及整数编号；Token 可以对应一个词、词的一部分或其他文本单元。嵌入层（Embedding Layer）再将编号映射为向量，作为网络计算的起点。这里的向量是一组数值，而不是直接存放在模型中的文字解释。[Hugging Face，Tokenizers](https://huggingface.co/learn/llm-course/chapter2/4?fw=pt)
+图 1-1　以 Embedding 说明可学习的表示。本书依据 Transformer 原论文 §3.4 绘制；词表、编号与向量数值均为教学设定，不是模型实测结果，也不表示某一维必然对应特定语义。
 
-![法语句子中的三个词分别对应三个向量，向量以绿色方格表示](../../assets/overview/alammar-embeddings.png)
-
-图 1-1a　文本的向量表示。绿色方格表示向量分量，不代表实际模型只有四个维度。引自 Jay Alammar，*The Illustrated Transformer*，原图未修改，CC BY-NC-SA 4.0。[原文](https://jalammar.github.io/illustrated-transformer/)；[许可](https://creativecommons.org/licenses/by-nc-sa/4.0/)。
+训练时，任务误差通过反向传播影响 Embedding 等参数的更新；常规推理时，参数保持固定，根据编号取得向量。因此，表示学习不仅涉及“把文字变成数字”，更涉及这些数值如何通过训练适应任务。深度学习（Deep Learning）进一步使用多层可学习的变换提取和组合特征，使表示可以在网络中逐层更新。[Goodfellow et al., 2016，Chapter 1](https://www.deeplearningbook.org/contents/intro.html)
 
 ## 语言表示为什么需要上下文
 
@@ -24,7 +22,7 @@
 
 ![左侧：农夫摘下了成熟的苹果，苹果指水果；右侧：苹果发布了新款电脑，苹果指公司](../../assets/overview/context-apple.png)
 
-图 1-1b　相同词形在不同上下文中的含义。由本书使用 AI 生成的教学示意，不是真实事件照片或模型实验结果；例子不假定“苹果”一定被切分为一个 Token。
+图 1-2　相同词形在不同上下文中的含义。由本书使用 AI 生成的教学示意，不是真实事件照片或模型实验结果；例子不假定“苹果”一定被切分为一个 Token。
 
 在相同词表与嵌入参数下，同一个 Token ID 查表得到的初始 Token Embedding 相同。模型需要在后续计算中结合上下文更新表示，才能区分当前语义；Attention 机制提供了在不同位置之间汇总信息的方式。[3Blue1Brown，Motivating Examples](https://www.3blue1brown.com/lessons/attention/)
 
@@ -34,7 +32,7 @@ Attention 机制根据当前输入计算权重，并组合相应的向量。对�
 
 ![原教程中 it 所在位置与其他输入位置之间的 Attention 可视化，部分连线指向 The 和 animal](../../assets/overview/alammar-self-attention.png)
 
-图 1-1c　原教程中的 Self-Attention 可视化。右侧选中的是 `it`，左侧展示参与关联的输入位置；该图来自 Encoder 场景，不受自回归模型只能访问自身及前文的限制。引自 Jay Alammar，*The Illustrated Transformer*，原图未修改，CC BY-NC-SA 4.0。[原文及可视化背景](https://jalammar.github.io/illustrated-transformer/)；[许可](https://creativecommons.org/licenses/by-nc-sa/4.0/)。
+图 1-3　原教程中的 Self-Attention 可视化。右侧选中的是 `it`，左侧展示参与关联的输入位置；该图来自 Encoder 场景，不受自回归模型只能访问自身及前文的限制。引自 Jay Alammar，*The Illustrated Transformer*，原图未修改，CC BY-NC-SA 4.0。[原文及可视化背景](https://jalammar.github.io/illustrated-transformer/)；[许可](https://creativecommons.org/licenses/by-nc-sa/4.0/)。
 
 图中的信息关联帮助解释 Attention 层的作用：它输出的是结合上下文的向量，而不是直接输出一条指代判断。一个 Head 的权重只描述特定层、特定输入下的一次信息汇总；模型的最终输出还取决于其他 Head、后续层与输出计算。
 
@@ -46,7 +44,7 @@ Attention 是一种计算机制，Transformer 是组织这些计算的网络架�
 
 ![两个位置的向量先经过共同的 Self-Attention 模块，再分别经过 Feed Forward Neural Network，输出传入下一层 Encoder](../../assets/overview/alammar-encoder.png)
 
-图 1-1d　Encoder 层内的简化数据流。先观察 Self-Attention 的跨位置计算，再观察 FFN 的逐位置变换；图中省略了残差连接与归一化。该图用于定位组件，不是 Decoder-only LLM 的完整架构。引自 Jay Alammar，*The Illustrated Transformer*，原图未修改，CC BY-NC-SA 4.0。[原文](https://jalammar.github.io/illustrated-transformer/)；[许可](https://creativecommons.org/licenses/by-nc-sa/4.0/)。
+图 1-4　Encoder 层内的简化数据流。先观察 Self-Attention 的跨位置计算，再观察 FFN 的逐位置变换；图中省略了残差连接与归一化。该图用于定位组件，不是 Decoder-only LLM 的完整架构。引自 Jay Alammar，*The Illustrated Transformer*，原图未修改，CC BY-NC-SA 4.0。[原文](https://jalammar.github.io/illustrated-transformer/)；[许可](https://creativecommons.org/licenses/by-nc-sa/4.0/)。
 
 本书主要讨论基于 Transformer 的自回归大语言模型（Large Language Model，LLM）。生成时，模型根据已有文本计算下一个 Token 的概率，生成策略据此选择一个 Token，将其加入上下文，再继续预测。Decoder-only 架构直接处理这一序列，无需另设用于编码输入序列的 Encoder。
 

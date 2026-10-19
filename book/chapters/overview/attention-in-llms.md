@@ -28,7 +28,7 @@ $$M\in\mathbb{R}^{n_q\times n_k}$$ 是加性 Mask：允许的位置取 $$0$$，�
 
 ![原论文图 2 左图：Q 与 K 经 MatMul、Scale、可选 Mask 和 Softmax 后，再与 V 相乘](https://arxiv.org/html/1706.03762v7/Figures/ModalNet-19.png)
 
-图 1-2　Scaled Dot-Product Attention，引用自 Vaswani et al.，Figure 2 左图。计算沿箭头依次完成权重计算与 Value 汇总。原论文首页给出了署名后用于学术作品的图表转载许可。[原图及出处](https://arxiv.org/html/1706.03762v7)
+图 1-5　Scaled Dot-Product Attention，引用自 Vaswani et al.，Figure 2 左图。计算沿箭头依次完成权重计算与 Value 汇总。原论文首页给出了署名后用于学术作品的图表转载许可。[原图及出处](https://arxiv.org/html/1706.03762v7)
 
 Q、K、V 是当前输入经过投影得到的激活值。训练学到的是投影等参数；推理时参数通常保持不变，Attention 权重仍会随输入改变。不能把 Attention 权重与模型参数混为一谈。[Shazeer, 2019，§2.1—2.3](https://arxiv.org/html/1911.02150v1)
 
