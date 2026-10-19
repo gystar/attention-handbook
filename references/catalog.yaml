@@ -382,6 +382,18 @@ sources:
   - Chapter 11 contents
   - §11.1 Queries, Keys, and Values
   checked_on: '2026-10-19'
+- id: huggingface-tokenizers
+  kind: tutorial
+  title: Hugging Face LLM Course — Tokenizers
+  authors: Hugging Face
+  version: 网页访问版本，2026-10-19
+  url: https://huggingface.co/learn/llm-course/chapter2/4?fw=pt
+  required_local: false
+  archive_status: link_only
+  checked_sections:
+  - Word-based, Character-based, Subword tokenization
+  - Encoding and decoding
+  checked_on: '2026-10-19'
 assets:
 - id: transformer-architecture
   source_id: vaswani2017attention

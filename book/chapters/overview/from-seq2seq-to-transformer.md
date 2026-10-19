@@ -35,7 +35,7 @@ $$n_x$$ 是输入长度，$$h_j$$ 是 Encoder 状态，$$s_{i-1}$$ 是前一步 
 
 ![Transformer 原论文架构图：左侧 Encoder，右侧含 Masked Self-Attention 和 Encoder–Decoder Attention 的 Decoder](https://arxiv.org/html/1706.03762v7/Figures/ModalNet-21.png)
 
-图 1-3　Transformer 架构，引用自 Vaswani et al.，Figure 1。先看三处 Attention，再看 FFN、残差连接和 Layer Normalization 如何围绕它们组成网络。[原图、§3.1 与 §3.2.3](https://arxiv.org/html/1706.03762v7)
+图 1-3　Transformer 架构，引用自 Vaswani et al.，Figure 1。图中三处 Attention 分别承担输入序列建模、输出序列建模和跨序列信息读取；FFN、残差连接与 Layer Normalization 共同构成层内计算。[原图、§3.1 与 §3.2.3](https://arxiv.org/html/1706.03762v7)
 
 | 原始 Transformer 中的位置 | Query 来自哪里 | Key、Value 来自哪里 | 可访问范围 |
 | --- | --- | --- | --- |
@@ -53,7 +53,7 @@ $$n_x$$ 是输入长度，$$h_j$$ 是 Encoder 状态，$$s_{i-1}$$ 是前一步 
 
 这种场景下，训练和生成的执行方式不同。训练时目标序列已知，多个位置可在 Causal Mask 下并行计算；常规生成时，新 Token 要由前一步输出确定，因此需要逐步推进。[Shazeer, 2019，§2.4](https://arxiv.org/html/1911.02150v1)
 
-理解这一差别，才能解释下一节中 Prefill 与 Decode 为什么具有不同的计算形态。
+这种数据依赖差异决定了下一节中 Prefill 与 Decode 的计算形态。
 
 延伸图解：[Jay Alammar，The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)。重点对应本节图 1-3 中的 Encoder、Decoder 和 Multi-Head 结构。
 

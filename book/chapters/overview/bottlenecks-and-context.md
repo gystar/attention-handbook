@@ -16,7 +16,7 @@
 
 Prefill 也可以按块执行；上述区别关注的是已知 Prompt 与新生成 Token 的数据依赖。[Kwon et al., 2023，§2.2](https://arxiv.org/html/2309.06180v1)；[Jiang et al., 2023，§2](https://arxiv.org/html/2310.06825v1)
 
-## Dense Attention 的成本来自哪些项
+## Dense Attention 的计算与存储成本
 
 令 $$B$$ 为 Batch Size，$$N$$ 为序列长度，$$h_q$$ 为 Query Head 数，$$d_h$$ 为每个 Head 的维度。这里假设 Key 与 Value 的维度均为 $$d_h$$，仅统计 Attention 核心运算；线性投影、FFN、反向传播和系统调度另行计算。
 
@@ -32,7 +32,7 @@ Causal Mask 将有效位置对限制为三角区域，但仍有 $$N(N+1)/2$$ 个
 
 小 Batch 的 Decode 可能受到读取模型参数与 KV 的带宽限制；瓶颈随 Batch、上下文长度、硬件与 Kernel 实现变化。[Shazeer, 2019，§2.4.1](https://arxiv.org/html/1911.02150v1)
 
-## KV Cache 保存什么
+## KV Cache 的内容与容量
 
 对于固定参数、固定前缀的 Causal Transformer，已经算出的历史 KV 可以在后续步骤复用。KV Cache 按层保存这些 Key 与 Value，减少重复计算；它不同于模型参数，也不同于本步骤的 Attention 权重矩阵。[Kwon et al., 2023，§2.2](https://arxiv.org/html/2309.06180v1)
 
@@ -54,7 +54,7 @@ $$
 
 其中 $$1$$ GiB 为 $$2^{30}$$ 字节，$$1$$ MiB 为 $$2^{20}$$ 字节。这是容量计算，不是实测显存或速度结果。GQA/MQA 通过共享 KV Head 改变这一项成本；容量缩小的倍数不能直接当作推理加速倍数。[Ainslie et al., 2023，§2.2](https://arxiv.org/html/2305.13245v3)
 
-Multi-Head Latent Attention（MLA）采用另一种缓存表示，不能简单把上式中的 $$h_{kv}$$ 改成 $$1$$ 来估算；需要计入 Latent 表示与位置相关的缓存项。[DeepSeek-AI, 2024，§2.1.2—2.1.4](https://arxiv.org/html/2405.04434v5)
+Multi-Head Latent Attention（MLA）采用另一种缓存表示，其容量不能通过将上式中的 $$h_{kv}$$ 设为 $$1$$ 来估算；需要计入 Latent 表示与位置相关的缓存项。[DeepSeek-AI, 2024，§2.1.2—2.1.4](https://arxiv.org/html/2405.04434v5)
 
 ## Long Context 的三个条件
 

@@ -2,7 +2,7 @@
 
 理解大模型中的 Attention，需要同时回答三个问题：模型怎样从上下文中读取信息，这个过程消耗哪些计算与存储资源，以及不同改进改变了其中的哪一部分。
 
-本章以 Transformer Attention 为参照，先建立共同的计算模型，再解释后续方法的分工。详细推导和实现分别在后续章节展开。
+本章以 Transformer Attention 为参照，先介绍语言模型的生成过程与 Attention 的基本计算，再解释后续方法的分工。详细推导和实现分别在后续章节展开。
 
 ![Attention 技术路线图：围绕 Transformer Attention，区分表示与位置、连接模式、计算实现、缓存管理、状态更新和模块组合](../../assets/overview/attention-landscape.svg)
 
@@ -16,4 +16,4 @@
 | [1.4 结构改进、计算优化与架构扩展](optimization-landscape.md) | MQA、FlashAttention、PagedAttention、Linear Attention 分别改变什么？ |
 | [1.5 演进关系与比较维度](evolution-and-comparison.md) | 哪些路线能够组合，比较方法时需要控制哪些条件？ |
 
-阅读本章需要矩阵乘法、Softmax 和神经网络训练的基本知识。符号见[附录 A](../../appendices/foundations.md)，原始论文与教学材料见[附录 C](../../appendices/references.md)。
+本章从 Token 与文本生成入手，不要求预先熟悉 LLM 架构。公式部分需要向量、矩阵乘法和基本概率知识；Softmax 的作用在 1.1 中说明。符号见[附录 A](../../appendices/foundations.md)，原始论文与教学材料见[附录 C](../../appendices/references.md)。

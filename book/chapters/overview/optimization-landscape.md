@@ -1,6 +1,6 @@
 # 1.4 Attention 的结构改进、计算优化与架构扩展
 
-区分方法时，先看它修改了什么。调整 KV 表示、减少位置对、重排 GPU 计算与改变状态更新，解决的是不同问题；方法名称相近不代表作用相同。
+Attention 方法可按其改变的计算对象分类。调整 KV 表示、减少位置对、重排 GPU 计算与改变状态更新，解决的是不同问题；方法名称相近不代表作用相同。
 
 ## 按设计问题定位方法
 
@@ -23,7 +23,7 @@ MQA 让多个 Query Head 共用一组 Key 和 Value；GQA 为每组 Query Head �
 
 ![GQA 原论文图 2：MHA 的 Query 与 KV 一一对应，GQA 分组共享 KV，MQA 全部共享一组 KV](https://arxiv.org/html/2305.13245v3/images/gmq_architecture.png)
 
-图 1-5　MHA、GQA 与 MQA 的 Head 组织，引用自 Ainslie et al.，Figure 2，CC BY 4.0。比较时先数 Query Head，再数 KV Head；减少 KV Head 不等于按同样比例减少 Query 的读取次数。[原图及出处](https://arxiv.org/html/2305.13245v3)
+图 1-5　MHA、GQA 与 MQA 的 Head 组织，引用自 Ainslie et al.，Figure 2，CC BY 4.0。图中 Query Head 数保持一致，KV Head 数随共享方式变化；减少 KV Head 不等于按同样比例减少 Query 的读取次数。[原图及出处](https://arxiv.org/html/2305.13245v3)
 
 MLA 联合压缩 Key 与 Value 的表示，推理时缓存压缩后的 Latent 及必要的位置相关信息。它与 Head 共享的实现方式不同。[DeepSeek-AI, 2024，§2.1](https://arxiv.org/html/2405.04434v5)
 
@@ -38,7 +38,7 @@ Sparse Attention 改变允许参与计算的位置对。固定模式可以采用
 | 比较项 | FlashAttention 的 Dense 路径 | Sparse Attention |
 | --- | --- | --- |
 | 是否保留 Dense Attention 的目标连接 | 保留给定 Mask 下的连接 | 按稀疏规则减少连接 |
-| 主要节省什么 | 中间矩阵读写与存储 | 被省略位置对的计算 |
+| 主要节省的资源 | 中间矩阵读写与存储 | 被省略位置对的计算 |
 | 需要注意的成本 | 硬件、数据布局与 Kernel 实现 | 选择开销、不规则访存及质量变化 |
 
 这两类思路可以结合。减少连接之后，剩余连接仍需要有效的计算实现；FlashAttention 原论文也讨论了 Block-Sparse 扩展。[Dao et al., 2022，§3.3](https://arxiv.org/html/2205.14135v2)
@@ -65,7 +65,7 @@ $$
 
 从显式历史求和到上述递推式的步骤见[附录 A](../../appendices/foundations.md)。固定大小描述的是逐步推理时的状态，不表示训练时所有 Token 的激活存储也为常数。
 
-这是特定核形式的计算，不能把原来的 Softmax 随意移出矩阵乘法，就声称获得等价的常数状态实现。后续方法还会改变状态的衰减、写入与更新方式。
+上述递推依赖可分解的核形式。标准 Softmax Attention 不具备同样的分解，不能通过交换矩阵乘法顺序直接得到这一固定大小状态的实现。后续方法还会改变状态的衰减、写入与更新方式。
 
 Gated DeltaNet 将控制状态衰减的 Gate 与 Delta Rule 结合；Softmax Attention 中的输出 Gating 则调节某个位置的中间结果。两者的 Gate 作用对象不同。[Yang et al., 2024，§3.1，式 (8)](https://arxiv.org/html/2412.06464v1)；[Qiu et al., 2025，§2.2](https://arxiv.org/html/2505.06708v1)
 

@@ -22,7 +22,7 @@ structure:
 1. 将项目推送到 GitHub 或 GitLab，确认分支中的书稿与本地版本一致。
 2. 在 GitBook 创建 Site，选择 **Sync with Git**，授权并选择仓库、分支。
 3. 将 Git Sync 的 Project directory 和该 Space 的映射目录设为仓库根目录（默认或 `./`）；正文子目录已由 `.gitbook.yaml` 指定为 `book/`。不要将 Space 映射目录再设成 `book/`，否则根目录配置将不在该 Space 的映射范围内。
-4. 首次同步选择 **Repository → GitBook**，从现有仓库导入。核对首页及三篇、十章、三个附录的侧栏结构。
+4. 首次同步选择 **Repository → GitBook**，从现有仓库导入。核对首页及主题分组、十章、三个附录的侧栏结构。
 5. 使用 **Preview** 检查页面，确认后再点击 **Publish**。发布入口与站点地址以 GitBook 界面为准。[官方 Quickstart](https://gitbook.com/docs/getting-started/quickstart)
 
 仓库已提供站点配置 `gitbook-docs.yaml`：一个 Space，`key: attention-handbook`、`path: handbook`、`content.directory: ./`，语言为 `zh`。章节分组由 `book/SUMMARY.md` 管理，不另建站点级 Section。`key` 是首次接入选择的标识，成功接入后应保持稳定；若平台已有对应 Space 的映射，沿用其原有 key。[站点映射规则](https://gitbook.com/docs/docs-as-code/git-sync/content-configuration)
