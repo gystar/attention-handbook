@@ -50,7 +50,7 @@ $$M\in\mathbb{R}^{n_q\times n_k}$$ 是加性 Mask：允许的位置取 $$0$$，�
 
 Q、K、V 是当前输入经过投影得到的激活值。训练学到的是投影等参数；推理时参数通常保持不变，Attention 权重仍会随输入改变。[Shazeer, 2019，§2.1—2.3](https://arxiv.org/html/1911.02150v1)
 
-在自回归 Self-Attention 中，Causal Mask 只允许位置访问自身及此前位置；当前位置的表示用于预测下一 Token，因此不会读取待预测的答案。
+在自回归 Self-Attention 中，Causal Mask 只允许位置访问自身及此前位置；当前位置的表示用于 Next-token Prediction，待预测位置被 Mask 屏蔽。
 
 ## 一个最小算例
 
