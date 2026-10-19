@@ -1,6 +1,6 @@
 # 附录 C 参考文献、教学资源与本地源文件索引
 
-本页收录第 1 章实际使用的来源。论文年份按首次公开年份填写；引用依据为列出的具体版本。核查范围限于与本章论述相关的正文、公式和图表。
+本页收录总览及已迁入专题章节的基础内容所使用的来源。论文年份按首次公开年份填写；引用依据为列出的具体版本。核查位置记录于各条目，范围限于相关正文、公式和图表。
 
 ## 必备原文
 
@@ -54,7 +54,7 @@
 | --- | --- | --- |
 | 书籍：[Zhang、Lipton、Li、Smola，Dive into Deep Learning](https://d2l.ai/chapter_attention-mechanisms-and-transformers/index.html)，在线版 1.0.3 | §11.1 Queries, Keys, and Values；按需进入本章后续小节 | 从加权读取建立 QKV 概念，配合公式与代码学习 |
 | 图文：[Jay Alammar，The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)，2018 | Encoder–Decoder 总图与 Multi-Head 图解 | 配合本书 1.2 节理解模块关系 |
-| 视频：[3Blue1Brown，Attention in transformers, step-by-step](https://www.youtube.com/watch?v=eMlx5fFNoYc)，2024 | 06:32—10:40 Q/K；11:30—12:45 Mask；13:40—15:10 Value；20:30—22:30 Multi-Head | 配合本书 1.3 节观察逐步计算；时间段依据作者英文字幕核对 |
+| 视频：[3Blue1Brown，Attention in transformers, step-by-step](https://www.youtube.com/watch?v=eMlx5fFNoYc)，2024 | 06:32—10:40 Q/K；11:30—12:45 Mask；13:40—15:10 Value；20:30—22:30 Multi-Head | 配合本书第 2 章观察逐步计算；时间段依据作者英文字幕核对 |
 
 <p align="center">表 C-1　教学资源</p>
 
@@ -64,7 +64,7 @@
 
 教学材料用于帮助理解，核心公式和方法归属仍以原始论文为据。D2L 当前核查了章节目录、§11.1 及 §10.7 的架构说明与 Figure 10.7.1；未将其全部实现标为已运行。视频没有作为独立实验依据。
 
-## 首章图表来源
+## 图表来源
 
 | 本书图号 | 来源与原图位置 | 解释对象 |
 | --- | --- | --- |
@@ -74,12 +74,12 @@
 | 图 1-4 | [Zhang, Lipton, Li & Smola，Dive into Deep Learning，§10.7，Figure 10.7.1](https://d2l.ai/chapter_recurrent-modern/seq2seq.html)，[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)；SVG 白底栅格化，图中内容未改动 | RNN Encoder–Decoder 的固定表示传递 |
 | 图 1-5 | 本书依据 [Bahdanau et al.，§3.1，式 (4)—(6)](https://arxiv.org/html/1409.0473v7#S3.SS1) 绘制；词语切分与权重为教学设定 | 英中翻译中逐步变化的读取权重 |
 | 图 1-6 | [Jay Alammar，The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/#a-high-level-look)，CC BY-NC-SA 4.0；原图未修改 | Attention 承担原文、译文及跨序列的信息交互 |
-| 图 1-7 | [Vaswani et al.，Figure 2 左图](https://arxiv.org/html/1706.03762v7) | Scaled Dot-Product Attention 的计算步骤 |
-| 图 1-8 | 本书依据 [Kwon et al.，§2.2](https://arxiv.org/html/2309.06180v1) 绘制 | Prefill 与 Decode 的位置关系 |
-| 图 1-9 | 本书绘制，SVG 源文件随书保存 | 设计问题与章节关系 |
-| 图 1-10 | [Ainslie et al.，Figure 2](https://arxiv.org/html/2305.13245v3) | MHA、GQA、MQA 的 Head 组织 |
+| 图 1-7 | 本书依据 [Kwon et al.，§2.2](https://arxiv.org/html/2309.06180v1) 绘制 | Prefill 与 Decode 的位置关系 |
+| 图 1-8 | 本书绘制，SVG 源文件随书保存 | 设计问题与章节关系 |
+| 图 2-1 | [Vaswani et al.，Figure 2 左图](https://arxiv.org/html/1706.03762v7) | Scaled Dot-Product Attention 的计算步骤 |
+| 图 4-1 | [Ainslie et al.，Figure 2](https://arxiv.org/html/2305.13245v3) | MHA、GQA、MQA 的 Head 组织 |
 
-<p align="center">表 C-2　首章图表来源</p>
+<p align="center">表 C-2　图表来源</p>
 
 Vaswani et al. 原论文首页允许署名后的学术图表转载；GQA 原图随论文以 CC BY 4.0 提供。图表的文件路径、转载条件和存储状态见仓库的 `references/catalog.yaml` 与 `book/assets/README.md`。
 

@@ -1,13 +1,11 @@
-# 1.5 Attention 的结构改进、计算优化与架构扩展
+# 1.4 Attention 的主要改进方向与方法关系
 
-Attention 方法可按其改变的计算对象分类。调整 KV 表示、减少位置对、重排 GPU 计算与改变状态更新，解决的是不同问题。
+长输入增加位置对计算，逐步生成需要读取历史 KV，而更长的上下文还要求模型有效处理位置与相关信息。围绕这些问题，Attention 的改进形成了多条路线：有的改变模型读取和保存信息的方式，有的优化同一计算在硬件上的执行。
 
 <figure align="center">
 <img src="../../assets/overview/attention-landscape.svg" alt="Attention 技术路线图，按表示、连接、实现、缓存与状态更新划分">
-<figcaption><p align="center">图 1-9　Attention 技术路线</p></figcaption>
+<figcaption><p align="center">图 1-8　Attention 技术路线</p></figcaption>
 </figure>
-
-图中按设计问题组织技术路线与后续章节。
 
 ## 按设计问题定位方法
 
@@ -22,71 +20,44 @@ Attention 方法可按其改变的计算对象分类。调整 KV 表示、减少
 | 历史怎样进入状态 | Linear Attention、Gated DeltaNet | 用状态更新与读取组织计算 | [第 9 章 Linear Attention 的 Recurrent Formulation 与 State Update](../linear-attention/README.md) |
 | 不同序列模块怎样组合 | Hybrid Architectures | Layer 或模块的组合 | [第 10 章 Hybrid Architectures 的结构设计与方法比较](../hybrid-architectures/README.md) |
 
-<p align="center">表 1-11　Attention 优化路线</p>
+<p align="center">表 1-7　Attention 优化路线</p>
 
-一个方法可以同时涉及多类设计问题。
+## 模型结构、计算实现与缓存管理
 
-## KV 表示与 KV 管理
+一个 Attention Head 独立执行一组匹配与汇总，Multi-Head Attention 并行执行多组这样的计算。以 KV 成本为例，Multi-Query Attention（MQA）和 Grouped-Query Attention（GQA）让多个 Query Head 共享 KV；Multi-Head Latent Attention（MLA）使用压缩后的 Latent 表示。它们改变模型中的 KV 组织方式。PagedAttention 则通过分页管理已有 KV 的物理存储，减少内存碎片并支持共享。[Ainslie et al.，§2.2](https://arxiv.org/html/2305.13245v3)；[DeepSeek-AI，§2.1](https://arxiv.org/html/2405.04434v5)；[Kwon et al.，§4.1—4.2](https://arxiv.org/html/2309.06180v1)
 
-MQA 让多个 Query Head 共用一组 Key 和 Value；GQA 为每组 Query Head 分配一组 KV。两者改变模型的 Head 组织。[Shazeer, 2019，§3](https://arxiv.org/html/1911.02150v1)；[Ainslie et al., 2023，§2.2](https://arxiv.org/html/2305.13245v3)
+计算优化也有不同层次。FlashAttention 保持目标 Attention 运算，通过分块与中间数据管理减少显存读写；Sparse Attention 选择部分位置参与计算，从连接数量上降低成本。前者需要考察硬件执行效率，后者还需要评估被省略的信息对模型能力的影响。[Dao et al.，§3](https://arxiv.org/html/2205.14135v2)；[Child et al.，§4](https://arxiv.org/html/1904.10509v1)
 
-<figure align="center">
-<img src="https://arxiv.org/html/2305.13245v3/images/gmq_architecture.png" alt="GQA 原论文图 2：MHA 的 Query 与 KV 一一对应，GQA 分组共享 KV，MQA 全部共享一组 KV">
-<figcaption><p align="center">图 1-10　MHA、GQA 与 MQA</p></figcaption>
-</figure>
+Linear Attention 进一步改变历史信息的组织方式：在适用的核形式下，将历史累积到状态中，逐步更新并读取。固定状态维度时，推理状态大小可以保持不随历史长度增长；状态如何保存和读取所需信息，成为这一方向的重要设计问题。Hybrid Architectures 则在不同层或模块组合 Attention 与其他序列运算。[Katharopoulos et al.，§3.2—3.4](https://proceedings.mlr.press/v119/katharopoulos20a/katharopoulos20a.pdf)；[Dao & Gu，§9.2.3](https://arxiv.org/html/2405.21060v1)
 
-图中 Query Head 数保持一致，KV Head 数随共享方式变化；各 Query Head 仍分别执行 Attention 计算。[Ainslie et al.，Figure 2](https://arxiv.org/html/2305.13245v3)
+## 不同改进方向的组合
 
-MLA 联合压缩 Key 与 Value 的表示，推理时缓存压缩后的 Latent 及必要的位置相关信息。它与 Head 共享的实现方式不同。[DeepSeek-AI, 2024，§2.1](https://arxiv.org/html/2405.04434v5)
+不同方法可以作用于同一模型的不同部分。例如，Mistral 7B 同时采用 GQA 与 Sliding Window Attention：GQA 减少 KV Head 数，滑动窗口限制每层直接读取的位置范围。[Jiang et al.，§2](https://arxiv.org/html/2310.06825v1)
 
-PagedAttention 则允许 KV Cache 存储在不连续的物理块中，通过逻辑块到物理块的映射读取。它主要处理分配、碎片和共享问题；分页布局保持缓存中的 Token 内容与数值精度。[Kwon et al., 2023，§4.1—4.2](https://arxiv.org/html/2309.06180v1)
-
-## Exact Attention 与 Sparse Attention
-
-FlashAttention 通过 Tiling、Online Softmax 等方式减少显存与片上存储之间的数据传输（Input/Output，IO），保持目标 Attention 运算的数学结果。这里的 Exact 表示没有为减少连接或替换核函数而引入近似；浮点运算顺序不同仍可能产生数值差异。[Dao et al., 2022，§3.1、Theorem 1](https://arxiv.org/html/2205.14135v2)
-
-Sparse Attention 改变允许参与计算的位置对。固定模式可以采用局部窗口或块状连接；动态模式还需要决定当前输入应该选择哪些位置或块。[Child et al., 2019，§4](https://arxiv.org/html/1904.10509v1)；[Yuan et al., 2025，§3](https://arxiv.org/html/2502.11089v1)
-
-| 比较项 | FlashAttention 的 Dense 路径 | Sparse Attention |
+| 组合方向 | 各自改变的对象 | 配合使用的条件 |
 | --- | --- | --- |
-| 是否保留 Dense Attention 的目标连接 | 保留给定 Mask 下的连接 | 按稀疏规则减少连接 |
-| 主要节省的资源 | 中间矩阵读写与存储 | 被省略位置对的计算 |
-| 需要注意的成本 | 硬件、数据布局与 Kernel 实现 | 选择开销、不规则访存及质量变化 |
+| KV 共享与 Sparse Attention | KV Head 组织、可访问的位置 | 计算实现支持相应 Head 分组和 Mask |
+| FlashAttention 与 KV 分页管理 | 运算调度、缓存布局 | Kernel 支持对应缓存布局及推理阶段 |
+| Attention 与状态更新模块 | 不同层或模块的信息读取方式 | 协调层间表示、训练与推理状态 |
 
-<p align="center">表 1-12　Exact Attention 与 Sparse Attention</p>
+<p align="center">表 1-8　不同改进方向的组合</p>
 
-这两类思路可以结合。减少连接之后，剩余连接仍需要有效的计算实现；FlashAttention 原论文也讨论了 Block-Sparse 扩展。[Dao et al., 2022，§3.3](https://arxiv.org/html/2205.14135v2)
+技术时间线及原始论文入口见[附录 B 技术演进时间线与方法对照表](../../appendices/timeline.md)。结合上面的设计对象，可以辨认同期工作解决的不同问题，以及后续模型采用的组合。
 
-## Position Encoding 与 Context Extension
+## 方法比较的对象与条件
 
-RoPE 通过位置相关的旋转作用于 Query 和 Key，使它们的匹配包含相对位置关系；Attention with Linear Biases（ALiBi）向 Attention 分数加入与距离相关的线性偏置。它们改变位置信息进入计算的方式，不直接消除 Dense Attention 的位置对计算。[Su et al., 2021，§3.2](https://arxiv.org/html/2104.09864v5)；[Press et al., 2021，§3](https://arxiv.org/html/2108.12409v2)
+比较方法时，先明确关注的是模型能力、Attention 运算、单次生成还是完整服务系统，再选择相应指标。
 
-Context Extension 还涉及位置范围、训练数据长度和适应训练。修改位置处理之后，仍需重新检查目标长度上的能力与资源成本。
+| 比较对象 | 主要指标 | 需要保持清楚的条件 |
+| --- | --- | --- |
+| 模型能力 | 任务质量、检索与长文本表现 | 数据、训练预算、输入长度与相关信息位置 |
+| Prefill 与 Decode | 耗时、每步延迟、峰值显存 | 输入与输出长度、Batch Size、硬件与精度 |
+| 服务系统 | 吞吐、并发与延迟 | 请求分布、缓存策略和延迟约束 |
 
-## 从显式历史到状态更新
+<p align="center">表 1-9　方法比较的基本条件</p>
 
-一个基本的 Causal Linear Attention 构造使用非负特征映射 $$\phi:\mathbb{R}^{d_k}\to\mathbb{R}^{d_\phi}$$，维护：
+FlashAttention 论文同时评估 Attention 实现与训练性能，PagedAttention 论文评估服务系统中的吞吐等指标。阅读这些结果时，应将速度或内存收益与其测量范围对应起来。[Dao et al.，§4](https://arxiv.org/html/2205.14135v2)；[Kwon et al.，§6](https://arxiv.org/html/2309.06180v1) 详细比较检查表见[方法比较的条件与指标](../../appendices/timeline.md#方法比较的条件与指标)。
 
-$$
-\begin{aligned}
-S_t&=S_{t-1}+\phi(k_t)v_t^\top,\\
-z_t&=z_{t-1}+\phi(k_t),\\[4pt]
-o_t^\top&=\frac{\phi(q_t)^\top S_t}{\phi(q_t)^\top z_t}.
-\end{aligned}
-$$
+图示来源与许可见[图表来源](../../appendices/references.md#图表来源)。
 
-其中 $$q_t,k_t\in\mathbb{R}^{d_k}$$、$$v_t\in\mathbb{R}^{d_v}$$ 均按列向量书写；$$S_t\in\mathbb{R}^{d_\phi\times d_v}$$，$$z_t\in\mathbb{R}^{d_\phi}$$，初始状态为零，分母需非零。状态累积历史信息，读取时无需再次逐个访问全部历史 KV。固定特征与状态维度后，该构造的状态大小不随序列长度增加。[Katharopoulos et al., 2020，§3.2—3.4](https://proceedings.mlr.press/v119/katharopoulos20a/katharopoulos20a.pdf)
-
-从显式历史求和到上述递推式的步骤见[附录 A 英文术语、数学符号与补充推导](../../appendices/foundations.md)。固定大小描述的是逐步推理时的状态；训练所需的激活存储还取决于序列长度与实现。
-
-上述递推依赖可分解的核形式。标准 Softmax Attention 不具备同样的分解，不能通过交换矩阵乘法顺序直接得到这一固定大小状态的实现。后续方法还会改变状态的衰减、写入与更新方式。
-
-Gated DeltaNet 将控制状态衰减的 Gate 与 Delta Rule 结合；Softmax Attention 中的输出 Gating 则调节某个位置的中间结果。两者的 Gate 作用对象不同。[Yang et al., 2024，§3.1，式 (8)](https://arxiv.org/html/2412.06464v1)；[Qiu et al., 2025，§2.2](https://arxiv.org/html/2505.06708v1)
-
-## Hybrid Architectures
-
-Hybrid 设计允许模型在不同 Layer 或模块中使用不同的序列运算，例如将 Attention 与状态更新模块组合。收益取决于组合位置、比例、训练和实现，需要通过具体实验评估。Mamba-2 论文研究了 Structured State Space Duality（SSD）对应的状态模块、Attention 和 Multi-Layer Perceptron（MLP）的组合，提供了具体实例。[Dao & Gu, 2024，§9.2.3](https://arxiv.org/html/2405.21060v1)
-
-图示来源与许可见[首章图表来源](../../appendices/references.md#首章图表来源)。
-
-下一节：[1.6 主要技术路线的演进关系与比较维度](evolution-and-comparison.md)。
+下一章：[第 2 章 Transformer Attention 的基本原理与计算过程](../transformer-attention/README.md)。

@@ -38,7 +38,7 @@
 
 ## Attention 机制按相关性汇总信息
 
-Attention 机制根据当前输入计算权重，并组合相应的向量。对于本书首先讨论的 Softmax Attention，可以依次理解为三个动作：比较当前位置与可访问位置的表示，将匹配分数归一化，再按权重汇总信息。正式的 Query、Key、Value 定义与计算公式见 1.3 节。
+Attention 机制根据当前输入计算权重，并组合相应的向量。对于本书首先讨论的 Softmax Attention，可以依次理解为三个动作：比较当前位置与可访问位置的表示，将匹配分数归一化，再按权重汇总信息。Query、Key、Value 的定义与计算公式见[第 2 章 Transformer Attention 的基本原理与计算过程](../transformer-attention/README.md)。
 
 <figure align="center">
 <img src="../../assets/overview/alammar-self-attention.png" alt="原教程中 it 所在位置与其他输入位置之间的 Attention 可视化，部分连线指向 The 和 animal">
@@ -53,6 +53,6 @@ Attention 层输出结合上下文的向量表示。一个 Head 的权重只描�
 
 Attention 机制可以用于不同的网络架构。下一节从 Seq2Seq 的输入读取问题出发，说明它如何进一步成为 Transformer 中序列建模的核心组件。
 
-图示来源与许可见[首章图表来源](../../appendices/references.md#首章图表来源)。
+图示来源与许可见[图表来源](../../appendices/references.md#图表来源)。
 
 下一节：[1.2 从 RNN 到 Transformer](from-seq2seq-to-transformer.md)。

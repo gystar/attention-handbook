@@ -66,8 +66,8 @@ Self-Attention 在 Transformer 之前已用于阅读理解、摘要等任务。�
 
 Decoder 的因果自注意力（Causal Self-Attention）只读取当前位置及此前的译文信息，跨序列注意力（Cross-Attention）读取 Encoder 输出。图中省略了因果限制、残差连接与归一化；完整结构见原论文 Figure 1。[Vaswani et al.，§3.1—3.3](https://arxiv.org/html/1706.03762v7)
 
-Transformer 的常见结构包括 Encoder–Decoder、侧重输入表示的 Encoder-only，以及根据已有文本继续生成的 Decoder-only。后文以 Decoder-only 大语言模型（Large Language Model，LLM）为主要分析场景，下一节先展开 Attention 的匹配与加权汇总计算。[Hugging Face，Transformer Architectures](https://huggingface.co/learn/llm-course/chapter1/6)
+Transformer 的常见结构包括 Encoder–Decoder、侧重输入表示的 Encoder-only，以及根据已有文本继续生成的 Decoder-only。后文以 Decoder-only 大语言模型（Large Language Model，LLM）为主要分析场景，下一节介绍生成过程中的 Attention 计算与缓存成本。[Hugging Face，Transformer Architectures](https://huggingface.co/learn/llm-course/chapter1/6)
 
-图示来源与许可见[首章图表来源](../../appendices/references.md#首章图表来源)。
+图示来源与许可见[图表来源](../../appendices/references.md#图表来源)。
 
-下一节：[1.3 Transformer 中的 Attention 计算](attention-in-llms.md)。
+下一节：[1.3 LLM 中的 Attention 成本与长上下文需求](bottlenecks-and-context.md)。
