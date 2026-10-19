@@ -47,6 +47,7 @@
 ### GitBook 文件约定
 
 - 正文位于 `book/`，导航由 `book/SUMMARY.md` 维护；正文内部使用相对文件链接。
+- 每个页面以 Markdown 的一级标题作为唯一页面名称。`SUMMARY.md`、首页和其他页面中指向该整页的链接文字必须与其一级标题完全一致；不设置侧栏简称、别名或独立的导航标题。修改标题时同步全部入口，Review 检查名称一致性。指向特定小节的锚点链接使用该小节标题。
 - 按 GitBook 的 Markdown 约定，行内公式使用 `$$…$$`；独立公式将 `$$` 放在公式前后的独立行。较长的多步公式使用 `aligned` 分行。[行内公式](https://gitbook.com/docs/create-content/formatting/inline#math-and-tex)；[公式块](https://gitbook.com/docs/create-content/blocks/math-and-tex)
 - 保留图表来源与可编辑文件，视频同时提供可点击的原始链接。Markdown 语法和本地图表检查不替代 GitBook 目标页面预览。
 

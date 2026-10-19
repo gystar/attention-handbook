@@ -57,4 +57,4 @@ $$n_x$$ 是输入长度，$$h_j$$ 是 Encoder 状态，$$s_{i-1}$$ 是前一步 
 
 延伸图解：[Jay Alammar，The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)。重点对应本节图 1-3 中的 Encoder、Decoder 和 Multi-Head 结构。
 
-下一节：[LLM 中的计算瓶颈、KV Cache 与 Long Context](bottlenecks-and-context.md)。
+下一节：[1.3 LLM 中的计算瓶颈、KV Cache 与 Long Context](bottlenecks-and-context.md)。

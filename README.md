@@ -2,8 +2,8 @@
 
 《大模型 Attention：原理、演进与优化》的书稿与资料索引。
 
-- [开始阅读](book/README.md)
-- [全书目录](book/SUMMARY.md)
+- [大模型 Attention：原理、演进与优化](book/README.md)
+- [Summary](book/SUMMARY.md)
 - [建设目标与本阶段进度](GOAL.md)
 - [写作及逐章 Review 规范](CONTRIBUTING.md)
 - [本地资料说明](sources/README.md)

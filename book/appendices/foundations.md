@@ -6,21 +6,21 @@
 
 | 术语 | 本书中的含义 | 对应正文 |
 | --- | --- | --- |
-| Attention Mechanism | 根据当前输入计算匹配权重并汇总信息的机制；本书首先介绍 Softmax Attention | [1.1](../chapters/overview/attention-in-llms.md) |
-| Large Language Model（LLM） | 大语言模型；本书主要分析 Decoder-only 自回归场景 | [1.1](../chapters/overview/attention-in-llms.md) |
-| Token | 模型处理的离散序列单元，不必对应完整单词或汉字 | [1.1](../chapters/overview/attention-in-llms.md) |
-| Sequence-to-Sequence（Seq2Seq） | 从输入序列生成输出序列的建模框架 | [1.2](../chapters/overview/from-seq2seq-to-transformer.md) |
-| Query / Key / Value（QKV） | 发起匹配、参与匹配和被汇总的向量表示 | [1.1](../chapters/overview/attention-in-llms.md) |
-| Self-Attention / Cross-Attention | 按 Query 与 KV 来自同一序列还是不同序列区分 | [1.2](../chapters/overview/from-seq2seq-to-transformer.md) |
-| Causal Mask | 只允许访问当前位置及此前位置的访问约束 | [1.2](../chapters/overview/from-seq2seq-to-transformer.md) |
-| Prefill / Decode | 处理已知 Prompt / 逐步处理生成 Token 的两个阶段 | [1.3](../chapters/overview/bottlenecks-and-context.md) |
-| Multi-Head Attention（MHA） | 多个 Head 分别计算 Attention 后组合输出 | [1.4](../chapters/overview/optimization-landscape.md) |
-| Multi-Query Attention（MQA） | 多个 Query Head 共享一组 KV | [1.4](../chapters/overview/optimization-landscape.md) |
-| Grouped-Query Attention（GQA） | 每组 Query Head 共享一组 KV | [1.4](../chapters/overview/optimization-landscape.md) |
-| Multi-Head Latent Attention（MLA） | 采用联合低秩 KV 表示，并处理位置相关分量的 Attention 设计 | [1.4](../chapters/overview/optimization-landscape.md) |
-| KV Cache | 为后续推理复用而保存的逐层历史 KV 或相应压缩表示 | [1.3](../chapters/overview/bottlenecks-and-context.md) |
-| IO / HBM | 数据传输 / GPU 的 High Bandwidth Memory；区别于算术运算量 | [1.4](../chapters/overview/optimization-landscape.md) |
-| Recurrent Formulation | 用上一步状态与当前输入表达下一步状态和输出 | [1.4](../chapters/overview/optimization-landscape.md) |
+| Attention Mechanism | 根据当前输入计算匹配权重并汇总信息的机制；本书首先介绍 Softmax Attention | [1.1 Attention 机制的基本思想与模型中的作用](../chapters/overview/attention-in-llms.md) |
+| Large Language Model（LLM） | 大语言模型；本书主要分析 Decoder-only 自回归场景 | [1.1 Attention 机制的基本思想与模型中的作用](../chapters/overview/attention-in-llms.md) |
+| Token | 模型处理的离散序列单元，不必对应完整单词或汉字 | [1.1 Attention 机制的基本思想与模型中的作用](../chapters/overview/attention-in-llms.md) |
+| Sequence-to-Sequence（Seq2Seq） | 从输入序列生成输出序列的建模框架 | [1.2 从 Seq2Seq 中的 Attention 到 Transformer](../chapters/overview/from-seq2seq-to-transformer.md) |
+| Query / Key / Value（QKV） | 发起匹配、参与匹配和被汇总的向量表示 | [1.1 Attention 机制的基本思想与模型中的作用](../chapters/overview/attention-in-llms.md) |
+| Self-Attention / Cross-Attention | 按 Query 与 KV 来自同一序列还是不同序列区分 | [1.2 从 Seq2Seq 中的 Attention 到 Transformer](../chapters/overview/from-seq2seq-to-transformer.md) |
+| Causal Mask | 只允许访问当前位置及此前位置的访问约束 | [1.2 从 Seq2Seq 中的 Attention 到 Transformer](../chapters/overview/from-seq2seq-to-transformer.md) |
+| Prefill / Decode | 处理已知 Prompt / 逐步处理生成 Token 的两个阶段 | [1.3 LLM 中的计算瓶颈、KV Cache 与 Long Context](../chapters/overview/bottlenecks-and-context.md) |
+| Multi-Head Attention（MHA） | 多个 Head 分别计算 Attention 后组合输出 | [1.4 Attention 的结构改进、计算优化与架构扩展](../chapters/overview/optimization-landscape.md) |
+| Multi-Query Attention（MQA） | 多个 Query Head 共享一组 KV | [1.4 Attention 的结构改进、计算优化与架构扩展](../chapters/overview/optimization-landscape.md) |
+| Grouped-Query Attention（GQA） | 每组 Query Head 共享一组 KV | [1.4 Attention 的结构改进、计算优化与架构扩展](../chapters/overview/optimization-landscape.md) |
+| Multi-Head Latent Attention（MLA） | 采用联合低秩 KV 表示，并处理位置相关分量的 Attention 设计 | [1.4 Attention 的结构改进、计算优化与架构扩展](../chapters/overview/optimization-landscape.md) |
+| KV Cache | 为后续推理复用而保存的逐层历史 KV 或相应压缩表示 | [1.3 LLM 中的计算瓶颈、KV Cache 与 Long Context](../chapters/overview/bottlenecks-and-context.md) |
+| IO / HBM | 数据传输 / GPU 的 High Bandwidth Memory；区别于算术运算量 | [1.4 Attention 的结构改进、计算优化与架构扩展](../chapters/overview/optimization-landscape.md) |
+| Recurrent Formulation | 用上一步状态与当前输入表达下一步状态和输出 | [1.4 Attention 的结构改进、计算优化与架构扩展](../chapters/overview/optimization-landscape.md) |
 
 ## 符号与维度
 
@@ -61,10 +61,10 @@ o_t^\top
 \end{aligned}
 $$
 
-右侧两项历史求和分别定义为 $$S_t$$、$$z_t$$。从 $$t-1$$ 到 $$t$$，各追加当前项，就得到 [1.4 节](../chapters/overview/optimization-landscape.md) 的递推公式。这一步只使用分配律与有限求和；得到固定大小状态还要求 $$d_\phi,d_v$$ 不随序列长度增加。[Katharopoulos et al., 2020，§3.2—3.4，式 (9)—(20)](https://proceedings.mlr.press/v119/katharopoulos20a/katharopoulos20a.pdf)
+右侧两项历史求和分别定义为 $$S_t$$、$$z_t$$。从 $$t-1$$ 到 $$t$$，各追加当前项，就得到 [1.4 Attention 的结构改进、计算优化与架构扩展](../chapters/overview/optimization-landscape.md) 的递推公式。这一步只使用分配律与有限求和；得到固定大小状态还要求 $$d_\phi,d_v$$ 不随序列长度增加。[Katharopoulos et al., 2020，§3.2—3.4，式 (9)—(20)](https://proceedings.mlr.press/v119/katharopoulos20a/katharopoulos20a.pdf)
 
 ## 容量计算的适用条件
 
-[1.3 节](../chapters/overview/bottlenecks-and-context.md) 的 KV 容量是元素数乘以每元素字节数。单层的 Key 张量与 Value 张量各含 $$BNh_{kv}d_h$$ 个元素，乘以两份缓存、$$L$$ 层和 $$s$$ 字节，即得 $$2LBNh_{kv}d_hs$$。
+[1.3 LLM 中的计算瓶颈、KV Cache 与 Long Context](../chapters/overview/bottlenecks-and-context.md) 的 KV 容量是元素数乘以每元素字节数。单层的 Key 张量与 Value 张量各含 $$BNh_{kv}d_h$$ 个元素，乘以两份缓存、$$L$$ 层和 $$s$$ 字节，即得 $$2LBNh_{kv}d_hs$$。
 
 这要求各层配置一致、请求长度一致且保留全部位置。按层、按请求长度不同的情况需要分别求和；MLA、窗口缓存及量化元数据也需按实际表示单独计算。

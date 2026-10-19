@@ -106,4 +106,4 @@ $$
 
 视频的示意图使用了自己的向量排列方式；本书统一按 Token 占据矩阵行来书写，Softmax 沿 Key 维度归一化。视频及[作者配套图文](https://www.3blue1brown.com/lessons/attention/)用于理解计算过程，精确定义以上述公式为准。时间段依据[作者字幕](https://github.com/3b1b/captions/blob/main/2024/attention/english/captions.srt)核对。
 
-下一节：[从 Seq2Seq 中的 Attention 到 Transformer](from-seq2seq-to-transformer.md)。
+下一节：[1.2 从 Seq2Seq 中的 Attention 到 Transformer](from-seq2seq-to-transformer.md)。

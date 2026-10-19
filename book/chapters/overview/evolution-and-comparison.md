@@ -4,7 +4,7 @@ Attention 的发展包含多条并行路线。时间线说明工作出现的先�
 
 ## 代表性时间节点
 
-下表按代表性工作的首次公开年份排列，覆盖本章使用的主要例子。预印本年份与正式发表、后续修订年份可能不同；具体使用版本见[参考资料索引](../../appendices/references.md)。
+下表按代表性工作的首次公开年份排列，覆盖本章使用的主要例子。预印本年份与正式发表、后续修订年份可能不同；具体使用版本见[附录 C 参考文献、教学资源与本地源文件索引](../../appendices/references.md)。
 
 | 年份 | 代表工作 | 在本书主线中的位置 |
 | --- | --- | --- |
@@ -51,9 +51,9 @@ Mistral 7B 的原始技术报告同时采用 GQA 与 Sliding Window Attention：
 
 | 当前问题 | 阅读位置 |
 | --- | --- |
-| QKV、Mask 或 Multi-Head 的计算还不清楚 | [第 2 章](../transformer-attention/README.md) |
-| 位置处理与长度扩展如何影响模型 | [第 3 章](../position-encoding/README.md) |
-| KV Head、Latent 表示与 Gate 分别怎样设计 | [第 4 章](../kv-representations/README.md)、[第 5 章](../gated-attention/README.md) |
-| 为什么显存访问、连接模式与缓存管理要分开分析 | [第 6 章](../flash-attention/README.md)—[第 8 章](../kv-cache/README.md) |
-| 用状态替代逐位置历史读取会改变什么 | [第 9 章](../linear-attention/README.md) |
-| 怎样组合不同序列模块并比较整体收益 | [第 10 章](../hybrid-architectures/README.md) |
+| QKV、Mask 或 Multi-Head 的计算还不清楚 | [第 2 章 Transformer Attention 的基本原理与计算过程](../transformer-attention/README.md) |
+| 位置处理与长度扩展如何影响模型 | [第 3 章 Position Encoding 的演进与 Context Extension](../position-encoding/README.md) |
+| KV Head、Latent 表示与 Gate 分别怎样设计 | [第 4 章 Key–Value 表示优化：MHA、MQA、GQA 与 MLA](../kv-representations/README.md)、[第 5 章 Softmax Attention 的结构改进：Gated Attention](../gated-attention/README.md) |
+| 为什么显存访问、连接模式与缓存管理要分开分析 | [第 6 章 FlashAttention：Exact Attention 的 IO 优化](../flash-attention/README.md)—[第 8 章 KV Cache 的存储管理与推理优化](../kv-cache/README.md) |
+| 用状态替代逐位置历史读取会改变什么 | [第 9 章 Linear Attention 的 Recurrent Formulation 与 State Update](../linear-attention/README.md) |
+| 怎样组合不同序列模块并比较整体收益 | [第 10 章 Hybrid Architectures 的结构设计与方法比较](../hybrid-architectures/README.md) |

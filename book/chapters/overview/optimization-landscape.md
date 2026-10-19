@@ -6,14 +6,14 @@ Attention 方法可按其改变的计算对象分类。调整 KV 表示、减少
 
 | 设计问题 | 代表路线 | 主要改变 | 后续章节 |
 | --- | --- | --- | --- |
-| 位置如何影响计算 | RoPE、ALiBi、Context Extension | 位置相关表示、分数或使用范围 | [第 3 章](../position-encoding/README.md) |
-| KV 如何表示 | MQA、GQA、MLA | Head 共享或 Latent 表示 | [第 4 章](../kv-representations/README.md) |
-| Attention 输出如何调节 | Gated Attention | 在特定计算位置引入 Gate | [第 5 章](../gated-attention/README.md) |
-| 运算怎样在硬件上执行 | FlashAttention | 分块、在线归一化及中间数据管理 | [第 6 章](../flash-attention/README.md) |
-| 哪些位置之间建立连接 | Sparse Attention | 允许或选择参与计算的位置对 | [第 7 章](../sparse-attention/README.md) |
-| 历史 KV 怎样存储和复用 | PagedAttention、量化、淘汰、共享 | 布局、精度、保留范围或复用方式 | [第 8 章](../kv-cache/README.md) |
-| 历史怎样进入状态 | Linear Attention、Gated DeltaNet | 用状态更新与读取组织计算 | [第 9 章](../linear-attention/README.md) |
-| 不同序列模块怎样组合 | Hybrid Architectures | Layer 或模块的组合 | [第 10 章](../hybrid-architectures/README.md) |
+| 位置如何影响计算 | RoPE、ALiBi、Context Extension | 位置相关表示、分数或使用范围 | [第 3 章 Position Encoding 的演进与 Context Extension](../position-encoding/README.md) |
+| KV 如何表示 | MQA、GQA、MLA | Head 共享或 Latent 表示 | [第 4 章 Key–Value 表示优化：MHA、MQA、GQA 与 MLA](../kv-representations/README.md) |
+| Attention 输出如何调节 | Gated Attention | 在特定计算位置引入 Gate | [第 5 章 Softmax Attention 的结构改进：Gated Attention](../gated-attention/README.md) |
+| 运算怎样在硬件上执行 | FlashAttention | 分块、在线归一化及中间数据管理 | [第 6 章 FlashAttention：Exact Attention 的 IO 优化](../flash-attention/README.md) |
+| 哪些位置之间建立连接 | Sparse Attention | 允许或选择参与计算的位置对 | [第 7 章 Sparse Attention 的连接模式与动态选择](../sparse-attention/README.md) |
+| 历史 KV 怎样存储和复用 | PagedAttention、量化、淘汰、共享 | 布局、精度、保留范围或复用方式 | [第 8 章 KV Cache 的存储管理与推理优化](../kv-cache/README.md) |
+| 历史怎样进入状态 | Linear Attention、Gated DeltaNet | 用状态更新与读取组织计算 | [第 9 章 Linear Attention 的 Recurrent Formulation 与 State Update](../linear-attention/README.md) |
+| 不同序列模块怎样组合 | Hybrid Architectures | Layer 或模块的组合 | [第 10 章 Hybrid Architectures 的结构设计与方法比较](../hybrid-architectures/README.md) |
 
 下文给出这些分类的具体依据。表中的分组用于定位问题，不要求一个方法只能属于一组。
 
@@ -63,7 +63,7 @@ $$
 
 其中 $$q_t,k_t\in\mathbb{R}^{d_k}$$、$$v_t\in\mathbb{R}^{d_v}$$ 均按列向量书写；$$S_t\in\mathbb{R}^{d_\phi\times d_v}$$，$$z_t\in\mathbb{R}^{d_\phi}$$，初始状态为零，分母需非零。状态累积历史信息，读取时无需再次逐个访问全部历史 KV。固定特征与状态维度后，该构造的状态大小不随序列长度增加。[Katharopoulos et al., 2020，§3.2—3.4](https://proceedings.mlr.press/v119/katharopoulos20a/katharopoulos20a.pdf)
 
-从显式历史求和到上述递推式的步骤见[附录 A](../../appendices/foundations.md)。固定大小描述的是逐步推理时的状态，不表示训练时所有 Token 的激活存储也为常数。
+从显式历史求和到上述递推式的步骤见[附录 A 英文术语、数学符号与补充推导](../../appendices/foundations.md)。固定大小描述的是逐步推理时的状态，不表示训练时所有 Token 的激活存储也为常数。
 
 上述递推依赖可分解的核形式。标准 Softmax Attention 不具备同样的分解，不能通过交换矩阵乘法顺序直接得到这一固定大小状态的实现。后续方法还会改变状态的衰减、写入与更新方式。
 
@@ -73,4 +73,4 @@ Gated DeltaNet 将控制状态衰减的 Gate 与 Delta Rule 结合；Softmax Att
 
 Hybrid 设计允许模型在不同 Layer 或模块中使用不同的序列运算，例如将 Attention 与状态更新模块组合。收益取决于组合位置、比例、训练和实现，不能仅凭“混合”推断能力或速度更好。Mamba-2 论文研究了 Structured State Space Duality（SSD）对应的状态模块、Attention 和 Multi-Layer Perceptron（MLP）的组合，提供了具体实例。[Dao & Gu, 2024，§9.2.3](https://arxiv.org/html/2405.21060v1)
 
-下一节：[主要技术路线的演进关系与比较维度](evolution-and-comparison.md)。
+下一节：[1.5 主要技术路线的演进关系与比较维度](evolution-and-comparison.md)。

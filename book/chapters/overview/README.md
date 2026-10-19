@@ -38,8 +38,8 @@ Transformer 将 Attention 机制用于序列表示计算，同时包含前馈网
 | --- | --- |
 | [1.1 Attention 机制的基本思想与模型中的作用](attention-in-llms.md) | 为什么需要上下文信息，Attention 机制如何汇总这些信息？ |
 | [1.2 从 Seq2Seq 中的 Attention 到 Transformer](from-seq2seq-to-transformer.md) | 从动态读取 Encoder 状态到 Self-Attention，架构发生了什么改变？ |
-| [1.3 计算瓶颈、KV Cache 与 Long Context](bottlenecks-and-context.md) | 为什么长输入、逐 Token 生成和长上下文能力需要分别分析？ |
-| [1.4 结构改进、计算优化与架构扩展](optimization-landscape.md) | MQA、FlashAttention、PagedAttention、Linear Attention 分别改变什么？ |
-| [1.5 演进关系与比较维度](evolution-and-comparison.md) | 哪些路线能够组合，比较方法时需要控制哪些条件？ |
+| [1.3 LLM 中的计算瓶颈、KV Cache 与 Long Context](bottlenecks-and-context.md) | 为什么长输入、逐 Token 生成和长上下文能力需要分别分析？ |
+| [1.4 Attention 的结构改进、计算优化与架构扩展](optimization-landscape.md) | MQA、FlashAttention、PagedAttention、Linear Attention 分别改变什么？ |
+| [1.5 主要技术路线的演进关系与比较维度](evolution-and-comparison.md) | 哪些路线能够组合，比较方法时需要控制哪些条件？ |
 
-本章从学习方法与序列建模问题入手，不要求预先熟悉 LLM 架构。公式部分需要向量、矩阵乘法和基本概率知识；Softmax 的作用在 1.1 中说明。符号见[附录 A](../../appendices/foundations.md)，原始论文与教学材料见[附录 C](../../appendices/references.md)。
+本章从学习方法与序列建模问题入手，不要求预先熟悉 LLM 架构。公式部分需要向量、矩阵乘法和基本概率知识；Softmax 的作用在 1.1 中说明。符号见[附录 A 英文术语、数学符号与补充推导](../../appendices/foundations.md)，原始论文与教学材料见[附录 C 参考文献、教学资源与本地源文件索引](../../appendices/references.md)。
