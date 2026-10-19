@@ -1,0 +1,37 @@
+GitBook adaptation: 2026-10-19
+Python 3.12.3 / PyYAML 6.0.1
+
+$ python3 scripts/check_handbook.py
+检查 32 个 Markdown 文件、126 个本地文件链接、19 个导航入口。
+来源记录 22 项；引用图片记录 3 项；必备资料及引用图片待归档 12 项。
+本地结构检查：通过。外链可用性、链接锚点和 GitBook 页面呈现须另行核查。
+exit_code=0
+
+$ python3 /tmp/check_attention_export.py
+Clean export files: 47 check exit: 0
+检查 31 个 Markdown 文件、125 个本地文件链接、19 个导航入口。
+来源记录 22 项；引用图片记录 3 项；必备资料及引用图片待归档 12 项。
+提示：本机未保存归档资料：sanderson2024attention（不影响发布文件检查）
+本地结构检查：通过。外链可用性、链接锚点和 GitBook 页面呈现须另行核查。
+
+Strict archive check correctly reports missing required files.
+Existing corrupt archive correctly fails hash verification.
+exit_code=0
+
+$ python3 -m py_compile scripts/check_handbook.py
+exit_code=0
+
+$ sha256sum --check reviews/gitbook-adaptation.sha256
+.gitbook.yaml: OK
+.gitignore: OK
+README.md: OK
+DEPLOYMENT.md: OK
+requirements.txt: OK
+book/README.md: OK
+book/SUMMARY.md: OK
+references/README.md: OK
+scripts/check_handbook.py: OK
+reviews/overview.md: OK
+reviews/gitbook-adaptation.md: OK
+exit_code=0
+

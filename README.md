@@ -7,6 +7,7 @@
 - [建设目标与本阶段进度](GOAL.md)
 - [写作及逐章 Review 规范](CONTRIBUTING.md)
 - [本地资料说明](sources/README.md)
+- [GitBook 部署说明](DEPLOYMENT.md)
 
 ## 当前内容
 
@@ -29,16 +30,19 @@
 在仓库根目录执行，需 Python 3.10+ 和 PyYAML：
 
 ```sh
+python3 -m pip install -r requirements.txt
 python3 scripts/check_handbook.py
 python3 scripts/verify_examples.py
 python3 scripts/sources.py
 ```
 
-这些命令分别检查文件与导航、首章教学算例、已有资料索引，不访问网络。下载与严格归档检查见[来源记录说明](references/README.md)。
+安装依赖需要访问包源；三个检查与索引命令本身不访问网络。刚克隆的仓库不包含本地原文，普通结构检查会提示缺失的本地归档；严格归档检查仍要求实际文件存在。下载与严格归档检查见[来源记录说明](references/README.md)。
 
 ## GitBook 接入
 
 初始配置将仓库根目录作为一个 Space 的映射目录，`.gitbook.yaml` 的内容根目录设为 `book/`。将仓库推送到 GitHub 或 GitLab 后，在 GitBook 选择对应仓库、分支并核对映射，首次同步选择 Repository → GitBook。站点映射文件按实际连接结果维护。[GitBook 内容配置](https://gitbook.com/docs/docs-as-code/git-sync/content-configuration)
 
 目前尚未接入远程仓库或 GitBook 站点；发布检查在接入后执行。
+
+首次连接的目录设置、预览项目和更新流程见 [DEPLOYMENT.md](DEPLOYMENT.md)。
 

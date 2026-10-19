@@ -1,0 +1,2 @@
+# Repository maintenance tools; GitBook hosts the reading site.
+PyYAML>=6.0,<7
