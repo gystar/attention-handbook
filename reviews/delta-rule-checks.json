@@ -1,0 +1,18 @@
+{
+  "python": "3.12.3",
+  "cases": 300,
+  "gradient_components": 1700,
+  "max_algebra_error": 5.551115123125783e-16,
+  "max_gradient_error": 6.818057229907026e-11,
+  "gated_toy": [
+    [
+      6.0
+    ],
+    [
+      2.0
+    ]
+  ],
+  "nonunit_counterexample": true,
+  "scope": "local algebra and finite differences; no full model, GPU or low precision",
+  "status": "passed"
+}

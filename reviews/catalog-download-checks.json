@@ -1,0 +1,178 @@
+{
+  "checked_on": "2026-10-26",
+  "records": [
+    {
+      "id": "sanderson2024attention",
+      "url": "https://raw.githubusercontent.com/3b1b/captions/main/2024/attention/english/captions.srt",
+      "local_exists": true,
+      "local_sha256_verified": true,
+      "local_path": "sources/videos/3blue1brown-attention.en.srt",
+      "endpoint_result": "not_checked",
+      "note": "本轮按 catalog 校验已有文件；未重新请求该下载地址。"
+    },
+    {
+      "id": "shah2024flashattention3",
+      "url": "https://arxiv.org/pdf/2407.08608v2",
+      "local_exists": false,
+      "local_sha256_verified": false,
+      "endpoint_result": "content_returned",
+      "note": "web.open 返回相应论文 PDF 文本；未取得原始文件。"
+    },
+    {
+      "id": "zadouri2026flashattention4",
+      "url": "https://arxiv.org/pdf/2603.05451v1",
+      "local_exists": false,
+      "local_sha256_verified": false,
+      "endpoint_result": "content_returned",
+      "note": "web.open 返回相应论文 PDF 文本；未取得原始文件。"
+    },
+    {
+      "id": "beltagy2020longformer",
+      "url": "https://arxiv.org/pdf/2004.05150v2",
+      "local_exists": false,
+      "local_sha256_verified": false,
+      "endpoint_result": "content_returned",
+      "note": "web.open 返回相应论文 PDF 文本；未取得原始文件。"
+    },
+    {
+      "id": "zaheer2020bigbird",
+      "url": "https://arxiv.org/pdf/2007.14062v2",
+      "local_exists": false,
+      "local_sha256_verified": false,
+      "endpoint_result": "content_returned",
+      "note": "web.open 返回相应论文 PDF 文本；未取得原始文件。"
+    },
+    {
+      "id": "tang2024quest",
+      "url": "https://arxiv.org/pdf/2406.10774v1",
+      "local_exists": false,
+      "local_sha256_verified": false,
+      "endpoint_result": "content_returned",
+      "note": "web.open 返回相应论文 PDF 文本；未取得原始文件。"
+    },
+    {
+      "id": "deepseek2025v32",
+      "url": "https://arxiv.org/pdf/2512.02556v1",
+      "local_exists": false,
+      "local_sha256_verified": false,
+      "endpoint_result": "content_returned",
+      "note": "web.open 返回相应论文 PDF 文本；未取得原始文件。"
+    },
+    {
+      "id": "transformer-architecture",
+      "url": "https://arxiv.org/html/1706.03762v7/Figures/ModalNet-21.png",
+      "local_exists": false,
+      "local_sha256_verified": false,
+      "endpoint_result": "pending",
+      "note": "原图地址尚未完成显示和下载检查。"
+    },
+    {
+      "id": "alammar-embeddings",
+      "url": "https://jalammar.github.io/images/t/embeddings.png",
+      "local_exists": true,
+      "local_sha256_verified": true,
+      "local_path": "book/assets/overview/alammar-embeddings.png",
+      "endpoint_result": "not_checked",
+      "note": "本轮按 catalog 校验已有文件；未重新请求该下载地址。"
+    },
+    {
+      "id": "alammar-self-attention",
+      "url": "https://jalammar.github.io/images/t/transformer_self-attention_visualization.png",
+      "local_exists": true,
+      "local_sha256_verified": true,
+      "local_path": "book/assets/overview/alammar-self-attention.png",
+      "endpoint_result": "not_checked",
+      "note": "本轮按 catalog 校验已有文件；未重新请求该下载地址。"
+    },
+    {
+      "id": "alammar-encoder",
+      "url": "https://jalammar.github.io/images/t/encoder_with_tensors_2.png",
+      "local_exists": true,
+      "local_sha256_verified": true,
+      "local_path": "book/assets/overview/alammar-encoder.png",
+      "endpoint_result": "not_checked",
+      "note": "本轮按 catalog 校验已有文件；未重新请求该下载地址。"
+    },
+    {
+      "id": "alammar-token-embeddings",
+      "url": "https://jalammar.github.io/images/gpt2/gpt2-token-embeddings-wte-2.png",
+      "local_exists": true,
+      "local_sha256_verified": true,
+      "local_path": "book/assets/overview/alammar-token-embeddings.png",
+      "endpoint_result": "not_checked",
+      "note": "本轮按 catalog 校验已有文件；未重新请求该下载地址。"
+    },
+    {
+      "id": "alammar-sentence-representation",
+      "url": "https://jalammar.github.io/images/distilBERT/bert-model-input-output-1.png",
+      "local_exists": true,
+      "local_sha256_verified": true,
+      "local_path": "book/assets/overview/alammar-sentence-representation.png",
+      "endpoint_result": "not_checked",
+      "note": "本轮按 catalog 校验已有文件；未重新请求该下载地址。"
+    },
+    {
+      "id": "alammar-encoder-decoder",
+      "url": "https://jalammar.github.io/images/t/Transformer_decoder.png",
+      "local_exists": true,
+      "local_sha256_verified": true,
+      "local_path": "book/assets/overview/alammar-encoder-decoder.png",
+      "endpoint_result": "not_checked",
+      "note": "本轮按 catalog 校验已有文件；未重新请求该下载地址。"
+    },
+    {
+      "id": "d2l-seq2seq-figure",
+      "url": "https://raw.githubusercontent.com/d2l-ai/d2l-en/master/img/seq2seq.svg",
+      "local_exists": true,
+      "local_sha256_verified": true,
+      "local_path": "book/assets/overview/d2l-seq2seq.svg",
+      "endpoint_result": "not_checked",
+      "note": "本轮按 catalog 校验已有文件；未重新请求该下载地址。"
+    },
+    {
+      "id": "alammar-translation-attention",
+      "url": "https://jalammar.github.io/images/attention.png",
+      "local_exists": true,
+      "local_sha256_verified": true,
+      "local_path": "book/assets/overview/alammar-translation-attention.png",
+      "endpoint_result": "not_checked",
+      "note": "本轮按 catalog 校验已有文件；未重新请求该下载地址。"
+    },
+    {
+      "id": "alammar-kv-cache",
+      "url": "https://jalammar.github.io/images/gpt2/gpt2-self-attention-qkv-3-2.png",
+      "local_exists": true,
+      "local_sha256_verified": true,
+      "local_path": "book/assets/overview/alammar-kv-cache.png",
+      "endpoint_result": "not_checked",
+      "note": "本轮按 catalog 校验已有文件；未重新请求该下载地址。"
+    },
+    {
+      "id": "d2l-transformer-svg",
+      "url": "https://raw.githubusercontent.com/d2l-ai/d2l-en/master/img/transformer.svg",
+      "local_exists": true,
+      "local_sha256_verified": true,
+      "local_path": "book/assets/transformer-attention/d2l-transformer.svg",
+      "endpoint_result": "not_checked",
+      "note": "本轮按 catalog 校验已有文件；未重新请求该下载地址。"
+    },
+    {
+      "id": "d2l-multi-head-attention-svg",
+      "url": "https://raw.githubusercontent.com/d2l-ai/d2l-en/master/img/multi-head-attention.svg",
+      "local_exists": true,
+      "local_sha256_verified": true,
+      "local_path": "book/assets/transformer-attention/d2l-multi-head-attention.svg",
+      "endpoint_result": "not_checked",
+      "note": "本轮按 catalog 校验已有文件；未重新请求该下载地址。"
+    },
+    {
+      "id": "alammar-sinusoidal",
+      "url": "https://raw.githubusercontent.com/jalammar/jalammar.github.io/master/images/t/attention-is-all-you-need-positional-encoding.png",
+      "local_exists": true,
+      "local_sha256_verified": true,
+      "local_path": "book/assets/position-encoding/alammar-sinusoidal.png",
+      "endpoint_result": "not_checked",
+      "note": "本轮按 catalog 校验已有文件；未重新请求该下载地址。"
+    }
+  ]
+}

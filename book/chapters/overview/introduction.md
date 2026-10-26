@@ -6,7 +6,7 @@
 
 ## 表示学习（Representation Learning）
 
-模型需要先将文本、图像等输入转换为可计算的数值形式，这种形式称为表示（Representation）。表示学习（Representation Learning）让模型通过训练学习这些表示，使其中的特征能够支持预测、分类等任务，而不完全依赖人工设计特征。[Goodfellow et al., 2016，Chapter 1](https://www.deeplearningbook.org/contents/intro.html)
+模型用数值形式描述输入及其特征，这些数值构成输入的表示（Representation）。例如，一幅图像可以表示为像素，也可以表示为描述边缘、形状等特征的向量。表示学习（Representation Learning）通过训练学习如何提取这些特征，使表示适合预测、分类等任务，减少对人工设计特征的依赖。[Goodfellow et al., 2016，Chapter 1](https://www.deeplearningbook.org/contents/intro.html)
 
 以一句英文影评为例，模型接收文本后，会将其转换为一组向量，用于后续分类或预测。图 1-1 从下向上展示了这一过程：英文文本被切分为 Token、转换为编号，再经过 DistilBERT 模型，得到各位置的输出向量。
 

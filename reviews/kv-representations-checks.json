@@ -1,0 +1,30 @@
+{
+  "python": "3.12.3",
+  "seed": 20261026,
+  "scope": "head grouping, mean projection, MLA content absorption, counterexamples; no model training or performance evaluation",
+  "tolerance": 1e-12,
+  "errors": {
+    "grouped_vs_expanded_1": 0.0,
+    "grouped_vs_expanded_2": 0.0,
+    "grouped_vs_expanded_8": 0.0,
+    "linear_projection_mean": 1.1102230246251565e-16,
+    "mla_content_expanded_vs_latent": 5.551115123125783e-17,
+    "mla_decoupled_rope_expanded_vs_latent": 4.163336342344337e-17
+  },
+  "cache_elements_per_layer_per_position": {
+    "MLA": 576,
+    "GQA-2": 512,
+    "GQA-4": 1024
+  },
+  "wrong_latent_scale_error": 0.020772987745424965,
+  "pooling_example": {
+    "heads": [
+      0.5,
+      0.8807970779778823
+    ],
+    "mean_head_output": 0.6903985389889411,
+    "pooled_key_output": 0.7310585786300049,
+    "difference": 0.040660039641063794
+  },
+  "status": "passed"
+}

@@ -1,0 +1,24 @@
+{
+  "count_cases": 1536,
+  "local_depth_cases": 2048,
+  "full_then_local_cases": 512,
+  "table_10_3": [
+    {
+      "n": 2,
+      "full": 6,
+      "mixed": 6
+    },
+    {
+      "n": 4,
+      "full": 20,
+      "mixed": 17
+    },
+    {
+      "n": 8,
+      "full": 72,
+      "mixed": 51
+    }
+  ],
+  "scope": "logical counts, retained KV positions, graph reachability; not learned information fidelity, runtime or allocated memory",
+  "status": "passed"
+}

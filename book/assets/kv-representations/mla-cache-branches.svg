@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="470" viewBox="0 0 1100 470">
+<rect width="1100" height="470" fill="white"/>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#607789"/></marker></defs>
+<g font-family="DejaVu Sans,Noto Sans CJK SC,sans-serif" fill="#243949">
+<text x="550" y="35" font-size="18" text-anchor="middle">One query head · one query position t · N cached positions</text>
+<rect x="30" y="80" width="250" height="85" rx="5" fill="#eaf4ef" stroke="#aebfca"/>
+<text x="155.0" y="109" font-size="18" text-anchor="middle">Content cache C</text>
+<text x="155.0" y="135" font-size="15" text-anchor="middle">N × d_c</text>
+<rect x="30" y="240" width="250" height="85" rx="5" fill="#f5eee5" stroke="#aebfca"/>
+<text x="155.0" y="269" font-size="18" text-anchor="middle">Position cache K_R</text>
+<text x="155.0" y="295" font-size="15" text-anchor="middle">N × d_r</text>
+<rect x="360" y="80" width="240" height="85" rx="5" fill="#edf3f7" stroke="#aebfca"/>
+<text x="480.0" y="109" font-size="18" text-anchor="middle">Content scores</text>
+<text x="480.0" y="135" font-size="15" text-anchor="middle">q_hat Cᵀ : 1 × N</text>
+<rect x="360" y="240" width="240" height="85" rx="5" fill="#edf3f7" stroke="#aebfca"/>
+<text x="480.0" y="269" font-size="18" text-anchor="middle">Position scores</text>
+<text x="480.0" y="295" font-size="15" text-anchor="middle">q_R K_Rᵀ : 1 × N</text>
+<path d="M280 122L360 122" stroke="#607789" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<path d="M280 282L360 282" stroke="#607789" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<rect x="710" y="160" width="320" height="85" rx="5" fill="#edf3f7" stroke="#aebfca"/>
+<text x="870.0" y="189" font-size="18" text-anchor="middle">Add → scale → mask → softmax</text>
+<text x="870.0" y="215" font-size="15" text-anchor="middle">weights: 1 × N</text>
+<path d="M600 122H650V202 M600 282H650V202H710" stroke="#607789" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<rect x="710" y="330" width="320" height="85" rx="5" fill="#edf3f7" stroke="#aebfca"/>
+<text x="870.0" y="359" font-size="18" text-anchor="middle">Weighted content latents</text>
+<text x="870.0" y="385" font-size="15" text-anchor="middle">z = weights C : 1 × d_c</text>
+<path d="M870 245L870 330" stroke="#607789" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<path d="M155 165V205H315V373H710" stroke="#34836e" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<text x="550" y="451" font-size="16" text-anchor="middle">Cached elements per position: d_c + d_r. Softmax is applied once after adding both scores.</text>
+</g></svg>

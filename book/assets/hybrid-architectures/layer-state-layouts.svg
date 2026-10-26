@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1050" height="465" viewBox="0 0 1050 465">
+<defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#637588"/></marker></defs>
+<rect width="100%" height="100%" fill="white"/>
+<g font-family="DejaVu Sans,sans-serif" fill="#243949">
+<text x="190" y="30" text-anchor="middle" font-size="19">Full Attention</text>
+<text x="190" y="62" text-anchor="middle" font-size="15">Input</text>
+<path d="M190,70 L190,87" stroke="#637588" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="45" y="90" width="290" height="72" rx="4" fill="#dce8f2" stroke="#b7c3ce"/>
+<text x="190" y="117" text-anchor="middle" font-size="18">Full Attention</text>
+<text x="190" y="143" text-anchor="middle" font-size="14">KV: N positions</text>
+<path d="M190,170 L190,187" stroke="#637588" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="45" y="190" width="290" height="72" rx="4" fill="#dce8f2" stroke="#b7c3ce"/>
+<text x="190" y="217" text-anchor="middle" font-size="18">Full Attention</text>
+<text x="190" y="243" text-anchor="middle" font-size="14">KV: N positions</text>
+<path d="M190,270 L190,287" stroke="#637588" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="45" y="290" width="290" height="72" rx="4" fill="#dce8f2" stroke="#b7c3ce"/>
+<text x="190" y="317" text-anchor="middle" font-size="18">Full Attention</text>
+<text x="190" y="343" text-anchor="middle" font-size="14">KV: N positions</text>
+<path d="M190,362 L190,389" stroke="#637588" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="190" y="414" text-anchor="middle" font-size="15">Output</text>
+<text x="520" y="30" text-anchor="middle" font-size="19">Recurrence + Local</text>
+<text x="520" y="62" text-anchor="middle" font-size="15">Input</text>
+<path d="M520,70 L520,87" stroke="#637588" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="375" y="90" width="290" height="72" rx="4" fill="#dceade" stroke="#b7c3ce"/>
+<text x="520" y="117" text-anchor="middle" font-size="18">Recurrence</text>
+<text x="520" y="143" text-anchor="middle" font-size="14">Fixed core + auxiliary state</text>
+<path d="M520,170 L520,187" stroke="#637588" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="375" y="190" width="290" height="72" rx="4" fill="#dceade" stroke="#b7c3ce"/>
+<text x="520" y="217" text-anchor="middle" font-size="18">Recurrence</text>
+<text x="520" y="243" text-anchor="middle" font-size="14">Fixed core + auxiliary state</text>
+<path d="M520,270 L520,287" stroke="#637588" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="375" y="290" width="290" height="72" rx="4" fill="#f2e6d5" stroke="#b7c3ce"/>
+<text x="520" y="317" text-anchor="middle" font-size="18">Local Attention</text>
+<text x="520" y="343" text-anchor="middle" font-size="14">KV: min(N, w) positions</text>
+<path d="M520,362 L520,389" stroke="#637588" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="520" y="414" text-anchor="middle" font-size="15">Output</text>
+<text x="850" y="30" text-anchor="middle" font-size="19">Recurrence + Full</text>
+<text x="850" y="62" text-anchor="middle" font-size="15">Input</text>
+<path d="M850,70 L850,87" stroke="#637588" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="705" y="90" width="290" height="72" rx="4" fill="#dceade" stroke="#b7c3ce"/>
+<text x="850" y="117" text-anchor="middle" font-size="18">Recurrence</text>
+<text x="850" y="143" text-anchor="middle" font-size="14">Fixed core + auxiliary state</text>
+<path d="M850,170 L850,187" stroke="#637588" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="705" y="190" width="290" height="72" rx="4" fill="#dceade" stroke="#b7c3ce"/>
+<text x="850" y="217" text-anchor="middle" font-size="18">Recurrence</text>
+<text x="850" y="243" text-anchor="middle" font-size="14">Fixed core + auxiliary state</text>
+<path d="M850,270 L850,287" stroke="#637588" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="705" y="290" width="290" height="72" rx="4" fill="#dce8f2" stroke="#b7c3ce"/>
+<text x="850" y="317" text-anchor="middle" font-size="18">Full Attention</text>
+<text x="850" y="343" text-anchor="middle" font-size="14">KV: N positions</text>
+<path d="M850,362 L850,389" stroke="#637588" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="850" y="414" text-anchor="middle" font-size="15">Output</text>
+<text x="525" y="449" text-anchor="middle" font-size="14">Illustrative layouts; residual connections, normalization and FFNs omitted.</text>
+</g></svg>

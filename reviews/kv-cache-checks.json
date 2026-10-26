@@ -1,0 +1,14 @@
+{
+  "python": "3.12.3",
+  "scope": "capacity counts, logical-to-physical gathering, fixed-input attention and copy-on-write illustration; no GPU or allocator implementation validation",
+  "capacity_cases": 260,
+  "mapped_position_6": {
+    "physical_block": 2,
+    "offset": 2
+  },
+  "gathered_attention_max_error": 0.0,
+  "reordered_attention_max_error": 0.0,
+  "unused_slot_counterexample_detected": true,
+  "copy_on_write_isolation": true,
+  "status": "passed"
+}

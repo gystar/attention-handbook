@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1040" height="590" viewBox="0 0 1040 590" role="img" aria-labelledby="title desc">
   <title id="title">Prefill 与单步 Decode 的 Query 和 KV</title>
-  <desc id="desc">五个 Prompt Token 的 Prefill 使用五行因果 Attention；最后一行预测第六个 Token。处理第六个 Token 时，只计算新的 Query，读取五个缓存 KV 和当前 KV，再预测第七个 Token。</desc>
+  <desc id="desc">五个 Prompt Token 的 Prefill 使用五行因果 Attention；最后一行预测第六个 Token。处理第六个 Token 时，计算当前位置的 Query、Key 和 Value，读取五个缓存 KV 和当前 KV，再预测第七个 Token。</desc>
   <defs>
     <style>
       text { font-family: 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif; fill: #193047; }

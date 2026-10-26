@@ -1,0 +1,18 @@
+{
+  "python": "3.12.3",
+  "scope": "algebra and constructed examples; no training, sinks, or performance measurements",
+  "tolerance": 1e-12,
+  "errors": {
+    "elementwise_example": 0.0,
+    "scalar_effective_weights": 0.0,
+    "effective_weight_sum": 0.0,
+    "static_gate_fold": 0.0
+  },
+  "projection_cancellation_example": {
+    "before": 0,
+    "after": 0.8
+  },
+  "value_vs_output_gate_difference": 0.05999999999999994,
+  "dynamic_gate_homogeneity_error": 0.29947699869575484,
+  "status": "passed"
+}

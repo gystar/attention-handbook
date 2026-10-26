@@ -1,0 +1,199 @@
+{
+  "scope": "Current chapter and appendix files matched against post-archive source-audit manifests; hashes do not replace review content",
+  "files": {
+    "book/appendices/foundations.md": [
+      "reviews/source-audit-appendices.sha256"
+    ],
+    "book/appendices/references.md": [
+      "reviews/source-audit-appendices.sha256"
+    ],
+    "book/appendices/timeline.md": [
+      "reviews/source-audit-appendices.sha256"
+    ],
+    "book/chapters/flash-attention/README.md": [
+      "reviews/source-audit-flash.sha256"
+    ],
+    "book/chapters/flash-attention/evaluation.md": [
+      "reviews/source-audit-flash.sha256"
+    ],
+    "book/chapters/flash-attention/forward-backward.md": [
+      "reviews/source-audit-flash.sha256"
+    ],
+    "book/chapters/flash-attention/io-cost.md": [
+      "reviews/source-audit-flash.sha256"
+    ],
+    "book/chapters/flash-attention/online-softmax.md": [
+      "reviews/source-audit-flash.sha256"
+    ],
+    "book/chapters/flash-attention/parallelism.md": [
+      "reviews/source-audit-flash.sha256"
+    ],
+    "book/chapters/gated-attention/README.md": [
+      "reviews/source-audit-gated.sha256"
+    ],
+    "book/chapters/gated-attention/attention-sink.md": [
+      "reviews/source-audit-gated.sha256"
+    ],
+    "book/chapters/gated-attention/evaluation.md": [
+      "reviews/source-audit-gated.sha256"
+    ],
+    "book/chapters/gated-attention/output-gating.md": [
+      "reviews/source-audit-gated.sha256"
+    ],
+    "book/chapters/gated-attention/placement.md": [
+      "reviews/source-audit-gated.sha256"
+    ],
+    "book/chapters/hybrid-architectures/README.md": [
+      "reviews/source-audit-hybrid.sha256"
+    ],
+    "book/chapters/hybrid-architectures/attention-linear.md": [
+      "reviews/source-audit-hybrid.sha256"
+    ],
+    "book/chapters/hybrid-architectures/attention-ssm.md": [
+      "reviews/source-audit-hybrid.sha256"
+    ],
+    "book/chapters/hybrid-architectures/composition.md": [
+      "reviews/source-audit-hybrid.sha256"
+    ],
+    "book/chapters/hybrid-architectures/evaluation.md": [
+      "reviews/source-audit-hybrid.sha256"
+    ],
+    "book/chapters/hybrid-architectures/full-sparse.md": [
+      "reviews/source-audit-hybrid.sha256"
+    ],
+    "book/chapters/hybrid-architectures/state-management.md": [
+      "reviews/source-audit-hybrid.sha256"
+    ],
+    "book/chapters/kv-cache/README.md": [
+      "reviews/source-audit-cache.sha256"
+    ],
+    "book/chapters/kv-cache/evaluation.md": [
+      "reviews/source-audit-cache.sha256"
+    ],
+    "book/chapters/kv-cache/eviction.md": [
+      "reviews/source-audit-cache.sha256"
+    ],
+    "book/chapters/kv-cache/lifecycle.md": [
+      "reviews/source-audit-cache.sha256"
+    ],
+    "book/chapters/kv-cache/paged-attention.md": [
+      "reviews/source-audit-cache.sha256"
+    ],
+    "book/chapters/kv-cache/quantization.md": [
+      "reviews/source-audit-cache.sha256"
+    ],
+    "book/chapters/kv-cache/reuse-offloading.md": [
+      "reviews/source-audit-cache.sha256"
+    ],
+    "book/chapters/kv-representations/README.md": [
+      "reviews/source-audit-kv-representations.sha256"
+    ],
+    "book/chapters/kv-representations/cache-cost.md": [
+      "reviews/source-audit-kv-representations.sha256"
+    ],
+    "book/chapters/kv-representations/comparison.md": [
+      "reviews/source-audit-kv-representations.sha256"
+    ],
+    "book/chapters/kv-representations/decoupled-rope.md": [
+      "reviews/source-audit-kv-representations.sha256"
+    ],
+    "book/chapters/kv-representations/head-sharing.md": [
+      "reviews/source-audit-kv-representations.sha256"
+    ],
+    "book/chapters/kv-representations/latent-compression.md": [
+      "reviews/source-audit-kv-representations.sha256"
+    ],
+    "book/chapters/linear-attention/README.md": [
+      "reviews/source-audit-linear.sha256"
+    ],
+    "book/chapters/linear-attention/capacity-retrieval.md": [
+      "reviews/source-audit-linear.sha256"
+    ],
+    "book/chapters/linear-attention/chunkwise-computation.md": [
+      "reviews/source-audit-linear.sha256"
+    ],
+    "book/chapters/linear-attention/delta-rule.md": [
+      "reviews/source-audit-linear.sha256"
+    ],
+    "book/chapters/linear-attention/kernel-attention.md": [
+      "reviews/source-audit-linear.sha256"
+    ],
+    "book/chapters/linear-attention/recurrence.md": [
+      "reviews/source-audit-linear.sha256"
+    ],
+    "book/chapters/linear-attention/state-decay.md": [
+      "reviews/source-audit-linear.sha256"
+    ],
+    "book/chapters/overview/README.md": [
+      "reviews/source-audit-overview.sha256"
+    ],
+    "book/chapters/overview/bottlenecks-and-context.md": [
+      "reviews/source-audit-overview.sha256"
+    ],
+    "book/chapters/overview/from-seq2seq-to-transformer.md": [
+      "reviews/source-audit-overview.sha256"
+    ],
+    "book/chapters/overview/introduction.md": [
+      "reviews/source-audit-overview.sha256"
+    ],
+    "book/chapters/overview/optimization-landscape.md": [
+      "reviews/source-audit-overview.sha256"
+    ],
+    "book/chapters/position-encoding/README.md": [
+      "reviews/source-audit-position.sha256"
+    ],
+    "book/chapters/position-encoding/absolute-and-relative.md": [
+      "reviews/source-audit-position.sha256"
+    ],
+    "book/chapters/position-encoding/context-extension.md": [
+      "reviews/source-audit-position.sha256"
+    ],
+    "book/chapters/position-encoding/evaluation.md": [
+      "reviews/source-audit-position.sha256"
+    ],
+    "book/chapters/position-encoding/position-and-order.md": [
+      "reviews/source-audit-position.sha256"
+    ],
+    "book/chapters/position-encoding/rope-and-alibi.md": [
+      "reviews/source-audit-position.sha256"
+    ],
+    "book/chapters/sparse-attention/README.md": [
+      "reviews/source-audit-sparse.sha256"
+    ],
+    "book/chapters/sparse-attention/block-sparse.md": [
+      "reviews/source-audit-sparse.sha256"
+    ],
+    "book/chapters/sparse-attention/connectivity-cost.md": [
+      "reviews/source-audit-sparse.sha256"
+    ],
+    "book/chapters/sparse-attention/dynamic-selection.md": [
+      "reviews/source-audit-sparse.sha256"
+    ],
+    "book/chapters/sparse-attention/evaluation.md": [
+      "reviews/source-audit-sparse.sha256"
+    ],
+    "book/chapters/sparse-attention/local-global.md": [
+      "reviews/source-audit-sparse.sha256"
+    ],
+    "book/chapters/transformer-attention/README.md": [
+      "reviews/source-audit-transformer.sha256"
+    ],
+    "book/chapters/transformer-attention/attention-and-masks.md": [
+      "reviews/source-audit-transformer.sha256"
+    ],
+    "book/chapters/transformer-attention/multi-head.md": [
+      "reviews/source-audit-transformer.sha256"
+    ],
+    "book/chapters/transformer-attention/scaled-dot-product.md": [
+      "reviews/source-audit-transformer.sha256"
+    ],
+    "book/chapters/transformer-attention/structure-and-flow.md": [
+      "reviews/source-audit-transformer.sha256"
+    ],
+    "book/chapters/transformer-attention/training-prefill-decode.md": [
+      "reviews/source-audit-transformer.sha256"
+    ]
+  },
+  "count": 64,
+  "all_matched": true
+}

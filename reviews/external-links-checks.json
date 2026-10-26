@@ -1,0 +1,4185 @@
+{
+  "checked_on": "2026-10-26",
+  "scope": "book/**/*.md 中的 HTTPS 链接与资源地址；不包含 references/catalog.yaml 独有下载地址",
+  "method": "提取 Markdown/HTML 中 HTTPS 地址，web.open 或 GitHub connector fetch 返回内容。未获取可靠 HTTP 状态码；未执行浏览器锚点跳转、视频播放或图片显示。",
+  "network_probe": {
+    "configured_proxy": "curl exit 7: could not connect to 127.0.0.1:7897",
+    "temporary_direct": "curl --noproxy exit 6: could not resolve arxiv.org",
+    "settings_changed": false
+  },
+  "endpoints": [
+    {
+      "url": "https://arxiv.org/html/2309.06180v1",
+      "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention (https://arxiv.org/html/2309.06180v1)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/html/2205.14135v2",
+      "title": "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/html/1409.0473v7",
+      "title": "Neural Machine Translation by Jointly Learning to Align and Translate (https://arxiv.org/html/1409.0473v7)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/abs/1409.3215v3",
+      "title": "[1409.3215v3] Sequence to Sequence Learning with Neural Networks (https://arxiv.org/abs/1409.3215v3)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/html/1409.3215v3",
+      "title": "Sequence to Sequence Learningwith Neural Networks (https://arxiv.org/html/1409.3215v3)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/pdf/1409.3215v3",
+      "title": "arXiv:1409.3215v3  [cs.CL]  14 Dec 2014 (https://arxiv.org/pdf/1409.3215v3)",
+      "type": "application/pdf",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/abs/1409.0473v7",
+      "title": "[1409.0473v7] Neural Machine Translation by Jointly Learning to Align and Translate (https://arxiv.org/abs/1409.0473v7)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/pdf/1409.0473v7",
+      "title": " (https://arxiv.org/pdf/1409.0473v7)",
+      "type": "application/pdf",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/abs/1706.03762v7",
+      "title": "[1706.03762v7] Attention Is All You Need (https://arxiv.org/abs/1706.03762v7)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/html/1706.03762v7",
+      "title": "Attention Is All You Need (https://arxiv.org/html/1706.03762v7)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/pdf/1706.03762v7",
+      "title": " (https://arxiv.org/pdf/1706.03762v7)",
+      "type": "application/pdf",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/abs/1910.10683v4",
+      "title": "[1910.10683v4] Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer (https://arxiv.org/abs/1910.10683v4)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/html/1910.10683v4",
+      "title": "Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer (https://arxiv.org/html/1910.10683v4)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/pdf/1910.10683v4",
+      "title": " (https://arxiv.org/pdf/1910.10683v4)",
+      "type": "application/pdf",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/abs/2104.09864v5",
+      "title": "[2104.09864v5] RoFormer: Enhanced Transformer with Rotary Position Embedding (https://arxiv.org/abs/2104.09864v5)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/html/2104.09864v5",
+      "title": "RoFormer: Enhanced Transformer with Rotary Position Embedding (https://arxiv.org/html/2104.09864v5)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2104.09864v5",
+      "title": "RoFormer (https://arxiv.org/pdf/2104.09864v5)",
+      "type": "application/pdf",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/abs/2108.12409v2",
+      "title": "[2108.12409v2] Train Short, Test Long: Attention with Linear Biases Enables Input Length Extrapolation (https://arxiv.org/abs/2108.12409v2)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/html/2108.12409v2",
+      "title": "Train Short, Test Long: Attention with Linear Biases Enables Input Length Extrapolation (https://arxiv.org/html/2108.12409v2)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2108.12409v2",
+      "title": " (https://arxiv.org/pdf/2108.12409v2)",
+      "type": "application/pdf",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/abs/2306.15595v2",
+      "title": "[2306.15595v2] Extending Context Window of Large Language Models via Positional Interpolation (https://arxiv.org/abs/2306.15595v2)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/html/2306.15595v2",
+      "title": "Extending Context Window of Large Language Models via Position Interpolation (https://arxiv.org/html/2306.15595v2)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2306.15595v2",
+      "title": " (https://arxiv.org/pdf/2306.15595v2)",
+      "type": "application/pdf",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/abs/2309.00071v2",
+      "title": "[2309.00071v2] YaRN: Efficient Context Window Extension of Large Language Models (https://arxiv.org/abs/2309.00071v2)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/html/2309.00071v2",
+      "title": "YaRN: Efficient Context Window Extension of Large Language Models (https://arxiv.org/html/2309.00071v2)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2309.00071v2",
+      "title": " (https://arxiv.org/pdf/2309.00071v2)",
+      "type": "application/pdf",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/abs/2402.13753v1",
+      "title": "[2402.13753v1] LongRoPE: Extending LLM Context Window Beyond 2 Million Tokens (https://arxiv.org/abs/2402.13753v1)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/html/2402.13753v1",
+      "title": "LongRoPE: Extending LLM Context Window Beyond 2 Million Tokens (https://arxiv.org/html/2402.13753v1)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2402.13753v1",
+      "title": "LongRoPE: Extending LLM Context Window Beyond 2 Million Tokens (https://arxiv.org/pdf/2402.13753v1)",
+      "type": "application/pdf",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/abs/2307.03172v1",
+      "title": "[2307.03172v1] Lost in the Middle: How Language Models Use Long Contexts (https://arxiv.org/abs/2307.03172v1)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/html/2307.03172v1",
+      "title": "Lost in the Middle: How Language Models Use Long Contexts (https://arxiv.org/html/2307.03172v1)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2307.03172v1",
+      "title": " (https://arxiv.org/pdf/2307.03172v1)",
+      "type": "application/pdf",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/abs/2404.06654v3",
+      "title": "[2404.06654v3] RULER: What's the Real Context Size of Your Long-Context Language Models? (https://arxiv.org/abs/2404.06654v3)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/html/2404.06654v3",
+      "title": "Ruler: What’s the Real Context Size of YourLong-Context Language Models? (https://arxiv.org/html/2404.06654v3)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2404.06654v3",
+      "title": " (https://arxiv.org/pdf/2404.06654v3)",
+      "type": "application/pdf",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/abs/2308.14508v2",
+      "title": "[2308.14508v2] LongBench: A Bilingual, Multitask Benchmark for Long Context Understanding (https://arxiv.org/abs/2308.14508v2)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/html/2308.14508v2",
+      "title": "LongBench: A Bilingual, Multitask Benchmark for Long Context Understanding (https://arxiv.org/html/2308.14508v2)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2308.14508v2",
+      "title": "Internal Error ()",
+      "type": null,
+      "error": "Failed to fetch https://arxiv.org/pdf/2308.14508v2: (400) Content length is too large: 11630690",
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "unverified"
+    },
+    {
+      "url": "https://arxiv.org/abs/1911.02150v1",
+      "title": "[1911.02150v1] Fast Transformer Decoding: One Write-Head is All You Need (https://arxiv.org/abs/1911.02150v1)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/html/1911.02150v1",
+      "title": "Fast Transformer Decoding: One Write-Head is All You Need (https://arxiv.org/html/1911.02150v1)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/pdf/1911.02150v1",
+      "title": " (https://arxiv.org/pdf/1911.02150v1)",
+      "type": "application/pdf",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/abs/2305.13245v3",
+      "title": "[2305.13245v3] GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints (https://arxiv.org/abs/2305.13245v3)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/html/2305.13245v3",
+      "title": "GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints (https://arxiv.org/html/2305.13245v3)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2305.13245v3",
+      "title": " (https://arxiv.org/pdf/2305.13245v3)",
+      "type": "application/pdf",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/abs/2405.04434v5",
+      "title": "[2405.04434v5] DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model (https://arxiv.org/abs/2405.04434v5)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/html/2405.04434v5",
+      "title": "DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model (https://arxiv.org/html/2405.04434v5)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2405.04434v5",
+      "title": " (https://arxiv.org/pdf/2405.04434v5)",
+      "type": "application/pdf",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/abs/2505.06708v1",
+      "title": "[2505.06708v1] Gated Attention for Large Language Models: Non-linearity, Sparsity, and Attention-Sink-Free (https://arxiv.org/abs/2505.06708v1)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/html/2505.06708v1",
+      "title": "Gated Attention for Large Language Models: Non-linearity, Sparsity, and Attention-Sink-Free (https://arxiv.org/html/2505.06708v1)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2505.06708v1",
+      "title": "Gated Attention for Large Language Models: Non-linearity, Sparsity, and Attention-Sink-Free (https://arxiv.org/pdf/2505.06708v1)",
+      "type": "application/pdf",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/html/2006.04768v3",
+      "title": "Linformer: Self-Attention with Linear Complexity (https://arxiv.org/html/2006.04768v3)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2006.04768v3",
+      "title": " (https://arxiv.org/pdf/2006.04768v3)",
+      "type": "application/pdf",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/html/1805.02867v2",
+      "title": "Online normalizer calculation for softmax (https://arxiv.org/html/1805.02867v2)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/pdf/1805.02867v2",
+      "title": " (https://arxiv.org/pdf/1805.02867v2)",
+      "type": "application/pdf",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/abs/2205.14135v2",
+      "title": "[2205.14135v2] FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness (https://arxiv.org/abs/2205.14135v2)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2205.14135v2",
+      "title": " (https://arxiv.org/pdf/2205.14135v2)",
+      "type": "application/pdf",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/html/2407.08608v2",
+      "title": "FlashAttention-3:Fast and Accurate Attention with Asynchrony and Low-precision (https://arxiv.org/html/2407.08608v2)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/html/2603.05451v1",
+      "title": "FlashAttention-4: Algorithm and Kernel Pipelining Co-Design for Asymmetric Hardware Scaling (https://arxiv.org/html/2603.05451v1)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/html/2410.02367v1",
+      "title": "SageAttention: Accurate 8-bit attention for Plug-and-Play Inference Acceleration (https://arxiv.org/html/2410.02367v1)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2410.02367v1",
+      "title": "Internal Error ()",
+      "type": null,
+      "error": "Failed to fetch https://arxiv.org/pdf/2410.02367v1: (400) Content length is too large: 14604502",
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "unverified"
+    },
+    {
+      "url": "https://arxiv.org/html/2310.01889v4",
+      "title": "Ring Attention with Blockwise Transformers for Near-Infinite Context (https://arxiv.org/html/2310.01889v4)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2310.01889v4",
+      "title": " (https://arxiv.org/pdf/2310.01889v4)",
+      "type": "application/pdf",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/html/2309.14509v1",
+      "title": "DeepSpeed Ulysses: System Optimizations for Enabling Training of Extreme Long Sequence Transformer Models (https://arxiv.org/html/2309.14509v1)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2309.14509v1",
+      "title": "DeepSpeed Ulysses: System Optimizations for Enabling Training of Extreme Long Sequence Transformer Models (https://arxiv.org/pdf/2309.14509v1)",
+      "type": "application/pdf",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/html/2001.04451v2",
+      "title": "Reformer: The Efficient Transformer (https://arxiv.org/html/2001.04451v2)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2001.04451v2",
+      "title": " (https://arxiv.org/pdf/2001.04451v2)",
+      "type": "application/pdf",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/html/2003.05997v3",
+      "title": "Efficient Content-Based Sparse Attention with Routing Transformers (https://arxiv.org/html/2003.05997v3)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2003.05997v3",
+      "title": " (https://arxiv.org/pdf/2003.05997v3)",
+      "type": "application/pdf",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/abs/1904.10509v1",
+      "title": "[1904.10509v1] Generating Long Sequences with Sparse Transformers (https://arxiv.org/abs/1904.10509v1)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/html/1904.10509v1",
+      "title": "Generating Long Sequences with Sparse Transformers (https://arxiv.org/html/1904.10509v1)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/pdf/1904.10509v1",
+      "title": "Generating Long Sequences with Sparse Transformers (https://arxiv.org/pdf/1904.10509v1)",
+      "type": "application/pdf",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/html/2004.05150v2",
+      "title": "Longformer: The Long-Document Transformer (https://arxiv.org/html/2004.05150v2)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/html/2007.14062v2",
+      "title": "Big Bird: Transformers for Longer Sequences (https://arxiv.org/html/2007.14062v2)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/abs/2310.06825v1",
+      "title": "[2310.06825v1] Mistral 7B (https://arxiv.org/abs/2310.06825v1)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/html/2310.06825v1",
+      "title": "Mistral 7B (https://arxiv.org/html/2310.06825v1)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2310.06825v1",
+      "title": " (https://arxiv.org/pdf/2310.06825v1)",
+      "type": "application/pdf",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/html/2406.10774v1",
+      "title": "Quest: Query-Aware Sparsity for Efficient Long-Context LLM Inference (https://arxiv.org/html/2406.10774v1)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/html/2407.02490v1",
+      "title": "MInference 1.0: Accelerating Pre-filling for Long-Context LLMs via Dynamic Sparse Attention (https://arxiv.org/html/2407.02490v1)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2407.02490v1",
+      "title": " (https://arxiv.org/pdf/2407.02490v1)",
+      "type": "application/pdf",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/abs/2502.11089v1",
+      "title": "[2502.11089v1] Native Sparse Attention: Hardware-Aligned and Natively Trainable Sparse Attention (https://arxiv.org/abs/2502.11089v1)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/html/2502.11089v1",
+      "title": "Native Sparse Attention: Hardware-Aligned and Natively Trainable Sparse Attention (https://arxiv.org/html/2502.11089v1)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2502.11089v1",
+      "title": " (https://arxiv.org/pdf/2502.11089v1)",
+      "type": "application/pdf",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/html/2512.02556v1",
+      "title": "DeepSeek-V3.2: Pushing the Frontier of Open Large Language Models (https://arxiv.org/html/2512.02556v1)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/abs/2309.06180v1",
+      "title": "[2309.06180v1] Efficient Memory Management for Large Language Model Serving with PagedAttention (https://arxiv.org/abs/2309.06180v1)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2309.06180v1",
+      "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention (https://arxiv.org/pdf/2309.06180v1)",
+      "type": "application/pdf",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/html/2402.02750v2",
+      "title": "KIVI: A Tuning-Free Asymmetric 2bit Quantization for KV Cache (https://arxiv.org/html/2402.02750v2)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2402.02750v2",
+      "title": "KIVI: A Tuning-Free Asymmetric 2bit Quantization for KV Cache (https://arxiv.org/pdf/2402.02750v2)",
+      "type": "application/pdf",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/abs/2309.17453v4",
+      "title": "[2309.17453v4] Efficient Streaming Language Models with Attention Sinks (https://arxiv.org/abs/2309.17453v4)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/html/2309.17453v4",
+      "title": "Efficient Streaming Language Models with Attention Sinks (https://arxiv.org/html/2309.17453v4)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2309.17453v4",
+      "title": "Internal Error ()",
+      "type": null,
+      "error": "Failed to fetch https://arxiv.org/pdf/2309.17453v4: (400) Content length is too large: 16952848",
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "unverified"
+    },
+    {
+      "url": "https://arxiv.org/html/2306.14048v3",
+      "title": "\"H\"_2⁢\"O\": Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models (https://arxiv.org/html/2306.14048v3)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2306.14048v3",
+      "title": " (https://arxiv.org/pdf/2306.14048v3)",
+      "type": "application/pdf",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/html/2404.14469v2",
+      "title": "SnapKV: LLM Knows What You are Looking for Before Generation (https://arxiv.org/html/2404.14469v2)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2404.14469v2",
+      "title": " (https://arxiv.org/pdf/2404.14469v2)",
+      "type": "application/pdf",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/html/2312.07104v2",
+      "title": "SGLang: Efficient Execution of Structured Language Model Programs (https://arxiv.org/html/2312.07104v2)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2312.07104v2",
+      "title": " (https://arxiv.org/pdf/2312.07104v2)",
+      "type": "application/pdf",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/html/2303.06865v1",
+      "title": "1Introduction (https://arxiv.org/html/2303.06865v1)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2303.06865v1",
+      "title": " High-throughput Generative Inference of Large Language Models  with a Single GPU  (https://arxiv.org/pdf/2303.06865v1)",
+      "type": "application/pdf",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/html/2403.02310v3",
+      "title": "Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve (https://arxiv.org/html/2403.02310v3)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2403.02310v3",
+      "title": " (https://arxiv.org/pdf/2403.02310v3)",
+      "type": "application/pdf",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/abs/2009.14794v4",
+      "title": "[2009.14794v4] Rethinking Attention with Performers (https://arxiv.org/abs/2009.14794v4)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2009.14794v4",
+      "title": " (https://arxiv.org/pdf/2009.14794v4)",
+      "type": "application/pdf",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/html/2312.06635v3",
+      "title": "Gated Linear Attention Transformers with Hardware-Efficient Training (https://arxiv.org/html/2312.06635v3)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2312.06635v3",
+      "title": " (https://arxiv.org/pdf/2312.06635v3)",
+      "type": "application/pdf",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/html/2406.06484v2",
+      "title": "Parallelizing Linear Transformers with the Delta Rule over Sequence Length (https://arxiv.org/html/2406.06484v2)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2406.06484v2",
+      "title": " (https://arxiv.org/pdf/2406.06484v2)",
+      "type": "application/pdf",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/abs/2412.06464v1",
+      "title": "[2412.06464v1] Gated Delta Networks: Improving Mamba2 with Delta Rule (https://arxiv.org/abs/2412.06464v1)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/html/2412.06464v1",
+      "title": "Gated Delta Networks: Improving Mamba2 with Delta Rule (https://arxiv.org/html/2412.06464v1)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2412.06464v1",
+      "title": " (https://arxiv.org/pdf/2412.06464v1)",
+      "type": "application/pdf",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/abs/2312.04927",
+      "title": "[2312.04927] Zoology: Measuring and Improving Recall in Efficient Language Models (https://arxiv.org/abs/2312.04927)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/html/2307.08621v4",
+      "title": "Retentive Network: A Successor to Transformer for Large Language Models (https://arxiv.org/html/2307.08621v4)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2307.08621v4",
+      "title": " (https://arxiv.org/pdf/2307.08621v4)",
+      "type": "application/pdf",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/html/2305.13048v2",
+      "title": "RWKV: Reinventing RNNs for the Transformer Era (https://arxiv.org/html/2305.13048v2)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2305.13048v2",
+      "title": " (https://arxiv.org/pdf/2305.13048v2)",
+      "type": "application/pdf",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/html/2407.04620v1",
+      "title": "Learning to (Learn at Test Time):RNNs with Expressive Hidden States (https://arxiv.org/html/2407.04620v1)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2407.04620v1",
+      "title": " (https://arxiv.org/pdf/2407.04620v1)",
+      "type": "application/pdf",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/html/2402.19427v1",
+      "title": "Griffin: Mixing Gated Linear Recurrences with Local Attention for Efficient Language Models (https://arxiv.org/html/2402.19427v1)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2402.19427v1",
+      "title": " (https://arxiv.org/pdf/2402.19427v1)",
+      "type": "application/pdf",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/html/2403.19887v2",
+      "title": "Jamba:A Hybrid Transformer-Mamba Language Model (https://arxiv.org/html/2403.19887v2)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2403.19887v2",
+      "title": " (https://arxiv.org/pdf/2403.19887v2)",
+      "type": "application/pdf",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/html/2408.00118v3",
+      "title": "Gemma 2: Improving Open Language Models at a Practical Size (https://arxiv.org/html/2408.00118v3)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2408.00118v3",
+      "title": " (https://arxiv.org/pdf/2408.00118v3)",
+      "type": "application/pdf",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/html/2312.00752v2",
+      "title": "Mamba: Linear-Time Sequence Modeling with Selective State Spaces (https://arxiv.org/html/2312.00752v2)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2312.00752v2",
+      "title": " (https://arxiv.org/pdf/2312.00752v2)",
+      "type": "application/pdf",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/html/2405.21060v1",
+      "title": "Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality (https://arxiv.org/html/2405.21060v1)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2405.21060v1",
+      "title": " (https://arxiv.org/pdf/2405.21060v1)",
+      "type": "application/pdf",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/html/2406.07522v1",
+      "title": "Samba: Simple Hybrid State Space Models for Efficient Unlimited Context Language Modeling (https://arxiv.org/html/2406.07522v1)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2406.07522v1",
+      "title": " (https://arxiv.org/pdf/2406.07522v1)",
+      "type": "application/pdf",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/abs/1409.3215",
+      "title": "[1409.3215] Sequence to Sequence Learning with Neural Networks (https://arxiv.org/abs/1409.3215)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/abs/1409.0473",
+      "title": "[1409.0473] Neural Machine Translation by Jointly Learning to Align and Translate (https://arxiv.org/abs/1409.0473)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/abs/1706.03762",
+      "title": "[1706.03762] Attention Is All You Need (https://arxiv.org/abs/1706.03762)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/abs/1904.10509",
+      "title": "[1904.10509] Generating Long Sequences with Sparse Transformers (https://arxiv.org/abs/1904.10509)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/abs/1911.02150",
+      "title": "[1911.02150] Fast Transformer Decoding: One Write-Head is All You Need (https://arxiv.org/abs/1911.02150)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/abs/2104.09864",
+      "title": "[2104.09864] RoFormer: Enhanced Transformer with Rotary Position Embedding (https://arxiv.org/abs/2104.09864)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/abs/2108.12409",
+      "title": "[2108.12409] Train Short, Test Long: Attention with Linear Biases Enables Input Length Extrapolation (https://arxiv.org/abs/2108.12409)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/abs/2205.14135",
+      "title": "[2205.14135] FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness (https://arxiv.org/abs/2205.14135)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/abs/2305.13245",
+      "title": "[2305.13245] GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints (https://arxiv.org/abs/2305.13245)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/abs/2309.06180",
+      "title": "[2309.06180] Efficient Memory Management for Large Language Model Serving with PagedAttention (https://arxiv.org/abs/2309.06180)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/abs/2306.15595",
+      "title": "[2306.15595] Extending Context Window of Large Language Models via Positional Interpolation (https://arxiv.org/abs/2306.15595)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/abs/2402.19427",
+      "title": "[2402.19427] Griffin: Mixing Gated Linear Recurrences with Local Attention for Efficient Language Models (https://arxiv.org/abs/2402.19427)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/abs/2405.04434",
+      "title": "[2405.04434] DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model (https://arxiv.org/abs/2405.04434)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/abs/2405.21060",
+      "title": "[2405.21060] Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality (https://arxiv.org/abs/2405.21060)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/abs/2412.06464",
+      "title": "[2412.06464] Gated Delta Networks: Improving Mamba2 with Delta Rule (https://arxiv.org/abs/2412.06464)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/abs/2502.11089",
+      "title": "[2502.11089] Native Sparse Attention: Hardware-Aligned and Natively Trainable Sparse Attention (https://arxiv.org/abs/2502.11089)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/abs/2505.06708",
+      "title": "[2505.06708] Gated Attention for Large Language Models: Non-linearity, Sparsity, and Attention-Sink-Free (https://arxiv.org/abs/2505.06708)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/abs/2603.05451v1",
+      "title": "[2603.05451v1] FlashAttention-4: Algorithm and Kernel Pipelining Co-Design for Asymmetric Hardware Scaling (https://arxiv.org/abs/2603.05451v1)",
+      "type": "text/html",
+      "error": null,
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://arxiv.org/html/1706.03762v7/Figures/ModalNet-19.png",
+      "title": null,
+      "type": null,
+      "error": "工具返回图像资源引用，未完成图像显示及文件字节核验。",
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "unverified"
+    },
+    {
+      "url": "https://arxiv.org/html/2305.13245v3/images/gmq_architecture.png",
+      "title": null,
+      "type": null,
+      "error": "工具返回图像资源引用，未完成图像显示及文件字节核验。",
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "unverified"
+    },
+    {
+      "url": "https://arxiv.org/html/2407.08608v2/figs/pingpong_pipelining.png",
+      "title": null,
+      "type": null,
+      "error": "工具返回图像资源引用，未完成图像显示及文件字节核验。",
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "anchor_verified": false,
+      "result": "unverified"
+    },
+    {
+      "url": "https://jalammar.github.io/images/xlnet/gpt-2-autoregression-2.gif",
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "type": null,
+      "error": "Unsupported content-type: image/gif；未验证资源显示或下载。",
+      "anchor_verified": false,
+      "result": "unverified"
+    },
+    {
+      "url": "https://jalammar.github.io/illustrated-transformer/",
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "type": "text/html",
+      "error": null,
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "type": "text/html",
+      "error": null,
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://jalammar.github.io/a-visual-guide-to-using-bert-for-the-first-time/",
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "type": "text/html",
+      "error": null,
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://github.com/d2l-ai/d2l-en/blob/master/LICENSE",
+      "checked_on": "2026-10-26",
+      "method": "GitHub connector fetch",
+      "type": "text/plain",
+      "error": null,
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://proceedings.mlr.press/v119/katharopoulos20a/katharopoulos20a.pdf",
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "type": "application/pdf",
+      "error": null,
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://aclanthology.org/N18-2074/",
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "type": "text/html",
+      "error": null,
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://aclanthology.org/N18-2074.pdf",
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "type": "application/pdf",
+      "error": null,
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://tridao.me/publications/flash2/flash2.pdf",
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "type": "application/pdf",
+      "error": null,
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://proceedings.mlr.press/v119/katharopoulos20a.html",
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "type": "text/html",
+      "error": null,
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://proceedings.mlr.press/v139/schlag21a.html",
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "type": "text/html",
+      "error": null,
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://proceedings.mlr.press/v139/schlag21a/schlag21a.pdf",
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "type": "application/pdf",
+      "error": null,
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2024/file/448fc91f669c15d10364ee01d512cc10-Paper-Conference.pdf",
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "type": "application/pdf",
+      "error": null,
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://www.deeplearningbook.org/contents/intro.html",
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "type": "text/html",
+      "error": null,
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://huggingface.co/learn/llm-course/chapter2/4?fw=pt",
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "type": "text/html",
+      "error": null,
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://d2l.ai/chapter_recurrent-modern/seq2seq.html",
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "type": "text/html",
+      "error": null,
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/",
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "type": "text/html",
+      "error": null,
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://huggingface.co/learn/llm-course/chapter1/6",
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "type": "text/html",
+      "error": null,
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://d2l.ai/chapter_attention-mechanisms-and-transformers/index.html",
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "type": "text/html",
+      "error": null,
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=eMlx5fFNoYc",
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "type": null,
+      "error": "仅取得页面标题或 Cache miss，未验证视频播放和时间定位。",
+      "anchor_verified": false,
+      "result": "unverified"
+    },
+    {
+      "url": "https://jalammar.github.io/illustrated-gpt2/",
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "type": "text/html",
+      "error": null,
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://www.3blue1brown.com/lessons/attention/",
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "type": "text/html",
+      "error": null,
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "type": "text/html",
+      "error": null,
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://d2l.ai/chapter_attention-mechanisms-and-transformers/transformer.html",
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "type": "text/html",
+      "error": null,
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://d2l.ai/chapter_attention-mechanisms-and-transformers/multihead-attention.html",
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "type": "text/html",
+      "error": null,
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://docs.vllm.ai/en/latest/design/paged_attention/",
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "type": "text/html",
+      "error": null,
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://d2l.ai/chapter_attention-mechanisms-and-transformers/self-attention-and-positional-encoding.html",
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "type": "text/html",
+      "error": null,
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://d2l.ai/chapter_attention-mechanisms-and-transformers/attention-scoring-functions.html",
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "type": "text/html",
+      "error": null,
+      "anchor_verified": false,
+      "result": "content_returned"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=eMlx5fFNoYc&t=392s",
+      "checked_on": "2026-10-26",
+      "method": "web.open",
+      "type": null,
+      "error": "仅取得页面标题或 Cache miss，未验证视频播放和时间定位。",
+      "anchor_verified": false,
+      "result": "unverified"
+    },
+    {
+      "url": "https://github.com/3b1b/captions/blob/main/2024/attention/english/captions.srt",
+      "checked_on": "2026-10-26",
+      "method": "GitHub connector fetch",
+      "type": "text/plain",
+      "error": null,
+      "anchor_verified": false,
+      "result": "content_returned"
+    }
+  ],
+  "links": [
+    {
+      "url": "https://jalammar.github.io/images/xlnet/gpt-2-autoregression-2.gif",
+      "files": [
+        "book/assets/README.md",
+        "book/chapters/overview/bottlenecks-and-context.md"
+      ],
+      "base_url": "https://jalammar.github.io/images/xlnet/gpt-2-autoregression-2.gif",
+      "endpoint_result": "unverified",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/html/2309.06180v1",
+      "files": [
+        "book/appendices/references.md",
+        "book/appendices/timeline.md",
+        "book/assets/README.md",
+        "book/chapters/kv-cache/lifecycle.md",
+        "book/chapters/kv-representations/cache-cost.md",
+        "book/chapters/overview/bottlenecks-and-context.md",
+        "book/chapters/overview/optimization-landscape.md",
+        "book/chapters/transformer-attention/README.md",
+        "book/chapters/transformer-attention/training-prefill-decode.md"
+      ],
+      "base_url": "https://arxiv.org/html/2309.06180v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/html/1706.03762v7/Figures/ModalNet-19.png",
+      "files": [
+        "book/assets/README.md",
+        "book/chapters/transformer-attention/scaled-dot-product.md"
+      ],
+      "base_url": "https://arxiv.org/html/1706.03762v7/Figures/ModalNet-19.png",
+      "endpoint_result": "unverified",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/html/2305.13245v3/images/gmq_architecture.png",
+      "files": [
+        "book/assets/README.md",
+        "book/chapters/kv-representations/README.md"
+      ],
+      "base_url": "https://arxiv.org/html/2305.13245v3/images/gmq_architecture.png",
+      "endpoint_result": "unverified",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://jalammar.github.io/illustrated-transformer/",
+      "files": [
+        "book/appendices/references.md",
+        "book/assets/README.md"
+      ],
+      "base_url": "https://jalammar.github.io/illustrated-transformer/",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "files": [
+        "book/appendices/references.md",
+        "book/assets/README.md"
+      ],
+      "base_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://jalammar.github.io/a-visual-guide-to-using-bert-for-the-first-time/",
+      "files": [
+        "book/appendices/references.md",
+        "book/assets/README.md",
+        "book/chapters/overview/introduction.md"
+      ],
+      "base_url": "https://jalammar.github.io/a-visual-guide-to-using-bert-for-the-first-time/",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://github.com/d2l-ai/d2l-en/blob/master/LICENSE",
+      "files": [
+        "book/assets/README.md"
+      ],
+      "base_url": "https://github.com/d2l-ai/d2l-en/blob/master/LICENSE",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/html/2205.14135v2",
+      "files": [
+        "book/appendices/foundations.md",
+        "book/appendices/references.md",
+        "book/appendices/timeline.md",
+        "book/chapters/flash-attention/README.md",
+        "book/chapters/overview/bottlenecks-and-context.md",
+        "book/chapters/overview/optimization-landscape.md",
+        "book/chapters/transformer-attention/scaled-dot-product.md",
+        "book/chapters/transformer-attention/training-prefill-decode.md"
+      ],
+      "base_url": "https://arxiv.org/html/2205.14135v2",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://proceedings.mlr.press/v119/katharopoulos20a/katharopoulos20a.pdf",
+      "files": [
+        "book/appendices/foundations.md",
+        "book/appendices/references.md",
+        "book/chapters/linear-attention/kernel-attention.md",
+        "book/chapters/linear-attention/recurrence.md",
+        "book/chapters/overview/optimization-landscape.md"
+      ],
+      "base_url": "https://proceedings.mlr.press/v119/katharopoulos20a/katharopoulos20a.pdf",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/html/1409.0473v7",
+      "files": [
+        "book/appendices/foundations.md",
+        "book/appendices/references.md",
+        "book/chapters/overview/from-seq2seq-to-transformer.md"
+      ],
+      "base_url": "https://arxiv.org/html/1409.0473v7",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/abs/1409.3215v3",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/abs/1409.3215v3",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/html/1409.3215v3",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/html/1409.3215v3",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/pdf/1409.3215v3",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/pdf/1409.3215v3",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/abs/1409.0473v7",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/abs/1409.0473v7",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/pdf/1409.0473v7",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/pdf/1409.0473v7",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/abs/1706.03762v7",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/abs/1706.03762v7",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/html/1706.03762v7",
+      "files": [
+        "book/appendices/references.md",
+        "book/chapters/overview/bottlenecks-and-context.md",
+        "book/chapters/overview/from-seq2seq-to-transformer.md",
+        "book/chapters/position-encoding/absolute-and-relative.md",
+        "book/chapters/position-encoding/position-and-order.md",
+        "book/chapters/transformer-attention/README.md",
+        "book/chapters/transformer-attention/attention-and-masks.md",
+        "book/chapters/transformer-attention/multi-head.md",
+        "book/chapters/transformer-attention/scaled-dot-product.md",
+        "book/chapters/transformer-attention/structure-and-flow.md",
+        "book/chapters/transformer-attention/training-prefill-decode.md"
+      ],
+      "base_url": "https://arxiv.org/html/1706.03762v7",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/pdf/1706.03762v7",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/pdf/1706.03762v7",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://aclanthology.org/N18-2074/",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://aclanthology.org/N18-2074/",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://aclanthology.org/N18-2074.pdf",
+      "files": [
+        "book/appendices/references.md",
+        "book/chapters/position-encoding/absolute-and-relative.md",
+        "book/chapters/position-encoding/position-and-order.md"
+      ],
+      "base_url": "https://aclanthology.org/N18-2074.pdf",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/abs/1910.10683v4",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/abs/1910.10683v4",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/html/1910.10683v4",
+      "files": [
+        "book/appendices/references.md",
+        "book/chapters/position-encoding/absolute-and-relative.md",
+        "book/chapters/position-encoding/position-and-order.md"
+      ],
+      "base_url": "https://arxiv.org/html/1910.10683v4",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/pdf/1910.10683v4",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/pdf/1910.10683v4",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/abs/2104.09864v5",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/abs/2104.09864v5",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/html/2104.09864v5",
+      "files": [
+        "book/appendices/references.md",
+        "book/chapters/overview/optimization-landscape.md",
+        "book/chapters/position-encoding/rope-and-alibi.md"
+      ],
+      "base_url": "https://arxiv.org/html/2104.09864v5",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2104.09864v5",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/pdf/2104.09864v5",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/abs/2108.12409v2",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/abs/2108.12409v2",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/html/2108.12409v2",
+      "files": [
+        "book/appendices/references.md",
+        "book/chapters/overview/optimization-landscape.md",
+        "book/chapters/position-encoding/evaluation.md",
+        "book/chapters/position-encoding/rope-and-alibi.md"
+      ],
+      "base_url": "https://arxiv.org/html/2108.12409v2",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2108.12409v2",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/pdf/2108.12409v2",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/abs/2306.15595v2",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/abs/2306.15595v2",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/html/2306.15595v2",
+      "files": [
+        "book/appendices/references.md",
+        "book/chapters/overview/bottlenecks-and-context.md",
+        "book/chapters/overview/optimization-landscape.md",
+        "book/chapters/position-encoding/context-extension.md",
+        "book/chapters/position-encoding/evaluation.md"
+      ],
+      "base_url": "https://arxiv.org/html/2306.15595v2",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2306.15595v2",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/pdf/2306.15595v2",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/abs/2309.00071v2",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/abs/2309.00071v2",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/html/2309.00071v2",
+      "files": [
+        "book/appendices/references.md",
+        "book/chapters/position-encoding/context-extension.md"
+      ],
+      "base_url": "https://arxiv.org/html/2309.00071v2",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2309.00071v2",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/pdf/2309.00071v2",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/abs/2402.13753v1",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/abs/2402.13753v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/html/2402.13753v1",
+      "files": [
+        "book/appendices/references.md",
+        "book/chapters/position-encoding/context-extension.md"
+      ],
+      "base_url": "https://arxiv.org/html/2402.13753v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2402.13753v1",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/pdf/2402.13753v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/abs/2307.03172v1",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/abs/2307.03172v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/html/2307.03172v1",
+      "files": [
+        "book/appendices/references.md",
+        "book/chapters/overview/bottlenecks-and-context.md",
+        "book/chapters/position-encoding/evaluation.md"
+      ],
+      "base_url": "https://arxiv.org/html/2307.03172v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2307.03172v1",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/pdf/2307.03172v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/abs/2404.06654v3",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/abs/2404.06654v3",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/html/2404.06654v3",
+      "files": [
+        "book/appendices/references.md",
+        "book/chapters/position-encoding/evaluation.md"
+      ],
+      "base_url": "https://arxiv.org/html/2404.06654v3",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2404.06654v3",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/pdf/2404.06654v3",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/abs/2308.14508v2",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/abs/2308.14508v2",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/html/2308.14508v2",
+      "files": [
+        "book/appendices/references.md",
+        "book/chapters/position-encoding/evaluation.md"
+      ],
+      "base_url": "https://arxiv.org/html/2308.14508v2",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2308.14508v2",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/pdf/2308.14508v2",
+      "endpoint_result": "unverified",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/abs/1911.02150v1",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/abs/1911.02150v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/html/1911.02150v1",
+      "files": [
+        "book/appendices/references.md",
+        "book/chapters/kv-representations/README.md",
+        "book/chapters/kv-representations/cache-cost.md",
+        "book/chapters/kv-representations/head-sharing.md",
+        "book/chapters/overview/bottlenecks-and-context.md",
+        "book/chapters/overview/introduction.md",
+        "book/chapters/overview/optimization-landscape.md",
+        "book/chapters/transformer-attention/README.md",
+        "book/chapters/transformer-attention/attention-and-masks.md",
+        "book/chapters/transformer-attention/multi-head.md",
+        "book/chapters/transformer-attention/training-prefill-decode.md"
+      ],
+      "base_url": "https://arxiv.org/html/1911.02150v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/pdf/1911.02150v1",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/pdf/1911.02150v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/abs/2305.13245v3",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/abs/2305.13245v3",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/html/2305.13245v3",
+      "files": [
+        "book/appendices/references.md",
+        "book/chapters/kv-representations/README.md",
+        "book/chapters/kv-representations/cache-cost.md",
+        "book/chapters/kv-representations/comparison.md",
+        "book/chapters/kv-representations/head-sharing.md",
+        "book/chapters/overview/optimization-landscape.md"
+      ],
+      "base_url": "https://arxiv.org/html/2305.13245v3",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2305.13245v3",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/pdf/2305.13245v3",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/abs/2405.04434v5",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/abs/2405.04434v5",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/html/2405.04434v5",
+      "files": [
+        "book/appendices/references.md",
+        "book/chapters/kv-representations/README.md",
+        "book/chapters/kv-representations/cache-cost.md",
+        "book/chapters/kv-representations/decoupled-rope.md",
+        "book/chapters/kv-representations/latent-compression.md",
+        "book/chapters/overview/optimization-landscape.md"
+      ],
+      "base_url": "https://arxiv.org/html/2405.04434v5",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2405.04434v5",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/pdf/2405.04434v5",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/abs/2505.06708v1",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/abs/2505.06708v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/html/2505.06708v1",
+      "files": [
+        "book/appendices/references.md",
+        "book/chapters/gated-attention/README.md",
+        "book/chapters/gated-attention/attention-sink.md",
+        "book/chapters/gated-attention/evaluation.md",
+        "book/chapters/gated-attention/output-gating.md",
+        "book/chapters/gated-attention/placement.md",
+        "book/chapters/overview/optimization-landscape.md"
+      ],
+      "base_url": "https://arxiv.org/html/2505.06708v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2505.06708v1",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/pdf/2505.06708v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/html/2006.04768v3",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/html/2006.04768v3",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2006.04768v3",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/pdf/2006.04768v3",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/html/1805.02867v2",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/html/1805.02867v2",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/pdf/1805.02867v2",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/pdf/1805.02867v2",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/abs/2205.14135v2",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/abs/2205.14135v2",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2205.14135v2",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/pdf/2205.14135v2",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://tridao.me/publications/flash2/flash2.pdf",
+      "files": [
+        "book/appendices/references.md",
+        "book/chapters/flash-attention/README.md",
+        "book/chapters/flash-attention/forward-backward.md",
+        "book/chapters/flash-attention/online-softmax.md",
+        "book/chapters/flash-attention/parallelism.md"
+      ],
+      "base_url": "https://tridao.me/publications/flash2/flash2.pdf",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/html/2407.08608v2",
+      "files": [
+        "book/appendices/references.md",
+        "book/chapters/flash-attention/evaluation.md",
+        "book/chapters/flash-attention/parallelism.md"
+      ],
+      "base_url": "https://arxiv.org/html/2407.08608v2",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/html/2603.05451v1",
+      "files": [
+        "book/appendices/references.md",
+        "book/chapters/flash-attention/parallelism.md"
+      ],
+      "base_url": "https://arxiv.org/html/2603.05451v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/html/2410.02367v1",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/html/2410.02367v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2410.02367v1",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/pdf/2410.02367v1",
+      "endpoint_result": "unverified",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/html/2310.01889v4",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/html/2310.01889v4",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2310.01889v4",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/pdf/2310.01889v4",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/html/2309.14509v1",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/html/2309.14509v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2309.14509v1",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/pdf/2309.14509v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/html/2001.04451v2",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/html/2001.04451v2",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2001.04451v2",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/pdf/2001.04451v2",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/html/2003.05997v3",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/html/2003.05997v3",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2003.05997v3",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/pdf/2003.05997v3",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/abs/1904.10509v1",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/abs/1904.10509v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/html/1904.10509v1",
+      "files": [
+        "book/appendices/references.md",
+        "book/chapters/overview/optimization-landscape.md",
+        "book/chapters/sparse-attention/README.md"
+      ],
+      "base_url": "https://arxiv.org/html/1904.10509v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/pdf/1904.10509v1",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/pdf/1904.10509v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/html/2004.05150v2",
+      "files": [
+        "book/appendices/references.md",
+        "book/chapters/sparse-attention/README.md"
+      ],
+      "base_url": "https://arxiv.org/html/2004.05150v2",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/html/2007.14062v2",
+      "files": [
+        "book/appendices/references.md",
+        "book/chapters/sparse-attention/README.md"
+      ],
+      "base_url": "https://arxiv.org/html/2007.14062v2",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/abs/2310.06825v1",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/abs/2310.06825v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/html/2310.06825v1",
+      "files": [
+        "book/appendices/references.md",
+        "book/chapters/overview/bottlenecks-and-context.md",
+        "book/chapters/overview/optimization-landscape.md",
+        "book/chapters/sparse-attention/README.md",
+        "book/chapters/transformer-attention/training-prefill-decode.md"
+      ],
+      "base_url": "https://arxiv.org/html/2310.06825v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2310.06825v1",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/pdf/2310.06825v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/html/2406.10774v1",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/html/2406.10774v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/html/2407.02490v1",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/html/2407.02490v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2407.02490v1",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/pdf/2407.02490v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/abs/2502.11089v1",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/abs/2502.11089v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/html/2502.11089v1",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/html/2502.11089v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2502.11089v1",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/pdf/2502.11089v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/html/2512.02556v1",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/html/2512.02556v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/abs/2309.06180v1",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/abs/2309.06180v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2309.06180v1",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/pdf/2309.06180v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/html/2402.02750v2",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/html/2402.02750v2",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2402.02750v2",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/pdf/2402.02750v2",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/abs/2309.17453v4",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/abs/2309.17453v4",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/html/2309.17453v4",
+      "files": [
+        "book/appendices/references.md",
+        "book/chapters/gated-attention/README.md",
+        "book/chapters/gated-attention/attention-sink.md"
+      ],
+      "base_url": "https://arxiv.org/html/2309.17453v4",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2309.17453v4",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/pdf/2309.17453v4",
+      "endpoint_result": "unverified",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/html/2306.14048v3",
+      "files": [
+        "book/appendices/references.md",
+        "book/chapters/kv-cache/eviction.md"
+      ],
+      "base_url": "https://arxiv.org/html/2306.14048v3",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2306.14048v3",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/pdf/2306.14048v3",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/html/2404.14469v2",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/html/2404.14469v2",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2404.14469v2",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/pdf/2404.14469v2",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/html/2312.07104v2",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/html/2312.07104v2",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2312.07104v2",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/pdf/2312.07104v2",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/html/2303.06865v1",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/html/2303.06865v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2303.06865v1",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/pdf/2303.06865v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/html/2403.02310v3",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/html/2403.02310v3",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2403.02310v3",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/pdf/2403.02310v3",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://proceedings.mlr.press/v119/katharopoulos20a.html",
+      "files": [
+        "book/appendices/references.md",
+        "book/appendices/timeline.md"
+      ],
+      "base_url": "https://proceedings.mlr.press/v119/katharopoulos20a.html",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/abs/2009.14794v4",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/abs/2009.14794v4",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2009.14794v4",
+      "files": [
+        "book/appendices/references.md",
+        "book/chapters/linear-attention/kernel-attention.md"
+      ],
+      "base_url": "https://arxiv.org/pdf/2009.14794v4",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://proceedings.mlr.press/v139/schlag21a.html",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://proceedings.mlr.press/v139/schlag21a.html",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://proceedings.mlr.press/v139/schlag21a/schlag21a.pdf",
+      "files": [
+        "book/appendices/references.md",
+        "book/chapters/linear-attention/capacity-retrieval.md",
+        "book/chapters/linear-attention/delta-rule.md"
+      ],
+      "base_url": "https://proceedings.mlr.press/v139/schlag21a/schlag21a.pdf",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/html/2312.06635v3",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/html/2312.06635v3",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2312.06635v3",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/pdf/2312.06635v3",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/html/2406.06484v2",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/html/2406.06484v2",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2406.06484v2",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/pdf/2406.06484v2",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/abs/2412.06464v1",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/abs/2412.06464v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/html/2412.06464v1",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/html/2412.06464v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2412.06464v1",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/pdf/2412.06464v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/abs/2312.04927",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/abs/2312.04927",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2024/file/448fc91f669c15d10364ee01d512cc10-Paper-Conference.pdf",
+      "files": [
+        "book/appendices/references.md",
+        "book/chapters/linear-attention/capacity-retrieval.md"
+      ],
+      "base_url": "https://proceedings.iclr.cc/paper_files/paper/2024/file/448fc91f669c15d10364ee01d512cc10-Paper-Conference.pdf",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/html/2307.08621v4",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/html/2307.08621v4",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2307.08621v4",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/pdf/2307.08621v4",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/html/2305.13048v2",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/html/2305.13048v2",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2305.13048v2",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/pdf/2305.13048v2",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/html/2407.04620v1",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/html/2407.04620v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2407.04620v1",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/pdf/2407.04620v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/html/2402.19427v1",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/html/2402.19427v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2402.19427v1",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/pdf/2402.19427v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/html/2403.19887v2",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/html/2403.19887v2",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2403.19887v2",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/pdf/2403.19887v2",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/html/2408.00118v3",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/html/2408.00118v3",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2408.00118v3",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/pdf/2408.00118v3",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/html/2312.00752v2",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/html/2312.00752v2",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2312.00752v2",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/pdf/2312.00752v2",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/html/2405.21060v1",
+      "files": [
+        "book/appendices/references.md",
+        "book/chapters/overview/optimization-landscape.md"
+      ],
+      "base_url": "https://arxiv.org/html/2405.21060v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2405.21060v1",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/pdf/2405.21060v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/html/2406.07522v1",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/html/2406.07522v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2406.07522v1",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/pdf/2406.07522v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://www.deeplearningbook.org/contents/intro.html",
+      "files": [
+        "book/appendices/references.md",
+        "book/chapters/overview/introduction.md"
+      ],
+      "base_url": "https://www.deeplearningbook.org/contents/intro.html",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://huggingface.co/learn/llm-course/chapter2/4?fw=pt",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://huggingface.co/learn/llm-course/chapter2/4?fw=pt",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://d2l.ai/chapter_recurrent-modern/seq2seq.html",
+      "files": [
+        "book/appendices/references.md",
+        "book/chapters/overview/from-seq2seq-to-transformer.md"
+      ],
+      "base_url": "https://d2l.ai/chapter_recurrent-modern/seq2seq.html",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://huggingface.co/learn/llm-course/chapter1/6",
+      "files": [
+        "book/appendices/references.md",
+        "book/chapters/overview/from-seq2seq-to-transformer.md"
+      ],
+      "base_url": "https://huggingface.co/learn/llm-course/chapter1/6",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://d2l.ai/chapter_attention-mechanisms-and-transformers/index.html",
+      "files": [
+        "book/appendices/references.md",
+        "book/chapters/transformer-attention/README.md"
+      ],
+      "base_url": "https://d2l.ai/chapter_attention-mechanisms-and-transformers/index.html",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=eMlx5fFNoYc",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://www.youtube.com/watch?v=eMlx5fFNoYc",
+      "endpoint_result": "unverified",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://jalammar.github.io/illustrated-gpt2/",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://jalammar.github.io/illustrated-gpt2/",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://www.3blue1brown.com/lessons/attention/",
+      "files": [
+        "book/appendices/references.md",
+        "book/chapters/overview/introduction.md",
+        "book/chapters/transformer-attention/scaled-dot-product.md"
+      ],
+      "base_url": "https://www.3blue1brown.com/lessons/attention/",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/html/1409.0473v7#S3.SS1",
+      "files": [
+        "book/appendices/references.md",
+        "book/chapters/overview/from-seq2seq-to-transformer.md"
+      ],
+      "base_url": "https://arxiv.org/html/1409.0473v7",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://jalammar.github.io/illustrated-transformer/#a-high-level-look",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://jalammar.github.io/illustrated-transformer/",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://jalammar.github.io/illustrated-gpt2/#one-difference-from-bert",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://jalammar.github.io/illustrated-gpt2/",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://jalammar.github.io/illustrated-gpt2/#evaluation-time-processing-one-token-at-a-time",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://jalammar.github.io/illustrated-gpt2/",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://d2l.ai/chapter_attention-mechanisms-and-transformers/transformer.html",
+      "files": [
+        "book/appendices/references.md",
+        "book/chapters/transformer-attention/structure-and-flow.md"
+      ],
+      "base_url": "https://d2l.ai/chapter_attention-mechanisms-and-transformers/transformer.html",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://d2l.ai/chapter_attention-mechanisms-and-transformers/multihead-attention.html",
+      "files": [
+        "book/appendices/references.md",
+        "book/chapters/transformer-attention/multi-head.md"
+      ],
+      "base_url": "https://d2l.ai/chapter_attention-mechanisms-and-transformers/multihead-attention.html",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://jalammar.github.io/illustrated-transformer/#representing-the-order-of-the-sequence-using-positional-encoding",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://jalammar.github.io/illustrated-transformer/",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2412.06464v1#S3.SS1",
+      "files": [
+        "book/appendices/references.md",
+        "book/chapters/linear-attention/delta-rule.md"
+      ],
+      "base_url": "https://arxiv.org/html/2412.06464v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2402.19427v1#S3",
+      "files": [
+        "book/appendices/references.md",
+        "book/chapters/hybrid-architectures/composition.md"
+      ],
+      "base_url": "https://arxiv.org/html/2402.19427v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2312.00752v2#S2",
+      "files": [
+        "book/appendices/references.md"
+      ],
+      "base_url": "https://arxiv.org/html/2312.00752v2",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://docs.vllm.ai/en/latest/design/paged_attention/",
+      "files": [
+        "book/appendices/references.md",
+        "book/chapters/kv-cache/paged-attention.md"
+      ],
+      "base_url": "https://docs.vllm.ai/en/latest/design/paged_attention/",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/abs/1409.3215",
+      "files": [
+        "book/appendices/timeline.md"
+      ],
+      "base_url": "https://arxiv.org/abs/1409.3215",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/abs/1409.0473",
+      "files": [
+        "book/appendices/timeline.md"
+      ],
+      "base_url": "https://arxiv.org/abs/1409.0473",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/abs/1706.03762",
+      "files": [
+        "book/appendices/timeline.md"
+      ],
+      "base_url": "https://arxiv.org/abs/1706.03762",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/abs/1904.10509",
+      "files": [
+        "book/appendices/timeline.md"
+      ],
+      "base_url": "https://arxiv.org/abs/1904.10509",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/abs/1911.02150",
+      "files": [
+        "book/appendices/timeline.md"
+      ],
+      "base_url": "https://arxiv.org/abs/1911.02150",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/abs/2104.09864",
+      "files": [
+        "book/appendices/timeline.md"
+      ],
+      "base_url": "https://arxiv.org/abs/2104.09864",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/abs/2108.12409",
+      "files": [
+        "book/appendices/timeline.md"
+      ],
+      "base_url": "https://arxiv.org/abs/2108.12409",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/abs/2205.14135",
+      "files": [
+        "book/appendices/timeline.md"
+      ],
+      "base_url": "https://arxiv.org/abs/2205.14135",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/abs/2305.13245",
+      "files": [
+        "book/appendices/timeline.md"
+      ],
+      "base_url": "https://arxiv.org/abs/2305.13245",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/abs/2309.06180",
+      "files": [
+        "book/appendices/timeline.md"
+      ],
+      "base_url": "https://arxiv.org/abs/2309.06180",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/abs/2306.15595",
+      "files": [
+        "book/appendices/timeline.md"
+      ],
+      "base_url": "https://arxiv.org/abs/2306.15595",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/abs/2402.19427",
+      "files": [
+        "book/appendices/timeline.md"
+      ],
+      "base_url": "https://arxiv.org/abs/2402.19427",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/abs/2405.04434",
+      "files": [
+        "book/appendices/timeline.md"
+      ],
+      "base_url": "https://arxiv.org/abs/2405.04434",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/abs/2405.21060",
+      "files": [
+        "book/appendices/timeline.md"
+      ],
+      "base_url": "https://arxiv.org/abs/2405.21060",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/abs/2412.06464",
+      "files": [
+        "book/appendices/timeline.md"
+      ],
+      "base_url": "https://arxiv.org/abs/2412.06464",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/abs/2502.11089",
+      "files": [
+        "book/appendices/timeline.md"
+      ],
+      "base_url": "https://arxiv.org/abs/2502.11089",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/abs/2505.06708",
+      "files": [
+        "book/appendices/timeline.md"
+      ],
+      "base_url": "https://arxiv.org/abs/2505.06708",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/abs/2603.05451v1",
+      "files": [
+        "book/appendices/timeline.md"
+      ],
+      "base_url": "https://arxiv.org/abs/2603.05451v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/html/2406.06484v2#S3",
+      "files": [
+        "book/chapters/linear-attention/delta-rule.md"
+      ],
+      "base_url": "https://arxiv.org/html/2406.06484v2",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2406.06484v2#S2.SS2",
+      "files": [
+        "book/chapters/linear-attention/delta-rule.md"
+      ],
+      "base_url": "https://arxiv.org/html/2406.06484v2",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2407.04620v1#S2.SS1",
+      "files": [
+        "book/chapters/linear-attention/delta-rule.md"
+      ],
+      "base_url": "https://arxiv.org/html/2407.04620v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2407.04620v1#S2.SS7",
+      "files": [
+        "book/chapters/linear-attention/delta-rule.md"
+      ],
+      "base_url": "https://arxiv.org/html/2407.04620v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2407.04620v1#S2.F6",
+      "files": [
+        "book/chapters/linear-attention/delta-rule.md"
+      ],
+      "base_url": "https://arxiv.org/html/2407.04620v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2406.06484v2#S2.SS1",
+      "files": [
+        "book/chapters/linear-attention/chunkwise-computation.md"
+      ],
+      "base_url": "https://arxiv.org/html/2406.06484v2",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2312.06635v3#S3.SS3",
+      "files": [
+        "book/chapters/linear-attention/chunkwise-computation.md"
+      ],
+      "base_url": "https://arxiv.org/html/2312.06635v3",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2406.06484v2#S3.SS2",
+      "files": [
+        "book/chapters/linear-attention/chunkwise-computation.md"
+      ],
+      "base_url": "https://arxiv.org/html/2406.06484v2",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2307.08621v4#S2.F3",
+      "files": [
+        "book/chapters/linear-attention/state-decay.md"
+      ],
+      "base_url": "https://arxiv.org/html/2307.08621v4",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2307.08621v4#S2.SS1",
+      "files": [
+        "book/chapters/linear-attention/state-decay.md"
+      ],
+      "base_url": "https://arxiv.org/html/2307.08621v4",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2305.13048v2#S3",
+      "files": [
+        "book/chapters/linear-attention/state-decay.md"
+      ],
+      "base_url": "https://arxiv.org/html/2305.13048v2",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2312.06635v3#S3.SS1",
+      "files": [
+        "book/chapters/linear-attention/state-decay.md"
+      ],
+      "base_url": "https://arxiv.org/html/2312.06635v3",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2312.06635v3#S3.SS4",
+      "files": [
+        "book/chapters/linear-attention/state-decay.md"
+      ],
+      "base_url": "https://arxiv.org/html/2312.06635v3",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2312.06635v3#S3.SS2",
+      "files": [
+        "book/chapters/linear-attention/state-decay.md"
+      ],
+      "base_url": "https://arxiv.org/html/2312.06635v3",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2407.08608v2/figs/pingpong_pipelining.png",
+      "files": [
+        "book/chapters/flash-attention/parallelism.md"
+      ],
+      "base_url": "https://arxiv.org/html/2407.08608v2/figs/pingpong_pipelining.png",
+      "endpoint_result": "unverified",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/html/2410.02367v1#S4",
+      "files": [
+        "book/chapters/flash-attention/parallelism.md"
+      ],
+      "base_url": "https://arxiv.org/html/2410.02367v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2410.02367v1#S4.SS2",
+      "files": [
+        "book/chapters/flash-attention/parallelism.md"
+      ],
+      "base_url": "https://arxiv.org/html/2410.02367v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2310.01889v4#S3",
+      "files": [
+        "book/chapters/flash-attention/parallelism.md"
+      ],
+      "base_url": "https://arxiv.org/html/2310.01889v4",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2309.14509v1#S3.SS1",
+      "files": [
+        "book/chapters/flash-attention/parallelism.md"
+      ],
+      "base_url": "https://arxiv.org/html/2309.14509v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2205.14135v2#A2.SS4",
+      "files": [
+        "book/chapters/flash-attention/forward-backward.md"
+      ],
+      "base_url": "https://arxiv.org/html/2205.14135v2",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2205.14135v2#A2.SS3",
+      "files": [
+        "book/chapters/flash-attention/forward-backward.md"
+      ],
+      "base_url": "https://arxiv.org/html/2205.14135v2",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2205.14135v2#S3.SS1",
+      "files": [
+        "book/chapters/flash-attention/io-cost.md"
+      ],
+      "base_url": "https://arxiv.org/html/2205.14135v2",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2205.14135v2#S3.SS2",
+      "files": [
+        "book/chapters/flash-attention/io-cost.md"
+      ],
+      "base_url": "https://arxiv.org/html/2205.14135v2",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/1805.02867v2#S3",
+      "files": [
+        "book/chapters/flash-attention/online-softmax.md"
+      ],
+      "base_url": "https://arxiv.org/html/1805.02867v2",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/1409.0473v7#S3",
+      "files": [
+        "book/chapters/overview/from-seq2seq-to-transformer.md"
+      ],
+      "base_url": "https://arxiv.org/html/1409.0473v7",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/1706.03762v7#S2",
+      "files": [
+        "book/chapters/overview/from-seq2seq-to-transformer.md"
+      ],
+      "base_url": "https://arxiv.org/html/1706.03762v7",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2406.10774v1#S3.SS3",
+      "files": [
+        "book/chapters/sparse-attention/evaluation.md"
+      ],
+      "base_url": "https://arxiv.org/html/2406.10774v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2502.11089v1#S4",
+      "files": [
+        "book/chapters/sparse-attention/evaluation.md"
+      ],
+      "base_url": "https://arxiv.org/html/2502.11089v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2001.04451v2#S2",
+      "files": [
+        "book/chapters/sparse-attention/dynamic-selection.md"
+      ],
+      "base_url": "https://arxiv.org/html/2001.04451v2",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2003.05997v3#S4.SS1",
+      "files": [
+        "book/chapters/sparse-attention/dynamic-selection.md"
+      ],
+      "base_url": "https://arxiv.org/html/2003.05997v3",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2406.10774v1#S3.SS4",
+      "files": [
+        "book/chapters/sparse-attention/dynamic-selection.md"
+      ],
+      "base_url": "https://arxiv.org/html/2406.10774v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2407.02490v1#S3",
+      "files": [
+        "book/chapters/sparse-attention/dynamic-selection.md"
+      ],
+      "base_url": "https://arxiv.org/html/2407.02490v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2407.02490v1#S4",
+      "files": [
+        "book/chapters/sparse-attention/dynamic-selection.md"
+      ],
+      "base_url": "https://arxiv.org/html/2407.02490v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2502.11089v1#S3",
+      "files": [
+        "book/chapters/sparse-attention/dynamic-selection.md"
+      ],
+      "base_url": "https://arxiv.org/html/2502.11089v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2512.02556v1#S2.SS1",
+      "files": [
+        "book/chapters/sparse-attention/dynamic-selection.md"
+      ],
+      "base_url": "https://arxiv.org/html/2512.02556v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2512.02556v1#S2.SS1.SSS1",
+      "files": [
+        "book/chapters/sparse-attention/dynamic-selection.md"
+      ],
+      "base_url": "https://arxiv.org/html/2512.02556v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2512.02556v1#S2.SS3",
+      "files": [
+        "book/chapters/sparse-attention/dynamic-selection.md"
+      ],
+      "base_url": "https://arxiv.org/html/2512.02556v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/1904.10509v1#S5.SS5",
+      "files": [
+        "book/chapters/sparse-attention/block-sparse.md"
+      ],
+      "base_url": "https://arxiv.org/html/1904.10509v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2205.14135v2#S3.SS3",
+      "files": [
+        "book/chapters/sparse-attention/block-sparse.md"
+      ],
+      "base_url": "https://arxiv.org/html/2205.14135v2",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/1904.10509v1#S4.SS2",
+      "files": [
+        "book/chapters/sparse-attention/connectivity-cost.md"
+      ],
+      "base_url": "https://arxiv.org/html/1904.10509v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2310.06825v1#S2",
+      "files": [
+        "book/chapters/sparse-attention/local-global.md"
+      ],
+      "base_url": "https://arxiv.org/html/2310.06825v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2004.05150v2#S3.SS1",
+      "files": [
+        "book/chapters/sparse-attention/local-global.md"
+      ],
+      "base_url": "https://arxiv.org/html/2004.05150v2",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2007.14062v2#S2",
+      "files": [
+        "book/chapters/sparse-attention/local-global.md"
+      ],
+      "base_url": "https://arxiv.org/html/2007.14062v2",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2312.00752v2#S3.SS2",
+      "files": [
+        "book/chapters/hybrid-architectures/attention-ssm.md"
+      ],
+      "base_url": "https://arxiv.org/html/2312.00752v2",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2405.21060v1#S5",
+      "files": [
+        "book/chapters/hybrid-architectures/attention-ssm.md"
+      ],
+      "base_url": "https://arxiv.org/html/2405.21060v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2403.19887v2#S2",
+      "files": [
+        "book/chapters/hybrid-architectures/attention-ssm.md",
+        "book/chapters/hybrid-architectures/composition.md",
+        "book/chapters/hybrid-architectures/state-management.md"
+      ],
+      "base_url": "https://arxiv.org/html/2403.19887v2",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2406.07522v1#S2.SS1",
+      "files": [
+        "book/chapters/hybrid-architectures/attention-ssm.md"
+      ],
+      "base_url": "https://arxiv.org/html/2406.07522v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2402.19427v1#S2.SS4",
+      "files": [
+        "book/chapters/hybrid-architectures/attention-ssm.md"
+      ],
+      "base_url": "https://arxiv.org/html/2402.19427v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2408.00118v3#S2",
+      "files": [
+        "book/chapters/hybrid-architectures/full-sparse.md"
+      ],
+      "base_url": "https://arxiv.org/html/2408.00118v3",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2403.19887v2#S6.SS1",
+      "files": [
+        "book/chapters/hybrid-architectures/evaluation.md"
+      ],
+      "base_url": "https://arxiv.org/html/2403.19887v2",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2402.19427v1#S6.SS2",
+      "files": [
+        "book/chapters/hybrid-architectures/evaluation.md"
+      ],
+      "base_url": "https://arxiv.org/html/2402.19427v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2406.06484v2#S3.SS4",
+      "files": [
+        "book/chapters/hybrid-architectures/attention-linear.md",
+        "book/chapters/hybrid-architectures/composition.md"
+      ],
+      "base_url": "https://arxiv.org/html/2406.06484v2",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2402.19427v1#A6.SS4",
+      "files": [
+        "book/chapters/hybrid-architectures/state-management.md"
+      ],
+      "base_url": "https://arxiv.org/html/2402.19427v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2412.06464v1#S3.SS3",
+      "files": [
+        "book/chapters/hybrid-architectures/attention-linear.md"
+      ],
+      "base_url": "https://arxiv.org/html/2412.06464v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2412.06464v1#S4",
+      "files": [
+        "book/chapters/hybrid-architectures/attention-linear.md"
+      ],
+      "base_url": "https://arxiv.org/html/2412.06464v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2402.02750v2#S3",
+      "files": [
+        "book/chapters/kv-cache/quantization.md"
+      ],
+      "base_url": "https://arxiv.org/html/2402.02750v2",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2402.02750v2#S3.SS3",
+      "files": [
+        "book/chapters/kv-cache/quantization.md"
+      ],
+      "base_url": "https://arxiv.org/html/2402.02750v2",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2403.02310v3#S4",
+      "files": [
+        "book/chapters/kv-cache/evaluation.md"
+      ],
+      "base_url": "https://arxiv.org/html/2403.02310v3",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2403.02310v3#S2.SS4",
+      "files": [
+        "book/chapters/kv-cache/evaluation.md"
+      ],
+      "base_url": "https://arxiv.org/html/2403.02310v3",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2312.07104v2#S3",
+      "files": [
+        "book/chapters/kv-cache/reuse-offloading.md"
+      ],
+      "base_url": "https://arxiv.org/html/2312.07104v2",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2303.06865v1#S4",
+      "files": [
+        "book/chapters/kv-cache/reuse-offloading.md"
+      ],
+      "base_url": "https://arxiv.org/html/2303.06865v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2309.06180v1#S4",
+      "files": [
+        "book/chapters/kv-cache/paged-attention.md"
+      ],
+      "base_url": "https://arxiv.org/html/2309.06180v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2309.06180v1#S4.SS4",
+      "files": [
+        "book/chapters/kv-cache/paged-attention.md"
+      ],
+      "base_url": "https://arxiv.org/html/2309.06180v1",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2309.17453v4#S3",
+      "files": [
+        "book/chapters/kv-cache/eviction.md"
+      ],
+      "base_url": "https://arxiv.org/html/2309.17453v4",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2309.17453v4#S3.SS2",
+      "files": [
+        "book/chapters/kv-cache/eviction.md"
+      ],
+      "base_url": "https://arxiv.org/html/2309.17453v4",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2404.14469v2#S4",
+      "files": [
+        "book/chapters/kv-cache/eviction.md"
+      ],
+      "base_url": "https://arxiv.org/html/2404.14469v2",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://d2l.ai/chapter_attention-mechanisms-and-transformers/self-attention-and-positional-encoding.html",
+      "files": [
+        "book/chapters/position-encoding/absolute-and-relative.md",
+        "book/chapters/position-encoding/position-and-order.md"
+      ],
+      "base_url": "https://d2l.ai/chapter_attention-mechanisms-and-transformers/self-attention-and-positional-encoding.html",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://arxiv.org/html/2006.04768v3#S4",
+      "files": [
+        "book/chapters/kv-representations/comparison.md"
+      ],
+      "base_url": "https://arxiv.org/html/2006.04768v3",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://arxiv.org/html/2006.04768v3#S5.SS1",
+      "files": [
+        "book/chapters/kv-representations/comparison.md"
+      ],
+      "base_url": "https://arxiv.org/html/2006.04768v3",
+      "endpoint_result": "content_returned",
+      "fragment_result": "html_id_present"
+    },
+    {
+      "url": "https://d2l.ai/chapter_attention-mechanisms-and-transformers/attention-scoring-functions.html",
+      "files": [
+        "book/chapters/transformer-attention/attention-and-masks.md",
+        "book/chapters/transformer-attention/scaled-dot-product.md"
+      ],
+      "base_url": "https://d2l.ai/chapter_attention-mechanisms-and-transformers/attention-scoring-functions.html",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=eMlx5fFNoYc&t=392s",
+      "files": [
+        "book/chapters/transformer-attention/scaled-dot-product.md"
+      ],
+      "base_url": "https://www.youtube.com/watch?v=eMlx5fFNoYc&t=392s",
+      "endpoint_result": "unverified",
+      "fragment_result": "not_applicable"
+    },
+    {
+      "url": "https://github.com/3b1b/captions/blob/main/2024/attention/english/captions.srt",
+      "files": [
+        "book/chapters/transformer-attention/scaled-dot-product.md"
+      ],
+      "base_url": "https://github.com/3b1b/captions/blob/main/2024/attention/english/captions.srt",
+      "endpoint_result": "content_returned",
+      "fragment_result": "not_applicable"
+    }
+  ],
+  "followup": "2026-10-26: 75 fragments matched by direct HTML GET; PDF/image archive verification in source-archive.md. Original endpoint rows retain initial web-tool observations."
+}

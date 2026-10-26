@@ -1,0 +1,55 @@
+{
+  "source": "2412.06464v1 Table 2",
+  "rows": [
+    {
+      "model": "Gated DeltaNet",
+      "values": [
+        46.65,
+        72.25,
+        55.76,
+        57.45,
+        71.21,
+        38.39,
+        40.63,
+        60.24
+      ],
+      "computed_mean": 55.3225,
+      "reported_mean": 55.32,
+      "agrees_to_two_decimals": true
+    },
+    {
+      "model": "H1",
+      "values": [
+        47.73,
+        72.57,
+        56.53,
+        58.4,
+        71.75,
+        40.1,
+        41.4,
+        63.21
+      ],
+      "computed_mean": 56.46125,
+      "reported_mean": 56.4,
+      "agrees_to_two_decimals": false
+    },
+    {
+      "model": "H2",
+      "values": [
+        48.76,
+        72.19,
+        56.88,
+        57.77,
+        71.33,
+        39.07,
+        41.91,
+        61.55
+      ],
+      "computed_mean": 56.1825,
+      "reported_mean": 56.18,
+      "agrees_to_two_decimals": true
+    }
+  ],
+  "scope": "transcription and arithmetic only, not model reproduction",
+  "status": "source inconsistency documented: H1 mean"
+}

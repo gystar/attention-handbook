@@ -1,0 +1,8 @@
+{
+  "scope": "StreamingLLM retained-position set as defined by the handbook; not a model implementation",
+  "cases": 15936,
+  "initial_positions": "1..8",
+  "recent_window": "1..16",
+  "last_position": "s-1..127",
+  "status": "passed"
+}

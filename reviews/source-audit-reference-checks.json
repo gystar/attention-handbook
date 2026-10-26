@@ -1,0 +1,13 @@
+{
+  "source_ids": 71,
+  "required_pdfs": 60,
+  "asset_files": 68,
+  "figure_captions": 38,
+  "all_sources_indexed_once": true,
+  "required_and_asset_hashes_match": true,
+  "arxiv_versions_match": true,
+  "scope": "IDs, explicit arXiv versions, local hashes and figure-number mapping; not rendered-page or video playback validation",
+  "required_titles_match_catalog": true,
+  "required_first_years_match_catalog": true,
+  "required_first_author_or_group_matches_pdf_first_page": true
+}

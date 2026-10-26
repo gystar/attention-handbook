@@ -1,0 +1,6 @@
+{
+  "scope": "Causal Attention suffix pair count for 0 <= P < N, self included; no cache engine or performance validation",
+  "sequence_lengths": "1..128",
+  "cases": 8256,
+  "status": "passed"
+}

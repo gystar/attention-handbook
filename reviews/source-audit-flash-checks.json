@@ -1,0 +1,52 @@
+{
+  "python": "3.12.3",
+  "scope": "float64 forward algebra, blockwise backward finite differences, and capacity arithmetic; no low precision or GPU performance validation",
+  "seed": 20261026,
+  "cases": 290,
+  "absolute_tolerance": 1e-12,
+  "max_errors": {
+    "figure_example": 1.1102230246251565e-16,
+    "streaming_vs_dense": 2.220446049250313e-16,
+    "tree_vs_dense": 2.220446049250313e-16,
+    "large_positive_shift": 9.43689570931383e-15
+  },
+  "unweighted_block_average_error": 0.11111111111111116,
+  "all_masked_rejections": 2,
+  "backward": {
+    "scalar_comparisons": 312,
+    "shape": {
+      "Nq": 3,
+      "Nk": 4,
+      "dh": 2,
+      "dv": 3
+    },
+    "block_sizes": [
+      1,
+      2,
+      8
+    ],
+    "finite_difference_step": 1e-06,
+    "absolute_tolerance": 1e-08,
+    "max_errors": {
+      "Q_causal_False_dropout_False": 1.7196806478825266e-11,
+      "K_causal_False_dropout_False": 5.565420346798078e-11,
+      "V_causal_False_dropout_False": 2.4661050979091215e-11,
+      "Q_causal_False_dropout_True": 3.975941798017857e-11,
+      "K_causal_False_dropout_True": 6.543937614011952e-11,
+      "V_causal_False_dropout_True": 3.1387267784843687e-11,
+      "Q_causal_True_dropout_False": 2.2501542296105015e-11,
+      "K_causal_True_dropout_False": 1.547366401677408e-11,
+      "V_causal_True_dropout_False": 1.5193207802965958e-11,
+      "Q_causal_True_dropout_True": 3.112529678439557e-11,
+      "K_causal_True_dropout_True": 1.2473841404236907e-11,
+      "V_causal_True_dropout_True": 1.447700292978027e-11
+    },
+    "dropout_mask": "fixed deterministic pattern with keep scale 2; tests conditional gradient, not RNG replay",
+    "status": "passed"
+  },
+  "capacity_MiB": {
+    "one_score_matrix": 128,
+    "one_input_matrix": 2
+  },
+  "status": "passed"
+}

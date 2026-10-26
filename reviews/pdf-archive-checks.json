@@ -1,0 +1,1136 @@
+{
+  "checked_on": "2026-10-26",
+  "method": "pdfinfo; full-document pdftotext parsing; normalized exact title match on first page; arXiv version extraction; SHA-256",
+  "papers": [
+    {
+      "id": "jiang2024minference",
+      "path": "sources/papers/jiang2024minference-v1.pdf",
+      "title": "MInference 1.0: Accelerating Pre-filling for Long-Context LLMs via Dynamic Sparse Attention",
+      "catalog_version": "2407.02490v1",
+      "first_page_arxiv_ids": [
+        "2407.02490v1"
+      ],
+      "pages": 26,
+      "bytes": 4866573,
+      "sha256": "b061e544a499c1e1abc292c9c996e21c5bfedbc6514703bcfca554ca7f5fe50a",
+      "pdfinfo_exit": 0,
+      "full_text_parse_exit": 0,
+      "first_page_title_match": true,
+      "first_page_excerpt": null,
+      "parser_warnings": "",
+      "version_verified": true,
+      "version_evidence": "Exact arXiv version on first page"
+    },
+    {
+      "id": "sutskever2014seq2seq",
+      "path": "sources/papers/sutskever2014seq2seq-v3.pdf",
+      "title": "Sequence to Sequence Learning with Neural Networks",
+      "catalog_version": "1409.3215v3",
+      "first_page_arxiv_ids": [
+        "1409.3215v3"
+      ],
+      "pages": 9,
+      "bytes": 112084,
+      "sha256": "5c74e1db863e2d61b869c9b0603494b34c41fb05db1a4fa7f9a83d5a42b7350f",
+      "pdfinfo_exit": 0,
+      "full_text_parse_exit": 0,
+      "first_page_title_match": true,
+      "first_page_excerpt": null,
+      "parser_warnings": "",
+      "version_verified": true,
+      "version_evidence": "Exact arXiv version on first page"
+    },
+    {
+      "id": "bahdanau2014attention",
+      "path": "sources/papers/bahdanau2014attention-v7.pdf",
+      "title": "Neural Machine Translation by Jointly Learning to Align and Translate",
+      "catalog_version": "1409.0473v7",
+      "first_page_arxiv_ids": [
+        "1409.0473v7"
+      ],
+      "pages": 15,
+      "bytes": 444482,
+      "sha256": "84801c8410da51b449d379d2fa4939a416123f2c93991077a680f863026022a7",
+      "pdfinfo_exit": 0,
+      "full_text_parse_exit": 0,
+      "first_page_title_match": true,
+      "first_page_excerpt": null,
+      "parser_warnings": "",
+      "version_verified": true,
+      "version_evidence": "Exact arXiv version on first page"
+    },
+    {
+      "id": "vaswani2017attention",
+      "path": "sources/papers/vaswani2017attention-v7.pdf",
+      "title": "Attention Is All You Need",
+      "catalog_version": "1706.03762v7",
+      "first_page_arxiv_ids": [
+        "1706.03762v7"
+      ],
+      "pages": 15,
+      "bytes": 2215244,
+      "sha256": "bdfaa68d8984f0dc02beaca527b76f207d99b666d31d1da728ee0728182df697",
+      "pdfinfo_exit": 0,
+      "full_text_parse_exit": 0,
+      "first_page_title_match": true,
+      "first_page_excerpt": null,
+      "parser_warnings": "",
+      "version_verified": true,
+      "version_evidence": "Exact arXiv version on first page"
+    },
+    {
+      "id": "child2019sparse",
+      "path": "sources/papers/child2019sparse-v1.pdf",
+      "title": "Generating Long Sequences with Sparse Transformers",
+      "catalog_version": "1904.10509v1",
+      "first_page_arxiv_ids": [
+        "1904.10509v1"
+      ],
+      "pages": 10,
+      "bytes": 4436935,
+      "sha256": "5b6a655a493557f38d2a40fc6ed4f88f0f111ee32197cebddceb4f4fdd10b415",
+      "pdfinfo_exit": 0,
+      "full_text_parse_exit": 0,
+      "first_page_title_match": true,
+      "first_page_excerpt": null,
+      "parser_warnings": "",
+      "version_verified": true,
+      "version_evidence": "Exact arXiv version on first page"
+    },
+    {
+      "id": "shazeer2019mqa",
+      "path": "sources/papers/shazeer2019mqa-v1.pdf",
+      "title": "Fast Transformer Decoding: One Write-Head is All You Need",
+      "catalog_version": "1911.02150v1",
+      "first_page_arxiv_ids": [
+        "1911.02150v1"
+      ],
+      "pages": 9,
+      "bytes": 142627,
+      "sha256": "3250947d7be32f1a15531ab3062134edd431b9cf79e669d324ab5cbddd9a2094",
+      "pdfinfo_exit": 0,
+      "full_text_parse_exit": 0,
+      "first_page_title_match": true,
+      "first_page_excerpt": null,
+      "parser_warnings": "",
+      "version_verified": true,
+      "version_evidence": "Exact arXiv version on first page"
+    },
+    {
+      "id": "katharopoulos2020linear",
+      "path": "sources/papers/katharopoulos2020linear-pmlr.pdf",
+      "title": "Transformers are RNNs: Fast Autoregressive Transformers with Linear Attention",
+      "catalog_version": "PMLR 119, 2020",
+      "first_page_arxiv_ids": [],
+      "pages": 10,
+      "bytes": 440409,
+      "sha256": "cd92e31e6a9371031660c03ae0dc2d47bb7d39014f7de73fdc3c021c3abd7e1c",
+      "pdfinfo_exit": 0,
+      "full_text_parse_exit": 0,
+      "first_page_title_match": true,
+      "first_page_excerpt": null,
+      "parser_warnings": "",
+      "version_verified": true,
+      "version_evidence": "PMLR 119, 2020"
+    },
+    {
+      "id": "su2021rope",
+      "path": "sources/papers/su2021rope-v5.pdf",
+      "title": "RoFormer: Enhanced Transformer with Rotary Position Embedding",
+      "catalog_version": "2104.09864v5",
+      "first_page_arxiv_ids": [
+        "2104.09864v5"
+      ],
+      "pages": 14,
+      "bytes": 599289,
+      "sha256": "e9a481fbe1c8a20b7b1fa566b13102a1896c7829fa9a8b4c80528452a5ddaf79",
+      "pdfinfo_exit": 0,
+      "full_text_parse_exit": 0,
+      "first_page_title_match": true,
+      "first_page_excerpt": null,
+      "parser_warnings": "",
+      "version_verified": true,
+      "version_evidence": "Exact arXiv version on first page"
+    },
+    {
+      "id": "press2021alibi",
+      "path": "sources/papers/press2021alibi-v2.pdf",
+      "title": "Train Short, Test Long: Attention with Linear Biases Enables Input Length Extrapolation",
+      "catalog_version": "2108.12409v2",
+      "first_page_arxiv_ids": [
+        "2108.12409v2"
+      ],
+      "pages": 25,
+      "bytes": 759030,
+      "sha256": "26223f5ecbc5983d0cb183c5fd61d09c814247a57b855b2b15717009664db70a",
+      "pdfinfo_exit": 0,
+      "full_text_parse_exit": 0,
+      "first_page_title_match": true,
+      "first_page_excerpt": null,
+      "parser_warnings": "",
+      "version_verified": true,
+      "version_evidence": "Exact arXiv version on first page"
+    },
+    {
+      "id": "dao2022flashattention",
+      "path": "sources/papers/dao2022flashattention-v2.pdf",
+      "title": "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness",
+      "catalog_version": "2205.14135v2",
+      "first_page_arxiv_ids": [
+        "2205.14135v2"
+      ],
+      "pages": 34,
+      "bytes": 2630825,
+      "sha256": "ca7f9fda10b90fc05dd291a3accc85e9c1a4a860b99b31928dab03ed3fcb14e4",
+      "pdfinfo_exit": 0,
+      "full_text_parse_exit": 0,
+      "first_page_title_match": true,
+      "first_page_excerpt": null,
+      "parser_warnings": "",
+      "version_verified": true,
+      "version_evidence": "Exact arXiv version on first page"
+    },
+    {
+      "id": "ainslie2023gqa",
+      "path": "sources/papers/ainslie2023gqa-v3.pdf",
+      "title": "GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints",
+      "catalog_version": "2305.13245v3",
+      "first_page_arxiv_ids": [
+        "2305.13245v3"
+      ],
+      "pages": 7,
+      "bytes": 269116,
+      "sha256": "ba9094fe73db9bf515d47ae8b2d502fee9d8a6c7b1327e197ddb160f4c63b94a",
+      "pdfinfo_exit": 0,
+      "full_text_parse_exit": 0,
+      "first_page_title_match": true,
+      "first_page_excerpt": null,
+      "parser_warnings": "",
+      "version_verified": true,
+      "version_evidence": "Exact arXiv version on first page"
+    },
+    {
+      "id": "chen2023pi",
+      "path": "sources/papers/chen2023pi-v2.pdf",
+      "title": "Extending Context Window of Large Language Models via Position Interpolation",
+      "catalog_version": "2306.15595v2",
+      "first_page_arxiv_ids": [
+        "2306.15595v2"
+      ],
+      "pages": 18,
+      "bytes": 751217,
+      "sha256": "890702e3170e5b8e2fb55552bd86cd99b0aa4ddbb3670ae8c351faa575cfaf09",
+      "pdfinfo_exit": 0,
+      "full_text_parse_exit": 0,
+      "first_page_title_match": true,
+      "first_page_excerpt": null,
+      "parser_warnings": "",
+      "version_verified": true,
+      "version_evidence": "Exact arXiv version on first page"
+    },
+    {
+      "id": "liu2023lostmiddle",
+      "path": "sources/papers/liu2023lostmiddle-v1.pdf",
+      "title": "Lost in the Middle: How Language Models Use Long Contexts",
+      "catalog_version": "2307.03172v1",
+      "first_page_arxiv_ids": [
+        "2307.03172v1"
+      ],
+      "pages": 15,
+      "bytes": 804284,
+      "sha256": "c8070998fc12d9652d4f3b2e3094a4d6f438ed47a18539e04f07e5dbb9891f9e",
+      "pdfinfo_exit": 0,
+      "full_text_parse_exit": 0,
+      "first_page_title_match": true,
+      "first_page_excerpt": null,
+      "parser_warnings": "",
+      "version_verified": true,
+      "version_evidence": "Exact arXiv version on first page"
+    },
+    {
+      "id": "kwon2023pagedattention",
+      "path": "sources/papers/kwon2023pagedattention-v1.pdf",
+      "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention",
+      "catalog_version": "2309.06180v1",
+      "first_page_arxiv_ids": [
+        "2309.06180v1"
+      ],
+      "pages": 16,
+      "bytes": 1459631,
+      "sha256": "55b3b324d779a67c59dac2519445e3b07c14e6ff5c656fadb47a3d7b5997469e",
+      "pdfinfo_exit": 0,
+      "full_text_parse_exit": 0,
+      "first_page_title_match": true,
+      "first_page_excerpt": null,
+      "parser_warnings": "",
+      "version_verified": true,
+      "version_evidence": "Exact arXiv version on first page"
+    },
+    {
+      "id": "jiang2023mistral",
+      "path": "sources/papers/jiang2023mistral-v1.pdf",
+      "title": "Mistral 7B",
+      "catalog_version": "2310.06825v1",
+      "first_page_arxiv_ids": [
+        "2310.06825v1"
+      ],
+      "pages": 9,
+      "bytes": 3749788,
+      "sha256": "dfbac4e7035344b305c947481f2e7e8a02f7a24a563917eb6e47f6591d14c5ae",
+      "pdfinfo_exit": 0,
+      "full_text_parse_exit": 0,
+      "first_page_title_match": true,
+      "first_page_excerpt": null,
+      "parser_warnings": "",
+      "version_verified": true,
+      "version_evidence": "Exact arXiv version on first page"
+    },
+    {
+      "id": "deepseek2024mla",
+      "path": "sources/papers/deepseek2024mla-v5.pdf",
+      "title": "DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model",
+      "catalog_version": "2405.04434v5",
+      "first_page_arxiv_ids": [
+        "2405.04434v5"
+      ],
+      "pages": 52,
+      "bytes": 1586880,
+      "sha256": "f149f9c09aa8b46ce6a740a255a99b7cc2317ac5b065989339919b7e6c329c9b",
+      "pdfinfo_exit": 0,
+      "full_text_parse_exit": 0,
+      "first_page_title_match": true,
+      "first_page_excerpt": null,
+      "parser_warnings": "",
+      "version_verified": true,
+      "version_evidence": "Exact arXiv version on first page"
+    },
+    {
+      "id": "dao2024ssd",
+      "path": "sources/papers/dao2024ssd-v1.pdf",
+      "title": "Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality",
+      "catalog_version": "2405.21060v1",
+      "first_page_arxiv_ids": [
+        "2405.21060v1"
+      ],
+      "pages": 52,
+      "bytes": 3209170,
+      "sha256": "6fe16414fa471a5ab150cddcba5840d3a94e347e96992c50c12c1fb8b919479f",
+      "pdfinfo_exit": 0,
+      "full_text_parse_exit": 0,
+      "first_page_title_match": true,
+      "first_page_excerpt": null,
+      "parser_warnings": "",
+      "version_verified": true,
+      "version_evidence": "Exact arXiv version on first page"
+    },
+    {
+      "id": "yang2024gateddelta",
+      "path": "sources/papers/yang2024gateddelta-v1.pdf",
+      "title": "Gated Delta Networks: Improving Mamba2 with Delta Rule",
+      "catalog_version": "2412.06464v1",
+      "first_page_arxiv_ids": [
+        "2412.06464v1"
+      ],
+      "pages": 21,
+      "bytes": 405308,
+      "sha256": "74ddc75f5315063ba7d943f054ac3ddda77d26d1f78c0ce8516f1e7ffaf3f8ca",
+      "pdfinfo_exit": 0,
+      "full_text_parse_exit": 0,
+      "first_page_title_match": true,
+      "first_page_excerpt": null,
+      "parser_warnings": "",
+      "version_verified": true,
+      "version_evidence": "Exact arXiv version on first page"
+    },
+    {
+      "id": "yuan2025nsa",
+      "path": "sources/papers/yuan2025nsa-v1.pdf",
+      "title": "Native Sparse Attention: Hardware-Aligned and Natively Trainable Sparse Attention",
+      "catalog_version": "2502.11089v1",
+      "first_page_arxiv_ids": [
+        "2502.11089v1"
+      ],
+      "pages": 24,
+      "bytes": 1425073,
+      "sha256": "d96f7b38fa7480cbb8add18fba1307249175865a6674583ccbd5db14b5a13aa2",
+      "pdfinfo_exit": 0,
+      "full_text_parse_exit": 0,
+      "first_page_title_match": true,
+      "first_page_excerpt": null,
+      "parser_warnings": "",
+      "version_verified": true,
+      "version_evidence": "Exact arXiv version on first page"
+    },
+    {
+      "id": "qiu2025gatedattention",
+      "path": "sources/papers/qiu2025gatedattention-v1.pdf",
+      "title": "Gated Attention for Large Language Models: Non-linearity, Sparsity, and Attention-Sink-Free",
+      "catalog_version": "2505.06708v1",
+      "first_page_arxiv_ids": [
+        "2505.06708v1"
+      ],
+      "pages": 17,
+      "bytes": 1503818,
+      "sha256": "949c7ed67dea3ddc6b88854cf72631ed2e1f466ad4c824c8aa1286739bcf2359",
+      "pdfinfo_exit": 0,
+      "full_text_parse_exit": 0,
+      "first_page_title_match": true,
+      "first_page_excerpt": null,
+      "parser_warnings": "",
+      "version_verified": true,
+      "version_evidence": "Exact arXiv version on first page"
+    },
+    {
+      "id": "shaw2018relative",
+      "path": "sources/papers/shaw2018relative-naacl2018.pdf",
+      "title": "Self-Attention with Relative Position Representations",
+      "catalog_version": "NAACL-HLT 2018, N18-2074",
+      "first_page_arxiv_ids": [],
+      "pages": 5,
+      "bytes": 208746,
+      "sha256": "f10b5d840c34d69e3d145dc20de8f668535dca23a95e0025200797956f268587",
+      "pdfinfo_exit": 0,
+      "full_text_parse_exit": 0,
+      "first_page_title_match": true,
+      "first_page_excerpt": null,
+      "parser_warnings": "",
+      "version_verified": true,
+      "version_evidence": "NAACL-HLT 2018, pages 464–468"
+    },
+    {
+      "id": "raffel2019t5",
+      "path": "sources/papers/raffel2019t5-v4.pdf",
+      "title": "Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer",
+      "catalog_version": "1910.10683v4",
+      "first_page_arxiv_ids": [
+        "1910.10683v4"
+      ],
+      "pages": 67,
+      "bytes": 1190021,
+      "sha256": "ad07e47cedf437a4156419ce5d3076e08a3e59bbfd6dac7cc53df1009cdcbe7f",
+      "pdfinfo_exit": 0,
+      "full_text_parse_exit": 0,
+      "first_page_title_match": true,
+      "first_page_excerpt": null,
+      "parser_warnings": "",
+      "version_verified": true,
+      "version_evidence": "Exact arXiv version on first page"
+    },
+    {
+      "id": "peng2023yarn",
+      "path": "sources/papers/peng2023yarn-v2.pdf",
+      "title": "YaRN: Efficient Context Window Extension of Large Language Models",
+      "catalog_version": "2309.00071v2",
+      "first_page_arxiv_ids": [
+        "2309.00071v2"
+      ],
+      "pages": 18,
+      "bytes": 721866,
+      "sha256": "ce1933b7d00eed2c6f146a73bb437930f6b66f3f69b19bc3ed6acfca42e5a744",
+      "pdfinfo_exit": 0,
+      "full_text_parse_exit": 0,
+      "first_page_title_match": true,
+      "first_page_excerpt": null,
+      "parser_warnings": "",
+      "version_verified": true,
+      "version_evidence": "Exact arXiv version on first page"
+    },
+    {
+      "id": "ding2024longrope",
+      "path": "sources/papers/ding2024longrope-v1.pdf",
+      "title": "LongRoPE: Extending LLM Context Window Beyond 2 Million Tokens",
+      "catalog_version": "2402.13753v1",
+      "first_page_arxiv_ids": [
+        "2402.13753v1"
+      ],
+      "pages": 13,
+      "bytes": 1329219,
+      "sha256": "01426973545b0158f6a20f6c73e5c3ccc6bd58382a1df60f4bc737dc6271cdbf",
+      "pdfinfo_exit": 0,
+      "full_text_parse_exit": 0,
+      "first_page_title_match": true,
+      "first_page_excerpt": null,
+      "parser_warnings": "",
+      "version_verified": true,
+      "version_evidence": "Exact arXiv version on first page"
+    },
+    {
+      "id": "hsieh2024ruler",
+      "path": "sources/papers/hsieh2024ruler-v3.pdf",
+      "title": "RULER: What’s the Real Context Size of Your Long-Context Language Models?",
+      "catalog_version": "2404.06654v3",
+      "first_page_arxiv_ids": [
+        "2404.06654v3"
+      ],
+      "pages": 27,
+      "bytes": 682955,
+      "sha256": "8a4bc6ca28d84570eec7f42652400c2121f4c8bc361701634e596772e396fc22",
+      "pdfinfo_exit": 0,
+      "full_text_parse_exit": 0,
+      "first_page_title_match": true,
+      "first_page_excerpt": null,
+      "parser_warnings": "",
+      "version_verified": true,
+      "version_evidence": "Exact arXiv version on first page"
+    },
+    {
+      "id": "bai2023longbench",
+      "path": "sources/papers/bai2023longbench-v2.pdf",
+      "title": "LongBench: A Bilingual, Multitask Benchmark for Long Context Understanding",
+      "catalog_version": "2308.14508v2",
+      "first_page_arxiv_ids": [
+        "2308.14508v2"
+      ],
+      "pages": 19,
+      "bytes": 11630690,
+      "sha256": "2ef5a32cc11976d7d706e24bd608e2dfe859f91b24ed1e02c9acc6a9cf6b87ce",
+      "pdfinfo_exit": 0,
+      "full_text_parse_exit": 0,
+      "first_page_title_match": true,
+      "first_page_excerpt": null,
+      "parser_warnings": "",
+      "version_verified": true,
+      "version_evidence": "Exact arXiv version on first page"
+    },
+    {
+      "id": "xiao2023streamingllm",
+      "path": "sources/papers/xiao2023streamingllm-v4.pdf",
+      "title": "Efficient Streaming Language Models with Attention Sinks",
+      "catalog_version": "2309.17453v4",
+      "first_page_arxiv_ids": [
+        "2309.17453v4"
+      ],
+      "pages": 21,
+      "bytes": 16952848,
+      "sha256": "e8a7de67c7c57642648362651b4cf64fd852467e18865a298916a36098314819",
+      "pdfinfo_exit": 0,
+      "full_text_parse_exit": 0,
+      "first_page_title_match": true,
+      "first_page_excerpt": null,
+      "parser_warnings": "",
+      "version_verified": true,
+      "version_evidence": "Exact arXiv version on first page"
+    },
+    {
+      "id": "liu2023ringattention",
+      "path": "sources/papers/liu2023ringattention-v4.pdf",
+      "title": "Ring Attention with Blockwise Transformers for Near-Infinite Context",
+      "catalog_version": "2310.01889v4",
+      "first_page_arxiv_ids": [
+        "2310.01889v4"
+      ],
+      "pages": 16,
+      "bytes": 1766025,
+      "sha256": "1e0ee1ad0aaf8c5763d060ba725887f1c6affda412c0a26dbb888cad5ad80f8c",
+      "pdfinfo_exit": 0,
+      "full_text_parse_exit": 0,
+      "first_page_title_match": true,
+      "first_page_excerpt": null,
+      "parser_warnings": "",
+      "version_verified": true,
+      "version_evidence": "Exact arXiv version on first page"
+    },
+    {
+      "id": "jacobs2023ulysses",
+      "path": "sources/papers/jacobs2023ulysses-v1.pdf",
+      "title": "DeepSpeed Ulysses: System Optimizations for Enabling Training of Extreme Long Sequence Transformer Models",
+      "catalog_version": "2309.14509v1",
+      "first_page_arxiv_ids": [
+        "2309.14509v1"
+      ],
+      "pages": 9,
+      "bytes": 505624,
+      "sha256": "ca79a7e182c857aead3e9c5fcdc89e4b2237fed242928ef3d89831afccb0f87d",
+      "pdfinfo_exit": 0,
+      "full_text_parse_exit": 0,
+      "first_page_title_match": true,
+      "first_page_excerpt": null,
+      "parser_warnings": "",
+      "version_verified": true,
+      "version_evidence": "Exact arXiv version on first page"
+    },
+    {
+      "id": "kitaev2020reformer",
+      "path": "sources/papers/kitaev2020reformer-v2.pdf",
+      "title": "Reformer: The Efficient Transformer",
+      "catalog_version": "2001.04451v2",
+      "first_page_arxiv_ids": [
+        "2001.04451v2"
+      ],
+      "pages": 12,
+      "bytes": 658515,
+      "sha256": "f86f29116ea4a04321f4ab8727283096c544255bd31f7efbc10e56390a8b5e8b",
+      "pdfinfo_exit": 0,
+      "full_text_parse_exit": 0,
+      "first_page_title_match": true,
+      "first_page_excerpt": null,
+      "parser_warnings": "",
+      "version_verified": true,
+      "version_evidence": "Exact arXiv version on first page"
+    },
+    {
+      "id": "roy2020routing",
+      "path": "sources/papers/roy2020routing-v3.pdf",
+      "title": "Efficient Content-Based Sparse Attention with Routing Transformers",
+      "catalog_version": "2003.05997v3",
+      "first_page_arxiv_ids": [
+        "2003.05997v3"
+      ],
+      "pages": 22,
+      "bytes": 708216,
+      "sha256": "0a2ef97593c2079448bd3903c9f8491490aac893d1a2bb2202f667b282ee2f17",
+      "pdfinfo_exit": 0,
+      "full_text_parse_exit": 0,
+      "first_page_title_match": true,
+      "first_page_excerpt": null,
+      "parser_warnings": "",
+      "version_verified": true,
+      "version_evidence": "Exact arXiv version on first page"
+    },
+    {
+      "id": "wang2020linformer",
+      "path": "sources/papers/wang2020linformer-v3.pdf",
+      "title": "Linformer: Self-Attention with Linear Complexity",
+      "catalog_version": "2006.04768v3",
+      "first_page_arxiv_ids": [
+        "2006.04768v3"
+      ],
+      "pages": 12,
+      "bytes": 922879,
+      "sha256": "1c4e089b6108f5ed0a2f8301ab07a64eab9851dcb471348b88739a6458e2f215",
+      "pdfinfo_exit": 0,
+      "full_text_parse_exit": 0,
+      "first_page_title_match": true,
+      "first_page_excerpt": null,
+      "parser_warnings": "",
+      "version_verified": true,
+      "version_evidence": "Exact arXiv version on first page"
+    },
+    {
+      "id": "zhang2024sageattention",
+      "path": "sources/papers/zhang2024sageattention-v1.pdf",
+      "title": "SageAttention: Accurate 8-bit attention for Plug-and-Play Inference Acceleration",
+      "catalog_version": "2410.02367v1",
+      "first_page_arxiv_ids": [
+        "2410.02367v1"
+      ],
+      "pages": 14,
+      "bytes": 14604502,
+      "sha256": "d4c4e565e59bdcd361cf06f229ffba52dc4af31873d27b9ec471ae746a700ba7",
+      "pdfinfo_exit": 0,
+      "full_text_parse_exit": 0,
+      "first_page_title_match": true,
+      "first_page_excerpt": null,
+      "parser_warnings": "",
+      "version_verified": true,
+      "version_evidence": "Exact arXiv version on first page"
+    },
+    {
+      "id": "milakov2018onlinesoftmax",
+      "path": "sources/papers/milakov2018onlinesoftmax.pdf",
+      "title": "Online normalizer calculation for softmax",
+      "catalog_version": "1805.02867v2",
+      "first_page_arxiv_ids": [
+        "1805.02867v2"
+      ],
+      "pages": 9,
+      "bytes": 147347,
+      "sha256": "722747b3a32eb90f5f0255d6b59f8bb0e1bc2257702ab7915e684c15275d44d7",
+      "pdfinfo_exit": 0,
+      "full_text_parse_exit": 0,
+      "first_page_title_match": true,
+      "first_page_excerpt": null,
+      "parser_warnings": "",
+      "version_verified": true,
+      "version_evidence": "Exact arXiv version on first page"
+    },
+    {
+      "id": "dao2023flashattention2",
+      "path": "sources/papers/dao2023flashattention2.pdf",
+      "title": "FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning",
+      "catalog_version": "author PDF dated 2023-07-18",
+      "first_page_arxiv_ids": [],
+      "pages": 14,
+      "bytes": 1510707,
+      "sha256": "02c3545f727bf902c76c59bbf011c7c7388aea218194f90bfc46f41cf584b627",
+      "pdfinfo_exit": 0,
+      "full_text_parse_exit": 0,
+      "first_page_title_match": true,
+      "first_page_excerpt": null,
+      "parser_warnings": "",
+      "version_verified": true,
+      "version_evidence": "July 18, 2023"
+    },
+    {
+      "id": "shah2024flashattention3",
+      "path": "sources/papers/shah2024flashattention3.pdf",
+      "title": "FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision",
+      "catalog_version": "2407.08608v2",
+      "first_page_arxiv_ids": [
+        "2407.08608v2"
+      ],
+      "pages": 22,
+      "bytes": 1096663,
+      "sha256": "3d05ca102802e6b8ebbae5181efe777b7d258cd75e2fe9cca209efd2f5e6c6cb",
+      "pdfinfo_exit": 0,
+      "full_text_parse_exit": 0,
+      "first_page_title_match": true,
+      "first_page_excerpt": null,
+      "parser_warnings": "",
+      "version_verified": true,
+      "version_evidence": "Exact arXiv version on first page"
+    },
+    {
+      "id": "zadouri2026flashattention4",
+      "path": "sources/papers/zadouri2026flashattention4.pdf",
+      "title": "FlashAttention-4: Algorithm and Kernel Pipelining Co-Design for Asymmetric Hardware Scaling",
+      "catalog_version": "2603.05451v1",
+      "first_page_arxiv_ids": [
+        "2603.05451v1"
+      ],
+      "pages": 20,
+      "bytes": 7634447,
+      "sha256": "7c053b2b45a9d7da93b21f7dbe16ff8a927a9dc7e92537a034ca58a4eb5f10eb",
+      "pdfinfo_exit": 0,
+      "full_text_parse_exit": 0,
+      "first_page_title_match": true,
+      "first_page_excerpt": null,
+      "parser_warnings": "",
+      "version_verified": true,
+      "version_evidence": "Exact arXiv version on first page"
+    },
+    {
+      "id": "beltagy2020longformer",
+      "path": "sources/papers/beltagy2020longformer.pdf",
+      "title": "Longformer: The Long-Document Transformer",
+      "catalog_version": "2004.05150v2",
+      "first_page_arxiv_ids": [
+        "2004.05150v2"
+      ],
+      "pages": 17,
+      "bytes": 539211,
+      "sha256": "053756b54e2d3462d4690b3aed489c962f17df7c3531865e47374c4a651f526c",
+      "pdfinfo_exit": 0,
+      "full_text_parse_exit": 0,
+      "first_page_title_match": true,
+      "first_page_excerpt": null,
+      "parser_warnings": "",
+      "version_verified": true,
+      "version_evidence": "Exact arXiv version on first page"
+    },
+    {
+      "id": "zaheer2020bigbird",
+      "path": "sources/papers/zaheer2020bigbird.pdf",
+      "title": "Big Bird: Transformers for Longer Sequences",
+      "catalog_version": "2007.14062v2",
+      "first_page_arxiv_ids": [
+        "2007.14062v2"
+      ],
+      "pages": 42,
+      "bytes": 1153823,
+      "sha256": "9dc448464532d61f084de6a224b84acf3b421142e05a40ebfb982b4eca5834a2",
+      "pdfinfo_exit": 0,
+      "full_text_parse_exit": 0,
+      "first_page_title_match": true,
+      "first_page_excerpt": null,
+      "parser_warnings": "Internal Error: xref num 1348 not found but needed, try to reconstruct<0a>\n",
+      "version_verified": true,
+      "version_evidence": "Exact arXiv version on first page"
+    },
+    {
+      "id": "tang2024quest",
+      "path": "sources/papers/tang2024quest.pdf",
+      "title": "Quest: Query-Aware Sparsity for Efficient Long-Context LLM Inference",
+      "catalog_version": "2406.10774v1",
+      "first_page_arxiv_ids": [
+        "2406.10774v1"
+      ],
+      "pages": 11,
+      "bytes": 2263803,
+      "sha256": "8421ec66bd0dcb7d1dfc3524dbafbb15da354acdbdb477ee99c949f018abba6c",
+      "pdfinfo_exit": 0,
+      "full_text_parse_exit": 0,
+      "first_page_title_match": true,
+      "first_page_excerpt": null,
+      "parser_warnings": "",
+      "version_verified": true,
+      "version_evidence": "Exact arXiv version on first page"
+    },
+    {
+      "id": "deepseek2025v32",
+      "path": "sources/papers/deepseek2025v32.pdf",
+      "title": "DeepSeek-V3.2: Pushing the Frontier of Open Large Language Models",
+      "catalog_version": "2512.02556v1",
+      "first_page_arxiv_ids": [
+        "2512.02556v1"
+      ],
+      "pages": 23,
+      "bytes": 980616,
+      "sha256": "2bec0671778769c159ec389412727d1f3d4889fe1c71564b61edaa24705bd17b",
+      "pdfinfo_exit": 0,
+      "full_text_parse_exit": 0,
+      "first_page_title_match": true,
+      "first_page_excerpt": null,
+      "parser_warnings": "",
+      "version_verified": true,
+      "version_evidence": "Exact arXiv version on first page"
+    },
+    {
+      "id": "liu2024kivi",
+      "path": "sources/papers/liu2024kivi-v2.pdf",
+      "title": "KIVI: A Tuning-Free Asymmetric 2bit Quantization for KV Cache",
+      "catalog_version": "2402.02750v2",
+      "first_page_arxiv_ids": [
+        "2402.02750v2"
+      ],
+      "pages": 15,
+      "bytes": 2194402,
+      "sha256": "df31ef32d71bfb280c533c5db8220cadf5ef42076bf45d82ba4c8da8e50ea5f4",
+      "pdfinfo_exit": 0,
+      "full_text_parse_exit": 0,
+      "first_page_title_match": true,
+      "first_page_excerpt": null,
+      "parser_warnings": "",
+      "version_verified": true,
+      "version_evidence": "Exact arXiv version on first page"
+    },
+    {
+      "id": "zhang2023h2o",
+      "path": "sources/papers/zhang2023h2o-v3.pdf",
+      "title": "H2O: Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models",
+      "catalog_version": "2306.14048v3",
+      "first_page_arxiv_ids": [
+        "2306.14048v3"
+      ],
+      "pages": 49,
+      "bytes": 3482403,
+      "sha256": "f2d699db2c1fe34b53677067ba6f3b903a6f87dbd04e4f6ad5b9fa324cdb36df",
+      "pdfinfo_exit": 0,
+      "full_text_parse_exit": 0,
+      "first_page_title_match": true,
+      "first_page_excerpt": null,
+      "parser_warnings": "",
+      "version_verified": true,
+      "version_evidence": "Exact arXiv version on first page"
+    },
+    {
+      "id": "li2024snapkv",
+      "path": "sources/papers/li2024snapkv-v2.pdf",
+      "title": "SnapKV: LLM Knows What You are Looking for Before Generation",
+      "catalog_version": "2404.14469v2",
+      "first_page_arxiv_ids": [
+        "2404.14469v2"
+      ],
+      "pages": 17,
+      "bytes": 1066370,
+      "sha256": "d17ce59a5a3342c9b0560c3503b0136f794fae92910421aa07dbca32e4279bf4",
+      "pdfinfo_exit": 0,
+      "full_text_parse_exit": 0,
+      "first_page_title_match": true,
+      "first_page_excerpt": null,
+      "parser_warnings": "",
+      "version_verified": true,
+      "version_evidence": "Exact arXiv version on first page"
+    },
+    {
+      "id": "zheng2023sglang",
+      "path": "sources/papers/zheng2023sglang-v2.pdf",
+      "title": "SGLang: Efficient Execution of Structured Language Model Programs",
+      "catalog_version": "2312.07104v2",
+      "first_page_arxiv_ids": [
+        "2312.07104v2"
+      ],
+      "pages": 20,
+      "bytes": 1383463,
+      "sha256": "161e0a0123a89cd8a57d68734ae704680b0e577fee41e1e7e1029c37a9d99b57",
+      "pdfinfo_exit": 0,
+      "full_text_parse_exit": 0,
+      "first_page_title_match": true,
+      "first_page_excerpt": null,
+      "parser_warnings": "",
+      "version_verified": true,
+      "version_evidence": "Exact arXiv version on first page"
+    },
+    {
+      "id": "sheng2023flexgen",
+      "path": "sources/papers/sheng2023flexgen-v1.pdf",
+      "title": "High-throughput Generative Inference of Large Language Models with a Single GPU",
+      "catalog_version": "2303.06865v1",
+      "first_page_arxiv_ids": [
+        "2303.06865v1"
+      ],
+      "pages": 25,
+      "bytes": 593858,
+      "sha256": "fc074580595511d3dc489dea3db40c65e7b209f647a4aaeca8cd9130f4a7de8b",
+      "pdfinfo_exit": 0,
+      "full_text_parse_exit": 0,
+      "first_page_title_match": true,
+      "first_page_excerpt": null,
+      "parser_warnings": "",
+      "version_verified": true,
+      "version_evidence": "Exact arXiv version on first page"
+    },
+    {
+      "id": "agrawal2024sarathiserve",
+      "path": "sources/papers/agrawal2024sarathiserve-v3.pdf",
+      "title": "Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve",
+      "catalog_version": "2403.02310v3",
+      "first_page_arxiv_ids": [
+        "2403.02310v3"
+      ],
+      "pages": 18,
+      "bytes": 1945812,
+      "sha256": "45f59f4474de29baf4d315c785b850625548b69a9bc7be2e036d6fc59f54b54a",
+      "pdfinfo_exit": 0,
+      "full_text_parse_exit": 0,
+      "first_page_title_match": true,
+      "first_page_excerpt": null,
+      "parser_warnings": "",
+      "version_verified": true,
+      "version_evidence": "Exact arXiv version on first page"
+    },
+    {
+      "id": "yang2023gla",
+      "path": "sources/papers/yang2023gla-v3.pdf",
+      "title": "Gated Linear Attention Transformers with Hardware-Efficient Training",
+      "catalog_version": "2312.06635v3",
+      "first_page_arxiv_ids": [
+        "2312.06635v3"
+      ],
+      "pages": 25,
+      "bytes": 835182,
+      "sha256": "ea1d3ab98c49715000a2baf4099cf90cad317479577a01a0e31dcfe523040ac0",
+      "pdfinfo_exit": 0,
+      "full_text_parse_exit": 0,
+      "first_page_title_match": true,
+      "first_page_excerpt": null,
+      "parser_warnings": "",
+      "version_verified": true,
+      "version_evidence": "Exact arXiv version on first page"
+    },
+    {
+      "id": "yang2024deltanet",
+      "path": "sources/papers/yang2024deltanet-v2.pdf",
+      "title": "Parallelizing Linear Transformers with the Delta Rule over Sequence Length",
+      "catalog_version": "2406.06484v2",
+      "first_page_arxiv_ids": [
+        "2406.06484v2"
+      ],
+      "pages": 18,
+      "bytes": 337538,
+      "sha256": "9d128dca4550fbcd6ca63d814c89b18fde94b7a4344e28332961db2c027eeb8e",
+      "pdfinfo_exit": 0,
+      "full_text_parse_exit": 0,
+      "first_page_title_match": true,
+      "first_page_excerpt": null,
+      "parser_warnings": "",
+      "version_verified": true,
+      "version_evidence": "Exact arXiv version on first page"
+    },
+    {
+      "id": "schlag2021fastweights",
+      "path": "sources/papers/schlag2021fastweights.pdf",
+      "title": "Linear Transformers Are Secretly Fast Weight Programmers",
+      "catalog_version": "PMLR 139 (ICML 2021)",
+      "first_page_arxiv_ids": [],
+      "pages": 12,
+      "bytes": 1326478,
+      "sha256": "207db79c22d7d063e6f81df614050d96a33172a631c7b2df7e75308b74f78f38",
+      "pdfinfo_exit": 0,
+      "full_text_parse_exit": 0,
+      "first_page_title_match": true,
+      "first_page_excerpt": null,
+      "parser_warnings": "",
+      "version_verified": true,
+      "version_evidence": "PMLR 139, 2021"
+    },
+    {
+      "id": "arora2023zoology",
+      "path": "sources/papers/arora2023zoology-iclr2024.pdf",
+      "title": "Zoology: Measuring and Improving Recall in Efficient Language Models",
+      "catalog_version": "ICLR 2024 conference paper",
+      "first_page_arxiv_ids": [],
+      "pages": 67,
+      "bytes": 3381743,
+      "sha256": "d6605cb47e601ced89d562466e227e5adcc5f690111521cab4a9df2c89526ac6",
+      "pdfinfo_exit": 0,
+      "full_text_parse_exit": 0,
+      "first_page_title_match": true,
+      "first_page_excerpt": null,
+      "parser_warnings": "",
+      "version_verified": true,
+      "version_evidence": "Published as a conference paper at ICLR 2024"
+    },
+    {
+      "id": "choromanski2020performer",
+      "path": "sources/papers/choromanski2020performer-v4.pdf",
+      "title": "Rethinking Attention with Performers",
+      "catalog_version": "2009.14794v4",
+      "first_page_arxiv_ids": [
+        "2009.14794v4"
+      ],
+      "pages": 38,
+      "bytes": 5880177,
+      "sha256": "2634d0985b5ebc5235d983e388ec012883369eb1c39b351a024c31ee718b2e25",
+      "pdfinfo_exit": 0,
+      "full_text_parse_exit": 0,
+      "first_page_title_match": true,
+      "first_page_excerpt": null,
+      "parser_warnings": "",
+      "version_verified": true,
+      "version_evidence": "Exact arXiv version on first page"
+    },
+    {
+      "id": "de2024griffin",
+      "path": "sources/papers/de2024griffin-v1.pdf",
+      "title": "Griffin: Mixing Gated Linear Recurrences with Local Attention for Efficient Language Models",
+      "catalog_version": "2402.19427v1",
+      "first_page_arxiv_ids": [
+        "2402.19427v1"
+      ],
+      "pages": 25,
+      "bytes": 951680,
+      "sha256": "e44b4e15e9a9f966621e0f40bf7abde7525a2beb1638c2e09940a24a5f6e51a9",
+      "pdfinfo_exit": 0,
+      "full_text_parse_exit": 0,
+      "first_page_title_match": true,
+      "first_page_excerpt": null,
+      "parser_warnings": "",
+      "version_verified": true,
+      "version_evidence": "Exact arXiv version on first page"
+    },
+    {
+      "id": "lieber2024jamba",
+      "path": "sources/papers/lieber2024jamba-v2.pdf",
+      "title": "Jamba: A Hybrid Transformer-Mamba Language Model",
+      "catalog_version": "2403.19887v2",
+      "first_page_arxiv_ids": [
+        "2403.19887v2"
+      ],
+      "pages": 17,
+      "bytes": 1287281,
+      "sha256": "517673951e0ff6dbd27701e52f4ab5d3ccf3f40d3eddae3d4e27dcf90f38d665",
+      "pdfinfo_exit": 0,
+      "full_text_parse_exit": 0,
+      "first_page_title_match": true,
+      "first_page_excerpt": null,
+      "parser_warnings": "",
+      "version_verified": true,
+      "version_evidence": "Exact arXiv version on first page"
+    },
+    {
+      "id": "gemmateam2024gemma2",
+      "path": "sources/papers/gemmateam2024gemma2-v3.pdf",
+      "title": "Gemma 2: Improving Open Language Models at a Practical Size",
+      "catalog_version": "2408.00118v3",
+      "first_page_arxiv_ids": [
+        "2408.00118v3"
+      ],
+      "pages": 21,
+      "bytes": 610320,
+      "sha256": "e81333353e58a01cbca0b6d5aec28caa5a7c6d26b52d227844bcce1bd87dc557",
+      "pdfinfo_exit": 0,
+      "full_text_parse_exit": 0,
+      "first_page_title_match": true,
+      "first_page_excerpt": null,
+      "parser_warnings": "",
+      "version_verified": true,
+      "version_evidence": "Exact arXiv version on first page"
+    },
+    {
+      "id": "gu2023mamba",
+      "path": "sources/papers/gu2023mamba-v2.pdf",
+      "title": "Mamba: Linear-Time Sequence Modeling with Selective State Spaces",
+      "catalog_version": "2312.00752v2",
+      "first_page_arxiv_ids": [
+        "2312.00752v2"
+      ],
+      "pages": 36,
+      "bytes": 1168615,
+      "sha256": "adf70ed1803c85b1899dec3e21f3af0b124411439e8654b840ea65f7b9f52b2e",
+      "pdfinfo_exit": 0,
+      "full_text_parse_exit": 0,
+      "first_page_title_match": true,
+      "first_page_excerpt": null,
+      "parser_warnings": "",
+      "version_verified": true,
+      "version_evidence": "Exact arXiv version on first page"
+    },
+    {
+      "id": "ren2024samba",
+      "path": "sources/papers/ren2024samba-v1.pdf",
+      "title": "Samba: Simple Hybrid State Space Models for Efficient Unlimited Context Language Modeling",
+      "catalog_version": "2406.07522v1",
+      "first_page_arxiv_ids": [
+        "2406.07522v1"
+      ],
+      "pages": 17,
+      "bytes": 1624851,
+      "sha256": "0fd70db61cc41498a762c6290fd9eac27492997d14fd038de6f4067eea5a3124",
+      "pdfinfo_exit": 0,
+      "full_text_parse_exit": 0,
+      "first_page_title_match": true,
+      "first_page_excerpt": null,
+      "parser_warnings": "",
+      "version_verified": true,
+      "version_evidence": "Exact arXiv version on first page"
+    },
+    {
+      "id": "sun2023retnet",
+      "path": "sources/papers/sun2023retnet-4.pdf",
+      "title": "Retentive Network: A Successor to Transformer for Large Language Models",
+      "catalog_version": "2307.08621v4",
+      "first_page_arxiv_ids": [
+        "2307.08621v4"
+      ],
+      "pages": 14,
+      "bytes": 778073,
+      "sha256": "b75fdb67fdcc760609a38d28171a785f336ece30f750d210c7379306bb483fa7",
+      "pdfinfo_exit": 0,
+      "full_text_parse_exit": 0,
+      "first_page_title_match": true,
+      "first_page_excerpt": null,
+      "parser_warnings": "",
+      "version_verified": true,
+      "version_evidence": "Exact arXiv version on first page"
+    },
+    {
+      "id": "peng2023rwkv",
+      "path": "sources/papers/peng2023rwkv-2.pdf",
+      "title": "RWKV: Reinventing RNNs for the Transformer Era",
+      "catalog_version": "2305.13048v2",
+      "first_page_arxiv_ids": [
+        "2305.13048v2"
+      ],
+      "pages": 30,
+      "bytes": 1590242,
+      "sha256": "57d18c40bdbb4bc1ab69c078a304f97e31657b4f543c408d8a5520e672a3fab0",
+      "pdfinfo_exit": 0,
+      "full_text_parse_exit": 0,
+      "first_page_title_match": true,
+      "first_page_excerpt": null,
+      "parser_warnings": "",
+      "version_verified": true,
+      "version_evidence": "Exact arXiv version on first page"
+    },
+    {
+      "id": "sun2024ttt",
+      "path": "sources/papers/sun2024ttt-1.pdf",
+      "title": "Learning to (Learn at Test Time): RNNs with Expressive Hidden States",
+      "catalog_version": "2407.04620v1",
+      "first_page_arxiv_ids": [
+        "2407.04620v1"
+      ],
+      "pages": 34,
+      "bytes": 1713478,
+      "sha256": "61a6cdb14891692fc42c827a9e7de2a953618f236803976389cb64da2b16b832",
+      "pdfinfo_exit": 0,
+      "full_text_parse_exit": 0,
+      "first_page_title_match": true,
+      "first_page_excerpt": null,
+      "parser_warnings": "",
+      "version_verified": true,
+      "version_evidence": "Exact arXiv version on first page"
+    }
+  ]
+}

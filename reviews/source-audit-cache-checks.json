@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-26",
+  "scope": "Summary of observed script outputs; no GPU or serving benchmark",
+  "verify_kv_cache": {
+    "capacity_cases": 260,
+    "gathered_attention_max_error": 0.0,
+    "reordered_attention_max_error": 0.0,
+    "unused_slot_counterexample_detected": true,
+    "copy_on_write_isolation": true,
+    "status": "passed"
+  },
+  "verify_kv_quantization": {
+    "rounding_bound_cases": 300,
+    "error_identity_cases": 100,
+    "max_identity_error": 1.8995222061946038e-16,
+    "constant_group": true,
+    "example_bytes": 12,
+    "example_compression_ratio": 5.333333333333333,
+    "status": "passed"
+  },
+  "reuse_and_eviction": {
+    "prefix_pair_count_cases": 2080,
+    "streaming_set_bound": "enumerated s=1..5,w=1..7,t=s-1..39",
+    "schedule_example_prefill_tokens": 224,
+    "timing_example": {
+      "arrival": 0,
+      "outputs": [
+        2,
+        2.1,
+        2.5
+      ],
+      "TTFT": 2,
+      "ITL": [
+        0.1,
+        0.4
+      ],
+      "mean_ITL": 0.25
+    },
+    "scope": "counting and constructed timing examples, not a serving benchmark",
+    "status": "passed"
+  }
+}

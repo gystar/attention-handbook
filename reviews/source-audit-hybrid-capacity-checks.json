@@ -1,0 +1,27 @@
+{
+  "scope": "Table 10-7 logical payload only; excludes allocation overhead, weights and workspace",
+  "rows": [
+    {
+      "positions": 1024,
+      "full_MiB": 4.0,
+      "local_MiB": 4.0,
+      "recurrent_MiB": 2.0,
+      "total_MiB": 10.0
+    },
+    {
+      "positions": 4096,
+      "full_MiB": 16.0,
+      "local_MiB": 4.0,
+      "recurrent_MiB": 2.0,
+      "total_MiB": 22.0
+    },
+    {
+      "positions": 16384,
+      "full_MiB": 64.0,
+      "local_MiB": 4.0,
+      "recurrent_MiB": 2.0,
+      "total_MiB": 70.0
+    }
+  ],
+  "status": "passed"
+}

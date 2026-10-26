@@ -4,16 +4,16 @@ Decoder-only 语言模型逐步生成文本，并通过 Attention 读取已有�
 
 ## 自回归生成与 KV Cache
 
-Next-token Prediction 根据已有序列估计后续 Token 在词表上的概率分布。模型通过 Causal Self-Attention 汇总当前及此前的信息，再由输出层给出分布；系统选取一个 Token，追加到序列末尾，继续生成。这一循环称为自回归生成（Autoregressive Generation）。[Kwon et al.，§2.1—2.2](https://arxiv.org/html/2309.06180v1)
+Next-token Prediction 根据已有序列，估计紧接其后的一个 Token 在词表上的概率分布。模型通过 Causal Self-Attention 汇总当前及此前的信息，再由输出层给出分布；系统选取一个 Token，追加到序列末尾，继续生成。这一循环称为自回归生成（Autoregressive Generation）。[Kwon et al.，§2.1—2.2](https://arxiv.org/html/2309.06180v1)
 
 <figure align="center">
-<img src="https://jalammar.github.io/images/xlnet/gpt-2-autoregression-2.gif" alt="Jay Alammar 自回归动画：生成的 Token 追加到输入序列，再进入下一轮生成">
+<img src="../../assets/overview/alammar-autoregression.gif" alt="Jay Alammar 自回归动画：生成的 Token 追加到输入序列，再进入下一轮生成">
 <figcaption><p align="center">图 1-7　自回归生成中的反馈循环</p></figcaption>
 </figure>
 
 [原始动画](https://jalammar.github.io/images/xlnet/gpt-2-autoregression-2.gif)展示输出追加到输入的反馈过程。图中的英文词语用于示意，实际 Token 边界由 Tokenizer 决定。
 
-每轮生成都会再次读取历史信息。Attention 层将输入表示映射为 Query、Key 和 Value：Query 与 Key 决定匹配权重，Value 提供被汇总的内容。在参数和前缀固定的 Causal Transformer 中，历史位置的表示不受后来追加内容的影响，因此各层已算出的 Key 和 Value 可以保存在 **KV Cache** 中复用。新位置只需计算自己的 QKV，并读取历史 KV。[Shazeer，§2.3—2.4](https://arxiv.org/html/1911.02150v1)
+每轮生成都会再次读取历史信息。Attention 层将输入表示映射为 Query、Key 和 Value：Query 与 Key 决定匹配权重，Value 提供被汇总的内容。在采用确定性因果计算的 Transformer 中，只要历史前缀、模型参数及位置处理等计算配置保持一致，历史位置的表示就不受后来追加内容的影响。因此，各层已算出的 Key 和 Value 可以保存在 **KV Cache** 中复用；新位置只需计算自己的 QKV，并读取历史 KV。[Shazeer，§2.3—2.4](https://arxiv.org/html/1911.02150v1)
 
 <figure align="center">
 <img src="../../assets/overview/alammar-kv-cache.png" alt="Jay Alammar 原图：处理 robot 时，各 Decoder 层保留 a 的 KV 并计算当前位置的 QKV">
@@ -54,7 +54,7 @@ Next-token Prediction 根据已有序列估计后续 Token 在词表上的概率
 
 <p align="center">表 1-4　Long Context 的三个条件</p>
 
-例如，Position Interpolation 重映射 Rotary Position Embedding（RoPE）的位置索引，并配合适应训练扩展上下文窗口。能力评估则需要检查相关信息能否被有效使用。[Chen et al.，§2.3](https://arxiv.org/html/2306.15595v2)
+例如，Position Interpolation 将 Rotary Position Embedding（RoPE）的位置索引线性缩放到原训练范围内，并通过微调使模型适应扩展后的上下文窗口。能力评估则需要检查相关信息能否被有效使用。[Chen et al.，§2.3](https://arxiv.org/html/2306.15595v2)
 
 Lost in the Middle 在多文档问答中移动含答案文档的位置，发现其评估模型的回答表现会随位置变化。下图用七份文档示意实验设置，未展示得分；这一结论限于论文评估的模型与任务。[Liu et al.，§3.1—3.3](https://arxiv.org/html/2307.03172v1)
 

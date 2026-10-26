@@ -11,9 +11,9 @@
 
 ## 当前内容
 
-第 1 章已有概览和四节正文；第 2、3 章各有概览及五节正文，分别解释 Attention 计算，以及位置编码、上下文扩展与评估。第 4、9 章已接收 KV 表示与容量、Linear Attention 递推等内容，完整章节待写；其余专题章保留节级目录。附录 B 收录时间线与方法比较条件。本地原文归档和本轮 GitBook 发布检查尚待完成。
+十章正文和三个附录已写齐，并完成归档后的逐章来源与表达审校。当前工作树已保存 60 篇必备论文和 68 个图表文件。全书最终一致性检查正在进行，当前版本的 GitBook 页面呈现与视频播放仍待验收。
 
-结构与表达复查见[第一章结构重写 Review](reviews/overview-restructure.md)、[第二章 Review](reviews/transformer-attention.md)及[第三章 Review](reviews/position-encoding.md)。
+逐章来源核查、修订和未完成项见[归档后来源审校](reviews/source-content-audit.md)。
 
 ## 目录职责
 
@@ -35,6 +35,8 @@ python3 scripts/check_handbook.py
 python3 scripts/verify_examples.py
 python3 scripts/verify_transformer_attention.py
 python3 scripts/verify_position_encoding.py
+python3 scripts/verify_kv_representations.py
+python3 scripts/verify_gated_attention.py
 python3 scripts/sources.py
 ```
 

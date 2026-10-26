@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="350" viewBox="0 0 1100 350">
+<rect width="1100" height="350" fill="white"/>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#607789"/></marker></defs>
+<g font-family="DejaVu Sans,Noto Sans CJK SC,sans-serif" fill="#243949">
+<rect x="25" y="130" width="150" height="80" rx="5" fill="#edf3f7" stroke="#aebfca"/>
+<text x="100.0" y="159" font-size="18" text-anchor="middle">Input X</text>
+<text x="100.0" y="185" font-size="15" text-anchor="middle">N × d</text>
+<rect x="265" y="130" width="210" height="80" rx="5" fill="#edf3f7" stroke="#aebfca"/>
+<text x="370.0" y="159" font-size="18" text-anchor="middle">Q/K/V → SDPA</text>
+<text x="370.0" y="185" font-size="15" text-anchor="middle">H: N × (h_q d_v)</text>
+<rect x="570" y="130" width="210" height="80" rx="5" fill="#edf3f7" stroke="#aebfca"/>
+<text x="675.0" y="159" font-size="18" text-anchor="middle">Multiply</text>
+<text x="675.0" y="185" font-size="15" text-anchor="middle">H ⊙ G</text>
+<rect x="870" y="130" width="205" height="80" rx="5" fill="#edf3f7" stroke="#aebfca"/>
+<text x="972.5" y="159" font-size="18" text-anchor="middle">Output projection</text>
+<text x="972.5" y="185" font-size="15" text-anchor="middle">Y = (H ⊙ G) W_O</text>
+<path d="M175 170L265 170" stroke="#607789" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<path d="M475 170L570 170" stroke="#607789" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<path d="M780 170L870 170" stroke="#607789" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<rect x="570" y="20" width="210" height="80" rx="5" fill="#eaf4ef" stroke="#aebfca"/>
+<text x="675.0" y="49" font-size="18" text-anchor="middle">Gate projection</text>
+<text x="675.0" y="75" font-size="15" text-anchor="middle">G = sigmoid(X W_G)</text>
+<path d="M100 130V60H570" stroke="#34836e" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<path d="M675 100L675 130" stroke="#607789" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<text x="550" y="280" font-size="17" text-anchor="middle">The same normalized input supplies the attention branch and the gate.</text>
+<text x="550" y="312" font-size="17" text-anchor="middle">The output gate acts after SDPA; the already computed attention weights are unchanged.</text>
+</g></svg>

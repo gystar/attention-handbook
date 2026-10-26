@@ -32,7 +32,7 @@ b'=b\rho^{d/(d-2)},\qquad
 =\theta_r\rho^{-2r/(d-2)}.
 $$
 
-由该式可直接看出：最高频的 $$r=0$$ 保持不变，最低频的 $$r=d/2-1$$ 恰好除以 $$\rho$$，中间维度平滑过渡。这个名称来自相关方法，不表示对任意模型都具有长度泛化保证。[Peng et al.，2309.00071v2，§3.1](https://arxiv.org/html/2309.00071v2)
+由该式可直接看出：最高频的 $$r=0$$ 保持不变，最低频的 $$r=d/2-1$$ 恰好除以 $$\rho$$，中间维度平滑过渡。由于部分频率保留了更大的相位间隔，参数 $$\rho$$ 与模型实际有效的长度扩展倍数需要分别评估。[Peng et al.，2309.00071v2，§3.1](https://arxiv.org/html/2309.00071v2)
 
 ## YaRN 结合分频调整与 Attention Scaling
 
@@ -58,6 +58,8 @@ A_{i,:}=\operatorname{softmax}\left(
 $$
 
 把旋转后的 Q、K 同时乘以 $$1/\sqrt\tau$$，即可得到相同的分数缩放。YaRN 是**分频插值与 Attention Scaling 的组合**；只改变 RoPE 基底不等于实现了完整 YaRN。[Peng et al.，v2，§3.4，式 (21)—(22)](https://arxiv.org/html/2309.00071v2)
+
+原论文针对 LLaMA 与 Llama 2 给出经验设置 $$1/\sqrt\tau=1+0.1\ln\rho$$。例如 $$\rho=4$$ 时，Q/K 各乘约 $$1.139$$，内容分数相应乘约 $$1.296$$。该关系由 LLaMA 上的 perplexity 实验拟合得到，迁移到其他模型时仍需验证；它与前述纯旋转保范数的 RoPE 是不同的操作。
 
 ## LongRoPE 将缩放配置纳入搜索
 

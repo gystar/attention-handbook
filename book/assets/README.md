@@ -2,7 +2,7 @@
 
 随书图表按章节放置。引用图的作者、定位与许可集中列于附录 C，正文提供入口，改绘注明来源及改绘，原创示意图保留可编辑 SVG 或生成脚本。
 
-本书自制图表为结构、计算流程与方法关系的教学示意。无法下载的外部原图保留原始链接，来源索引如实记录归档状态。
+本书自制图表为结构、计算流程与方法关系的教学示意。当前引用原图已保存本地文件，原始链接和校验值保留在来源索引中。
 
 ## 正文素材清单
 
@@ -14,14 +14,14 @@
 | 1-4 | [d2l-seq2seq.png](overview/d2l-seq2seq.png)／[SVG 原文件](overview/d2l-seq2seq.svg) | Zhang, Lipton, Li & Smola，Dive into Deep Learning，Figure 10.7.1；CC BY-SA 4.0，SVG 白底栅格化，图中内容未改动 |
 | 1-5 | [PNG](overview/translation-attention-en-zh.png)／[SVG 源文件](overview/translation-attention-en-zh.svg) | 本书依据 Bahdanau §3.1 绘制；I like tea → 我喜欢茶，切分与权重为教学设定 |
 | 1-6 | [alammar-encoder-decoder.png](overview/alammar-encoder-decoder.png) | Jay Alammar 教程原图，CC BY-NC-SA 4.0；Encoder 与 Decoder 中三处 Attention 的位置 |
-| 1-7 | [自回归 GIF](https://jalammar.github.io/images/xlnet/gpt-2-autoregression-2.gif) | Jay Alammar，The Illustrated GPT-2；CC BY-NC-SA 4.0，原图远程引用，本地归档待完成 |
+| 1-7 | [自回归 GIF](overview/alammar-autoregression.gif) | Jay Alammar，The Illustrated GPT-2；CC BY-NC-SA 4.0，原图未修改，已本地归档 |
 | 1-8 | [alammar-kv-cache.png](overview/alammar-kv-cache.png) | Jay Alammar，The Illustrated GPT-2；CC BY-NC-SA 4.0，原图未修改 |
 | 1-9 | [prefill-decode.svg](overview/prefill-decode.svg) | 本书依据 [Kwon et al. §2.2](https://arxiv.org/html/2309.06180v1) 绘制；只展示位置关系，省略其余网络计算 |
 | 1-10 | [PNG](overview/context-costs.png)／[SVG](overview/context-costs.svg) | 本书绘制；单 Head、固定配置、缓存全部历史的计数示意 |
 | 1-11 | [PNG](overview/context-evidence-position.png)／[SVG](overview/context-evidence-position.svg) | 本书依据 Lost in the Middle §3.1 绘制实验设置；未描绘实验结果 |
 | 1-12 | [PNG](overview/attention-design-locations.png)／[SVG](overview/attention-design-locations.svg) | 本书综合绘制；生成脚本 scripts/render_attention_routes.py；方法依据见 1.4 对应引用 |
 | 2-1 | [PNG](transformer-attention/d2l-transformer.png)／[原始 SVG](transformer-attention/d2l-transformer.svg) | Zhang, Lipton, Li & Smola，D2L Figure 11.7.1；CC BY-SA 4.0，白底栅格化 |
-| 2-2 | [Transformer Figure 2 左图](https://arxiv.org/html/1706.03762v7/Figures/ModalNet-19.png) | Vaswani et al.，原图远程引用，待本地归档 |
+| 2-2 | [Transformer Figure 2 左图](overview/scaled-dot-product-original.png) | Vaswani et al.，原图未修改，已本地归档 |
 | 2-3 | [PNG](transformer-attention/attention-masks.png)／[SVG](transformer-attention/attention-masks.svg) | 本书依据 Vaswani §3.2.3 绘制；网格仅表示访问范围 |
 | 2-4 | [PNG](transformer-attention/d2l-multi-head-attention.png)／[原始 SVG](transformer-attention/d2l-multi-head-attention.svg) | Zhang, Lipton, Li & Smola，D2L Figure 11.5.1；CC BY-SA 4.0，白底栅格化 |
 | 2-5 | [prefill-decode.svg](overview/prefill-decode.svg) | 复用图 1-9，方法依据为 Kwon §2.2 |
@@ -32,7 +32,14 @@
 | 3-5 | [PNG](position-encoding/position-interpolation.png)／[SVG](position-encoding/position-interpolation.svg) | 本书依据公式绘制；生成脚本 scripts/render_position_encoding.py；方法与参数见附录 C |
 | 3-6 | [PNG](position-encoding/frequency-scaling.png)／[SVG](position-encoding/frequency-scaling.svg) | 本书依据公式绘制；生成脚本 scripts/render_position_encoding.py；方法与参数见附录 C |
 | 3-7 | [PNG](overview/context-evidence-position.png)／[SVG](overview/context-evidence-position.svg) | 复用图 1-11；Lost in the Middle 证据位置实验设置 |
-| 4-1 | [GQA Figure 2](https://arxiv.org/html/2305.13245v3/images/gmq_architecture.png) | Ainslie et al.，CC BY 4.0；原图远程引用，待本地归档 |
+| 4-1 | [GQA Figure 2](overview/gqa-heads-original.png) | Ainslie et al.，CC BY 4.0；原图未修改，已本地归档 |
+| 4-2 | [PNG](kv-representations/mla-computation.png)／[SVG](kv-representations/mla-computation.svg) | 本书依据 DeepSeek-V2 §2.1.2 绘制；两种内容计算顺序，保留相同缩放与 Mask |
+| 4-3 | [PNG](kv-representations/mla-cache-branches.png)／[SVG](kv-representations/mla-cache-branches.svg) | 本书依据 DeepSeek-V2 §2.1.3 绘制；两类缓存与统一 Softmax，非实验结果 |
+| 5-1 | [PNG](gated-attention/output-gate.png)／[SVG](gated-attention/output-gate.svg) | 本书依据 Qiu §2.2 绘制；拼接形式的输出 Gate |
+| 5-2 | [PNG](gated-attention/gate-example.png)／[SVG](gated-attention/gate-example.svg) | 逐元素乘法教学算例；非实验结果 |
+| 6-1 | [PNG](flash-attention/online-merge.png)／[SVG](flash-attention/online-merge.svg) | 本书自行绘制的分块合并算例；公式依据 FlashAttention-2 §3.1.1，生成脚本 scripts/render_flash_attention.py |
+| 7-1 | [PNG](sparse-attention/connectivity.png)／[SVG](sparse-attention/connectivity.svg) | 本书自行绘制的连接矩阵；蓝色为允许连接，不表示测得权重；生成脚本 scripts/render_sparse_attention.py |
+| 7-2 | [PNG](sparse-attention/page-bound.png)／[SVG](sparse-attention/page-bound.svg) | 本书构造的页面上界反例；二维 Query/Key，非实测结果 |
 
 Transformer 图表使用条件见原论文首页的转载声明。三张论文原图的归档目标路径和来源 ID 已记录在仓库 `references/catalog.yaml`，没有将尚不存在的本地文件作为链接。
 
@@ -47,7 +54,7 @@ Transformer 图表使用条件见原论文首页的转载声明。三张论文�
 
 原 `alammar-encoder.png` 保留为历史素材，图 1-6 改用同一教程 A High-Level Look 的 Encoder–Decoder 示意图；原图未修改，许可与校验值见 catalog.yaml。
 
-原论文 Transformer Figure 1 保留归档计划。现行图号以本页表格和正文为准，旧编号见历史 Review。
+原论文 Transformer Figure 1 已保存为 `overview/transformer-architecture-original.png`，保留为参考素材。现行图号以本页表格和正文为准，旧编号见历史 Review。
 
 新增 D2L SVG 来自作者仓库 `d2l-ai/d2l-en/img/seq2seq.svg`；许可见该仓库 LICENSE。新增翻译 Attention 图来自 `jalammar/jalammar.github.io/images/attention.png`；两者均保留原文件，Git blob 与 SHA-256 见 catalog.yaml。
 
@@ -60,3 +67,9 @@ Transformer 图表使用条件见原论文首页的转载声明。三张论文�
 原章节导航图 `attention-landscape.svg` 保留为历史素材；当前图 1-12 按方法作用于计算的主要位置组织，不再列章号。
 
 第二章新增素材由 `scripts/render_transformer_attention.py` 生成或栅格化。D2L SVG 原文件保持不变；[源仓库许可](https://github.com/d2l-ai/d2l-en/blob/master/LICENSE)为 CC BY-SA 4.0，版本与文件校验值见 catalog.yaml。
+
+第八章图 8-1、8-2 为 `scripts/render_kv_cache.py` 生成的教学示意，保留 SVG 和 PNG。分页例子与正文块表一致，量化图颜色只表示分组；方法来源与校验值见 catalog.yaml。
+
+第九章图 9-1、9-2 由 `scripts/render_linear_attention.py` 生成，保留 SVG 与 PNG。图 9-1 表示归一化前的张量计算；图 9-2 展开正文自设状态更新算例。来源及校验值见 catalog.yaml。
+
+第十章图 10-1、10-2 由 `scripts/render_hybrid_architectures.py` 生成。前者为简化层排列及状态示意，后者为依据因果状态推导的快照与分支要求；均非原论文图片复制，保留 SVG 和 PNG，版本与校验值见 catalog.yaml。

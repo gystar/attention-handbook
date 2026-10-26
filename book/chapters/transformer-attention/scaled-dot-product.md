@@ -41,7 +41,7 @@ $$
 因此，每个 Query 分别得到一组权重；同一个 Key 可以被多个 Query 读取。图 2-2 中，从 Q、K 开始的路径产生权重，V 路径提供被加权的内容。
 
 <figure align="center">
-<img src="https://arxiv.org/html/1706.03762v7/Figures/ModalNet-19.png" alt="原论文 Figure 2 左图：MatMul、Scale、Mask、Softmax 后与 V 相乘">
+<img src="../../assets/overview/scaled-dot-product-original.png" alt="原论文 Figure 2 左图：MatMul、Scale、Mask、Softmax 后与 V 相乘">
 <figcaption><p align="center">图 2-2　Scaled Dot-Product Attention</p></figcaption>
 </figure>
 
@@ -58,7 +58,7 @@ $$
 \operatorname{Var}\left(\frac{q^\top k}{\sqrt{d_k}}\right)=1.
 $$
 
-缩放使这组假设下的分数方差不随维度增长。过大的分数差异会使 Softmax 接近集中在少数位置，部分梯度变得很小。实际训练后的 QKV 不必满足上述独立同分布条件，这一推导解释的是缩放的设计动机。[Vaswani et al.，§3.2.1 及脚注](https://arxiv.org/html/1706.03762v7)；[D2L，§11.3.1](https://d2l.ai/chapter_attention-mechanisms-and-transformers/attention-scoring-functions.html)
+缩放使这组假设下的分数方差不随维度增长。过大的分数差异会使 Softmax 接近集中在少数位置，部分梯度变得很小。实际训练后的 Query 和 Key 不必满足上述独立、零均值及单位方差的假设，这一推导解释的是缩放的设计动机。[Vaswani et al.，§3.2.1 及脚注](https://arxiv.org/html/1706.03762v7)；[D2L，§11.3.1](https://d2l.ai/chapter_attention-mechanisms-and-transformers/attention-scoring-functions.html)
 
 计算 Softmax 时，可先从每行有效分数中减去最大值，再取指数。给整行减去同一常数不改变归一化结果，且能避免大正数的指数溢出。[Dao et al.，§3.1](https://arxiv.org/html/2205.14135v2)
 

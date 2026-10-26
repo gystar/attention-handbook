@@ -1,0 +1,8 @@
+{
+  "cases": 200,
+  "max_mgf_identity_error": 2.220446049250313e-16,
+  "max_ratio_identity_error": 3.8163916471489756e-17,
+  "max_reorder_error": 8.326672684688674e-17,
+  "scope": "Gaussian MGF algebra, normalized ratio identity and fixed random-map reorder; no ORF variance or trained-model claims",
+  "status": "passed"
+}

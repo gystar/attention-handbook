@@ -1,0 +1,11 @@
+{
+  "python": "3.12.3",
+  "scope": "float64 quantizer bound and fixed-input attention identity; no GPU, bit packing or model evaluation",
+  "rounding_bound_cases": 300,
+  "constant_group": true,
+  "error_identity_cases": 100,
+  "max_identity_error": 1.8995222061946038e-16,
+  "example_bytes": 12,
+  "example_compression_ratio": 5.333333333333333,
+  "status": "passed"
+}

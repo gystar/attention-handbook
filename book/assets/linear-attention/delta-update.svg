@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="390" viewBox="0 0 1000 390">
+<rect width="100%" height="100%" fill="white"/>
+<g font-family="DejaVu Sans,sans-serif" fill="#243949">
+<text x="500" y="30" font-size="18" text-anchor="middle">k = (1, 0)ᵀ     v = 6     β = 1     α = 0.5</text>
+<text x="125" y="127" font-size="18" text-anchor="middle">Additive</text>
+<rect x="300" y="95" width="70" height="30" fill="#d7e7ef" stroke="white"/>
+<text x="335" y="117" font-size="18" text-anchor="middle">2</text>
+<rect x="300" y="125" width="70" height="30" fill="#e9edef" stroke="white"/>
+<text x="335" y="147" font-size="18" text-anchor="middle">4</text>
+<rect x="530" y="95" width="70" height="30" fill="#d7e7ef" stroke="white"/>
+<text x="565" y="117" font-size="18" text-anchor="middle">6</text>
+<rect x="530" y="125" width="70" height="30" fill="#e9edef" stroke="white"/>
+<text x="565" y="147" font-size="18" text-anchor="middle">0</text>
+<rect x="790" y="95" width="70" height="30" fill="#d7e7ef" stroke="white"/>
+<text x="825" y="117" font-size="18" text-anchor="middle">8</text>
+<rect x="790" y="125" width="70" height="30" fill="#e9edef" stroke="white"/>
+<text x="825" y="147" font-size="18" text-anchor="middle">4</text>
+<text x="450" y="130" font-size="25" text-anchor="middle">+</text>
+<text x="705" y="130" font-size="25" text-anchor="middle">=</text>
+<text x="125" y="227" font-size="18" text-anchor="middle">Delta Rule</text>
+<rect x="300" y="195" width="70" height="30" fill="#d7e7ef" stroke="white"/>
+<text x="335" y="217" font-size="18" text-anchor="middle">2</text>
+<rect x="300" y="225" width="70" height="30" fill="#e9edef" stroke="white"/>
+<text x="335" y="247" font-size="18" text-anchor="middle">4</text>
+<rect x="530" y="195" width="70" height="30" fill="#d7e7ef" stroke="white"/>
+<text x="565" y="217" font-size="18" text-anchor="middle">4</text>
+<rect x="530" y="225" width="70" height="30" fill="#e9edef" stroke="white"/>
+<text x="565" y="247" font-size="18" text-anchor="middle">0</text>
+<rect x="790" y="195" width="70" height="30" fill="#d7e7ef" stroke="white"/>
+<text x="825" y="217" font-size="18" text-anchor="middle">6</text>
+<rect x="790" y="225" width="70" height="30" fill="#e9edef" stroke="white"/>
+<text x="825" y="247" font-size="18" text-anchor="middle">4</text>
+<text x="450" y="230" font-size="25" text-anchor="middle">+</text>
+<text x="705" y="230" font-size="25" text-anchor="middle">=</text>
+<text x="125" y="327" font-size="18" text-anchor="middle">Gated Delta Rule</text>
+<rect x="300" y="295" width="70" height="30" fill="#d7e7ef" stroke="white"/>
+<text x="335" y="317" font-size="18" text-anchor="middle">1</text>
+<rect x="300" y="325" width="70" height="30" fill="#e9edef" stroke="white"/>
+<text x="335" y="347" font-size="18" text-anchor="middle">2</text>
+<rect x="530" y="295" width="70" height="30" fill="#d7e7ef" stroke="white"/>
+<text x="565" y="317" font-size="18" text-anchor="middle">5</text>
+<rect x="530" y="325" width="70" height="30" fill="#e9edef" stroke="white"/>
+<text x="565" y="347" font-size="18" text-anchor="middle">0</text>
+<rect x="790" y="295" width="70" height="30" fill="#d7e7ef" stroke="white"/>
+<text x="825" y="317" font-size="18" text-anchor="middle">6</text>
+<rect x="790" y="325" width="70" height="30" fill="#e9edef" stroke="white"/>
+<text x="825" y="347" font-size="18" text-anchor="middle">2</text>
+<text x="450" y="330" font-size="25" text-anchor="middle">+</text>
+<text x="705" y="330" font-size="25" text-anchor="middle">=</text>
+<text x="335" y="68" font-size="16" text-anchor="middle">Retained state</text>
+<text x="565" y="68" font-size="16" text-anchor="middle">Write</text>
+<text x="825" y="68" font-size="16" text-anchor="middle">New state</text>
+<text x="500" y="380" font-size="16" text-anchor="middle">Old state = (2, 4)ᵀ; readout along k is the first row.</text>
+</g></svg>

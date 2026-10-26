@@ -65,4 +65,4 @@ $$
 
 图示来源见[图表来源](../../appendices/references.md#图表来源)。
 
-下一章：[第 4 章 Key–Value 表示优化：MHA、MQA、GQA 与 MLA](../kv-representations/README.md)。
+下一章：[第 4 章 MQA、GQA 与 MLA 的 KV 表示优化](../kv-representations/README.md)。

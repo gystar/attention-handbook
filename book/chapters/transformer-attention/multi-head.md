@@ -54,7 +54,7 @@ $$
 
 这里先投影再拆分 Head；各 Head 的参数是大投影矩阵的不同列块。实现可以采用其他内存布局，但必须保持 Head 与位置的对应关系。[D2L，§11.5.2](https://d2l.ai/chapter_attention-mechanisms-and-transformers/multihead-attention.html)
 
-例如 $$d_{\mathrm{model}}=512$$、$$h=8$$ 时，每个 Head 的维度为 64。按上述配置，Q、K、V 和输出的四个投影共含 $$4d_{\mathrm{model}}^2$$ 个权重元素，不计偏置；这是由矩阵形状相乘得到的计数。MQA、GQA 和 MLA 会改变 KV 的组织与参数形式，见[第 4 章 Key–Value 表示优化：MHA、MQA、GQA 与 MLA](../kv-representations/README.md)。
+例如 $$d_{\mathrm{model}}=512$$、$$h=8$$ 时，每个 Head 的维度为 64。按上述配置，Q、K、V 和输出的四个投影共含 $$4d_{\mathrm{model}}^2$$ 个权重元素，不计偏置；这是由矩阵形状相乘得到的计数。MQA、GQA 和 MLA 会改变 KV 的组织与参数形式，见[第 4 章 MQA、GQA 与 MLA 的 KV 表示优化](../kv-representations/README.md)。
 
 图示来源与许可见[图表来源](../../appendices/references.md#图表来源)。
 

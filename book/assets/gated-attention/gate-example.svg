@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="340" viewBox="0 0 1000 340">
+<rect width="1000" height="340" fill="white"/>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#607789"/></marker></defs>
+<g font-family="DejaVu Sans,Noto Sans CJK SC,sans-serif" fill="#243949">
+<text x="500" y="35" font-size="18" text-anchor="middle">Constructed example · one head · three features</text>
+<text x="180" y="83" font-size="18" text-anchor="middle">Head output H</text>
+<rect x="80" y="105" width="200" height="55" rx="5" fill="#edf3f7" stroke="#aebfca"/>
+<text x="180.0" y="134" font-size="18" text-anchor="middle">2</text>
+<text x="180.0" y="160" font-size="15" text-anchor="middle"></text>
+<rect x="80" y="170" width="200" height="55" rx="5" fill="#edf3f7" stroke="#aebfca"/>
+<text x="180.0" y="199" font-size="18" text-anchor="middle">−1</text>
+<text x="180.0" y="225" font-size="15" text-anchor="middle"></text>
+<rect x="80" y="235" width="200" height="55" rx="5" fill="#edf3f7" stroke="#aebfca"/>
+<text x="180.0" y="264" font-size="18" text-anchor="middle">4</text>
+<text x="180.0" y="290" font-size="15" text-anchor="middle"></text>
+<text x="500" y="83" font-size="18" text-anchor="middle">Gate G</text>
+<rect x="400" y="105" width="200" height="55" rx="5" fill="#eaf4ef" stroke="#aebfca"/>
+<text x="500.0" y="134" font-size="18" text-anchor="middle">0.10</text>
+<text x="500.0" y="160" font-size="15" text-anchor="middle"></text>
+<rect x="400" y="170" width="200" height="55" rx="5" fill="#eaf4ef" stroke="#aebfca"/>
+<text x="500.0" y="199" font-size="18" text-anchor="middle">0.80</text>
+<text x="500.0" y="225" font-size="15" text-anchor="middle"></text>
+<rect x="400" y="235" width="200" height="55" rx="5" fill="#eaf4ef" stroke="#aebfca"/>
+<text x="500.0" y="264" font-size="18" text-anchor="middle">0.25</text>
+<text x="500.0" y="290" font-size="15" text-anchor="middle"></text>
+<text x="820" y="83" font-size="18" text-anchor="middle">Gated output H ⊙ G</text>
+<rect x="720" y="105" width="200" height="55" rx="5" fill="#edf3f7" stroke="#aebfca"/>
+<text x="820.0" y="134" font-size="18" text-anchor="middle">0.2</text>
+<text x="820.0" y="160" font-size="15" text-anchor="middle"></text>
+<rect x="720" y="170" width="200" height="55" rx="5" fill="#edf3f7" stroke="#aebfca"/>
+<text x="820.0" y="199" font-size="18" text-anchor="middle">−0.8</text>
+<text x="820.0" y="225" font-size="15" text-anchor="middle"></text>
+<rect x="720" y="235" width="200" height="55" rx="5" fill="#edf3f7" stroke="#aebfca"/>
+<text x="820.0" y="264" font-size="18" text-anchor="middle">1.0</text>
+<text x="820.0" y="290" font-size="15" text-anchor="middle"></text>
+<text x="340" y="205" font-size="28" text-anchor="middle">×</text>
+<text x="660" y="205" font-size="28" text-anchor="middle">=</text>
+</g></svg>

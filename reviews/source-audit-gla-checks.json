@@ -1,0 +1,21 @@
+{
+  "python": "3.12.3",
+  "scope": "row-gated state expansion only; no full GLA model, gradients, low precision or GPU evaluation",
+  "cases": 180,
+  "max_error": 8.881784197001252e-16,
+  "decay_table": [
+    [
+      0.5,
+      0.0625,
+      1.52587890625e-05
+    ],
+    [
+      0.9,
+      0.6561,
+      0.18530201888518416
+    ]
+  ],
+  "state_gate_example": 3,
+  "output_gate_example": 2.5,
+  "status": "passed"
+}

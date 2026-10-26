@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="350" viewBox="0 0 1040 350">
+<rect width="1040" height="350" fill="white"/>
+<g font-family="DejaVu Sans,sans-serif" fill="#243949">
+<text x="520" y="30" font-size="20" text-anchor="middle">Constructed example: q = (1, 1)</text>
+<rect x="30" y="55" width="470" height="225" rx="6" fill="#edf3fa" stroke="#b4c3cc"/>
+<text x="265" y="89" font-size="20" text-anchor="middle">Page A</text>
+<text x="265" y="130" font-size="17" text-anchor="middle">Keys: (1, 0)   (0, 1)</text>
+<text x="265" y="181" font-size="19" text-anchor="middle">Page upper bound: 2</text>
+<text x="265" y="226" font-size="19" text-anchor="middle">Largest actual dot product: 1</text>
+<rect x="540" y="55" width="470" height="225" rx="6" fill="#eaf4ef" stroke="#b4c3cc"/>
+<text x="775" y="89" font-size="20" text-anchor="middle">Page B</text>
+<text x="775" y="130" font-size="17" text-anchor="middle">Keys: (0.75, 0.75)   (0.75, 0.75)</text>
+<text x="775" y="181" font-size="19" text-anchor="middle">Page upper bound: 1.5</text>
+<text x="775" y="226" font-size="19" text-anchor="middle">Largest actual dot product: 1.5</text>
+<text x="520" y="319" font-size="19" text-anchor="middle">Upper-bound ranking: A &gt; B     Actual maximum: B &gt; A</text>
+</g></svg>

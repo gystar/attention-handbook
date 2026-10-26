@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="420" viewBox="0 0 1100 420">
+<rect width="1100" height="420" fill="white"/>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#607789"/></marker></defs>
+<g font-family="DejaVu Sans,Noto Sans CJK SC,sans-serif" fill="#243949">
+<text x="550" y="35" font-size="18" text-anchor="middle">One head · content branch · identical parameters and attention weights</text>
+<text x="550" y="75" font-size="18" text-anchor="middle">Expanded K/V</text>
+<rect x="25" y="100" width="200" height="80" rx="5" fill="#eaf4ef" stroke="#aebfca"/>
+<text x="125.0" y="129" font-size="18" text-anchor="middle">Cached latents</text>
+<text x="125.0" y="155" font-size="15" text-anchor="middle">C: N × d_c</text>
+<rect x="300" y="100" width="200" height="80" rx="5" fill="#edf3f7" stroke="#aebfca"/>
+<text x="400.0" y="129" font-size="18" text-anchor="middle">Expand K and V</text>
+<text x="400.0" y="155" font-size="15" text-anchor="middle">K, V: N × d_h</text>
+<rect x="575" y="100" width="200" height="80" rx="5" fill="#edf3f7" stroke="#aebfca"/>
+<text x="675.0" y="129" font-size="18" text-anchor="middle">Attention</text>
+<text x="675.0" y="155" font-size="15" text-anchor="middle">q: 1 × d_h</text>
+<rect x="850" y="100" width="220" height="80" rx="5" fill="#edf3f7" stroke="#aebfca"/>
+<text x="960.0" y="129" font-size="18" text-anchor="middle">Head output</text>
+<text x="960.0" y="155" font-size="15" text-anchor="middle">o: 1 × d_h</text>
+<path d="M225 140L300 140" stroke="#607789" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<path d="M500 140L575 140" stroke="#607789" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<path d="M775 140L850 140" stroke="#607789" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<text x="550" y="235" font-size="18" text-anchor="middle">Latent computation</text>
+<rect x="25" y="260" width="200" height="80" rx="5" fill="#eaf4ef" stroke="#aebfca"/>
+<text x="125.0" y="289" font-size="18" text-anchor="middle">Cached latents</text>
+<text x="125.0" y="315" font-size="15" text-anchor="middle">C: N × d_c</text>
+<rect x="300" y="260" width="200" height="80" rx="5" fill="#edf3f7" stroke="#aebfca"/>
+<text x="400.0" y="289" font-size="18" text-anchor="middle">Transform query</text>
+<text x="400.0" y="315" font-size="15" text-anchor="middle">q_hat = q U_K</text>
+<rect x="575" y="260" width="200" height="80" rx="5" fill="#edf3f7" stroke="#aebfca"/>
+<text x="675.0" y="289" font-size="18" text-anchor="middle">Weighted latents</text>
+<text x="675.0" y="315" font-size="15" text-anchor="middle">z = softmax(scores) C</text>
+<rect x="850" y="260" width="220" height="80" rx="5" fill="#edf3f7" stroke="#aebfca"/>
+<text x="960.0" y="289" font-size="18" text-anchor="middle">Project once</text>
+<text x="960.0" y="315" font-size="15" text-anchor="middle">o = z U_Vᵀ</text>
+<path d="M500 300L575 300" stroke="#607789" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<path d="M775 300L850 300" stroke="#607789" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<path d="M125 340V365H675V340" stroke="#607789" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<text x="550" y="398" font-size="16" text-anchor="middle">Row-vector diagram; scale and mask are unchanged. C stores each position separately.</text>
+</g></svg>

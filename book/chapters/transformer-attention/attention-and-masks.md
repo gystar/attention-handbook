@@ -36,7 +36,9 @@ Causal Self-Attention 允许访问对角线，是因为位置 $$i$$ 的输入 To
 
 ## Padding 与增量计算中的 Mask
 
-同一 batch 中的序列可以用 padding 补齐长度。Padding Mask 应排除无效 Key；对于补齐的 Query 行，其输出和 loss 也需要按任务忽略。有效 Query 至少应保留一个有效 Key，否则整行都是 $$-\infty$$，基础 Softmax 公式没有定义好的归一化结果。[D2L，§11.3.2.1](https://d2l.ai/chapter_attention-mechanisms-and-transformers/attention-scoring-functions.html)
+同一 batch 中的序列可以用 padding 补齐长度。Padding Mask 排除无效 Key，防止有效 Query 读取补齐位置。补齐的 Query 行即使产生输出，也应从有效结果和相应 loss 中排除；仅屏蔽 Key 不会自动将这些行的输出置零。[D2L，§11.3.2.1](https://d2l.ai/chapter_attention-mechanisms-and-transformers/attention-scoring-functions.html)
+
+按本章的 Softmax 定义，每个参与计算的 Query 行至少需要一个有限的有效分数。若整行都是 $$-\infty$$，归一化分母为零，公式无定义；实现若保留这种补齐行，需要单独约定其输出并处理数值运算。
 
 采用 KV cache 时，要按**实际位置**构造因果关系。假设缓存中已有 $$p$$ 个位置，本轮一起处理 $$m$$ 个新位置，第 $$i$$ 个新 Query 的绝对位置是 $$p+i$$，它可以访问的 Key 满足：
 

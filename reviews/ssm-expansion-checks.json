@@ -1,0 +1,10 @@
+{
+  "seed": 20261026,
+  "sequences": 200,
+  "length": 9,
+  "state_dimension": 3,
+  "output_comparisons": 1800,
+  "max_error": 6.661338147750939e-16,
+  "scope": "scalar-identity discrete SSM recurrence versus finite expansion; no full Mamba/SSD implementation or gradients",
+  "status": "passed"
+}

@@ -1,6 +1,26 @@
 schema_version: 1
 checked_on: '2026-10-19'
 sources:
+- id: jiang2024minference
+  kind: paper
+  title: 'MInference 1.0: Accelerating Pre-filling for Long-Context LLMs via Dynamic Sparse Attention'
+  authors: Jiang et al.
+  first_public_year: 2024
+  version: 2407.02490v1
+  url: https://arxiv.org/abs/2407.02490v1
+  full_text_url: https://arxiv.org/html/2407.02490v1
+  download_url: https://arxiv.org/pdf/2407.02490v1
+  local_path: sources/papers/jiang2024minference-v1.pdf
+  required_local: true
+  archive_status: downloaded
+  sha256: b061e544a499c1e1abc292c9c996e21c5bfedbc6514703bcfca554ca7f5fe50a
+  checked_sections:
+  - §2.2 sparse patterns
+  - §3.1–3.2; Algorithms 1–3
+  - '§4 Baselines: sparse prefill and dense decode'
+  checked_on: '2026-10-26'
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  bytes: 4866573
 - id: sutskever2014seq2seq
   kind: paper
   title: Sequence to Sequence Learning with Neural Networks
@@ -12,12 +32,13 @@ sources:
   download_url: https://arxiv.org/pdf/1409.3215v3
   local_path: sources/papers/sutskever2014seq2seq-v3.pdf
   required_local: true
-  archive_status: pending
-  archive_note: 终端网络连接受权限限制；尚未获得原始 PDF。
-  sha256: null
+  archive_status: downloaded
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  sha256: 5c74e1db863e2d61b869c9b0603494b34c41fb05db1a4fa7f9a83d5a42b7350f
   checked_sections:
   - §2
   checked_on: '2026-10-19'
+  bytes: 112084
 - id: bahdanau2014attention
   kind: paper
   title: Neural Machine Translation by Jointly Learning to Align and Translate
@@ -29,12 +50,13 @@ sources:
   download_url: https://arxiv.org/pdf/1409.0473v7
   local_path: sources/papers/bahdanau2014attention-v7.pdf
   required_local: true
-  archive_status: pending
-  archive_note: 终端网络连接受权限限制；尚未获得原始 PDF。
-  sha256: null
+  archive_status: downloaded
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  sha256: 84801c8410da51b449d379d2fa4939a416123f2c93991077a680f863026022a7
   checked_sections:
   - §3.1, equations (4)–(6)
   checked_on: '2026-10-19'
+  bytes: 444482
 - id: vaswani2017attention
   kind: paper
   title: Attention Is All You Need
@@ -46,9 +68,9 @@ sources:
   download_url: https://arxiv.org/pdf/1706.03762v7
   local_path: sources/papers/vaswani2017attention-v7.pdf
   required_local: true
-  archive_status: pending
-  archive_note: 终端网络连接受权限限制；尚未获得原始 PDF。
-  sha256: null
+  archive_status: downloaded
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  sha256: bdfaa68d8984f0dc02beaca527b76f207d99b666d31d1da728ee0728182df697
   checked_sections:
   - §3.1–3.2.3
   - Table 1
@@ -56,6 +78,7 @@ sources:
   - Figure reuse statement on page 1
   - §3.5 positional encoding
   checked_on: '2026-10-26'
+  bytes: 2215244
 - id: child2019sparse
   kind: paper
   title: Generating Long Sequences with Sparse Transformers
@@ -66,13 +89,15 @@ sources:
   full_text_url: https://arxiv.org/html/1904.10509v1
   download_url: https://arxiv.org/pdf/1904.10509v1
   local_path: sources/papers/child2019sparse-v1.pdf
-  required_local: false
-  archive_status: pending
-  archive_note: 终端网络连接受权限限制；尚未获得原始 PDF。
-  sha256: null
+  required_local: true
+  archive_status: downloaded
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  sha256: 5b6a655a493557f38d2a40fc6ed4f88f0f111ee32197cebddceb4f4fdd10b415
   checked_sections:
-  - §4
-  checked_on: '2026-10-19'
+  - §4.2–4.3 connectivity and factorization
+  - §5.1 composition; §5.5 block-sparse execution
+  checked_on: '2026-10-26'
+  bytes: 4436935
 - id: shazeer2019mqa
   kind: paper
   title: 'Fast Transformer Decoding: One Write-Head is All You Need'
@@ -84,13 +109,14 @@ sources:
   download_url: https://arxiv.org/pdf/1911.02150v1
   local_path: sources/papers/shazeer2019mqa-v1.pdf
   required_local: true
-  archive_status: pending
-  archive_note: 终端网络连接受权限限制；尚未获得原始 PDF。
-  sha256: null
+  archive_status: downloaded
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  sha256: 3250947d7be32f1a15531ab3062134edd431b9cf79e669d324ab5cbddd9a2094
   checked_sections:
   - §2.1–2.4.1
   - §3
   checked_on: '2026-10-19'
+  bytes: 142627
 - id: katharopoulos2020linear
   kind: paper
   title: 'Transformers are RNNs: Fast Autoregressive Transformers with Linear Attention'
@@ -102,12 +128,14 @@ sources:
   download_url: https://proceedings.mlr.press/v119/katharopoulos20a/katharopoulos20a.pdf
   local_path: sources/papers/katharopoulos2020linear-pmlr.pdf
   required_local: true
-  archive_status: pending
-  archive_note: 终端网络连接受权限限制；尚未获得原始 PDF。
-  sha256: null
+  archive_status: downloaded
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  sha256: cd92e31e6a9371031660c03ae0dc2d47bb7d39014f7de73fdc3c021c3abd7e1c
   checked_sections:
   - §3.2–3.4, equations (4)–(12), (16)–(20)
-  checked_on: '2026-10-19'
+  - 'Chapter 9 reread: §3.1–3.4, equations (3)–(20), feature dimension and memory scope'
+  checked_on: '2026-10-26'
+  bytes: 440409
 - id: su2021rope
   kind: paper
   title: 'RoFormer: Enhanced Transformer with Rotary Position Embedding'
@@ -119,13 +147,14 @@ sources:
   download_url: https://arxiv.org/pdf/2104.09864v5
   local_path: sources/papers/su2021rope-v5.pdf
   required_local: true
-  archive_status: pending
-  archive_note: 终端网络连接受权限限制；尚未获得原始 PDF。
-  sha256: null
+  archive_status: downloaded
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  sha256: e9a481fbe1c8a20b7b1fa566b13102a1896c7829fa9a8b4c80528452a5ddaf79
   checked_sections:
   - §3.2
   - §3.1–3.2; equations (11)–(16)
   checked_on: '2026-10-26'
+  bytes: 599289
 - id: press2021alibi
   kind: paper
   title: 'Train Short, Test Long: Attention with Linear Biases Enables Input Length Extrapolation'
@@ -137,13 +166,14 @@ sources:
   download_url: https://arxiv.org/pdf/2108.12409v2
   local_path: sources/papers/press2021alibi-v2.pdf
   required_local: true
-  archive_status: pending
-  archive_note: 终端网络连接受权限限制；尚未获得原始 PDF。
-  sha256: null
+  archive_status: downloaded
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  sha256: 26223f5ecbc5983d0cb183c5fd61d09c814247a57b855b2b15717009664db70a
   checked_sections:
   - §3
   - §3 and footnotes 9–10; Appendix B.1 evaluation protocol
   checked_on: '2026-10-26'
+  bytes: 759030
 - id: dao2022flashattention
   kind: paper
   title: 'FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness'
@@ -155,14 +185,17 @@ sources:
   download_url: https://arxiv.org/pdf/2205.14135v2
   local_path: sources/papers/dao2022flashattention-v2.pdf
   required_local: true
-  archive_status: pending
-  archive_note: 终端网络连接受权限限制；尚未获得原始 PDF。
-  sha256: null
+  archive_status: downloaded
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  sha256: ca7f9fda10b90fc05dd291a3accc85e9c1a4a860b99b31928dab03ed3fcb14e4
   checked_sections:
   - §3.1, Theorem 1
   - §3.3
   - §4
-  checked_on: '2026-10-19'
+  - §3.1 Algorithm 1 and §3.2 Theorem 2, Proposition 3 (IO model and assumptions)
+  - 'Appendix B.2–B.4: backward gradients, scale, dropout replay'
+  checked_on: '2026-10-26'
+  bytes: 2630825
 - id: ainslie2023gqa
   kind: paper
   title: 'GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints'
@@ -174,13 +207,15 @@ sources:
   download_url: https://arxiv.org/pdf/2305.13245v3
   local_path: sources/papers/ainslie2023gqa-v3.pdf
   required_local: true
-  archive_status: pending
-  archive_note: 终端网络连接受权限限制；尚未获得原始 PDF。
-  sha256: null
+  archive_status: downloaded
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  sha256: ba9094fe73db9bf515d47ae8b2d502fee9d8a6c7b1327e197ddb160f4c63b94a
   checked_sections:
   - §2.1–2.2
   - Figure 2
-  checked_on: '2026-10-19'
+  - §3.1–3.2, Table 1
+  checked_on: '2026-10-26'
+  bytes: 269116
 - id: chen2023pi
   kind: paper
   title: Extending Context Window of Large Language Models via Position Interpolation
@@ -192,13 +227,14 @@ sources:
   download_url: https://arxiv.org/pdf/2306.15595v2
   local_path: sources/papers/chen2023pi-v2.pdf
   required_local: true
-  archive_status: pending
-  archive_note: 终端网络连接受权限限制；尚未获得原始 PDF。
-  sha256: null
+  archive_status: downloaded
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  sha256: 890702e3170e5b8e2fb55552bd86cd99b0aa4ddbb3670ae8c351faa575cfaf09
   checked_sections:
   - §2.3
   - §2.1–2.3; §3.1–3.4
   checked_on: '2026-10-26'
+  bytes: 751217
 - id: liu2023lostmiddle
   kind: paper
   title: 'Lost in the Middle: How Language Models Use Long Contexts'
@@ -210,13 +246,14 @@ sources:
   download_url: https://arxiv.org/pdf/2307.03172v1
   local_path: sources/papers/liu2023lostmiddle-v1.pdf
   required_local: true
-  archive_status: pending
-  archive_note: 终端网络连接受权限限制；尚未获得原始 PDF。
-  sha256: null
+  archive_status: downloaded
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  sha256: c8070998fc12d9652d4f3b2e3094a4d6f438ed47a18539e04f07e5dbb9891f9e
   checked_sections:
   - §3.1–3.3
   - §3.1–3.3; §4 task setup
   checked_on: '2026-10-26'
+  bytes: 804284
 - id: kwon2023pagedattention
   kind: paper
   title: Efficient Memory Management for Large Language Model Serving with PagedAttention
@@ -228,14 +265,16 @@ sources:
   download_url: https://arxiv.org/pdf/2309.06180v1
   local_path: sources/papers/kwon2023pagedattention-v1.pdf
   required_local: true
-  archive_status: pending
-  archive_note: 终端网络连接受权限限制；尚未获得原始 PDF。
-  sha256: null
+  archive_status: downloaded
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  sha256: 55b3b324d779a67c59dac2519445e3b07c14e6ff5c656fadb47a3d7b5997469e
   checked_sections:
   - §2.1–2.2
   - §4.1–4.2
   - §6.1
-  checked_on: '2026-10-19'
+  - §3.1; §4.1–4.5; §5.1–5.2 (Chapter 8)
+  checked_on: '2026-10-26'
+  bytes: 1459631
 - id: jiang2023mistral
   kind: paper
   title: Mistral 7B
@@ -246,13 +285,15 @@ sources:
   full_text_url: https://arxiv.org/html/2310.06825v1
   download_url: https://arxiv.org/pdf/2310.06825v1
   local_path: sources/papers/jiang2023mistral-v1.pdf
-  required_local: false
-  archive_status: pending
-  archive_note: 终端网络连接受权限限制；尚未获得原始 PDF。
-  sha256: null
+  required_local: true
+  archive_status: downloaded
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  sha256: dfbac4e7035344b305c947481f2e7e8a02f7a24a563917eb6e47f6591d14c5ae
   checked_sections:
   - §2, Table 1
-  checked_on: '2026-10-19'
+  - §2 Sliding Window Attention, Rolling Buffer Cache and window endpoint conventions
+  checked_on: '2026-10-26'
+  bytes: 3749788
 - id: deepseek2024mla
   kind: paper
   title: 'DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model'
@@ -264,12 +305,14 @@ sources:
   download_url: https://arxiv.org/pdf/2405.04434v5
   local_path: sources/papers/deepseek2024mla-v5.pdf
   required_local: true
-  archive_status: pending
-  archive_note: 终端网络连接受权限限制；尚未获得原始 PDF。
-  sha256: null
+  archive_status: downloaded
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  sha256: f149f9c09aa8b46ce6a740a255a99b7cc2317ac5b065989339919b7e6c329c9b
   checked_sections:
   - §2.1.1–2.1.4
-  checked_on: '2026-10-19'
+  - §3.1.2 latent normalization
+  checked_on: '2026-10-26'
+  bytes: 1586880
 - id: dao2024ssd
   kind: paper
   title: 'Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality'
@@ -280,15 +323,16 @@ sources:
   full_text_url: https://arxiv.org/html/2405.21060v1
   download_url: https://arxiv.org/pdf/2405.21060v1
   local_path: sources/papers/dao2024ssd-v1.pdf
-  required_local: false
-  archive_status: pending
-  archive_note: 终端网络连接受权限限制；尚未获得原始 PDF。
-  sha256: null
+  required_local: true
+  archive_status: downloaded
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  sha256: 6fe16414fa471a5ab150cddcba5840d3a94e347e96992c50c12c1fb8b919479f
   checked_sections:
   - §4.1
-  - §5.1–5.2
+  - §5.1–5.3; §6 SSD algorithm overview
   - §9.2.3
-  checked_on: '2026-10-19'
+  checked_on: '2026-10-26'
+  bytes: 3209170
 - id: yang2024gateddelta
   kind: paper
   title: 'Gated Delta Networks: Improving Mamba2 with Delta Rule'
@@ -299,14 +343,17 @@ sources:
   full_text_url: https://arxiv.org/html/2412.06464v1
   download_url: https://arxiv.org/pdf/2412.06464v1
   local_path: sources/papers/yang2024gateddelta-v1.pdf
-  required_local: false
-  archive_status: pending
-  archive_note: 终端网络连接受权限限制；尚未获得原始 PDF。
-  sha256: null
+  required_local: true
+  archive_status: downloaded
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  sha256: 74ddc75f5315063ba7d943f054ac3ddda77d26d1f78c0ce8516f1e7ffaf3f8ca
   checked_sections:
   - §2.3
   - §3.1, equation (8)
-  checked_on: '2026-10-19'
+  - §3.1 equation (8), online gradient interpretation (Chapter 9)
+  - §3.3 hybrid H1/H2; §4 Setup and Table 2; Appendix B.1 metric names
+  checked_on: '2026-10-26'
+  bytes: 405308
 - id: yuan2025nsa
   kind: paper
   title: 'Native Sparse Attention: Hardware-Aligned and Natively Trainable Sparse Attention'
@@ -317,13 +364,15 @@ sources:
   full_text_url: https://arxiv.org/html/2502.11089v1
   download_url: https://arxiv.org/pdf/2502.11089v1
   local_path: sources/papers/yuan2025nsa-v1.pdf
-  required_local: false
-  archive_status: pending
-  archive_note: 终端网络连接受权限限制；尚未获得原始 PDF。
-  sha256: null
+  required_local: true
+  archive_status: downloaded
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  sha256: d96f7b38fa7480cbb8add18fba1307249175865a6674583ccbd5db14b5a13aa2
   checked_sections:
-  - §3.2–3.3.2
-  checked_on: '2026-10-19'
+  - '§3.2–3.4: branches, compression, selection, grouped heads, kernels'
+  - '§4.1–4.3: training and benchmark subset; §5 efficiency setup'
+  checked_on: '2026-10-26'
+  bytes: 1425073
 - id: qiu2025gatedattention
   kind: paper
   title: 'Gated Attention for Large Language Models: Non-linearity, Sparsity, and Attention-Sink-Free'
@@ -334,13 +383,16 @@ sources:
   full_text_url: https://arxiv.org/html/2505.06708v1
   download_url: https://arxiv.org/pdf/2505.06708v1
   local_path: sources/papers/qiu2025gatedattention-v1.pdf
-  required_local: false
-  archive_status: pending
-  archive_note: 终端网络连接受权限限制；尚未获得原始 PDF。
-  sha256: null
+  required_local: true
+  archive_status: downloaded
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  sha256: 949c7ed67dea3ddc6b88854cf72631ed2e1f466ad4c824c8aa1286739bcf2359
   checked_sections:
   - §2.2, equation (5)
-  checked_on: '2026-10-19'
+  - §3.1–3.2.2; Table 2 rows 1–2
+  - §4.1–4.4; Table 4; Figure 1–3 captions
+  checked_on: '2026-10-26'
+  bytes: 1503818
 - id: sanderson2024attention
   kind: video
   title: Attention in transformers, step-by-step
@@ -430,7 +482,9 @@ sources:
   archive_status: link_only
   checked_sections:
   - Input Encoding；页尾许可
-  checked_on: '2026-10-19'
+  - One Difference From BERT
+  - Evaluation Time: Processing One Token at a Time
+  checked_on: '2026-10-26'
 - id: huggingface-transformer-architectures
   kind: course
   title: Transformer Architectures
@@ -440,7 +494,7 @@ sources:
   archive_status: link_only
   checked_sections:
   - Encoder models；Decoder models；Sequence-to-sequence models
-  checked_on: '2026-10-19'
+  checked_on: '2026-10-26'
 - id: alammar2019bertguide
   kind: blog
   title: A Visual Guide to Using BERT for the First Time
@@ -451,7 +505,7 @@ sources:
   archive_status: link_only
   checked_sections:
   - How a single prediction is calculated；Flowing Through DistilBERT；Slicing the important part；页尾许可
-  checked_on: '2026-10-19'
+  checked_on: '2026-10-26'
 - id: d2l-seq2seq
   kind: book
   title: Dive into Deep Learning — Sequence-to-Sequence Learning for Machine Translation
@@ -475,7 +529,7 @@ sources:
   - Looking under the hood
   - Let’s Pay Attention Now
   - 页尾许可
-  checked_on: '2026-10-19'
+  checked_on: '2026-10-26'
 - id: shaw2018relative
   kind: paper
   title: Self-Attention with Relative Position Representations
@@ -487,12 +541,13 @@ sources:
   download_url: https://aclanthology.org/N18-2074.pdf
   local_path: sources/papers/shaw2018relative-naacl2018.pdf
   required_local: true
-  archive_status: pending
-  archive_note: 2026-10-26：原文通过网页工具核查；终端代理连接失败，PDF 尚未归档。
-  sha256: null
+  archive_status: downloaded
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  sha256: f10b5d840c34d69e3d145dc20de8f668535dca23a95e0025200797956f268587
   checked_sections:
   - §3.1–3.2, equations (3)–(4), clipping rule
   checked_on: '2026-10-26'
+  bytes: 208746
 - id: raffel2019t5
   kind: paper
   title: Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer
@@ -504,12 +559,13 @@ sources:
   download_url: https://arxiv.org/pdf/1910.10683v4
   local_path: sources/papers/raffel2019t5-v4.pdf
   required_local: true
-  archive_status: pending
-  archive_note: 2026-10-26：原文通过网页工具核查；终端代理连接失败，PDF 尚未归档。
-  sha256: null
+  archive_status: downloaded
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  sha256: ad07e47cedf437a4156419ce5d3076e08a3e59bbfd6dac7cc53df1009cdcbe7f
   checked_sections:
   - §2.1 relative scalar bias and parameter sharing
   checked_on: '2026-10-26'
+  bytes: 1190021
 - id: peng2023yarn
   kind: paper
   title: 'YaRN: Efficient Context Window Extension of Large Language Models'
@@ -521,12 +577,13 @@ sources:
   download_url: https://arxiv.org/pdf/2309.00071v2
   local_path: sources/papers/peng2023yarn-v2.pdf
   required_local: true
-  archive_status: pending
-  archive_note: 2026-10-26：原文通过网页工具核查；终端代理连接失败，PDF 尚未归档。
-  sha256: null
+  archive_status: downloaded
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  sha256: ce1933b7d00eed2c6f146a73bb437930f6b66f3f69b19bc3ed6acfca42e5a744
   checked_sections:
   - §2.2–2.3; §3.1–3.4; equations (10)–(22)
   checked_on: '2026-10-26'
+  bytes: 721866
 - id: ding2024longrope
   kind: paper
   title: 'LongRoPE: Extending LLM Context Window Beyond 2 Million Tokens'
@@ -538,12 +595,13 @@ sources:
   download_url: https://arxiv.org/pdf/2402.13753v1
   local_path: sources/papers/ding2024longrope-v1.pdf
   required_local: true
-  archive_status: pending
-  archive_note: 2026-10-26：原文通过网页工具核查；终端代理连接失败，PDF 尚未归档。
-  sha256: null
+  archive_status: downloaded
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  sha256: 01426973545b0158f6a20f6c73e5c3ccc6bd58382a1df60f4bc737dc6271cdbf
   checked_sections:
   - §3.1–3.3 search and progressive extension; §4.3 short-context adjustment
   checked_on: '2026-10-26'
+  bytes: 1329219
 - id: hsieh2024ruler
   kind: paper
   title: 'RULER: What’s the Real Context Size of Your Long-Context Language Models?'
@@ -555,12 +613,14 @@ sources:
   download_url: https://arxiv.org/pdf/2404.06654v3
   local_path: sources/papers/hsieh2024ruler-v3.pdf
   required_local: true
-  archive_status: pending
-  archive_note: 2026-10-26：原文通过网页工具核查；终端代理连接失败，PDF 尚未归档。
-  sha256: null
+  archive_status: downloaded
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  sha256: 8a4bc6ca28d84570eec7f42652400c2121f4c8bc361701634e596772e396fc22
   checked_sections:
   - §3 task definitions; §4 evaluation configuration and effective context size
+  - '§3 and Table 2: retrieval, tracing, aggregation and QA'
   checked_on: '2026-10-26'
+  bytes: 682955
 - id: bai2023longbench
   kind: paper
   title: 'LongBench: A Bilingual, Multitask Benchmark for Long Context Understanding'
@@ -572,40 +632,679 @@ sources:
   download_url: https://arxiv.org/pdf/2308.14508v2
   local_path: sources/papers/bai2023longbench-v2.pdf
   required_local: true
-  archive_status: pending
-  archive_note: 2026-10-26：原文通过网页工具核查；终端代理连接失败，PDF 尚未归档。
-  sha256: null
+  archive_status: downloaded
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  sha256: 2ef5a32cc11976d7d706e24bd608e2dfe859f91b24ed1e02c9acc6a9cf6b87ce
   checked_sections:
   - §3.1–3.2; Table 1 task categories and length units
   checked_on: '2026-10-26'
+  bytes: 11630690
+- id: xiao2023streamingllm
+  kind: paper
+  title: Efficient Streaming Language Models with Attention Sinks
+  authors: Xiao et al.
+  first_public_year: 2023
+  version: 2309.17453v4
+  url: https://arxiv.org/abs/2309.17453v4
+  full_text_url: https://arxiv.org/html/2309.17453v4
+  download_url: https://arxiv.org/pdf/2309.17453v4
+  local_path: sources/papers/xiao2023streamingllm-v4.pdf
+  required_local: true
+  archive_status: downloaded
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  sha256: e8a7de67c7c57642648362651b4cf64fd852467e18865a298916a36098314819
+  checked_sections:
+  - §3.1–3.3
+  - §3.2 rolling cache and positional reindexing (Chapter 8)
+  checked_on: '2026-10-26'
+  bytes: 16952848
+- id: liu2023ringattention
+  kind: paper
+  title: Ring Attention with Blockwise Transformers for Near-Infinite Context
+  authors: Hao Liu, Matei Zaharia & Pieter Abbeel
+  first_public_year: 2023
+  version: 2310.01889v4
+  url: https://arxiv.org/abs/2310.01889v4
+  full_text_url: https://arxiv.org/html/2310.01889v4
+  download_url: https://arxiv.org/pdf/2310.01889v4
+  local_path: sources/papers/liu2023ringattention-v4.pdf
+  required_local: true
+  archive_status: downloaded
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  sha256: 1e0ee1ad0aaf8c5763d060ba725887f1c6affda412c0a26dbb888cad5ad80f8c
+  checked_sections:
+  - §3 block rotation, merging and compute/communication overlap; Figure 2
+  checked_on: '2026-10-26'
+  bytes: 1766025
+- id: jacobs2023ulysses
+  kind: paper
+  title: 'DeepSpeed Ulysses: System Optimizations for Enabling Training of Extreme Long Sequence Transformer Models'
+  authors: Sam Ade Jacobs et al.
+  first_public_year: 2023
+  version: 2309.14509v1
+  url: https://arxiv.org/abs/2309.14509v1
+  full_text_url: https://arxiv.org/html/2309.14509v1
+  download_url: https://arxiv.org/pdf/2309.14509v1
+  local_path: sources/papers/jacobs2023ulysses-v1.pdf
+  required_local: true
+  archive_status: downloaded
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  sha256: ca79a7e182c857aead3e9c5fcdc89e4b2237fed242928ef3d89831afccb0f87d
+  checked_sections:
+  - §3.1–3.4; Figure 2; sequence/head layout and all-to-all
+  checked_on: '2026-10-26'
+  bytes: 505624
+- id: kitaev2020reformer
+  kind: paper
+  title: 'Reformer: The Efficient Transformer'
+  authors: Nikita Kitaev, Łukasz Kaiser & Anselm Levskaya
+  first_public_year: 2020
+  version: 2001.04451v2
+  url: https://arxiv.org/abs/2001.04451v2
+  full_text_url: https://arxiv.org/html/2001.04451v2
+  download_url: https://arxiv.org/pdf/2001.04451v2
+  local_path: sources/papers/kitaev2020reformer-v2.pdf
+  required_local: true
+  archive_status: downloaded
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  sha256: f86f29116ea4a04321f4ab8727283096c544255bd31f7efbc10e56390a8b5e8b
+  checked_sections:
+  - §2 shared-QK, LSH sorting/chunking, multiple rounds and causal mask; Figure 2
+  checked_on: '2026-10-26'
+  bytes: 658515
+- id: roy2020routing
+  kind: paper
+  title: Efficient Content-Based Sparse Attention with Routing Transformers
+  authors: Aurko Roy, Mohammad Saffar, Ashish Vaswani & David Grangier
+  first_public_year: 2020
+  version: 2003.05997v3
+  url: https://arxiv.org/abs/2003.05997v3
+  full_text_url: https://arxiv.org/html/2003.05997v3
+  download_url: https://arxiv.org/pdf/2003.05997v3
+  local_path: sources/papers/roy2020routing-v3.pdf
+  required_local: true
+  archive_status: downloaded
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  sha256: 0a2ef97593c2079448bd3903c9f8491490aac893d1a2bb2202f667b282ee2f17
+  checked_sections:
+  - §4.1 clustering, balanced top-k routing, EMA centroids; Algorithm 1 and Figure 1
+  checked_on: '2026-10-26'
+  bytes: 708216
+- id: wang2020linformer
+  kind: paper
+  title: 'Linformer: Self-Attention with Linear Complexity'
+  authors: Sinong Wang, Belinda Z. Li, Madian Khabsa, Han Fang & Hao Ma
+  first_public_year: 2020
+  version: 2006.04768v3
+  url: https://arxiv.org/abs/2006.04768v3
+  full_text_url: https://arxiv.org/html/2006.04768v3
+  download_url: https://arxiv.org/pdf/2006.04768v3
+  local_path: sources/papers/wang2020linformer-v3.pdf
+  required_local: true
+  archive_status: downloaded
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  sha256: 1c4e089b6108f5ed0a2f8301ab07a64eab9851dcb471348b88739a6458e2f215
+  checked_sections:
+  - §4 equation (7), projection shapes; §5.1 MLM setup
+  checked_on: '2026-10-26'
+  bytes: 922879
+- id: zhang2024sageattention
+  kind: paper
+  title: 'SageAttention: Accurate 8-bit attention for Plug-and-Play Inference Acceleration'
+  authors: Jintao Zhang, Jia Wei, Pengle Zhang, Jun Zhu & Jianfei Chen
+  first_public_year: 2024
+  version: 2410.02367v1
+  url: https://arxiv.org/abs/2410.02367v1
+  full_text_url: https://arxiv.org/html/2410.02367v1
+  download_url: https://arxiv.org/pdf/2410.02367v1
+  local_path: sources/papers/zhang2024sageattention-v1.pdf
+  required_local: true
+  archive_status: downloaded
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  sha256: d4c4e565e59bdcd361cf06f229ffba52dc4af31873d27b9ec471ae746a700ba7
+  checked_sections:
+  - §4.1–4.4; Table 6 (SAGEAttn-B precision path and shared Key centering)
+  checked_on: '2026-10-26'
+  bytes: 14604502
+- id: milakov2018onlinesoftmax
+  kind: paper
+  title: Online normalizer calculation for softmax
+  authors: Milakov & Gimelshein
+  first_public_year: 2018
+  version: 1805.02867v2
+  url: https://arxiv.org/abs/1805.02867v2
+  full_text_url: https://arxiv.org/html/1805.02867v2
+  download_url: https://arxiv.org/pdf/1805.02867v2
+  local_path: sources/papers/milakov2018onlinesoftmax.pdf
+  required_local: true
+  archive_status: downloaded
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  sha256: 722747b3a32eb90f5f0255d6b59f8bb0e1bc2257702ab7915e684c15275d44d7
+  checked_sections:
+  - §2–3.1; Algorithms 2–3; equations (2)–(4)
+  checked_on: '2026-10-26'
+  bytes: 147347
+- id: dao2023flashattention2
+  kind: paper
+  title: 'FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning'
+  authors: Tri Dao
+  first_public_year: 2023
+  version: author PDF dated 2023-07-18
+  url: https://tridao.me/publications/flash2/flash2.pdf
+  full_text_url: https://tridao.me/publications/flash2/flash2.pdf
+  download_url: https://tridao.me/publications/flash2/flash2.pdf
+  local_path: sources/papers/dao2023flashattention2.pdf
+  required_local: true
+  archive_status: downloaded
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  sha256: 02c3545f727bf902c76c59bbf011c7c7388aea218194f90bfc46f41cf584b627
+  checked_sections:
+  - §3.1.1; Algorithm 1 (forward update and logsumexp)
+  - §3.1.2 Algorithm 2; §3.2–3.3 work partitioning; §4.1 benchmark settings
+  checked_on: '2026-10-26'
+  bytes: 1510707
+- id: shah2024flashattention3
+  kind: paper
+  title: 'FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision'
+  authors: Shah et al.
+  first_public_year: 2024
+  version: 2407.08608v2
+  url: https://arxiv.org/abs/2407.08608v2
+  full_text_url: https://arxiv.org/html/2407.08608v2
+  download_url: https://arxiv.org/pdf/2407.08608v2
+  local_path: sources/papers/shah2024flashattention3.pdf
+  required_local: true
+  archive_status: downloaded
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  sha256: 3d05ca102802e6b8ebbae5181efe777b7d258cd75e2fe9cca209efd2f5e6c6cb
+  checked_sections:
+  - §2.2; §3.1–3.2 asynchronous scheduling and Figure 1
+  - §3.3 block quantization and incoherent processing; §4.1–4.3 benchmark and accuracy conditions
+  checked_on: '2026-10-26'
+  bytes: 1096663
+- id: zadouri2026flashattention4
+  kind: paper
+  title: 'FlashAttention-4: Algorithm and Kernel Pipelining Co-Design for Asymmetric Hardware Scaling'
+  authors: Zadouri et al.
+  first_public_year: 2026
+  version: 2603.05451v1
+  url: https://arxiv.org/abs/2603.05451v1
+  full_text_url: https://arxiv.org/html/2603.05451v1
+  download_url: https://arxiv.org/pdf/2603.05451v1
+  local_path: sources/papers/zadouri2026flashattention4.pdf
+  required_local: true
+  archive_status: downloaded
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  sha256: 7c053b2b45a9d7da93b21f7dbe16ff8a927a9dc7e92537a034ca58a4eb5f10eb
+  checked_sections:
+  - §3.1.1–3.1.4 hardware cost, polynomial exponentials and conditional rescaling
+  - §3.2.1–3.2.2 backward cost and tensor-memory pipeline
+  checked_on: '2026-10-26'
+  bytes: 7634447
+- id: beltagy2020longformer
+  kind: paper
+  title: 'Longformer: The Long-Document Transformer'
+  authors: Beltagy, Peters & Cohan
+  first_public_year: 2020
+  version: 2004.05150v2
+  url: https://arxiv.org/abs/2004.05150v2
+  full_text_url: https://arxiv.org/html/2004.05150v2
+  download_url: https://arxiv.org/pdf/2004.05150v2
+  local_path: sources/papers/beltagy2020longformer.pdf
+  required_local: true
+  archive_status: downloaded
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  sha256: 053756b54e2d3462d4690b3aed489c962f17df7c3531865e47374c4a651f526c
+  checked_sections:
+  - §3.1 local, dilated and global patterns; Figure 2
+  checked_on: '2026-10-26'
+  bytes: 539211
+- id: zaheer2020bigbird
+  kind: paper
+  title: 'Big Bird: Transformers for Longer Sequences'
+  authors: Zaheer et al.
+  first_public_year: 2020
+  version: 2007.14062v2
+  url: https://arxiv.org/abs/2007.14062v2
+  full_text_url: https://arxiv.org/html/2007.14062v2
+  download_url: https://arxiv.org/pdf/2007.14062v2
+  local_path: sources/papers/zaheer2020bigbird.pdf
+  required_local: true
+  archive_status: downloaded
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  sha256: 9dc448464532d61f084de6a224b84acf3b421142e05a40ebfb982b4eca5834a2
+  checked_sections:
+  - §2 random, window and global connectivity; Figure 1
+  checked_on: '2026-10-26'
+  bytes: 1153823
+- id: tang2024quest
+  kind: paper
+  title: 'Quest: Query-Aware Sparsity for Efficient Long-Context LLM Inference'
+  authors: Tang et al.
+  first_public_year: 2024
+  version: 2406.10774v1
+  url: https://arxiv.org/abs/2406.10774v1
+  full_text_url: https://arxiv.org/html/2406.10774v1
+  download_url: https://arxiv.org/pdf/2406.10774v1
+  local_path: sources/papers/tang2024quest.pdf
+  required_local: true
+  archive_status: downloaded
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  sha256: 8421ec66bd0dcb7d1dfc3524dbafbb15da354acdbdb477ee99c949f018abba6c
+  checked_sections:
+  - §3.3–3.5, Algorithm 1 and Figure 4; §4.1 evaluation setup
+  checked_on: '2026-10-26'
+  bytes: 2263803
+- id: deepseek2025v32
+  kind: paper
+  title: 'DeepSeek-V3.2: Pushing the Frontier of Open Large Language Models'
+  authors: DeepSeek-AI
+  first_public_year: 2025
+  version: 2512.02556v1
+  url: https://arxiv.org/abs/2512.02556v1
+  full_text_url: https://arxiv.org/html/2512.02556v1
+  download_url: https://arxiv.org/pdf/2512.02556v1
+  local_path: sources/papers/deepseek2025v32.pdf
+  required_local: true
+  archive_status: downloaded
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  sha256: 2bec0671778769c159ec389412727d1f3d4889fe1c71564b61edaa24705bd17b
+  checked_sections:
+  - §2.1 indexer and MLA; §2.1.1 training objectives; §2.3 quadratic indexer cost
+  checked_on: '2026-10-26'
+  bytes: 980616
+- id: liu2024kivi
+  kind: paper
+  title: 'KIVI: A Tuning-Free Asymmetric 2bit Quantization for KV Cache'
+  authors: Liu et al.
+  first_public_year: 2024
+  version: 2402.02750v2
+  url: https://arxiv.org/abs/2402.02750v2
+  full_text_url: https://arxiv.org/html/2402.02750v2
+  download_url: https://arxiv.org/pdf/2402.02750v2
+  local_path: sources/papers/liu2024kivi-v2.pdf
+  required_local: true
+  archive_status: downloaded
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  sha256: df31ef32d71bfb280c533c5db8220cadf5ef42076bf45d82ba4c8da8e50ea5f4
+  checked_sections:
+  - §3.1–3.3; Figures 1–3; §4.1–4.2.1
+  checked_on: '2026-10-26'
+  bytes: 2194402
+- id: vllm-paged-attention-history
+  kind: documentation
+  title: Paged Attention (historical design)
+  authors: vLLM contributors
+  version: accessed 2026-10-26
+  url: https://docs.vllm.ai/en/latest/design/paged_attention/
+  required_local: false
+  archive_status: remote
+  checked_sections:
+  - Historical-document notice; Inputs; Key; Softmax
+  checked_on: '2026-10-26'
+- id: zhang2023h2o
+  kind: paper
+  title: 'H2O: Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models'
+  authors: Zhang et al.
+  first_public_year: 2023
+  version: 2306.14048v3
+  url: https://arxiv.org/abs/2306.14048v3
+  full_text_url: https://arxiv.org/html/2306.14048v3
+  download_url: https://arxiv.org/pdf/2306.14048v3
+  local_path: sources/papers/zhang2023h2o-v3.pdf
+  required_local: true
+  archive_status: downloaded
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  sha256: f2d699db2c1fe34b53677067ba6f3b903a6f87dbd04e4f6ad5b9fa324cdb36df
+  checked_sections:
+  - §2.1; §3.2; §4.1–4.2; Appendix A system details and pseudocode
+  checked_on: '2026-10-26'
+  bytes: 3482403
+- id: li2024snapkv
+  kind: paper
+  title: 'SnapKV: LLM Knows What You are Looking for Before Generation'
+  authors: Li et al.
+  first_public_year: 2024
+  version: 2404.14469v2
+  url: https://arxiv.org/abs/2404.14469v2
+  full_text_url: https://arxiv.org/html/2404.14469v2
+  download_url: https://arxiv.org/pdf/2404.14469v2
+  local_path: sources/papers/li2024snapkv-v2.pdf
+  required_local: true
+  archive_status: downloaded
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  sha256: d17ce59a5a3342c9b0560c3503b0136f794fae92910421aa07dbca32e4279bf4
+  checked_sections:
+  - §4.1 and Listing 1; §4.2.1; §4.3
+  checked_on: '2026-10-26'
+  bytes: 1066370
+- id: zheng2023sglang
+  kind: paper
+  title: 'SGLang: Efficient Execution of Structured Language Model Programs'
+  authors: Zheng et al.
+  first_public_year: 2023
+  version: 2312.07104v2
+  url: https://arxiv.org/abs/2312.07104v2
+  full_text_url: https://arxiv.org/html/2312.07104v2
+  download_url: https://arxiv.org/pdf/2312.07104v2
+  local_path: sources/papers/zheng2023sglang-v2.pdf
+  required_local: true
+  archive_status: downloaded
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  sha256: 161e0a0123a89cd8a57d68734ae704680b0e577fee41e1e7e1029c37a9d99b57
+  checked_sections:
+  - §3 radix tree, reference counts, LRU eviction and cache-aware scheduling; Appendix A.1
+  checked_on: '2026-10-26'
+  bytes: 1383463
+- id: sheng2023flexgen
+  kind: paper
+  title: High-throughput Generative Inference of Large Language Models with a Single GPU
+  authors: Sheng et al.
+  first_public_year: 2023
+  version: 2303.06865v1
+  url: https://arxiv.org/abs/2303.06865v1
+  full_text_url: https://arxiv.org/html/2303.06865v1
+  download_url: https://arxiv.org/pdf/2303.06865v1
+  local_path: sources/papers/sheng2023flexgen-v1.pdf
+  required_local: true
+  archive_status: downloaded
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  sha256: fc074580595511d3dc489dea3db40c65e7b209f647a4aaeca8cd9130f4a7de8b
+  checked_sections:
+  - §4.1–4.3 tensor placement, computation delegation and overlap cost model
+  checked_on: '2026-10-26'
+  bytes: 593858
+- id: agrawal2024sarathiserve
+  kind: paper
+  title: Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve
+  authors: Agrawal et al.
+  first_public_year: 2024
+  version: 2403.02310v3
+  url: https://arxiv.org/abs/2403.02310v3
+  full_text_url: https://arxiv.org/html/2403.02310v3
+  download_url: https://arxiv.org/pdf/2403.02310v3
+  local_path: sources/papers/agrawal2024sarathiserve-v3.pdf
+  required_local: true
+  archive_status: downloaded
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  sha256: 45f59f4474de29baf4d315c785b850625548b69a9bc7be2e036d6fc59f54b54a
+  checked_sections:
+  - §2.4–2.5 metrics and iteration-level batching; §4.1–4.3 and Algorithm 3
+  checked_on: '2026-10-26'
+  bytes: 1945812
+- id: yang2023gla
+  kind: paper
+  title: Gated Linear Attention Transformers with Hardware-Efficient Training
+  authors: Yang et al.
+  first_public_year: 2023
+  version: 2312.06635v3
+  url: https://arxiv.org/abs/2312.06635v3
+  full_text_url: https://arxiv.org/html/2312.06635v3
+  download_url: https://arxiv.org/pdf/2312.06635v3
+  local_path: sources/papers/yang2023gla-v3.pdf
+  required_local: true
+  archive_status: downloaded
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  sha256: ea1d3ab98c49715000a2baf4099cf90cad317479577a01a0e31dcfe523040ac0
+  checked_sections:
+  - §2.2; §3.1–3.4, equations (8)–(13), state gates and per-head LayerNorm
+  checked_on: '2026-10-26'
+  bytes: 835182
+- id: yang2024deltanet
+  kind: paper
+  title: Parallelizing Linear Transformers with the Delta Rule over Sequence Length
+  authors: Yang et al.
+  first_public_year: 2024
+  version: 2406.06484v2
+  url: https://arxiv.org/abs/2406.06484v2
+  full_text_url: https://arxiv.org/html/2406.06484v2
+  download_url: https://arxiv.org/pdf/2406.06484v2
+  local_path: sources/papers/yang2024deltanet-v2.pdf
+  required_local: true
+  archive_status: downloaded
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  sha256: 9d128dca4550fbcd6ca63d814c89b18fde94b7a4344e28332961db2c027eeb8e
+  checked_sections:
+  - §2.1 chunkwise additive form; §2.2 DeltaNet update and writing strength
+  - §3.1–3.2 pseudo-values and WY representation
+  - §3.4 sliding-window and global attention hybrid configurations
+  checked_on: '2026-10-26'
+  bytes: 337538
+- id: schlag2021fastweights
+  kind: paper
+  title: Linear Transformers Are Secretly Fast Weight Programmers
+  authors: Schlag et al.
+  first_public_year: 2021
+  version: PMLR 139 (ICML 2021)
+  url: https://proceedings.mlr.press/v139/schlag21a.html
+  full_text_url: https://proceedings.mlr.press/v139/schlag21a/schlag21a.pdf
+  download_url: https://proceedings.mlr.press/v139/schlag21a/schlag21a.pdf
+  local_path: sources/papers/schlag2021fastweights.pdf
+  required_local: true
+  archive_status: downloaded
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  sha256: 207db79c22d7d063e6f81df614050d96a33172a631c7b2df7e75308b74f78f38
+  checked_sections:
+  - §4.1–4.2 capacity and delta update; §6.1 task setup
+  checked_on: '2026-10-26'
+  bytes: 1326478
+- id: arora2023zoology
+  kind: paper
+  title: 'Zoology: Measuring and Improving Recall in Efficient Language Models'
+  authors: Arora et al.
+  first_public_year: 2023
+  version: ICLR 2024 conference paper
+  url: https://arxiv.org/abs/2312.04927
+  full_text_url: https://proceedings.iclr.cc/paper_files/paper/2024/file/448fc91f669c15d10364ee01d512cc10-Paper-Conference.pdf
+  download_url: https://proceedings.iclr.cc/paper_files/paper/2024/file/448fc91f669c15d10364ee01d512cc10-Paper-Conference.pdf
+  local_path: sources/papers/arora2023zoology-iclr2024.pdf
+  required_local: true
+  archive_status: downloaded
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  sha256: d6605cb47e601ced89d562466e227e5adcc5f690111521cab4a9df2c89526ac6
+  checked_sections:
+  - §3 associative recall analysis and Definition 3.1 MQAR; §4 evaluation scope
+  checked_on: '2026-10-26'
+  bytes: 3381743
+- id: choromanski2020performer
+  kind: paper
+  title: Rethinking Attention with Performers
+  authors: Choromanski et al.
+  first_public_year: 2020
+  version: 2009.14794v4
+  url: https://arxiv.org/abs/2009.14794v4
+  full_text_url: https://arxiv.org/pdf/2009.14794v4
+  download_url: https://arxiv.org/pdf/2009.14794v4
+  local_path: sources/papers/choromanski2020performer-v4.pdf
+  required_local: true
+  archive_status: downloaded
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  sha256: 2634d0985b5ebc5235d983e388ec012883369eb1c39b351a024c31ee718b2e25
+  checked_sections:
+  - §2, Lemma 1 positive random features; Appendix B.2 orthogonal random features
+  checked_on: '2026-10-26'
+  bytes: 5880177
+- id: de2024griffin
+  kind: paper
+  title: 'Griffin: Mixing Gated Linear Recurrences with Local Attention for Efficient Language Models'
+  authors: De et al.
+  first_public_year: 2024
+  version: 2402.19427v1
+  url: https://arxiv.org/abs/2402.19427v1
+  full_text_url: https://arxiv.org/html/2402.19427v1
+  download_url: https://arxiv.org/pdf/2402.19427v1
+  local_path: sources/papers/de2024griffin-v1.pdf
+  required_local: true
+  archive_status: downloaded
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  sha256: e44b4e15e9a9f966621e0f40bf7abde7525a2beb1638c2e09940a24a5f6e51a9
+  checked_sections:
+  - §2–3 temporal mixing; Griffin layer ratio and default window
+  - Appendix F.4 cache sizes, recurrent and short convolution states
+  - §6.2 and Figure 6 synthetic training versus pretrained phonebook lookup
+  checked_on: '2026-10-26'
+  bytes: 951680
+- id: lieber2024jamba
+  kind: paper
+  title: 'Jamba: A Hybrid Transformer-Mamba Language Model'
+  authors: Lieber et al.
+  first_public_year: 2024
+  version: 2403.19887v2
+  url: https://arxiv.org/abs/2403.19887v2
+  full_text_url: https://arxiv.org/html/2403.19887v2
+  download_url: https://arxiv.org/pdf/2403.19887v2
+  local_path: sources/papers/lieber2024jamba-v2.pdf
+  required_local: true
+  archive_status: downloaded
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  sha256: 517673951e0ff6dbd27701e52f4ab5d3ccf3f40d3eddae3d4e27dcf90f38d665
+  checked_sections:
+  - §2 and Figure 1; Attention/Mamba ratio and MoE frequency
+  - §6.1 and Table 4 no-MoE ablation, 1.3B/250B setting
+  checked_on: '2026-10-26'
+  bytes: 1287281
+- id: gemmateam2024gemma2
+  kind: paper
+  title: 'Gemma 2: Improving Open Language Models at a Practical Size'
+  authors: Gemma Team
+  first_public_year: 2024
+  version: 2408.00118v3
+  url: https://arxiv.org/abs/2408.00118v3
+  full_text_url: https://arxiv.org/html/2408.00118v3
+  download_url: https://arxiv.org/pdf/2408.00118v3
+  local_path: sources/papers/gemmateam2024gemma2-v3.pdf
+  required_local: true
+  archive_status: downloaded
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  sha256: e81333353e58a01cbca0b6d5aec28caa5a7c6d26b52d227844bcce1bd87dc557
+  checked_sections:
+  - §2 and Table 1; alternating local/global attention, window and context sizes
+  checked_on: '2026-10-26'
+  bytes: 610320
+- id: gu2023mamba
+  kind: paper
+  title: 'Mamba: Linear-Time Sequence Modeling with Selective State Spaces'
+  authors: Gu & Dao
+  first_public_year: 2023
+  version: 2312.00752v2
+  url: https://arxiv.org/abs/2312.00752v2
+  full_text_url: https://arxiv.org/html/2312.00752v2
+  download_url: https://arxiv.org/pdf/2312.00752v2
+  local_path: sources/papers/gu2023mamba-v2.pdf
+  required_local: true
+  archive_status: downloaded
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  sha256: adf70ed1803c85b1899dec3e21f3af0b124411439e8654b840ea65f7b9f52b2e
+  checked_sections:
+  - §2; §3.2 Algorithm 2; §3.3 Selective Scan
+  checked_on: '2026-10-26'
+  bytes: 1168615
+- id: ren2024samba
+  kind: paper
+  title: 'Samba: Simple Hybrid State Space Models for Efficient Unlimited Context Language Modeling'
+  authors: Ren et al.
+  first_public_year: 2024
+  version: 2406.07522v1
+  url: https://arxiv.org/abs/2406.07522v1
+  full_text_url: https://arxiv.org/html/2406.07522v1
+  download_url: https://arxiv.org/pdf/2406.07522v1
+  local_path: sources/papers/ren2024samba-v1.pdf
+  required_local: true
+  archive_status: downloaded
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  sha256: 0fd70db61cc41498a762c6290fd9eac27492997d14fd038de6f4067eea5a3124
+  checked_sections:
+  - §2.1 Mamba/SWA/MLP architecture and window size
+  checked_on: '2026-10-26'
+  bytes: 1624851
+- id: sun2023retnet
+  kind: paper
+  title: 'Retentive Network: A Successor to Transformer for Large Language Models'
+  authors: Yutao Sun et al.
+  first_public_year: 2023
+  version: 2307.08621v4
+  url: https://arxiv.org/abs/2307.08621v4
+  full_text_url: https://arxiv.org/html/2307.08621v4
+  download_url: https://arxiv.org/pdf/2307.08621v4
+  local_path: sources/papers/sun2023retnet-4.pdf
+  required_local: true
+  archive_status: downloaded
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  sha256: b75fdb67fdcc760609a38d28171a785f336ece30f750d210c7379306bb483fa7
+  checked_sections:
+  - §2.1–2.2; fixed per-head decay, positional rotation, GroupNorm and output gate; Figure 3
+  checked_on: '2026-10-26'
+  bytes: 778073
+- id: peng2023rwkv
+  kind: paper
+  title: 'RWKV: Reinventing RNNs for the Transformer Era'
+  authors: Bo Peng et al.
+  first_public_year: 2023
+  version: 2305.13048v2
+  url: https://arxiv.org/abs/2305.13048v2
+  full_text_url: https://arxiv.org/html/2305.13048v2
+  download_url: https://arxiv.org/pdf/2305.13048v2
+  local_path: sources/papers/peng2023rwkv-2.pdf
+  required_local: true
+  archive_status: downloaded
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  sha256: 57d18c40bdbb4bc1ab69c078a304f97e31657b4f543c408d8a5520e672a3fab0
+  checked_sections:
+  - §3.1–3.3; WKV equation (16), output gate; Appendix D state layout
+  checked_on: '2026-10-26'
+  bytes: 1590242
+- id: sun2024ttt
+  kind: paper
+  title: 'Learning to (Learn at Test Time): RNNs with Expressive Hidden States'
+  authors: Yu Sun et al.
+  first_public_year: 2024
+  version: 2407.04620v1
+  url: https://arxiv.org/abs/2407.04620v1
+  full_text_url: https://arxiv.org/html/2407.04620v1
+  download_url: https://arxiv.org/pdf/2407.04620v1
+  local_path: sources/papers/sun2024ttt-1.pdf
+  required_local: true
+  archive_status: downloaded
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  sha256: 61a6cdb14891692fc42c827a9e7de2a953618f236803976389cb64da2b16b832
+  checked_sections:
+  - §2.1–2.3; Figure 6; §2.6 Theorem 1; §2.7 internal model and initialization
+  checked_on: '2026-10-26'
+  bytes: 1713478
 assets:
 - id: transformer-architecture
   source_id: vaswani2017attention
   locator: Figure 1
   download_url: https://arxiv.org/html/1706.03762v7/Figures/ModalNet-21.png
   local_path: book/assets/overview/transformer-architecture-original.png
-  archive_status: pending
-  sha256: null
+  archive_status: downloaded
+  sha256: 56d69ccc192b90c3b93e5e285ff892f74753f970103939b40291945e106e9f79
   attribution: 原论文首页允许署名后在新闻或学术作品中转载图表。
-  display_mode: remote_url
+  display_mode: local_file
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  bytes: 159152
 - id: scaled-dot-product
   source_id: vaswani2017attention
   locator: Figure 2, left
   download_url: https://arxiv.org/html/1706.03762v7/Figures/ModalNet-19.png
   local_path: book/assets/overview/scaled-dot-product-original.png
-  archive_status: pending
-  sha256: null
+  archive_status: downloaded
+  sha256: 6d40a44e2ec3f0cdab207c768a9085b6b908bbefa82c5af6613dc8233bee6a42
   attribution: 原论文首页允许署名后在新闻或学术作品中转载图表。
-  display_mode: remote_url
+  display_mode: local_file
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  bytes: 26323
 - id: gqa-heads
   source_id: ainslie2023gqa
   locator: Figure 2
   download_url: https://arxiv.org/html/2305.13245v3/images/gmq_architecture.png
   local_path: book/assets/overview/gqa-heads-original.png
-  archive_status: pending
-  sha256: null
+  archive_status: downloaded
+  sha256: 02c3d00ec9f339211daae34392aeed850b013457b64f8088f1c5c054a5e94ab6
   attribution: CC BY 4.0，按原作者与原图署名。
-  display_mode: remote_url
+  display_mode: local_file
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
+  bytes: 70702
 - id: alammar-embeddings
   source_id: alammar2018illustrated
   locator: Bringing The Tensors Into The Picture
@@ -837,13 +1536,14 @@ assets:
   locator: One Difference From BERT; gpt-2-autoregression-2.gif
   download_url: https://jalammar.github.io/images/xlnet/gpt-2-autoregression-2.gif
   local_path: book/assets/overview/alammar-autoregression.gif
-  archive_status: pending
-  sha256: null
+  archive_status: downloaded
+  sha256: 58430f275e37cfd7e988338b2afa9616af74ff5355e1dd421da2b2a89671b3dc
   git_blob: 98d6bb283dbe8ce02d0d255ad4146b4cbb223056
-  archive_note: fetch_file 返回空内容；fetch_blob 对二进制解码失败；终端代理连接与直连 DNS 均不可用。未完成逐帧或播放核查。
+  archive_note: 已下载；文件格式标记与 SHA-256 已检查。
   attribution: Jay Alammar, The Illustrated GPT-2; CC BY-NC-SA 4.0；原 GIF 未修改。
   license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
-  display_mode: remote_url
+  display_mode: local_file
+  bytes: 1325837
 - id: attention-design-locations-svg
   source_id: vaswani2017attention
   locator: §3.2；各路线依据见正文 1.4 引用
@@ -1058,3 +1758,237 @@ assets:
   attribution: Jay Alammar, The Illustrated Transformer; CC BY-NC-SA 4.0；原图未修改。
   license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
   display_mode: local_file
+- id: mla-computation-svg
+  source_id: deepseek2024mla
+  locator: §2.1.2; handbook Figure 4-2
+  local_path: book/assets/kv-representations/mla-computation.svg
+  archive_status: downloaded
+  sha256: df876efba918145f40dc38c737a3b5f1b89ee51a5f26f73f1cb7b66246f45cad
+  attribution: 本书依据论文公式自行绘制，非原图改绘；教学示意，生成脚本 scripts/render_kv_representations.py。
+  display_mode: local_file
+  bytes: 3433
+- id: mla-computation-png
+  source_id: deepseek2024mla
+  locator: §2.1.2; handbook Figure 4-2
+  local_path: book/assets/kv-representations/mla-computation.png
+  archive_status: downloaded
+  sha256: 3fca0a1e355a2e23bab998ea13122f7f3dcce4f87351fb2b9678000ad9e048b3
+  attribution: 本书依据论文公式自行绘制，非原图改绘；教学示意，生成脚本 scripts/render_kv_representations.py。
+  display_mode: local_file
+  bytes: 72429
+- id: mla-cache-branches-svg
+  source_id: deepseek2024mla
+  locator: §2.1.3; handbook Figure 4-3
+  local_path: book/assets/kv-representations/mla-cache-branches.svg
+  archive_status: downloaded
+  sha256: 091a3860ea4dbf6ff48574fe59ec1317cffec743a4c63aaf91a4e661c60849a5
+  attribution: 本书依据论文公式自行绘制，非原图改绘；教学示意，生成脚本 scripts/render_kv_representations.py。
+  display_mode: local_file
+  bytes: 2747
+- id: mla-cache-branches-png
+  source_id: deepseek2024mla
+  locator: §2.1.3; handbook Figure 4-3
+  local_path: book/assets/kv-representations/mla-cache-branches.png
+  archive_status: downloaded
+  sha256: b632be755062e8ae555a4a839d95c32592b74f590b90d3bc448b45fedb1b9999
+  attribution: 本书依据论文公式自行绘制，非原图改绘；教学示意，生成脚本 scripts/render_kv_representations.py。
+  display_mode: local_file
+  bytes: 64511
+- id: output-gate-svg
+  source_id: qiu2025gatedattention
+  locator: §2.2 equation (5); handbook Figure 5-1
+  local_path: book/assets/gated-attention/output-gate.svg
+  archive_status: downloaded
+  sha256: ccacb6d0666d62fe99660f78b944ec287fc02b3b0e9322238ffdf21d9a235b06
+  attribution: 本书自行绘制；非原图改绘，非模型实验。生成脚本 scripts/render_gated_attention.py。
+  display_mode: local_file
+  bytes: 2413
+- id: output-gate-png
+  source_id: qiu2025gatedattention
+  locator: §2.2 equation (5); handbook Figure 5-1
+  local_path: book/assets/gated-attention/output-gate.png
+  archive_status: downloaded
+  sha256: b9357d63ba624c8e93287d91055691a28e17e0cb5efdca06d9bcc2c35311236a
+  attribution: 本书自行绘制；非原图改绘，非模型实验。生成脚本 scripts/render_gated_attention.py。
+  display_mode: local_file
+  bytes: 51866
+- id: gate-example-svg
+  source_id: qiu2025gatedattention
+  locator: handbook constructed numeric example; Figure 5-2
+  local_path: book/assets/gated-attention/gate-example.svg
+  archive_status: downloaded
+  sha256: 5d908a990126dba17d6af3ac4712ea9034949bca3637cb7e5c633d8b34940a99
+  attribution: 本书自行绘制；非原图改绘，非模型实验。生成脚本 scripts/render_gated_attention.py。
+  display_mode: local_file
+  bytes: 2907
+- id: gate-example-png
+  source_id: qiu2025gatedattention
+  locator: handbook constructed numeric example; Figure 5-2
+  local_path: book/assets/gated-attention/gate-example.png
+  archive_status: downloaded
+  sha256: 26f23ad960ba42aa7b7275bc28e5aaac0e3b432867ef417cda21413c0ed84902
+  attribution: 本书自行绘制；非原图改绘，非模型实验。生成脚本 scripts/render_gated_attention.py。
+  display_mode: local_file
+  bytes: 28737
+- id: online-merge-svg
+  source_id: dao2023flashattention2
+  locator: §3.1.1; handbook constructed example Figure 6-1
+  local_path: book/assets/flash-attention/online-merge.svg
+  archive_status: downloaded
+  sha256: 171a2193ab50440d0625ece6b302369058efa01b36e4bcc4037352aa3a84ecde
+  attribution: 本书依公式自行绘制；三个位置的教学算例，非原图改绘或实验数据。生成脚本 scripts/render_flash_attention.py。
+  display_mode: local_file
+  bytes: 2252
+- id: online-merge-png
+  source_id: dao2023flashattention2
+  locator: §3.1.1; handbook constructed example Figure 6-1
+  local_path: book/assets/flash-attention/online-merge.png
+  archive_status: downloaded
+  sha256: 1e4c4ff70702d41da9c45a043923b9d94dab397d924b3db45d64abfd5490c017
+  attribution: 本书依公式自行绘制；三个位置的教学算例，非原图改绘或实验数据。生成脚本 scripts/render_flash_attention.py。
+  display_mode: local_file
+  bytes: 75631
+- id: sparse-connectivity-svg
+  source_id: beltagy2020longformer
+  locator: §3.1 patterns; handbook Figure 7-1 constructed comparison
+  local_path: book/assets/sparse-attention/connectivity.svg
+  archive_status: downloaded
+  sha256: eb8540e5734af813212a742fc8c161d72839cd6334b6c57a6e3ea204e1691ade
+  attribution: 本书自行绘制；非原图改绘；N=8，Causal 窗口包含自身为3，双向局部半径1且Global位置1；生成脚本 scripts/render_sparse_attention.py。
+  display_mode: local_file
+  bytes: 16122
+- id: sparse-connectivity-png
+  source_id: beltagy2020longformer
+  locator: §3.1 patterns; handbook Figure 7-1 constructed comparison
+  local_path: book/assets/sparse-attention/connectivity.png
+  archive_status: downloaded
+  sha256: 18e567744f1dffcea2d5e75c615ea73b99964fbf2e580749a3d6731511e8de45
+  attribution: 本书自行绘制；非原图改绘；N=8，Causal 窗口包含自身为3，双向局部半径1且Global位置1；生成脚本 scripts/render_sparse_attention.py。
+  display_mode: local_file
+  bytes: 34013
+- id: quest-page-bound-svg
+  source_id: tang2024quest
+  locator: §3.4; handbook Figure 7-2 constructed counterexample
+  local_path: book/assets/sparse-attention/page-bound.svg
+  archive_status: downloaded
+  sha256: 99f09a9d8e42c8f88d0a9f1b3751472758ab73865c769380e50f437a0318cd81
+  attribution: 本书自行构造二维反例，非原图改绘或实验；脚本 scripts/render_sparse_attention.py。
+  display_mode: local_file
+  bytes: 1289
+- id: quest-page-bound-png
+  source_id: tang2024quest
+  locator: §3.4; handbook Figure 7-2 constructed counterexample
+  local_path: book/assets/sparse-attention/page-bound.png
+  archive_status: downloaded
+  sha256: eb1d8acf6e591dec0df6bdc38c26c7b86650fa26ca041bbf3ed02b47bd2a90e6
+  attribution: 本书自行构造二维反例，非原图改绘或实验；脚本 scripts/render_sparse_attention.py。
+  display_mode: local_file
+  bytes: 52768
+- id: kv-paged-mapping-svg
+  source_id: kwon2023pagedattention
+  locator: §4.1–4.3; handbook Figure 8-1 constructed mapping
+  local_path: book/assets/kv-cache/paged-mapping.svg
+  archive_status: downloaded
+  sha256: 82cf761829c74faf32642a14ee56f3953fb6311ab455b31f2a06df9508fcc073
+  attribution: 本书自行绘制的教学示意，非原图复制或实验数据；脚本 scripts/render_kv_cache.py。
+  display_mode: local_file
+  bytes: 5072
+- id: kv-paged-mapping-png
+  source_id: kwon2023pagedattention
+  locator: §4.1–4.3; handbook Figure 8-1 constructed mapping
+  local_path: book/assets/kv-cache/paged-mapping.png
+  archive_status: downloaded
+  sha256: 534135638bf6a75d737c8b24a4cf8b45c51406c669fc39b0896710f0e33f9581
+  attribution: 本书自行绘制的教学示意，非原图复制或实验数据；脚本 scripts/render_kv_cache.py。
+  display_mode: local_file
+  bytes: 46869
+- id: kv-quantization-groups-svg
+  source_id: liu2024kivi
+  locator: §3.1 and Figure 1; handbook Figure 8-2 constructed matrix
+  local_path: book/assets/kv-cache/quantization-groups.svg
+  archive_status: downloaded
+  sha256: 586225b9ce209d802a3e5afd86ac2b1ea4e794784f657eadd6259308c843b220
+  attribution: 本书自行绘制的教学示意，非原图复制或实验数据；脚本 scripts/render_kv_cache.py。
+  display_mode: local_file
+  bytes: 6877
+- id: kv-quantization-groups-png
+  source_id: liu2024kivi
+  locator: §3.1 and Figure 1; handbook Figure 8-2 constructed matrix
+  local_path: book/assets/kv-cache/quantization-groups.png
+  archive_status: downloaded
+  sha256: 2c75b1883e5142604ee036e7b39d63fd045cb4984c23c539124dcd26bdfa8716
+  attribution: 本书自行绘制的教学示意，非原图复制或实验数据；脚本 scripts/render_kv_cache.py。
+  display_mode: local_file
+  bytes: 53520
+- id: linear-kernel-reordering-svg
+  source_id: katharopoulos2020linear
+  locator: §3.2; handbook Figure 9-1
+  local_path: book/assets/linear-attention/kernel-reordering.svg
+  archive_status: downloaded
+  sha256: d39238b17e3114bc25f54e86f97d495ae9de2063e7d1f7114d645abe8bab7845
+  attribution: 本书自行绘制的教学示意，非原图复制或实验数据；脚本 scripts/render_linear_attention.py。
+  display_mode: local_file
+  bytes: 20124
+- id: linear-kernel-reordering-png
+  source_id: katharopoulos2020linear
+  locator: §3.2; handbook Figure 9-1
+  local_path: book/assets/linear-attention/kernel-reordering.png
+  archive_status: downloaded
+  sha256: a340482e845cc891b767d15b7148fada929e2389b761390d19be4b3468629e2b
+  attribution: 本书自行绘制的教学示意，非原图复制或实验数据；脚本 scripts/render_linear_attention.py。
+  display_mode: local_file
+  bytes: 40032
+- id: linear-delta-update-svg
+  source_id: yang2024gateddelta
+  locator: §3.1; handbook Figure 9-2
+  local_path: book/assets/linear-attention/delta-update.svg
+  archive_status: downloaded
+  sha256: 203d3fdf7c78326c91cb520da694d4178b2e2d81c5be2f20a56e5949b82616b5
+  attribution: 本书自行绘制的教学示意，非原图复制或实验数据；脚本 scripts/render_linear_attention.py。
+  display_mode: local_file
+  bytes: 3885
+- id: linear-delta-update-png
+  source_id: yang2024gateddelta
+  locator: §3.1; handbook Figure 9-2
+  local_path: book/assets/linear-attention/delta-update.png
+  archive_status: downloaded
+  sha256: 55a1442b40b1e5d4f61471e035c95ad91225fbdd75c4dd144b6620f6e100eb11
+  attribution: 本书自行绘制的教学示意，非原图复制或实验数据；脚本 scripts/render_linear_attention.py。
+  display_mode: local_file
+  bytes: 34290
+- id: hybrid-layer-state-layouts-svg
+  source_id: de2024griffin
+  locator: §3; handbook Figure 10-1 constructed layer layouts
+  local_path: book/assets/hybrid-architectures/layer-state-layouts.svg
+  archive_status: downloaded
+  sha256: 67f57d085e4cf2ee70447c95be1f684feaac85ab219c6fc7a95d843211a92bfa
+  attribution: 本书自行绘制，非原图复制或性能实验；脚本 scripts/render_hybrid_architectures.py。
+  display_mode: local_file
+  bytes: 4521
+- id: hybrid-layer-state-layouts-png
+  source_id: de2024griffin
+  locator: §3; handbook Figure 10-1 constructed layer layouts
+  local_path: book/assets/hybrid-architectures/layer-state-layouts.png
+  archive_status: downloaded
+  sha256: b916d52c2cbd36650f5d091db93fecacc2cef5a06e5739f6b7be0f0627a6bd37
+  attribution: 本书自行绘制，非原图复制或性能实验；脚本 scripts/render_hybrid_architectures.py。
+  display_mode: local_file
+  bytes: 56632
+- id: hybrid-prefix-state-branches-svg
+  source_id: gu2023mamba
+  locator: §2–3 state recurrence; handbook Figure 10-2 derived state snapshot requirements
+  local_path: book/assets/hybrid-architectures/prefix-state-branches.svg
+  archive_status: downloaded
+  sha256: cac48daab30587f65d4e86f6cbb02e04256c9e48cc415c8f3700eddb6f5cebcc
+  attribution: 本书自行绘制，非原图复制或性能实验；脚本 scripts/render_hybrid_architectures.py。
+  display_mode: local_file
+  bytes: 3086
+- id: hybrid-prefix-state-branches-png
+  source_id: gu2023mamba
+  locator: §2–3 state recurrence; handbook Figure 10-2 derived state snapshot requirements
+  local_path: book/assets/hybrid-architectures/prefix-state-branches.png
+  archive_status: downloaded
+  sha256: 40d9afa01c976a32209fe1fe6d8f5945b9787abb3842d6dcdfdb4bc0e9111f81
+  attribution: 本书自行绘制，非原图复制或性能实验；脚本 scripts/render_hybrid_architectures.py。
+  display_mode: local_file
+  bytes: 80489

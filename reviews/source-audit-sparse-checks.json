@@ -1,0 +1,38 @@
+{
+  "python": "3.12.3",
+  "scope": "fixed-pattern counts, structural reachability, fixed-input pruning algebra; no model-quality or GPU measurements",
+  "window_configurations": 300,
+  "depths_checked": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "random_pruning_examples": 300,
+  "max_identity_error": 8.881784197001252e-16,
+  "scalar_example": {
+    "dense": 5.8,
+    "sparse": 1.6
+  },
+  "block_example": {
+    "logical_pairs": 8,
+    "scheduled_slots": 32
+  },
+  "page_bound_tests": 300,
+  "page_bound_example": {
+    "bounds": [
+      2,
+      1.5
+    ],
+    "actual_maxima": [
+      1,
+      1.5
+    ]
+  },
+  "branch_example": {
+    "gated": 5.0,
+    "union_softmax": 8.807970779778826
+  },
+  "status": "passed"
+}

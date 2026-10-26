@@ -1,0 +1,24 @@
+{
+  "python": "3.12.3",
+  "scope": "fixed features; causal explicit sums versus recurrence; chunk state continuity; no training or hardware evaluation",
+  "cases": 120,
+  "max_error": 4.440892098500626e-16,
+  "toy_outputs": [
+    [
+      2.0,
+      0.0
+    ],
+    [
+      1.0,
+      2.0
+    ],
+    [
+      2.0,
+      2.5
+    ]
+  ],
+  "softmax_example": 0.7310585786300049,
+  "elu_kernel_example": 0.6666666666666666,
+  "zero_denominator_rejected": true,
+  "status": "passed"
+}

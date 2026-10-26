@@ -21,7 +21,7 @@ $$
 <figcaption><p align="center">图 3-2　不同频率的 Sinusoidal Position Encoding</p></figcaption>
 </figure>
 
-固定偏移 $$\Delta$$ 对每对 sin/cos 的影响可用一个相同的线性变换表达：
+对每个频率 $$\omega_r$$，固定偏移 $$\Delta$$ 对 sin/cos 对的影响，可用一个不随起始位置 $$i$$ 变化的线性变换表达：
 
 $$
 \begin{bmatrix}

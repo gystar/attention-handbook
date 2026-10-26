@@ -1,0 +1,13 @@
+{
+  "seed": 20261026,
+  "ssm_sequences": 240,
+  "ssm_output_comparisons": 1560,
+  "ssm_max_error": 4.440892098500626e-16,
+  "scope": "Scalar-identity SSM with zero initial state; CPU Python float; not a full Mamba implementation or performance test",
+  "table_2_displayed_accuracy_means": {
+    "Gated DeltaNet": 55.3225,
+    "H1": 56.46125,
+    "H2": 56.1825
+  },
+  "status": "passed"
+}

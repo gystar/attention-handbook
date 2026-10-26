@@ -1,0 +1,30 @@
+{
+  "capacity_rows": [
+    {
+      "n": 1024,
+      "global_bytes": 4194304,
+      "local_bytes": 4194304,
+      "recurrent_bytes": 2097152,
+      "total_mib": 10
+    },
+    {
+      "n": 4096,
+      "global_bytes": 16777216,
+      "local_bytes": 4194304,
+      "recurrent_bytes": 2097152,
+      "total_mib": 22
+    },
+    {
+      "n": 16384,
+      "global_bytes": 67108864,
+      "local_bytes": 4194304,
+      "recurrent_bytes": 2097152,
+      "total_mib": 70
+    }
+  ],
+  "chunk_equivalence": true,
+  "branch_snapshot_unchanged": true,
+  "reset_counterexample": true,
+  "scope": "constructed payload calculation and toy scalar recurrence/rolling buffers; not model or serving implementation",
+  "status": "passed"
+}

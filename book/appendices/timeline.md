@@ -1,10 +1,10 @@
 # 附录 B 技术演进时间线与方法对照表
 
-本页提供跨章检索入口。当前时间线覆盖首章引用的代表工作，后续随专题章节补充。
+本页按时间、技术对象和比较指标组织跨章检索入口。
 
 ## 代表性时间节点
 
-下表按代表性工作的首次公开年份排列，覆盖本章使用的主要例子。预印本年份与正式发表、后续修订年份可能不同；具体使用版本见[附录 C 参考文献、教学资源与本地源文件索引](references.md)。
+下表按代表性工作的首次公开年份排列，对应各专题中的主要方法。预印本年份与正式发表、后续修订年份可能不同；具体使用版本见[附录 C 参考文献、教学资源与本地源文件索引](references.md)。
 
 | 年份 | 代表工作 | 在本书主线中的位置 |
 | --- | --- | --- |
@@ -15,8 +15,9 @@
 | 2021 | [RoPE](https://arxiv.org/abs/2104.09864)、[ALiBi](https://arxiv.org/abs/2108.12409) | 位置信息进入 Attention 的不同方式 |
 | 2022 | [FlashAttention](https://arxiv.org/abs/2205.14135) | Exact Attention 的 IO 优化 |
 | 2023 | [GQA](https://arxiv.org/abs/2305.13245)、[PagedAttention](https://arxiv.org/abs/2309.06180)、[Position Interpolation](https://arxiv.org/abs/2306.15595) | KV 共享、缓存管理和上下文扩展分别推进 |
-| 2024 | [MLA](https://arxiv.org/abs/2405.04434)、[Mamba-2/SSD](https://arxiv.org/abs/2405.21060)、[Gated DeltaNet](https://arxiv.org/abs/2412.06464) | Latent 压缩、结构化状态计算与状态更新 |
+| 2024 | [Griffin](https://arxiv.org/abs/2402.19427)、[MLA](https://arxiv.org/abs/2405.04434)、[Mamba-2/SSD](https://arxiv.org/abs/2405.21060)、[Gated DeltaNet](https://arxiv.org/abs/2412.06464) | 递推与 Local Attention 的组合、Latent 压缩、结构化状态计算与状态更新 |
 | 2025 | [Native Sparse Attention](https://arxiv.org/abs/2502.11089)、[Gated Attention](https://arxiv.org/abs/2505.06708) | 硬件适配的稀疏选择，以及对 Softmax Attention 中 Gating 位置的系统研究 |
+| 2026 | [FlashAttention-4](https://arxiv.org/abs/2603.05451v1) | 针对 Blackwell 的执行单元与片上带宽比例调整流水线 |
 
 <p align="center">表 B-1　代表性时间节点</p>
 
@@ -27,17 +28,17 @@
 | 改变的对象 | 代表方法 | 主要比较问题 | 专题 |
 | --- | --- | --- | --- |
 | 位置表示与距离信息 | RoPE、ALiBi、Position Interpolation | 使用范围如何变化，长文本能力怎样评估 | [第 3 章 Position Encoding 的演进与 Context Extension](../chapters/position-encoding/README.md) |
-| KV Head 或表示 | MQA、GQA、MLA | 缓存保存什么，能力与容量如何权衡 | [第 4 章 Key–Value 表示优化：MHA、MQA、GQA 与 MLA](../chapters/kv-representations/README.md) |
-| Attention 内部的 Gate | Gated Attention | Gate 的输入、作用位置与实验依据 | [第 5 章 Softmax Attention 的结构改进：Gated Attention](../chapters/gated-attention/README.md) |
-| 运算调度与中间存储 | FlashAttention | 目标算子是否相同，IO 减少多少 | [第 6 章 FlashAttention：Exact Attention 的 IO 优化](../chapters/flash-attention/README.md) |
+| KV Head 或表示 | MQA、GQA、MLA | 缓存保存什么，能力与容量如何权衡 | [第 4 章 MQA、GQA 与 MLA 的 KV 表示优化](../chapters/kv-representations/README.md) |
+| Attention 内部的 Gate | Gated Attention | Gate 的输入、作用位置与实验依据 | [第 5 章 Gated Attention 的结构与作用](../chapters/gated-attention/README.md) |
+| 运算调度与中间存储 | FlashAttention | 目标算子是否相同，IO 减少多少 | [第 6 章 FlashAttention 的计算与 IO 优化](../chapters/flash-attention/README.md) |
 | 可访问的位置对 | Sparse Attention | 选择开销、实际稀疏度与质量变化 | [第 7 章 Sparse Attention 的连接模式与动态选择](../chapters/sparse-attention/README.md) |
 | KV 的物理存储和保留 | PagedAttention、KV 量化与淘汰 | 分别改变布局、精度还是历史覆盖 | [第 8 章 KV Cache 的存储管理与推理优化](../chapters/kv-cache/README.md) |
 | 状态更新与读取 | Linear Attention、Gated DeltaNet | 状态容量、计算方式与信息读取能力 | [第 9 章 Linear Attention 的 Recurrent Formulation 与 State Update](../chapters/linear-attention/README.md) |
-| 模块组合 | Attention、Recurrent、SSM 的组合 | 配置、训练及整模型表现 | [第 10 章 Hybrid Architectures 的结构设计与方法比较](../chapters/hybrid-architectures/README.md) |
+| 模块组合 | Full–Sparse Attention、Attention 与 Linear Attention 或 SSM | 配置、训练及整模型表现 | [第 10 章 Hybrid Architectures 的结构设计与方法比较](../chapters/hybrid-architectures/README.md) |
 
 <p align="center">表 B-2　按改变的对象查找</p>
 
-方法区别的原始依据集中在 [1.4 Attention 机制的主要发展方向与技术路线](../chapters/overview/optimization-landscape.md)。性能比较需同时指定阶段、长度、Batch、硬件、精度及能力指标。
+各路线的机制区别与组合关系见 [1.4 Attention 机制的主要发展方向与技术路线](../chapters/overview/optimization-landscape.md)。性能比较需同时指定阶段、长度、Batch、硬件、精度及能力指标。
 
 ## 方法比较的条件与指标
 
@@ -53,4 +54,4 @@
 
 <p align="center">表 B-3　方法比较的条件与指标</p>
 
-例如，报告“更快”之前，需要说明是 Attention Kernel、整层、单次请求还是完整服务系统更快。FlashAttention 与 PagedAttention 论文分别考察了运算实现和服务系统层面的成本，评估对象不同。[Dao et al., 2022，§4](https://arxiv.org/html/2205.14135v2)；[Kwon et al., 2023，§6](https://arxiv.org/html/2309.06180v1)
+例如，报告“更快”之前，需要说明是 Attention Kernel、整层、单次请求还是完整服务系统更快。FlashAttention 论文同时报告 Attention 实现耗时与端到端训练时间；PagedAttention 论文则在不同请求到达率下比较服务的 normalized latency，即每个请求的端到端延迟除以输出长度后取均值。比较前应先对齐测量对象与指标定义。[Dao et al., 2022，§4](https://arxiv.org/html/2205.14135v2)；[Kwon et al., 2023，§6](https://arxiv.org/html/2309.06180v1)

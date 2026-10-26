@@ -1,0 +1,18 @@
+{
+  "cases": 360,
+  "max_error": 2.220446049250313e-16,
+  "scope": "additive and ungated DeltaNet forward chunk output and final state; nonzero entry; no GPU, backward, normalization or Gated DeltaNet",
+  "status": "passed",
+  "normalized_additive_chunks": {
+    "cases": 16,
+    "max_error": 3.3306690738754696e-16,
+    "chunk_sizes": [
+      1,
+      2,
+      4,
+      32
+    ],
+    "scope": "positive fixed features; numerator and denominator; partial last chunk",
+    "status": "passed"
+  }
+}
