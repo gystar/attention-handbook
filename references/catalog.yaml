@@ -126,8 +126,7 @@ sources:
   checked_on: '2026-10-19'
 - id: press2021alibi
   kind: paper
-  title: 'Train Short, Test Long: Attention with Linear Biases Enables Input Length
-    Extrapolation'
+  title: 'Train Short, Test Long: Attention with Linear Biases Enables Input Length Extrapolation'
   authors: Press, Smith & Lewis
   first_public_year: 2021
   version: 2108.12409v2
@@ -163,8 +162,7 @@ sources:
   checked_on: '2026-10-19'
 - id: ainslie2023gqa
   kind: paper
-  title: 'GQA: Training Generalized Multi-Query Transformer Models from Multi-Head
-    Checkpoints'
+  title: 'GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints'
   authors: Ainslie et al.
   first_public_year: 2023
   version: 2305.13245v3
@@ -252,8 +250,7 @@ sources:
   checked_on: '2026-10-19'
 - id: deepseek2024mla
   kind: paper
-  title: 'DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language
-    Model'
+  title: 'DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model'
   authors: DeepSeek-AI
   first_public_year: 2024
   version: 2405.04434v5
@@ -270,8 +267,7 @@ sources:
   checked_on: '2026-10-19'
 - id: dao2024ssd
   kind: paper
-  title: 'Transformers are SSMs: Generalized Models and Efficient Algorithms Through
-    Structured State Space Duality'
+  title: 'Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality'
   authors: Tri Dao & Albert Gu
   first_public_year: 2024
   version: 2405.21060v1
@@ -308,8 +304,7 @@ sources:
   checked_on: '2026-10-19'
 - id: yuan2025nsa
   kind: paper
-  title: 'Native Sparse Attention: Hardware-Aligned and Natively Trainable Sparse
-    Attention'
+  title: 'Native Sparse Attention: Hardware-Aligned and Natively Trainable Sparse Attention'
   authors: Yuan et al.
   first_public_year: 2025
   version: 2502.11089v1
@@ -326,8 +321,7 @@ sources:
   checked_on: '2026-10-19'
 - id: qiu2025gatedattention
   kind: paper
-  title: 'Gated Attention for Large Language Models: Non-linearity, Sparsity, and
-    Attention-Sink-Free'
+  title: 'Gated Attention for Large Language Models: Non-linearity, Sparsity, and Attention-Sink-Free'
   authors: Qiu et al.
   first_public_year: 2025
   version: 2505.06708v1
@@ -379,7 +373,7 @@ sources:
   kind: book
   title: Dive into Deep Learning — Attention Mechanisms and Transformers
   authors: Zhang, Lipton, Li & Smola
-  version: Online edition 1.0.3，访问日期 2026-10-19
+  version: Online edition 1.0.3，访问日期 2026-10-26
   url: https://d2l.ai/chapter_attention-mechanisms-and-transformers/index.html
   full_text_url: https://d2l.ai/chapter_attention-mechanisms-and-transformers/queries-keys-values.html
   required_local: false
@@ -387,7 +381,14 @@ sources:
   checked_sections:
   - Chapter 11 contents
   - §11.1 Queries, Keys, and Values
-  checked_on: '2026-10-19'
+  - §11.3.1–11.3.3 scaling, masked_softmax and dropout implementation
+  - §11.5.1–11.5.2 equations, Figure 11.5.1 and tensor layout
+  - §11.7.1–11.7.3 architecture, FFN and Add & Norm; Figure 11.7.1
+  checked_on: '2026-10-26'
+  additional_urls:
+  - https://d2l.ai/chapter_attention-mechanisms-and-transformers/attention-scoring-functions.html
+  - https://d2l.ai/chapter_attention-mechanisms-and-transformers/multihead-attention.html
+  - https://d2l.ai/chapter_attention-mechanisms-and-transformers/transformer.html
 - id: huggingface-tokenizers
   kind: tutorial
   title: Hugging Face LLM Course — Tokenizers
@@ -442,8 +443,7 @@ sources:
   required_local: false
   archive_status: link_only
   checked_sections:
-  - How a single prediction is calculated；Flowing Through DistilBERT；Slicing the important
-    part；页尾许可
+  - How a single prediction is calculated；Flowing Through DistilBERT；Slicing the important part；页尾许可
   checked_on: '2026-10-19'
 - id: d2l-seq2seq
   kind: book
@@ -735,3 +735,95 @@ assets:
   attribution: Jay Alammar, The Illustrated GPT-2; CC BY-NC-SA 4.0；原 GIF 未修改。
   license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
   display_mode: remote_url
+- id: attention-design-locations-svg
+  source_id: vaswani2017attention
+  locator: §3.2；各路线依据见正文 1.4 引用
+  local_path: book/assets/overview/attention-design-locations.svg
+  archive_status: downloaded
+  creation_mode: original_diagram
+  generator_path: scripts/render_attention_routes.py
+  sha256: 265465e25c408f6bd5c461f056cda60520c326b05e3b1ac0cd2506869d57da2c
+  bytes: 3653
+  attribution: 本书综合绘制；表示主要改进位置，Gating 采用输出门控示例。
+  display_mode: local_file
+- id: attention-design-locations-png
+  source_id: vaswani2017attention
+  locator: §3.2；各路线依据见正文 1.4 引用
+  local_path: book/assets/overview/attention-design-locations.png
+  archive_status: downloaded
+  creation_mode: original_diagram
+  generator_path: scripts/render_attention_routes.py
+  sha256: b56d3e0efef47b686cc2e8991c1c9aaef28f85a913f9277c7f2e5b5fd50e0cda
+  bytes: 157172
+  attribution: 本书综合绘制；表示主要改进位置，Gating 采用输出门控示例。
+  display_mode: local_file
+- id: d2l-transformer-svg
+  source_id: d2l-attention
+  locator: Figure 11.7.1
+  local_path: book/assets/transformer-attention/d2l-transformer.svg
+  archive_status: downloaded
+  sha256: f9c00f78aef20cff10176360f88630487c3698f138998cac91e412f80e5182ac
+  bytes: 76981
+  display_mode: local_file
+  attribution: Zhang, Lipton, Li & Smola, Dive into Deep Learning; CC BY-SA 4.0；SVG 原图未修改，PNG 为白底栅格化。
+  license_url: https://creativecommons.org/licenses/by-sa/4.0/
+  git_blob: 024bb3f28878e7d08bf29f31ab3cdfda341b5eb6
+  download_url: https://raw.githubusercontent.com/d2l-ai/d2l-en/master/img/transformer.svg
+- id: d2l-transformer-png
+  source_id: d2l-attention
+  locator: Figure 11.7.1
+  local_path: book/assets/transformer-attention/d2l-transformer.png
+  archive_status: downloaded
+  sha256: 5128b2c4a4eb46f1da9d528d08fd22aeb8f617657b9dbb7079212ed6520a3d56
+  bytes: 148320
+  display_mode: local_file
+  attribution: Zhang, Lipton, Li & Smola, Dive into Deep Learning; CC BY-SA 4.0；SVG 原图未修改，PNG 为白底栅格化。
+  license_url: https://creativecommons.org/licenses/by-sa/4.0/
+  derived_from: book/assets/transformer-attention/d2l-transformer.svg
+  generator_path: scripts/render_transformer_attention.py
+- id: d2l-multi-head-attention-svg
+  source_id: d2l-attention
+  locator: Figure 11.5.1
+  local_path: book/assets/transformer-attention/d2l-multi-head-attention.svg
+  archive_status: downloaded
+  sha256: 8816fdde658ff9d34f680afe35062c760c917c9f6e2b4c3024898583417e5ca5
+  bytes: 34285
+  display_mode: local_file
+  attribution: Zhang, Lipton, Li & Smola, Dive into Deep Learning; CC BY-SA 4.0；SVG 原图未修改，PNG 为白底栅格化。
+  license_url: https://creativecommons.org/licenses/by-sa/4.0/
+  git_blob: c08d2a45cfd97a06b84850d4f7fac5e2384c9474
+  download_url: https://raw.githubusercontent.com/d2l-ai/d2l-en/master/img/multi-head-attention.svg
+- id: d2l-multi-head-attention-png
+  source_id: d2l-attention
+  locator: Figure 11.5.1
+  local_path: book/assets/transformer-attention/d2l-multi-head-attention.png
+  archive_status: downloaded
+  sha256: d30f6af583a4555e8a526df6e9a19e223317e3739cb3566d7754607a0684eb34
+  bytes: 39397
+  display_mode: local_file
+  attribution: Zhang, Lipton, Li & Smola, Dive into Deep Learning; CC BY-SA 4.0；SVG 原图未修改，PNG 为白底栅格化。
+  license_url: https://creativecommons.org/licenses/by-sa/4.0/
+  derived_from: book/assets/transformer-attention/d2l-multi-head-attention.svg
+  generator_path: scripts/render_transformer_attention.py
+- id: attention-masks-svg
+  source_id: vaswani2017attention
+  locator: §3.2.3
+  local_path: book/assets/transformer-attention/attention-masks.svg
+  archive_status: downloaded
+  sha256: 0200169bd2825460622b64617f68afcb2b3cf113a56f734b5ed4f6aa10757e42
+  bytes: 6916
+  display_mode: local_file
+  creation_mode: original_diagram
+  generator_path: scripts/render_transformer_attention.py
+  attribution: 本书绘制；展示有效位置，不表示实际权重。
+- id: attention-masks-png
+  source_id: vaswani2017attention
+  locator: §3.2.3
+  local_path: book/assets/transformer-attention/attention-masks.png
+  archive_status: downloaded
+  sha256: 6279c14d46883ae35fab2ca38b5072d9cd7eca1ed05783ef0e54815362c041a6
+  bytes: 50936
+  display_mode: local_file
+  creation_mode: original_diagram
+  generator_path: scripts/render_transformer_attention.py
+  attribution: 本书绘制；展示有效位置，不表示实际权重。

@@ -52,7 +52,7 @@
 
 | 形式与来源 | 推荐阅读或观看位置 | 用途 |
 | --- | --- | --- |
-| 书籍：[Zhang、Lipton、Li、Smola，Dive into Deep Learning](https://d2l.ai/chapter_attention-mechanisms-and-transformers/index.html)，在线版 1.0.3 | §11.1 Queries, Keys, and Values；按需进入本章后续小节 | 从加权读取建立 QKV 概念，配合公式与代码学习 |
+| 书籍：[Zhang、Lipton、Li、Smola，Dive into Deep Learning](https://d2l.ai/chapter_attention-mechanisms-and-transformers/index.html)，在线版 1.0.3 | §11.1 QKV；§11.3 Scoring；§11.5 Multi-Head；§11.7 Transformer | 从加权读取建立 QKV 概念，配合公式与代码学习 |
 | 图文：[Jay Alammar，The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)，2018 | Encoder–Decoder 总图与 Multi-Head 图解 | 配合本书 1.2 节理解模块关系 |
 | 视频：[3Blue1Brown，Attention in transformers, step-by-step](https://www.youtube.com/watch?v=eMlx5fFNoYc)，2024 | 06:32—10:40 Q/K；11:30—12:45 Mask；13:40—15:10 Value；20:30—22:30 Multi-Head | 配合本书第 2 章观察逐步计算；时间段依据作者英文字幕核对 |
 
@@ -62,7 +62,7 @@
 
 入门补充：[Hugging Face LLM Course — Tokenizers](https://huggingface.co/learn/llm-course/chapter2/4?fw=pt)（来源 ID：`huggingface-tokenizers`），用于理解文本切分、Token 编号与文本还原，对应 1.1 的输入处理流程。
 
-教学材料用于帮助理解，核心公式和方法归属仍以原始论文为据。D2L 当前核查了章节目录、§11.1 及 §10.7 的架构说明与 Figure 10.7.1；未将其全部实现标为已运行。视频没有作为独立实验依据。
+教学材料用于帮助理解，核心公式和方法归属仍以原始论文为据。D2L 已核查 §10.7 的架构说明、§11.1、§11.3 的缩放与 Mask、§11.5 的公式与张量布局，以及 §11.7.1—11.7.3 的结构说明。书中数值检查使用本仓库脚本，D2L 的模型训练代码未运行。
 
 ## 图表来源
 
@@ -79,8 +79,12 @@
 | 图 1-9 | 本书依据 [Kwon et al.，§2.2](https://arxiv.org/html/2309.06180v1) 绘制 | Prefill 与 Decode 的位置关系 |
 | 图 1-10 | 本书依据 [Vaswani et al.，Table 1](https://arxiv.org/html/1706.03762v7) 与 [Shazeer，§2.4](https://arxiv.org/html/1911.02150v1) 绘制 | 因果位置对与单步 KV 读取量，非实测性能 |
 | 图 1-11 | 本书依据 [Liu et al.，§3.1](https://arxiv.org/html/2307.03172v1) 绘制 | 多文档问答的位置对照设置，七份文档为教学设定，未描绘得分 |
-| 图 1-12 | 本书绘制，SVG 源文件随书保存 | 设计问题与章节关系 |
-| 图 2-1 | [Vaswani et al.，Figure 2 左图](https://arxiv.org/html/1706.03762v7) | Scaled Dot-Product Attention 的计算步骤 |
+| 图 1-12 | 本书综合绘制；计算参照 [Vaswani §3.2](https://arxiv.org/html/1706.03762v7)，各路线依据见 1.4 的对应论文；SVG 与生成脚本随书保存 | 方法作用于表示、匹配、输出、计算存储及状态更新的主要位置 |
+| 图 2-1 | [Zhang, Lipton, Li & Smola，D2L，Figure 11.7.1](https://d2l.ai/chapter_attention-mechanisms-and-transformers/transformer.html)，[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)；原 SVG 白底栅格化，图中内容未修改 | Attention 在 Encoder–Decoder 中的位置 |
+| 图 2-2 | [Vaswani et al.，Figure 2 左图](https://arxiv.org/html/1706.03762v7)；原图未修改 | Scaled Dot-Product Attention 的计算步骤 |
+| 图 2-3 | 本书依据 [Vaswani et al.，§3.2.3](https://arxiv.org/html/1706.03762v7) 绘制；网格表示允许读取的位置 | 三类 Attention 的信息来源与访问范围 |
+| 图 2-4 | [Zhang, Lipton, Li & Smola，D2L，Figure 11.5.1](https://d2l.ai/chapter_attention-mechanisms-and-transformers/multihead-attention.html)，[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)；原 SVG 白底栅格化，图中内容未修改 | 独立投影、并行汇总与 Output Projection |
+| 图 2-5 | 本书依据 [Kwon et al.，§2.2](https://arxiv.org/html/2309.06180v1) 绘制，复用图 1-9 | 完整 Prompt 与单个新 Query 的读取范围 |
 | 图 4-1 | [Ainslie et al.，Figure 2](https://arxiv.org/html/2305.13245v3) | MHA、GQA、MQA 的 Head 组织 |
 
 <p align="center">表 C-2　图表来源</p>
@@ -91,7 +95,7 @@ Vaswani et al. 原论文首页允许署名后的学术图表转载；GQA 原图�
 
 公开书页直接链接原论文和作者页面。本地原文放在仓库 `sources/` 中，由 `sources/INDEX.md` 提供真实文件链接；来源 ID 与上述条目一致。原文文件默认不随 Git 仓库发布。
 
-当前图示归档状态：正文使用的十一张本地图已随书保存；自回归 GIF、Scaled Dot-Product Attention 与 GQA 两张论文图通过远程地址引用。必备论文 PDF 与原论文图的归档缺口仍保留在来源索引中。
+当前图示归档状态：本地图及新增 D2L 原始 SVG 已随书保存；自回归 GIF、Scaled Dot-Product Attention 与 GQA 两张论文图通过远程地址引用。必备论文 PDF 与原论文图的归档缺口仍保留在来源索引中。
 
 在允许联网的环境中，可在仓库根目录执行 `python3 scripts/sources.py --download` 获取必备原文及引用图片，再执行 `python3 scripts/sources.py` 更新索引。选读资料使用 `--download --all`。工具说明和后续归档要求见仓库 `references/README.md`。
 

@@ -13,6 +13,11 @@
 ## 原理与结构改进
 
 * [第 2 章 Transformer Attention 的基本原理与计算过程](chapters/transformer-attention/README.md)
+  * [2.1 Transformer 中的 Attention 结构与计算流程](chapters/transformer-attention/structure-and-flow.md)
+  * [2.2 Query、Key、Value 与 Scaled Dot-Product Attention](chapters/transformer-attention/scaled-dot-product.md)
+  * [2.3 Self-Attention、Cross-Attention 与 Causal Attention](chapters/transformer-attention/attention-and-masks.md)
+  * [2.4 Multi-Head Attention 的结构与 Output Projection](chapters/transformer-attention/multi-head.md)
+  * [2.5 Training、Prefill 与 Decode 的计算差异](chapters/transformer-attention/training-prefill-decode.md)
 * [第 3 章 Position Encoding 的演进与 Context Extension](chapters/position-encoding/README.md)
 * [第 4 章 Key–Value 表示优化：MHA、MQA、GQA 与 MLA](chapters/kv-representations/README.md)
 * [第 5 章 Softmax Attention 的结构改进：Gated Attention](chapters/gated-attention/README.md)

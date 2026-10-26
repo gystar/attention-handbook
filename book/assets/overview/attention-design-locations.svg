@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="650" viewBox="0 0 1120 650">
+<rect width="1120" height="650" fill="white"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10Z" fill="#688091"/></marker></defs>
+<g font-family="Noto Sans CJK SC, sans-serif" fill="#243342">
+<text x="28" y="32" font-size="21">以 Softmax Attention 的匹配与汇总为参照</text>
+<rect x="28" y="195" width="330" height="90" rx="5" fill="#eef3f6" stroke="#c8d5dd"/>
+<text x="45" y="229" font-size="22">QKV 表示</text>
+<text x="45" y="261" font-size="18">生成用于匹配与汇总的向量</text>
+<rect x="395" y="195" width="330" height="90" rx="5" fill="#eef3f6" stroke="#c8d5dd"/>
+<text x="412" y="229" font-size="22">位置匹配与权重</text>
+<text x="412" y="261" font-size="18">计算分数、Mask 与 Softmax</text>
+<rect x="762" y="195" width="330" height="90" rx="5" fill="#eef3f6" stroke="#c8d5dd"/>
+<text x="779" y="229" font-size="22">Value 汇总与输出</text>
+<text x="779" y="261" font-size="18">按权重汇总，再组合 Head 输出</text>
+<path d="M360 240 L390 240" fill="none" stroke="#688091" stroke-width="1.5" marker-end="url(#a)"/>
+<path d="M729 240 L757 240" fill="none" stroke="#688091" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="28" y="60" width="330" height="105" rx="5" fill="#eaf3ee" stroke="#c8d5dd"/>
+<text x="45" y="88" font-size="21">KV 表示</text>
+<text x="45" y="117" font-size="19">MQA / GQA：共享 KV Head</text>
+<text x="45" y="146" font-size="19">MLA：压缩 KV 表示</text>
+<path d="M193 167 L193 189" fill="none" stroke="#688091" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="395" y="60" width="330" height="105" rx="5" fill="#eaf3ee" stroke="#c8d5dd"/>
+<text x="412" y="88" font-size="21">位置与连接</text>
+<text x="412" y="117" font-size="19">RoPE / ALiBi：引入位置信息</text>
+<text x="412" y="146" font-size="19">Sparse Attention：选择位置</text>
+<path d="M560 167 L560 189" fill="none" stroke="#688091" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="762" y="60" width="330" height="105" rx="5" fill="#eaf3ee" stroke="#c8d5dd"/>
+<text x="779" y="88" font-size="21">输出调节</text>
+<text x="779" y="117" font-size="19">Gated Attention</text>
+<text x="779" y="146" font-size="19">示例：对汇总结果施加 Gate</text>
+<path d="M927 167 L927 189" fill="none" stroke="#688091" stroke-width="1.5" marker-end="url(#a)"/>
+<text x="28" y="320" font-size="21">计算与存储实现</text>
+<rect x="28" y="338" width="514" height="87" rx="5" fill="#eef3f6" stroke="#c8d5dd"/>
+<text x="44" y="370" font-size="21">FlashAttention</text>
+<text x="44" y="401" font-size="19">分块执行 Attention，减少中间数据读写</text>
+<rect x="568" y="338" width="524" height="87" rx="5" fill="#eef3f6" stroke="#c8d5dd"/>
+<text x="584" y="370" font-size="21">PagedAttention</text>
+<text x="584" y="401" font-size="19">分页组织 KV Cache，按需分配与共享</text>
+<text x="28" y="465" font-size="21">另一种历史信息组织方式</text>
+<rect x="28" y="485" width="1064" height="100" rx="5" fill="#f2eff7" stroke="#c8d5dd"/>
+<text x="46" y="519" font-size="21">Linear Attention</text>
+<text x="275" y="519" font-size="21">旧状态 + 当前输入 → 更新状态 → 读取输出</text>
+<text x="46" y="555" font-size="19">适用的核形式下，用状态累积历史；Hybrid Architectures 可组合不同序列模块。</text>
+<text x="28" y="625" font-size="17">标注表示方法主要改变的对象；RoPE 作用于 Q/K，ALiBi 作用于匹配分数。</text>
+</g></svg>

@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="390" viewBox="0 0 1080 390">
+<rect width="1080" height="390" fill="white"/>
+<g font-family="DejaVu Sans, sans-serif" fill="#233647">
+<text x="170" y="30" font-size="18" text-anchor="middle">Encoder Self-Attention</text>
+<text x="170" y="58" font-size="13" text-anchor="middle">Same sequence</text>
+<text x="170" y="88" font-size="14" text-anchor="middle">Key position</text>
+<text x="42" y="129" font-size="16" text-anchor="middle">Q</text>
+<text x="102" y="111" font-size="14" text-anchor="middle">1</text>
+<text x="147" y="111" font-size="14" text-anchor="middle">2</text>
+<text x="192" y="111" font-size="14" text-anchor="middle">3</text>
+<text x="237" y="111" font-size="14" text-anchor="middle">4</text>
+<text x="64" y="149" font-size="14" text-anchor="middle">1</text>
+<rect x="80" y="120" width="43" height="43" rx="3" fill="#47778e" stroke="#d0d8de"/>
+<rect x="125" y="120" width="43" height="43" rx="3" fill="#47778e" stroke="#d0d8de"/>
+<rect x="170" y="120" width="43" height="43" rx="3" fill="#47778e" stroke="#d0d8de"/>
+<rect x="215" y="120" width="43" height="43" rx="3" fill="#47778e" stroke="#d0d8de"/>
+<text x="64" y="194" font-size="14" text-anchor="middle">2</text>
+<rect x="80" y="165" width="43" height="43" rx="3" fill="#47778e" stroke="#d0d8de"/>
+<rect x="125" y="165" width="43" height="43" rx="3" fill="#47778e" stroke="#d0d8de"/>
+<rect x="170" y="165" width="43" height="43" rx="3" fill="#47778e" stroke="#d0d8de"/>
+<rect x="215" y="165" width="43" height="43" rx="3" fill="#47778e" stroke="#d0d8de"/>
+<text x="64" y="239" font-size="14" text-anchor="middle">3</text>
+<rect x="80" y="210" width="43" height="43" rx="3" fill="#47778e" stroke="#d0d8de"/>
+<rect x="125" y="210" width="43" height="43" rx="3" fill="#47778e" stroke="#d0d8de"/>
+<rect x="170" y="210" width="43" height="43" rx="3" fill="#47778e" stroke="#d0d8de"/>
+<rect x="215" y="210" width="43" height="43" rx="3" fill="#47778e" stroke="#d0d8de"/>
+<text x="64" y="284" font-size="14" text-anchor="middle">4</text>
+<rect x="80" y="255" width="43" height="43" rx="3" fill="#47778e" stroke="#d0d8de"/>
+<rect x="125" y="255" width="43" height="43" rx="3" fill="#47778e" stroke="#d0d8de"/>
+<rect x="170" y="255" width="43" height="43" rx="3" fill="#47778e" stroke="#d0d8de"/>
+<rect x="215" y="255" width="43" height="43" rx="3" fill="#47778e" stroke="#d0d8de"/>
+<text x="520" y="30" font-size="18" text-anchor="middle">Causal Self-Attention</text>
+<text x="520" y="58" font-size="13" text-anchor="middle">Same sequence</text>
+<text x="520" y="88" font-size="14" text-anchor="middle">Key position</text>
+<text x="392" y="129" font-size="16" text-anchor="middle">Q</text>
+<text x="452" y="111" font-size="14" text-anchor="middle">1</text>
+<text x="497" y="111" font-size="14" text-anchor="middle">2</text>
+<text x="542" y="111" font-size="14" text-anchor="middle">3</text>
+<text x="587" y="111" font-size="14" text-anchor="middle">4</text>
+<text x="414" y="149" font-size="14" text-anchor="middle">1</text>
+<rect x="430" y="120" width="43" height="43" rx="3" fill="#47778e" stroke="#d0d8de"/>
+<rect x="475" y="120" width="43" height="43" rx="3" fill="#eef0f2" stroke="#d0d8de"/>
+<path d="M491 136 l11 11 m0 -11 l-11 11" stroke="#9aa5ad" stroke-width="1.4"/>
+<rect x="520" y="120" width="43" height="43" rx="3" fill="#eef0f2" stroke="#d0d8de"/>
+<path d="M536 136 l11 11 m0 -11 l-11 11" stroke="#9aa5ad" stroke-width="1.4"/>
+<rect x="565" y="120" width="43" height="43" rx="3" fill="#eef0f2" stroke="#d0d8de"/>
+<path d="M581 136 l11 11 m0 -11 l-11 11" stroke="#9aa5ad" stroke-width="1.4"/>
+<text x="414" y="194" font-size="14" text-anchor="middle">2</text>
+<rect x="430" y="165" width="43" height="43" rx="3" fill="#47778e" stroke="#d0d8de"/>
+<rect x="475" y="165" width="43" height="43" rx="3" fill="#47778e" stroke="#d0d8de"/>
+<rect x="520" y="165" width="43" height="43" rx="3" fill="#eef0f2" stroke="#d0d8de"/>
+<path d="M536 181 l11 11 m0 -11 l-11 11" stroke="#9aa5ad" stroke-width="1.4"/>
+<rect x="565" y="165" width="43" height="43" rx="3" fill="#eef0f2" stroke="#d0d8de"/>
+<path d="M581 181 l11 11 m0 -11 l-11 11" stroke="#9aa5ad" stroke-width="1.4"/>
+<text x="414" y="239" font-size="14" text-anchor="middle">3</text>
+<rect x="430" y="210" width="43" height="43" rx="3" fill="#47778e" stroke="#d0d8de"/>
+<rect x="475" y="210" width="43" height="43" rx="3" fill="#47778e" stroke="#d0d8de"/>
+<rect x="520" y="210" width="43" height="43" rx="3" fill="#47778e" stroke="#d0d8de"/>
+<rect x="565" y="210" width="43" height="43" rx="3" fill="#eef0f2" stroke="#d0d8de"/>
+<path d="M581 226 l11 11 m0 -11 l-11 11" stroke="#9aa5ad" stroke-width="1.4"/>
+<text x="414" y="284" font-size="14" text-anchor="middle">4</text>
+<rect x="430" y="255" width="43" height="43" rx="3" fill="#47778e" stroke="#d0d8de"/>
+<rect x="475" y="255" width="43" height="43" rx="3" fill="#47778e" stroke="#d0d8de"/>
+<rect x="520" y="255" width="43" height="43" rx="3" fill="#47778e" stroke="#d0d8de"/>
+<rect x="565" y="255" width="43" height="43" rx="3" fill="#47778e" stroke="#d0d8de"/>
+<text x="870" y="30" font-size="18" text-anchor="middle">Cross-Attention</text>
+<text x="870" y="58" font-size="13" text-anchor="middle">Query: target  /  Key: source</text>
+<text x="870" y="88" font-size="14" text-anchor="middle">Key position</text>
+<text x="742" y="129" font-size="16" text-anchor="middle">Q</text>
+<text x="802" y="111" font-size="14" text-anchor="middle">1</text>
+<text x="847" y="111" font-size="14" text-anchor="middle">2</text>
+<text x="892" y="111" font-size="14" text-anchor="middle">3</text>
+<text x="937" y="111" font-size="14" text-anchor="middle">4</text>
+<text x="764" y="149" font-size="14" text-anchor="middle">1</text>
+<rect x="780" y="120" width="43" height="43" rx="3" fill="#47778e" stroke="#d0d8de"/>
+<rect x="825" y="120" width="43" height="43" rx="3" fill="#47778e" stroke="#d0d8de"/>
+<rect x="870" y="120" width="43" height="43" rx="3" fill="#47778e" stroke="#d0d8de"/>
+<rect x="915" y="120" width="43" height="43" rx="3" fill="#47778e" stroke="#d0d8de"/>
+<text x="764" y="194" font-size="14" text-anchor="middle">2</text>
+<rect x="780" y="165" width="43" height="43" rx="3" fill="#47778e" stroke="#d0d8de"/>
+<rect x="825" y="165" width="43" height="43" rx="3" fill="#47778e" stroke="#d0d8de"/>
+<rect x="870" y="165" width="43" height="43" rx="3" fill="#47778e" stroke="#d0d8de"/>
+<rect x="915" y="165" width="43" height="43" rx="3" fill="#47778e" stroke="#d0d8de"/>
+<text x="540" y="337" font-size="15" text-anchor="middle">Rows: Query positions     Columns: Key positions</text>
+<rect x="350" y="356" width="18" height="18" fill="#47778e"/><rect x="557" y="356" width="18" height="18" fill="#eef0f2" stroke="#d0d8de"/>
+<text x="380" y="370" font-size="14" text-anchor="start">Allowed</text>
+<text x="587" y="370" font-size="14" text-anchor="start">Masked</text>
+</g></svg>

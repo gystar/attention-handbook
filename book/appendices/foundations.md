@@ -69,7 +69,7 @@ $$
 
 ## 容量计算的适用条件
 
-[1.3 LLM 中的 Attention 成本与长上下文需求](../chapters/overview/bottlenecks-and-context.md) 的 KV 容量是元素数乘以每元素字节数。单层的 Key 张量与 Value 张量各含 $$BNh_{kv}d_h$$ 个元素，乘以两份缓存、$$L$$ 层和 $$s$$ 字节，即得 $$2LBNh_{kv}d_hs$$。
+[第 4 章 Key–Value 表示优化：MHA、MQA、GQA 与 MLA](../chapters/kv-representations/README.md) 的 KV 容量是元素数乘以每元素字节数。单层的 Key 张量与 Value 张量各含 $$BNh_{kv}d_h$$ 个元素，乘以两份缓存、$$L$$ 层和 $$s$$ 字节，即得 $$2LBNh_{kv}d_hs$$。
 
 这要求各层配置一致、请求长度一致且保留全部位置。按层、按请求长度不同的情况需要分别求和；MLA、窗口缓存及量化元数据也需按实际表示单独计算。
 

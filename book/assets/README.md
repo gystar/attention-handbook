@@ -19,8 +19,12 @@
 | 1-9 | [prefill-decode.svg](overview/prefill-decode.svg) | 本书依据 [Kwon et al. §2.2](https://arxiv.org/html/2309.06180v1) 绘制；只展示位置关系，省略其余网络计算 |
 | 1-10 | [PNG](overview/context-costs.png)／[SVG](overview/context-costs.svg) | 本书绘制；单 Head、固定配置、缓存全部历史的计数示意 |
 | 1-11 | [PNG](overview/context-evidence-position.png)／[SVG](overview/context-evidence-position.svg) | 本书依据 Lost in the Middle §3.1 绘制实验设置；未描绘实验结果 |
-| 1-12 | [attention-landscape.svg](overview/attention-landscape.svg) | 本书原创，移至方法分类小节 |
-| 2-1 | [Transformer Figure 2 左图](https://arxiv.org/html/1706.03762v7/Figures/ModalNet-19.png) | Vaswani et al.，原图远程引用，待本地归档 |
+| 1-12 | [PNG](overview/attention-design-locations.png)／[SVG](overview/attention-design-locations.svg) | 本书综合绘制；生成脚本 scripts/render_attention_routes.py；方法依据见 1.4 对应引用 |
+| 2-1 | [PNG](transformer-attention/d2l-transformer.png)／[原始 SVG](transformer-attention/d2l-transformer.svg) | Zhang, Lipton, Li & Smola，D2L Figure 11.7.1；CC BY-SA 4.0，白底栅格化 |
+| 2-2 | [Transformer Figure 2 左图](https://arxiv.org/html/1706.03762v7/Figures/ModalNet-19.png) | Vaswani et al.，原图远程引用，待本地归档 |
+| 2-3 | [PNG](transformer-attention/attention-masks.png)／[SVG](transformer-attention/attention-masks.svg) | 本书依据 Vaswani §3.2.3 绘制；网格仅表示访问范围 |
+| 2-4 | [PNG](transformer-attention/d2l-multi-head-attention.png)／[原始 SVG](transformer-attention/d2l-multi-head-attention.svg) | Zhang, Lipton, Li & Smola，D2L Figure 11.5.1；CC BY-SA 4.0，白底栅格化 |
+| 2-5 | [prefill-decode.svg](overview/prefill-decode.svg) | 复用图 1-9，方法依据为 Kwon §2.2 |
 | 4-1 | [GQA Figure 2](https://arxiv.org/html/2305.13245v3/images/gmq_architecture.png) | Ainslie et al.，CC BY 4.0；原图远程引用，待本地归档 |
 
 Transformer 图表使用条件见原论文首页的转载声明。三张论文原图的归档目标路径和来源 ID 已记录在仓库 `references/catalog.yaml`，没有将尚不存在的本地文件作为链接。
@@ -45,3 +49,7 @@ Transformer 图表使用条件见原论文首页的转载声明。三张论文�
 图 1-10、1-11 的可编辑 SVG 与 PNG 由 `scripts/render_context_figures.py` 生成。图 1-8 通过作者 GitHub 仓库下载，源路径与校验值见 catalog.yaml。
 
 原 `autoregressive-steps.svg` 与 PNG 保留为历史素材，当前正文已由 Alammar 自回归动画替换。
+
+原章节导航图 `attention-landscape.svg` 保留为历史素材；当前图 1-12 按方法作用于计算的主要位置组织，不再列章号。
+
+第二章新增素材由 `scripts/render_transformer_attention.py` 生成或栅格化。D2L SVG 原文件保持不变；[源仓库许可](https://github.com/d2l-ai/d2l-en/blob/master/LICENSE)为 CC BY-SA 4.0，版本与文件校验值见 catalog.yaml。

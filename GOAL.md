@@ -8,7 +8,7 @@
 
 ## 本阶段目标
 
-搭建可用于 GitBook Git Sync 的 Markdown 内容框架，完成第 1 章“Attention 机制的演进与主要发展方向”，并执行逐章 Review、修正与复查。
+在现有 GitBook 框架和第 1 章基础上，撰写第 2 章“Transformer Attention 的基本原理与计算过程”，核对原始来源、完成图文与数值检查，并执行逐章 Review。
 
 第 1 章包含：
 
@@ -63,4 +63,6 @@
 
 本轮四节结构与内容迁移记录见[第一章结构重写 Review](reviews/overview-restructure.md)。
 
-下一步：按已确定的“Attention 机制的主要发展方向与技术路线”重写 1.4，后续会话继续。
+2026-10-20：1.4 按信息使用、历史成本、计算存储效率及方法组合重写；首图改为方法作用位置图。复查见 [1.4 技术路线叙述 Review](reviews/attention-routes.md)，归档与发布检查待完成。
+
+2026-10-26：第 2 章已写成概览及五节独立页面，采用原始 Transformer 论文、D2L、Shazeer 增量推理论文和 PagedAttention 论文解释计算。新增两张 D2L 原图、一张 Mask 示意图及数值核查脚本；正文技术核查、表达检查和本地结构检查结果见[第二章 Review](reviews/transformer-attention.md)。必备原文归档与 GitBook 页面预览待完成。
