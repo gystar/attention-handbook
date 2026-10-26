@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="300" viewBox="0 0 1000 300">
+<rect width="1000" height="300" fill="white"/>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#71808b"/></marker></defs>
+<g font-family="Noto Sans CJK SC,DejaVu Sans,sans-serif" fill="#253747">
+<text x="30" y="35" font-size="20" text-anchor="start" fill="#253747">Query 位置 i = 4；仅展示偏置 −m(i−j)</text>
+<text x="310" y="80" font-size="17" text-anchor="middle" fill="#253747">j = 0</text>
+<text x="445" y="80" font-size="17" text-anchor="middle" fill="#253747">j = 1</text>
+<text x="580" y="80" font-size="17" text-anchor="middle" fill="#253747">j = 2</text>
+<text x="715" y="80" font-size="17" text-anchor="middle" fill="#253747">j = 3</text>
+<text x="850" y="80" font-size="17" text-anchor="middle" fill="#253747">j = 4</text>
+<text x="30" y="142" font-size="18" text-anchor="start" fill="#253747">Head slope m = 0.25</text>
+<rect x="260" y="110" width="100" height="50" rx="4" fill="#e5eef3" stroke="#cbd6df"/>
+<text x="310" y="142" font-size="20" text-anchor="middle" fill="#253747">-1</text>
+<rect x="395" y="110" width="100" height="50" rx="4" fill="#e5eef3" stroke="#cbd6df"/>
+<text x="445" y="142" font-size="20" text-anchor="middle" fill="#253747">-0.75</text>
+<rect x="530" y="110" width="100" height="50" rx="4" fill="#e5eef3" stroke="#cbd6df"/>
+<text x="580" y="142" font-size="20" text-anchor="middle" fill="#253747">-0.5</text>
+<rect x="665" y="110" width="100" height="50" rx="4" fill="#e5eef3" stroke="#cbd6df"/>
+<text x="715" y="142" font-size="20" text-anchor="middle" fill="#253747">-0.25</text>
+<rect x="800" y="110" width="100" height="50" rx="4" fill="#ecf4ee" stroke="#cbd6df"/>
+<text x="850" y="142" font-size="20" text-anchor="middle" fill="#253747">0</text>
+<text x="30" y="232" font-size="18" text-anchor="start" fill="#253747">Head slope m = 0.5</text>
+<rect x="260" y="200" width="100" height="50" rx="4" fill="#e5eef3" stroke="#cbd6df"/>
+<text x="310" y="232" font-size="20" text-anchor="middle" fill="#253747">-2</text>
+<rect x="395" y="200" width="100" height="50" rx="4" fill="#e5eef3" stroke="#cbd6df"/>
+<text x="445" y="232" font-size="20" text-anchor="middle" fill="#253747">-1.5</text>
+<rect x="530" y="200" width="100" height="50" rx="4" fill="#e5eef3" stroke="#cbd6df"/>
+<text x="580" y="232" font-size="20" text-anchor="middle" fill="#253747">-1</text>
+<rect x="665" y="200" width="100" height="50" rx="4" fill="#e5eef3" stroke="#cbd6df"/>
+<text x="715" y="232" font-size="20" text-anchor="middle" fill="#253747">-0.5</text>
+<rect x="800" y="200" width="100" height="50" rx="4" fill="#ecf4ee" stroke="#cbd6df"/>
+<text x="850" y="232" font-size="20" text-anchor="middle" fill="#253747">0</text>
+</g></svg>

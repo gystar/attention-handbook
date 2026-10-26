@@ -25,6 +25,13 @@
 | 2-3 | [PNG](transformer-attention/attention-masks.png)／[SVG](transformer-attention/attention-masks.svg) | 本书依据 Vaswani §3.2.3 绘制；网格仅表示访问范围 |
 | 2-4 | [PNG](transformer-attention/d2l-multi-head-attention.png)／[原始 SVG](transformer-attention/d2l-multi-head-attention.svg) | Zhang, Lipton, Li & Smola，D2L Figure 11.5.1；CC BY-SA 4.0，白底栅格化 |
 | 2-5 | [prefill-decode.svg](overview/prefill-decode.svg) | 复用图 1-9，方法依据为 Kwon §2.2 |
+| 3-1 | [PNG](position-encoding/position-paths.png)／[SVG](position-encoding/position-paths.svg) | 本书依据公式绘制；生成脚本 scripts/render_position_encoding.py；方法与参数见附录 C |
+| 3-2 | [PNG](position-encoding/alammar-sinusoidal.png) | Jay Alammar 原图；CC BY-NC-SA 4.0；未修改 |
+| 3-3 | [PNG](position-encoding/rope-relative-rotation.png)／[SVG](position-encoding/rope-relative-rotation.svg) | 本书依据公式绘制；生成脚本 scripts/render_position_encoding.py；方法与参数见附录 C |
+| 3-4 | [PNG](position-encoding/alibi-bias.png)／[SVG](position-encoding/alibi-bias.svg) | 本书依据公式绘制；生成脚本 scripts/render_position_encoding.py；方法与参数见附录 C |
+| 3-5 | [PNG](position-encoding/position-interpolation.png)／[SVG](position-encoding/position-interpolation.svg) | 本书依据公式绘制；生成脚本 scripts/render_position_encoding.py；方法与参数见附录 C |
+| 3-6 | [PNG](position-encoding/frequency-scaling.png)／[SVG](position-encoding/frequency-scaling.svg) | 本书依据公式绘制；生成脚本 scripts/render_position_encoding.py；方法与参数见附录 C |
+| 3-7 | [PNG](overview/context-evidence-position.png)／[SVG](overview/context-evidence-position.svg) | 复用图 1-11；Lost in the Middle 证据位置实验设置 |
 | 4-1 | [GQA Figure 2](https://arxiv.org/html/2305.13245v3/images/gmq_architecture.png) | Ainslie et al.，CC BY 4.0；原图远程引用，待本地归档 |
 
 Transformer 图表使用条件见原论文首页的转载声明。三张论文原图的归档目标路径和来源 ID 已记录在仓库 `references/catalog.yaml`，没有将尚不存在的本地文件作为链接。

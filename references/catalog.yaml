@@ -54,7 +54,8 @@ sources:
   - Table 1
   - Figures 1–2
   - Figure reuse statement on page 1
-  checked_on: '2026-10-19'
+  - §3.5 positional encoding
+  checked_on: '2026-10-26'
 - id: child2019sparse
   kind: paper
   title: Generating Long Sequences with Sparse Transformers
@@ -117,13 +118,14 @@ sources:
   full_text_url: https://arxiv.org/html/2104.09864v5
   download_url: https://arxiv.org/pdf/2104.09864v5
   local_path: sources/papers/su2021rope-v5.pdf
-  required_local: false
+  required_local: true
   archive_status: pending
   archive_note: 终端网络连接受权限限制；尚未获得原始 PDF。
   sha256: null
   checked_sections:
   - §3.2
-  checked_on: '2026-10-19'
+  - §3.1–3.2; equations (11)–(16)
+  checked_on: '2026-10-26'
 - id: press2021alibi
   kind: paper
   title: 'Train Short, Test Long: Attention with Linear Biases Enables Input Length Extrapolation'
@@ -134,13 +136,14 @@ sources:
   full_text_url: https://arxiv.org/html/2108.12409v2
   download_url: https://arxiv.org/pdf/2108.12409v2
   local_path: sources/papers/press2021alibi-v2.pdf
-  required_local: false
+  required_local: true
   archive_status: pending
   archive_note: 终端网络连接受权限限制；尚未获得原始 PDF。
   sha256: null
   checked_sections:
   - §3
-  checked_on: '2026-10-19'
+  - §3 and footnotes 9–10; Appendix B.1 evaluation protocol
+  checked_on: '2026-10-26'
 - id: dao2022flashattention
   kind: paper
   title: 'FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness'
@@ -188,13 +191,14 @@ sources:
   full_text_url: https://arxiv.org/html/2306.15595v2
   download_url: https://arxiv.org/pdf/2306.15595v2
   local_path: sources/papers/chen2023pi-v2.pdf
-  required_local: false
+  required_local: true
   archive_status: pending
   archive_note: 终端网络连接受权限限制；尚未获得原始 PDF。
   sha256: null
   checked_sections:
   - §2.3
-  checked_on: '2026-10-19'
+  - §2.1–2.3; §3.1–3.4
+  checked_on: '2026-10-26'
 - id: liu2023lostmiddle
   kind: paper
   title: 'Lost in the Middle: How Language Models Use Long Contexts'
@@ -205,13 +209,14 @@ sources:
   full_text_url: https://arxiv.org/html/2307.03172v1
   download_url: https://arxiv.org/pdf/2307.03172v1
   local_path: sources/papers/liu2023lostmiddle-v1.pdf
-  required_local: false
+  required_local: true
   archive_status: pending
   archive_note: 终端网络连接受权限限制；尚未获得原始 PDF。
   sha256: null
   checked_sections:
   - §3.1–3.3
-  checked_on: '2026-10-19'
+  - §3.1–3.3; §4 task setup
+  checked_on: '2026-10-26'
 - id: kwon2023pagedattention
   kind: paper
   title: Efficient Memory Management for Large Language Model Serving with PagedAttention
@@ -368,7 +373,8 @@ sources:
   archive_status: link_only
   checked_sections:
   - Encoder–Decoder architecture and Multi-Head Attention
-  checked_on: '2026-10-19'
+  - Representing The Order of The Sequence Using Positional Encoding; July 2020 update
+  checked_on: '2026-10-26'
 - id: d2l-attention
   kind: book
   title: Dive into Deep Learning — Attention Mechanisms and Transformers
@@ -384,6 +390,7 @@ sources:
   - §11.3.1–11.3.3 scaling, masked_softmax and dropout implementation
   - §11.5.1–11.5.2 equations, Figure 11.5.1 and tensor layout
   - §11.7.1–11.7.3 architecture, FFN and Add & Norm; Figure 11.7.1
+  - §11.6.3 and §11.6.3.2 sinusoidal encoding and shift identity
   checked_on: '2026-10-26'
   additional_urls:
   - https://d2l.ai/chapter_attention-mechanisms-and-transformers/attention-scoring-functions.html
@@ -469,6 +476,108 @@ sources:
   - Let’s Pay Attention Now
   - 页尾许可
   checked_on: '2026-10-19'
+- id: shaw2018relative
+  kind: paper
+  title: Self-Attention with Relative Position Representations
+  authors: Shaw, Uszkoreit & Vaswani
+  first_public_year: 2018
+  version: NAACL-HLT 2018, N18-2074
+  url: https://aclanthology.org/N18-2074/
+  full_text_url: https://aclanthology.org/N18-2074.pdf
+  download_url: https://aclanthology.org/N18-2074.pdf
+  local_path: sources/papers/shaw2018relative-naacl2018.pdf
+  required_local: true
+  archive_status: pending
+  archive_note: 2026-10-26：原文通过网页工具核查；终端代理连接失败，PDF 尚未归档。
+  sha256: null
+  checked_sections:
+  - §3.1–3.2, equations (3)–(4), clipping rule
+  checked_on: '2026-10-26'
+- id: raffel2019t5
+  kind: paper
+  title: Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer
+  authors: Raffel et al.
+  first_public_year: 2019
+  version: 1910.10683v4
+  url: https://arxiv.org/abs/1910.10683v4
+  full_text_url: https://arxiv.org/html/1910.10683v4
+  download_url: https://arxiv.org/pdf/1910.10683v4
+  local_path: sources/papers/raffel2019t5-v4.pdf
+  required_local: true
+  archive_status: pending
+  archive_note: 2026-10-26：原文通过网页工具核查；终端代理连接失败，PDF 尚未归档。
+  sha256: null
+  checked_sections:
+  - §2.1 relative scalar bias and parameter sharing
+  checked_on: '2026-10-26'
+- id: peng2023yarn
+  kind: paper
+  title: 'YaRN: Efficient Context Window Extension of Large Language Models'
+  authors: Peng, Quesnelle, Fan & Shippole
+  first_public_year: 2023
+  version: 2309.00071v2
+  url: https://arxiv.org/abs/2309.00071v2
+  full_text_url: https://arxiv.org/html/2309.00071v2
+  download_url: https://arxiv.org/pdf/2309.00071v2
+  local_path: sources/papers/peng2023yarn-v2.pdf
+  required_local: true
+  archive_status: pending
+  archive_note: 2026-10-26：原文通过网页工具核查；终端代理连接失败，PDF 尚未归档。
+  sha256: null
+  checked_sections:
+  - §2.2–2.3; §3.1–3.4; equations (10)–(22)
+  checked_on: '2026-10-26'
+- id: ding2024longrope
+  kind: paper
+  title: 'LongRoPE: Extending LLM Context Window Beyond 2 Million Tokens'
+  authors: Ding et al.
+  first_public_year: 2024
+  version: 2402.13753v1
+  url: https://arxiv.org/abs/2402.13753v1
+  full_text_url: https://arxiv.org/html/2402.13753v1
+  download_url: https://arxiv.org/pdf/2402.13753v1
+  local_path: sources/papers/ding2024longrope-v1.pdf
+  required_local: true
+  archive_status: pending
+  archive_note: 2026-10-26：原文通过网页工具核查；终端代理连接失败，PDF 尚未归档。
+  sha256: null
+  checked_sections:
+  - §3.1–3.3 search and progressive extension; §4.3 short-context adjustment
+  checked_on: '2026-10-26'
+- id: hsieh2024ruler
+  kind: paper
+  title: 'RULER: What’s the Real Context Size of Your Long-Context Language Models?'
+  authors: Hsieh et al.
+  first_public_year: 2024
+  version: 2404.06654v3
+  url: https://arxiv.org/abs/2404.06654v3
+  full_text_url: https://arxiv.org/html/2404.06654v3
+  download_url: https://arxiv.org/pdf/2404.06654v3
+  local_path: sources/papers/hsieh2024ruler-v3.pdf
+  required_local: true
+  archive_status: pending
+  archive_note: 2026-10-26：原文通过网页工具核查；终端代理连接失败，PDF 尚未归档。
+  sha256: null
+  checked_sections:
+  - §3 task definitions; §4 evaluation configuration and effective context size
+  checked_on: '2026-10-26'
+- id: bai2023longbench
+  kind: paper
+  title: 'LongBench: A Bilingual, Multitask Benchmark for Long Context Understanding'
+  authors: Bai et al.
+  first_public_year: 2023
+  version: 2308.14508v2
+  url: https://arxiv.org/abs/2308.14508v2
+  full_text_url: https://arxiv.org/html/2308.14508v2
+  download_url: https://arxiv.org/pdf/2308.14508v2
+  local_path: sources/papers/bai2023longbench-v2.pdf
+  required_local: true
+  archive_status: pending
+  archive_note: 2026-10-26：原文通过网页工具核查；终端代理连接失败，PDF 尚未归档。
+  sha256: null
+  checked_sections:
+  - §3.1–3.2; Table 1 task categories and length units
+  checked_on: '2026-10-26'
 assets:
 - id: transformer-architecture
   source_id: vaswani2017attention
@@ -827,3 +936,125 @@ assets:
   creation_mode: original_diagram
   generator_path: scripts/render_transformer_attention.py
   attribution: 本书绘制；展示有效位置，不表示实际权重。
+- id: position-paths-svg
+  source_id: vaswani2017attention
+  locator: §3.5; T5 §2.1, RoFormer §3.2, ALiBi §3
+  local_path: book/assets/position-encoding/position-paths.svg
+  archive_status: downloaded
+  creation_mode: original_diagram
+  generator_path: scripts/render_position_encoding.py
+  sha256: 248d0325e07be297e6a94420a5068ef12d09d148f8b651d286e22574eddf6483
+  bytes: 3076
+  attribution: 本书依据公式绘制的教学示意；非模型实验结果。
+  display_mode: local_file
+- id: position-paths-png
+  source_id: vaswani2017attention
+  locator: §3.5; T5 §2.1, RoFormer §3.2, ALiBi §3
+  local_path: book/assets/position-encoding/position-paths.png
+  archive_status: downloaded
+  creation_mode: original_diagram
+  generator_path: scripts/render_position_encoding.py
+  sha256: d5d378c52d89cf8b56c4ab091b75bc29c1961774714aab26f96a35677b3ddaa3
+  bytes: 52774
+  attribution: 本书依据公式绘制的教学示意；非模型实验结果。
+  display_mode: local_file
+- id: rope-relative-rotation-svg
+  source_id: su2021rope
+  locator: §3.2; fixed q=k=(1,0), theta=pi/6
+  local_path: book/assets/position-encoding/rope-relative-rotation.svg
+  archive_status: downloaded
+  creation_mode: original_diagram
+  generator_path: scripts/render_position_encoding.py
+  sha256: 8aa2695d460f73fecf2df5a5ab2f4844b06f6e6d5f5bc31724279bd4ddbe31e0
+  bytes: 2380
+  attribution: 本书依据公式绘制的教学示意；非模型实验结果。
+  display_mode: local_file
+- id: rope-relative-rotation-png
+  source_id: su2021rope
+  locator: §3.2; fixed q=k=(1,0), theta=pi/6
+  local_path: book/assets/position-encoding/rope-relative-rotation.png
+  archive_status: downloaded
+  creation_mode: original_diagram
+  generator_path: scripts/render_position_encoding.py
+  sha256: bc4386406cca16e5268a58599394364a2c42718981013e2868d464b8d9095ed1
+  bytes: 35501
+  attribution: 本书依据公式绘制的教学示意；非模型实验结果。
+  display_mode: local_file
+- id: alibi-bias-svg
+  source_id: press2021alibi
+  locator: §3; i=4, slopes 0.25 and 0.5
+  local_path: book/assets/position-encoding/alibi-bias.svg
+  archive_status: downloaded
+  creation_mode: original_diagram
+  generator_path: scripts/render_position_encoding.py
+  sha256: 07ae98b5023b458ac926af8a29d66a6005db896fa70fa7fe6a62a32010fa9d21
+  bytes: 2846
+  attribution: 本书依据公式绘制的教学示意；非模型实验结果。
+  display_mode: local_file
+- id: alibi-bias-png
+  source_id: press2021alibi
+  locator: §3; i=4, slopes 0.25 and 0.5
+  local_path: book/assets/position-encoding/alibi-bias.png
+  archive_status: downloaded
+  creation_mode: original_diagram
+  generator_path: scripts/render_position_encoding.py
+  sha256: eaf471677db61b0197f5fb12b460733cd99c615dba85199e29b9b35c06951e29
+  bytes: 24916
+  attribution: 本书依据公式绘制的教学示意；非模型实验结果。
+  display_mode: local_file
+- id: position-interpolation-svg
+  source_id: chen2023pi
+  locator: §2.3 equation (4); L=4, Lprime=8
+  local_path: book/assets/position-encoding/position-interpolation.svg
+  archive_status: downloaded
+  creation_mode: original_diagram
+  generator_path: scripts/render_position_encoding.py
+  sha256: f5e6231a471ba5dbe0a53601092cc743cbf057a5384fff96819ab539680806f5
+  bytes: 4685
+  attribution: 本书依据公式绘制的教学示意；非模型实验结果。
+  display_mode: local_file
+- id: position-interpolation-png
+  source_id: chen2023pi
+  locator: §2.3 equation (4); L=4, Lprime=8
+  local_path: book/assets/position-encoding/position-interpolation.png
+  archive_status: downloaded
+  creation_mode: original_diagram
+  generator_path: scripts/render_position_encoding.py
+  sha256: 492de3f420bc6a355a58fe658af9de9b1e7d1bd8bb04f13583b284233c9732c8
+  bytes: 30953
+  attribution: 本书依据公式绘制的教学示意；非模型实验结果。
+  display_mode: local_file
+- id: frequency-scaling-svg
+  source_id: peng2023yarn
+  locator: v2 §3.1–3.2; d=64, L=2048, rho=4, b=10000, alpha=1, beta=32
+  local_path: book/assets/position-encoding/frequency-scaling.svg
+  archive_status: downloaded
+  creation_mode: original_diagram
+  generator_path: scripts/render_position_encoding.py
+  sha256: adf58ef191b8284eb2e712b593b28f51a3e479ebdcb1145bfc10911dcf9584ce
+  bytes: 6338
+  attribution: 本书依据公式绘制的教学示意；非模型实验结果。
+  display_mode: local_file
+- id: frequency-scaling-png
+  source_id: peng2023yarn
+  locator: v2 §3.1–3.2; d=64, L=2048, rho=4, b=10000, alpha=1, beta=32
+  local_path: book/assets/position-encoding/frequency-scaling.png
+  archive_status: downloaded
+  creation_mode: original_diagram
+  generator_path: scripts/render_position_encoding.py
+  sha256: b474ebfc12ada6cadd351480b96843e64e1f29d5a22f21e95129b1469bdea0fd
+  bytes: 50541
+  attribution: 本书依据公式绘制的教学示意；非模型实验结果。
+  display_mode: local_file
+- id: alammar-sinusoidal
+  source_id: alammar2018illustrated
+  locator: Representing The Order of The Sequence Using Positional Encoding; July 2020 update
+  download_url: https://raw.githubusercontent.com/jalammar/jalammar.github.io/master/images/t/attention-is-all-you-need-positional-encoding.png
+  local_path: book/assets/position-encoding/alammar-sinusoidal.png
+  archive_status: downloaded
+  git_blob: 9e20bc9509801d48557a4f91469bffe82048d532
+  sha256: 4a24227e6e620705f8e8d1fa1aa2e4b461edf1f2152a9169eae664f14a740d88
+  bytes: 13305
+  attribution: Jay Alammar, The Illustrated Transformer; CC BY-NC-SA 4.0；原图未修改。
+  license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+  display_mode: local_file

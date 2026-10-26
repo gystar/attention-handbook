@@ -1,16 +1,16 @@
 # 附录 C 参考文献、教学资源与本地源文件索引
 
-本页收录总览及已迁入专题章节的基础内容所使用的来源。论文年份按首次公开年份填写；引用依据为列出的具体版本。核查位置记录于各条目，范围限于相关正文、公式和图表。
+本页收录已写章节所使用的来源。论文年份按首次公开年份填写；引用依据为列出的具体版本。核查位置记录于各条目，范围限于相关正文、公式和图表。
 
 ## 必备原文
 
-这些论文支撑首章的基础机制与核心比较，列为本阶段必备的本地归档资料。
+这些论文支撑已写章节的基础机制与核心比较，列为本阶段必备的本地归档资料。
 
 - **Sutskever, Vinyals & Le，2014**：[Sequence to Sequence Learning with Neural Networks](https://arxiv.org/abs/1409.3215v3)。使用版本：1409.3215v3；核查位置：§2。[全文](https://arxiv.org/html/1409.3215v3) · [PDF](https://arxiv.org/pdf/1409.3215v3)。来源 ID：`sutskever2014seq2seq`。
 
 - **Bahdanau, Cho & Bengio，2014**：[Neural Machine Translation by Jointly Learning to Align and Translate](https://arxiv.org/abs/1409.0473v7)。使用版本：1409.0473v7；核查位置：§3.1, equations (4)–(6)。[全文](https://arxiv.org/html/1409.0473v7) · [PDF](https://arxiv.org/pdf/1409.0473v7)。来源 ID：`bahdanau2014attention`。
 
-- **Vaswani et al.，2017**：[Attention Is All You Need](https://arxiv.org/abs/1706.03762v7)。使用版本：1706.03762v7；核查位置：§3.1–3.2.3；Table 1；Figures 1–2；Figure reuse statement on page 1。[全文](https://arxiv.org/html/1706.03762v7) · [PDF](https://arxiv.org/pdf/1706.03762v7)。来源 ID：`vaswani2017attention`。
+- **Vaswani et al.，2017**：[Attention Is All You Need](https://arxiv.org/abs/1706.03762v7)。使用版本：1706.03762v7；核查位置：§3.1–3.2.3、§3.5；Table 1；Figures 1–2；Figure reuse statement on page 1。[全文](https://arxiv.org/html/1706.03762v7) · [PDF](https://arxiv.org/pdf/1706.03762v7)。来源 ID：`vaswani2017attention`。
 
 - **Noam Shazeer，2019**：[Fast Transformer Decoding: One Write-Head is All You Need](https://arxiv.org/abs/1911.02150v1)。使用版本：1911.02150v1；核查位置：§2.1–2.4.1；§3。[全文](https://arxiv.org/html/1911.02150v1) · [PDF](https://arxiv.org/pdf/1911.02150v1)。来源 ID：`shazeer2019mqa`。
 
@@ -24,19 +24,32 @@
 
 - **DeepSeek-AI，2024**：[DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model](https://arxiv.org/abs/2405.04434v5)。使用版本：2405.04434v5；核查位置：§2.1.1–2.1.4。[全文](https://arxiv.org/html/2405.04434v5) · [PDF](https://arxiv.org/pdf/2405.04434v5)。来源 ID：`deepseek2024mla`。
 
+- **Su et al.，2021**：[RoFormer: Enhanced Transformer with Rotary Position Embedding](https://arxiv.org/abs/2104.09864v5)。使用版本：2104.09864v5；核查位置：§3.2。[全文](https://arxiv.org/html/2104.09864v5) · [PDF](https://arxiv.org/pdf/2104.09864v5)。来源 ID：`su2021rope`。
+- **Press, Smith & Lewis，2021**：[Train Short, Test Long: Attention with Linear Biases Enables Input Length Extrapolation](https://arxiv.org/abs/2108.12409v2)。使用版本：2108.12409v2；核查位置：§3。[全文](https://arxiv.org/html/2108.12409v2) · [PDF](https://arxiv.org/pdf/2108.12409v2)。来源 ID：`press2021alibi`。
+- **Chen et al.，2023**：[Extending Context Window of Large Language Models via Position Interpolation](https://arxiv.org/abs/2306.15595v2)。使用版本：2306.15595v2；核查位置：§2.3。[全文](https://arxiv.org/html/2306.15595v2) · [PDF](https://arxiv.org/pdf/2306.15595v2)。来源 ID：`chen2023pi`。
+- **Liu et al.，2023**：[Lost in the Middle: How Language Models Use Long Contexts](https://arxiv.org/abs/2307.03172v1)。使用版本：2307.03172v1；核查位置：§3.1–3.3。[全文](https://arxiv.org/html/2307.03172v1) · [PDF](https://arxiv.org/pdf/2307.03172v1)。来源 ID：`liu2023lostmiddle`。
+
+- **Shaw, Uszkoreit & Vaswani，2018**：[Self-Attention with Relative Position Representations](https://aclanthology.org/N18-2074/)。使用版本：NAACL-HLT 2018, N18-2074；核查位置：§3.1–3.2, equations (3)–(4), clipping rule。[全文](https://aclanthology.org/N18-2074.pdf) · [PDF](https://aclanthology.org/N18-2074.pdf)。来源 ID：`shaw2018relative`。
+
+- **Raffel et al.，2019**：[Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer](https://arxiv.org/abs/1910.10683v4)。使用版本：1910.10683v4；核查位置：§2.1 relative scalar bias and parameter sharing。[全文](https://arxiv.org/html/1910.10683v4) · [PDF](https://arxiv.org/pdf/1910.10683v4)。来源 ID：`raffel2019t5`。
+
+- **Peng, Quesnelle, Fan & Shippole，2023**：[YaRN: Efficient Context Window Extension of Large Language Models](https://arxiv.org/abs/2309.00071v2)。使用版本：2309.00071v2；核查位置：§2.2–2.3; §3.1–3.4; equations (10)–(22)。[全文](https://arxiv.org/html/2309.00071v2) · [PDF](https://arxiv.org/pdf/2309.00071v2)。来源 ID：`peng2023yarn`。
+
+- **Ding et al.，2024**：[LongRoPE: Extending LLM Context Window Beyond 2 Million Tokens](https://arxiv.org/abs/2402.13753v1)。使用版本：2402.13753v1；核查位置：§3.1–3.3 search and progressive extension; §4.3 short-context adjustment。[全文](https://arxiv.org/html/2402.13753v1) · [PDF](https://arxiv.org/pdf/2402.13753v1)。来源 ID：`ding2024longrope`。
+
+- **Hsieh et al.，2024**：[RULER: What’s the Real Context Size of Your Long-Context Language Models?](https://arxiv.org/abs/2404.06654v3)。使用版本：2404.06654v3；核查位置：§3 task definitions; §4 evaluation configuration and effective context size。[全文](https://arxiv.org/html/2404.06654v3) · [PDF](https://arxiv.org/pdf/2404.06654v3)。来源 ID：`hsieh2024ruler`。
+
+- **Bai et al.，2023**：[LongBench: A Bilingual, Multitask Benchmark for Long Context Understanding](https://arxiv.org/abs/2308.14508v2)。使用版本：2308.14508v2；核查位置：§3.1–3.2; Table 1 task categories and length units。[全文](https://arxiv.org/html/2308.14508v2) · [PDF](https://arxiv.org/pdf/2308.14508v2)。来源 ID：`bai2023longbench`。
+
 ## 选读原文
 
 用于查证其他技术路线、组合实例与比较条件；相关方法将在对应专题章展开。
 
 - **Child et al.，2019**：[Generating Long Sequences with Sparse Transformers](https://arxiv.org/abs/1904.10509v1)。使用版本：1904.10509v1；核查位置：§4。[全文](https://arxiv.org/html/1904.10509v1) · [PDF](https://arxiv.org/pdf/1904.10509v1)。来源 ID：`child2019sparse`。
 
-- **Su et al.，2021**：[RoFormer: Enhanced Transformer with Rotary Position Embedding](https://arxiv.org/abs/2104.09864v5)。使用版本：2104.09864v5；核查位置：§3.2。[全文](https://arxiv.org/html/2104.09864v5) · [PDF](https://arxiv.org/pdf/2104.09864v5)。来源 ID：`su2021rope`。
 
-- **Press, Smith & Lewis，2021**：[Train Short, Test Long: Attention with Linear Biases Enables Input Length Extrapolation](https://arxiv.org/abs/2108.12409v2)。使用版本：2108.12409v2；核查位置：§3。[全文](https://arxiv.org/html/2108.12409v2) · [PDF](https://arxiv.org/pdf/2108.12409v2)。来源 ID：`press2021alibi`。
 
-- **Chen et al.，2023**：[Extending Context Window of Large Language Models via Position Interpolation](https://arxiv.org/abs/2306.15595v2)。使用版本：2306.15595v2；核查位置：§2.3。[全文](https://arxiv.org/html/2306.15595v2) · [PDF](https://arxiv.org/pdf/2306.15595v2)。来源 ID：`chen2023pi`。
 
-- **Liu et al.，2023**：[Lost in the Middle: How Language Models Use Long Contexts](https://arxiv.org/abs/2307.03172v1)。使用版本：2307.03172v1；核查位置：§3.1–3.3。[全文](https://arxiv.org/html/2307.03172v1) · [PDF](https://arxiv.org/pdf/2307.03172v1)。来源 ID：`liu2023lostmiddle`。
 
 - **Jiang et al.，2023**：[Mistral 7B](https://arxiv.org/abs/2310.06825v1)。使用版本：2310.06825v1；核查位置：§2, Table 1。[全文](https://arxiv.org/html/2310.06825v1) · [PDF](https://arxiv.org/pdf/2310.06825v1)。来源 ID：`jiang2023mistral`。
 
@@ -52,8 +65,8 @@
 
 | 形式与来源 | 推荐阅读或观看位置 | 用途 |
 | --- | --- | --- |
-| 书籍：[Zhang、Lipton、Li、Smola，Dive into Deep Learning](https://d2l.ai/chapter_attention-mechanisms-and-transformers/index.html)，在线版 1.0.3 | §11.1 QKV；§11.3 Scoring；§11.5 Multi-Head；§11.7 Transformer | 从加权读取建立 QKV 概念，配合公式与代码学习 |
-| 图文：[Jay Alammar，The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)，2018 | Encoder–Decoder 总图与 Multi-Head 图解 | 配合本书 1.2 节理解模块关系 |
+| 书籍：[Zhang、Lipton、Li、Smola，Dive into Deep Learning](https://d2l.ai/chapter_attention-mechanisms-and-transformers/index.html)，在线版 1.0.3 | §11.1 QKV；§11.3 Scoring；§11.5 Multi-Head；§11.6.3 位置编码；§11.7 Transformer | 从加权读取建立 QKV 概念，配合公式与代码学习 |
+| 图文：[Jay Alammar，The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)，2018 | Encoder–Decoder、Multi-Head 与 Position Encoding 图解 | 配合本书 1.2、2.4、3.2 理解结构与计算 |
 | 视频：[3Blue1Brown，Attention in transformers, step-by-step](https://www.youtube.com/watch?v=eMlx5fFNoYc)，2024 | 06:32—10:40 Q/K；11:30—12:45 Mask；13:40—15:10 Value；20:30—22:30 Multi-Head | 配合本书第 2 章观察逐步计算；时间段依据作者英文字幕核对 |
 
 <p align="center">表 C-1　教学资源</p>
@@ -62,7 +75,7 @@
 
 入门补充：[Hugging Face LLM Course — Tokenizers](https://huggingface.co/learn/llm-course/chapter2/4?fw=pt)（来源 ID：`huggingface-tokenizers`），用于理解文本切分、Token 编号与文本还原，对应 1.1 的输入处理流程。
 
-教学材料用于帮助理解，核心公式和方法归属仍以原始论文为据。D2L 已核查 §10.7 的架构说明、§11.1、§11.3 的缩放与 Mask、§11.5 的公式与张量布局，以及 §11.7.1—11.7.3 的结构说明。书中数值检查使用本仓库脚本，D2L 的模型训练代码未运行。
+教学材料用于帮助理解，核心公式和方法归属仍以原始论文为据。D2L 已核查 §10.7 的架构说明、§11.1、§11.3 的缩放与 Mask、§11.5 的公式与张量布局，§11.6.3 的位置编码，以及 §11.7.1—11.7.3 的结构说明。书中数值检查使用本仓库脚本，D2L 的模型训练代码未运行。
 
 ## 图表来源
 
@@ -85,6 +98,13 @@
 | 图 2-3 | 本书依据 [Vaswani et al.，§3.2.3](https://arxiv.org/html/1706.03762v7) 绘制；网格表示允许读取的位置 | 三类 Attention 的信息来源与访问范围 |
 | 图 2-4 | [Zhang, Lipton, Li & Smola，D2L，Figure 11.5.1](https://d2l.ai/chapter_attention-mechanisms-and-transformers/multihead-attention.html)，[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)；原 SVG 白底栅格化，图中内容未修改 | 独立投影、并行汇总与 Output Projection |
 | 图 2-5 | 本书依据 [Kwon et al.，§2.2](https://arxiv.org/html/2309.06180v1) 绘制，复用图 1-9 | 完整 Prompt 与单个新 Query 的读取范围 |
+| 图 3-1 | 本书依据 [Vaswani §3.5](https://arxiv.org/html/1706.03762v7)、[RoFormer §3.2](https://arxiv.org/html/2104.09864v5)、[T5 §2.1](https://arxiv.org/html/1910.10683v4) 与 [ALiBi §3](https://arxiv.org/html/2108.12409v2) 绘制 | 位置项进入 Attention 的主要位置 |
+| 图 3-2 | [Jay Alammar，The Illustrated Transformer，Position Encoding 段落的 July 2020 Update](https://jalammar.github.io/illustrated-transformer/#representing-the-order-of-the-sequence-using-positional-encoding)，[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)；原图未修改 | sin/cos 交错排列的编码热图 |
+| 图 3-3 | 本书依据 [Su et al.，§3.2](https://arxiv.org/html/2104.09864v5) 绘制；单位内容向量、角频率 π/6 为教学设定 | 共同平移与相对旋转 |
+| 图 3-4 | 本书依据 [Press et al.，§3](https://arxiv.org/html/2108.12409v2) 绘制；Query 位置 4，斜率 0.25 与 0.5 | ALiBi 的分数偏置，非 Attention 权重 |
+| 图 3-5 | 本书依据 [Chen et al.，§2.3，式 (4)](https://arxiv.org/html/2306.15595v2) 绘制；长度 4 扩展到 8 为教学设定 | PI 的坐标压缩 |
+| 图 3-6 | 本书依据 [Peng et al.，v2，§3.1—3.2](https://arxiv.org/html/2309.00071v2) 的公式绘制；d=64、L=2048、ρ=4、b=10000、α=1、β=32 | 各维度频率比值；未包含 YaRN 温度，无模型得分 |
+| 图 3-7 | 本书依据 [Liu et al.，§3.1](https://arxiv.org/html/2307.03172v1) 绘制，复用图 1-11；七份文档为教学设定 | 证据位置对照，非实验得分 |
 | 图 4-1 | [Ainslie et al.，Figure 2](https://arxiv.org/html/2305.13245v3) | MHA、GQA、MQA 的 Head 组织 |
 
 <p align="center">表 C-2　图表来源</p>

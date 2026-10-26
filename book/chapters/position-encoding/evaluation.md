@@ -1,0 +1,68 @@
+# 3.5 长度泛化与长上下文评估
+
+位置编码能够为长序列计算数值，模型也可能成功接收这些输入。但要判断上下文扩展是否有效，还需要检查预测质量、远处信息的利用情况，以及原长度范围内的能力是否保留。
+
+## 训练长度与有效上下文
+
+**Length Generalization** 指模型在超出相关训练长度的输入上保持任务能力。评估时应分别记录预训练长度、扩展训练长度与测试长度：超过原始预训练长度，但仍在扩展训练范围内，与超过所有训练长度是不同条件。
+
+**有效上下文长度**还依赖任务、指标与通过标准。例如 RULER 在其具体评估中设定得分阈值，再报告达到阈值的最大测试长度；这一数值必须连同任务集合和阈值解释。[Hsieh et al.，§4，Effective Context Size](https://arxiv.org/html/2404.06654v3)
+
+| 检查层次 | 需要观察的结果 | 对应问题 |
+| --- | --- | --- |
+| 输入与执行 | 实际输入 Token 数、是否截断、是否运行成功 | 系统接收了多少内容 |
+| 语言建模 | 相同条件下的 loss / perplexity | 长输入下预测是否稳定 |
+| 信息利用 | 检索、推理、汇总等任务得分 | 模型是否使用了需要的内容 |
+| 短上下文保留 | 原长度范围内的对照结果 | 扩展是否影响原有能力 |
+
+<p align="center">表 3-6　上下文扩展的评估层次</p>
+
+## 长度、证据位置与任务难度
+
+只把文本加长，无法分辨错误来自距离、证据位置还是干扰内容。Lost in the Middle 固定问题与相关文档，改变文档位置及干扰文档数量，以观察不同条件下的信息利用。[Liu et al.，§3.1—3.3](https://arxiv.org/html/2307.03172v1)
+
+<figure align="center">
+<img src="../../assets/overview/context-evidence-position.png" alt="保持相关文档内容不变，将其移动到文档序列的开头、中部和结尾，比较模型回答">
+<figcaption><p align="center">图 3-7　证据位置的对照评估</p></figcaption>
+</figure>
+
+Passkey Retrieval 或 Needle-in-a-Haystack（NIAH）要求从干扰文本中找出指定信息。它们适合检验定位与检索；涉及多条证据或推理链时，需要相应增加任务。RULER 将检索扩展到多 Key、多 Value 和多 Query，并加入变量追踪、信息聚合与问答。[Hsieh et al.，§3](https://arxiv.org/html/2404.06654v3)
+
+| 任务 | 主要检查对象 | 可控制的难度 |
+| --- | --- | --- |
+| 单条检索 | 定位指定内容 | 输入长度、证据位置、干扰文本 |
+| 多条检索 | 完整找回所需信息 | 目标数量、相似 Key、查询数量 |
+| 变量追踪 | 沿引用关系连接信息 | 关系链长度、链数量 |
+| 信息聚合 | 汇总分散出现的内容 | 出现次数、候选数量与分布 |
+| 长文问答与摘要 | 在自然文本中利用证据 | 文档数量、推理步骤、输出要求 |
+
+<p align="center">表 3-7　长上下文任务与控制变量</p>
+
+自然任务可补充使用 LongBench 的文档问答、摘要和代码补全等类别。比较长度时需特别注意统计口径：其原论文 Table 1 的英文长度按词、中文按字符统计；模型实际接收的 Token 数还要由对应 tokenizer 计算。[Bai et al.，§3、Table 1](https://arxiv.org/html/2308.14508v2)
+
+## Perplexity 的比较条件
+
+对实际计分的 $$T$$ 个目标 Token，令 $$c_t$$ 为评估协议允许位置 $$t$$ 使用的上下文，则：
+
+$$
+\operatorname{PPL}=\exp\left(-\frac{1}{T}\sum_{t=1}^{T}\log p(x_t\mid c_t)\right).
+$$
+
+滑动窗口大小、stride、每个窗口中哪些 Token 计入 loss，都会改变 $$c_t$$ 或计分集合。ALiBi 论文分析了非重叠窗口起始位置上下文不足的影响；PI 也明确报告了滑动窗口的评估设置。比较扩展前后模型时，需固定数据、tokenizer 和计分协议。[Press et al.，§2.1、Appendix B.1](https://arxiv.org/html/2108.12409v2)；[Chen et al.，§3.2](https://arxiv.org/html/2306.15595v2)
+
+## 评估配置与复查记录
+
+| 类别 | 至少记录的内容 |
+| --- | --- |
+| 模型 | Checkpoint、tokenizer、预训练及扩展训练长度 |
+| 位置配置 | RoPE base、缩放方法与参数、温度、是否动态变化 |
+| 输入 | 模板、实际 Token 数、证据位置、截断与 padding 规则 |
+| 任务与计分 | 数据版本、样本量、长度分组、指标与有效长度阈值 |
+| 执行 | 精度、KV cache 策略、生成参数；若比较速度，再记录硬件与 batch |
+| 对照 | 扩展前模型、短上下文回归、prefill 与 decode 一致性 |
+
+<p align="center">表 3-8　上下文扩展的评估记录</p>
+
+图示来源见[图表来源](../../appendices/references.md#图表来源)。
+
+下一章：[第 4 章 Key–Value 表示优化：MHA、MQA、GQA 与 MLA](../kv-representations/README.md)。

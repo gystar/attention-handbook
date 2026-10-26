@@ -1,6 +1,6 @@
 # 附录 A 英文术语、数学符号与补充推导
 
-本页维护已写章节使用的术语和数学约定，当前覆盖第 1 章。原始论文的符号可能不同，引用时说明对应关系。
+本页维护已写章节使用的术语和数学约定，当前覆盖前三章及已写的专题内容。原始论文的符号可能不同，引用时说明对应关系。
 
 ## 常用术语
 
@@ -21,6 +21,10 @@
 | KV Cache | 为后续推理复用而保存的逐层历史 KV 或相应压缩表示 | [1.3 LLM 中的 Attention 成本与长上下文需求](../chapters/overview/bottlenecks-and-context.md) |
 | IO / HBM | 数据传输 / GPU 的 High Bandwidth Memory；区别于算术运算量 | [1.4 Attention 机制的主要发展方向与技术路线](../chapters/overview/optimization-landscape.md) |
 | Recurrent Formulation | 用上一步状态与当前输入表达下一步状态和输出 | [1.4 Attention 机制的主要发展方向与技术路线](../chapters/overview/optimization-landscape.md) |
+| Position Encoding | 把位置或距离信息引入输入表示、Q/K 或 Attention 分数 | [3.1 Attention 中的顺序与位置信息](../chapters/position-encoding/position-and-order.md) |
+| RoPE / ALiBi | 分别通过 Q/K 旋转与线性距离偏置建模位置 | [3.3 RoPE 与 ALiBi 的位置建模](../chapters/position-encoding/rope-and-alibi.md) |
+| Position Interpolation（PI） | 将较长序列的位置坐标压缩到原长度范围 | [3.4 RoPE Scaling 与上下文扩展](../chapters/position-encoding/context-extension.md) |
+| Length Generalization | 超出相关训练长度时保持任务能力 | [3.5 长度泛化与长上下文评估](../chapters/position-encoding/evaluation.md) |
 
 <p align="center">表 A-1　常用术语</p>
 
@@ -30,7 +34,7 @@
 
 | 符号 | 含义 |
 | --- | --- |
-| $$B,L,N$$ | Batch Size、层数、序列长度 |
+| $$B,L,N$$ | KV 容量语境中分别为 Batch Size、层数、序列长度 |
 | $$n_q,n_k$$ | Query 数量与 Key 数量；Cross-Attention 中可以不同 |
 | $$d_k,d_v$$ | Query/Key 维度与 Value 维度 |
 | $$d_h$$ | 在明确假设 $$d_k=d_v$$ 时使用的统一 Head 维度 |
@@ -39,6 +43,9 @@
 | $$M$$ | 加性 Mask，形状 $$n_q\times n_k$$；允许项为 $$0$$，禁止项为 $$-\infty$$ |
 | $$d_\phi$$ | Linear Attention 特征映射的输出维度 |
 | $$S_t,z_t$$ | 历史状态与归一化状态，形状分别为 $$d_\phi\times d_v$$、$$d_\phi$$ |
+| $$L,L',\rho$$（第 3 章） | 原训练长度、目标长度与扩展因子 $$\rho=L'/L$$ |
+| $$d,b,\theta_r$$（第 3 章） | Head 的 Q/K 维度、RoPE 基底、第 $$r$$ 个维度对的角频率 |
+| $$\lambda_r,\tau$$（第 3 章） | 波长 $$2\pi/\theta_r$$ 与 Attention Scaling 温度 |
 
 <p align="center">表 A-2　符号与维度</p>
 

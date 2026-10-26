@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="390" viewBox="0 0 1080 390">
+<rect width="1080" height="390" fill="white"/>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#71808b"/></marker></defs>
+<g font-family="Noto Sans CJK SC,DejaVu Sans,sans-serif" fill="#253747">
+<text x="20" y="96" font-size="20" text-anchor="start" fill="#253747">原位置 L = 4</text>
+<rect x="270" y="54" width="370" height="70" rx="4" fill="#edf4ef" stroke="#cbd6df"/>
+<path d="M270 90L964.0 90" stroke="#71808b" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<circle cx="280" cy="90" r="5" fill="#326a89" stroke="#326a89"/>
+<text x="280" y="117" font-size="15" text-anchor="middle" fill="#253747">0</text>
+<circle cx="370" cy="90" r="5" fill="#326a89" stroke="#326a89"/>
+<text x="370" y="117" font-size="15" text-anchor="middle" fill="#253747">1</text>
+<circle cx="460" cy="90" r="5" fill="#326a89" stroke="#326a89"/>
+<text x="460" y="117" font-size="15" text-anchor="middle" fill="#253747">2</text>
+<circle cx="550" cy="90" r="5" fill="#326a89" stroke="#326a89"/>
+<text x="550" y="117" font-size="15" text-anchor="middle" fill="#253747">3</text>
+<path d="M640 54L640 124" stroke="#b77736" stroke-width="2" fill="none" stroke-dasharray="4 3"/>
+<text x="20" y="206" font-size="20" text-anchor="start" fill="#253747">直接外推 L′ = 8</text>
+<rect x="270" y="164" width="370" height="70" rx="4" fill="#edf4ef" stroke="#cbd6df"/>
+<path d="M270 200L964.0 200" stroke="#71808b" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<circle cx="280" cy="200" r="5" fill="#326a89" stroke="#326a89"/>
+<text x="280" y="227" font-size="15" text-anchor="middle" fill="#253747">0</text>
+<circle cx="370" cy="200" r="5" fill="#326a89" stroke="#326a89"/>
+<text x="370" y="227" font-size="15" text-anchor="middle" fill="#253747">1</text>
+<circle cx="460" cy="200" r="5" fill="#326a89" stroke="#326a89"/>
+<text x="460" y="227" font-size="15" text-anchor="middle" fill="#253747">2</text>
+<circle cx="550" cy="200" r="5" fill="#326a89" stroke="#326a89"/>
+<text x="550" y="227" font-size="15" text-anchor="middle" fill="#253747">3</text>
+<circle cx="640" cy="200" r="5" fill="#326a89" stroke="#326a89"/>
+<text x="640" y="227" font-size="15" text-anchor="middle" fill="#253747">4</text>
+<circle cx="730" cy="200" r="5" fill="#326a89" stroke="#326a89"/>
+<text x="730" y="227" font-size="15" text-anchor="middle" fill="#253747">5</text>
+<circle cx="820" cy="200" r="5" fill="#326a89" stroke="#326a89"/>
+<text x="820" y="227" font-size="15" text-anchor="middle" fill="#253747">6</text>
+<circle cx="910" cy="200" r="5" fill="#326a89" stroke="#326a89"/>
+<text x="910" y="227" font-size="15" text-anchor="middle" fill="#253747">7</text>
+<path d="M640 164L640 234" stroke="#b77736" stroke-width="2" fill="none" stroke-dasharray="4 3"/>
+<text x="20" y="316" font-size="20" text-anchor="start" fill="#253747">PI，ρ = 2</text>
+<rect x="270" y="274" width="370" height="70" rx="4" fill="#edf4ef" stroke="#cbd6df"/>
+<path d="M270 310L964.0 310" stroke="#71808b" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<circle cx="280.0" cy="310" r="5" fill="#326a89" stroke="#326a89"/>
+<text x="280.0" y="337" font-size="15" text-anchor="middle" fill="#253747">0</text>
+<circle cx="325.0" cy="310" r="5" fill="#326a89" stroke="#326a89"/>
+<text x="325.0" y="337" font-size="15" text-anchor="middle" fill="#253747">0.5</text>
+<circle cx="370.0" cy="310" r="5" fill="#326a89" stroke="#326a89"/>
+<text x="370.0" y="337" font-size="15" text-anchor="middle" fill="#253747">1</text>
+<circle cx="415.0" cy="310" r="5" fill="#326a89" stroke="#326a89"/>
+<text x="415.0" y="337" font-size="15" text-anchor="middle" fill="#253747">1.5</text>
+<circle cx="460.0" cy="310" r="5" fill="#326a89" stroke="#326a89"/>
+<text x="460.0" y="337" font-size="15" text-anchor="middle" fill="#253747">2</text>
+<circle cx="505.0" cy="310" r="5" fill="#326a89" stroke="#326a89"/>
+<text x="505.0" y="337" font-size="15" text-anchor="middle" fill="#253747">2.5</text>
+<circle cx="550.0" cy="310" r="5" fill="#326a89" stroke="#326a89"/>
+<text x="550.0" y="337" font-size="15" text-anchor="middle" fill="#253747">3</text>
+<circle cx="595.0" cy="310" r="5" fill="#326a89" stroke="#326a89"/>
+<text x="595.0" y="337" font-size="15" text-anchor="middle" fill="#253747">3.5</text>
+<path d="M640 274L640 344" stroke="#b77736" stroke-width="2" fill="none" stroke-dasharray="4 3"/>
+<text x="280" y="370" font-size="17" text-anchor="start" fill="#253747">绿色区域表示原索引范围 [0, 4)；圆点表示输入 RoPE 的坐标。</text>
+</g></svg>

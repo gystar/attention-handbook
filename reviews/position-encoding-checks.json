@@ -1,0 +1,29 @@
+{
+  "python": "3.12.3",
+  "seed": 20261026,
+  "tolerance": 1e-11,
+  "scope": "algebra and toy attention layers only; no language-model quality evaluation",
+  "maximum_absolute_errors": {
+    "unmasked_permutation_equivariance": 0.0,
+    "sinusoidal_shift": 2.220446049250313e-16,
+    "rope_relative_dot": 2.7755575615628914e-17,
+    "rope_joint_shift": 0.0,
+    "rope_norm": 0.0,
+    "rope_illustration": 1.1102230246251565e-16,
+    "pi_position_vs_frequency": 0.0,
+    "ntk_endpoints": 5.551115123125783e-17,
+    "ntk_base_vs_ratio": 1.1102230246251565e-16,
+    "consistent_pair_layout_permutation": 0.0,
+    "temperature_vs_qk_scaling": 2.7755575615628914e-17,
+    "fixed_rope_full_vs_cache": 0.0,
+    "single_layer_key_rerotation": 1.1102230246251565e-16
+  },
+  "counterexample_differences": {
+    "fixed_causal_mask_breaks_permutation_equivariance": 0.6323311635784793,
+    "rope_nonmonotonic_dot_increase": 2.0,
+    "mixed_frequency_cache_error": 0.16175488546696412,
+    "two_layer_rerotation_keeps_stale_hidden_states": 0.018274638886548733
+  },
+  "alibi_bias_and_equal_content_weight_order": "passed",
+  "status": "passed"
+}

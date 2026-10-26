@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1050" height="390" viewBox="0 0 1050 390">
+<rect width="1050" height="390" fill="white"/>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#71808b"/></marker></defs>
+<g font-family="Noto Sans CJK SC,DejaVu Sans,sans-serif" fill="#253747">
+<text x="25" y="90" font-size="20" text-anchor="start" fill="#253747">Absolute</text>
+<rect x="190" y="55" width="245" height="65" rx="4" fill="#e9f2ef" stroke="#cbd6df"/>
+<text x="312" y="94" font-size="17" text-anchor="middle" fill="#253747">Embedding + Position</text>
+<path d="M438 87L477 87" stroke="#71808b" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<rect x="485" y="55" width="245" height="65" rx="4" fill="#f5f7f9" stroke="#cbd6df"/>
+<text x="607" y="94" font-size="17" text-anchor="middle" fill="#253747">Q / K / V projection</text>
+<path d="M733 87L772 87" stroke="#71808b" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<rect x="780" y="55" width="245" height="65" rx="4" fill="#f5f7f9" stroke="#cbd6df"/>
+<text x="902" y="94" font-size="17" text-anchor="middle" fill="#253747">Attention</text>
+<text x="25" y="205" font-size="20" text-anchor="start" fill="#253747">RoPE</text>
+<rect x="190" y="170" width="245" height="65" rx="4" fill="#f5f7f9" stroke="#cbd6df"/>
+<text x="312" y="209" font-size="17" text-anchor="middle" fill="#253747">Q / K projection</text>
+<path d="M438 202L477 202" stroke="#71808b" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<rect x="485" y="170" width="245" height="65" rx="4" fill="#e9f2ef" stroke="#cbd6df"/>
+<text x="607" y="209" font-size="17" text-anchor="middle" fill="#253747">Rotate Q / K</text>
+<path d="M733 202L772 202" stroke="#71808b" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<rect x="780" y="170" width="245" height="65" rx="4" fill="#f5f7f9" stroke="#cbd6df"/>
+<text x="902" y="209" font-size="17" text-anchor="middle" fill="#253747">Scores → Softmax</text>
+<text x="25" y="320" font-size="20" text-anchor="start" fill="#253747">Relative Bias</text>
+<rect x="190" y="285" width="245" height="65" rx="4" fill="#f5f7f9" stroke="#cbd6df"/>
+<text x="312" y="324" font-size="17" text-anchor="middle" fill="#253747">Content scores</text>
+<path d="M438 317L477 317" stroke="#71808b" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<rect x="485" y="285" width="245" height="65" rx="4" fill="#e9f2ef" stroke="#cbd6df"/>
+<text x="607" y="324" font-size="17" text-anchor="middle" fill="#253747">Add position bias</text>
+<path d="M733 317L772 317" stroke="#71808b" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<rect x="780" y="285" width="245" height="65" rx="4" fill="#f5f7f9" stroke="#cbd6df"/>
+<text x="902" y="324" font-size="17" text-anchor="middle" fill="#253747">Softmax → AV</text>
+<text x="25" y="375" font-size="16" text-anchor="start" fill="#253747">位置项分别作用于输入、Q/K 或匹配分数；图中省略残差、FFN 与其他网络组件。</text>
+</g></svg>

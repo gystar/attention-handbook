@@ -19,6 +19,11 @@
   * [2.4 Multi-Head Attention 的结构与 Output Projection](chapters/transformer-attention/multi-head.md)
   * [2.5 Training、Prefill 与 Decode 的计算差异](chapters/transformer-attention/training-prefill-decode.md)
 * [第 3 章 Position Encoding 的演进与 Context Extension](chapters/position-encoding/README.md)
+  * [3.1 Attention 中的顺序与位置信息](chapters/position-encoding/position-and-order.md)
+  * [3.2 Absolute 与 Relative Position Encoding](chapters/position-encoding/absolute-and-relative.md)
+  * [3.3 RoPE 与 ALiBi 的位置建模](chapters/position-encoding/rope-and-alibi.md)
+  * [3.4 RoPE Scaling 与上下文扩展](chapters/position-encoding/context-extension.md)
+  * [3.5 长度泛化与长上下文评估](chapters/position-encoding/evaluation.md)
 * [第 4 章 Key–Value 表示优化：MHA、MQA、GQA 与 MLA](chapters/kv-representations/README.md)
 * [第 5 章 Softmax Attention 的结构改进：Gated Attention](chapters/gated-attention/README.md)
 

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="400" viewBox="0 0 1000 400">
+<rect width="1000" height="400" fill="white"/>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#71808b"/></marker></defs>
+<g font-family="Noto Sans CJK SC,DejaVu Sans,sans-serif" fill="#253747">
+<circle cx="240" cy="215" r="105" fill="none" stroke="#ced8df"/>
+<path d="M110 215L375 215" stroke="#ced8df" stroke-width="2" fill="none"/>
+<path d="M240 340L240 85" stroke="#ced8df" stroke-width="2" fill="none"/>
+<text x="240" y="35" font-size="21" text-anchor="middle" fill="#253747">位置 1 与 3</text>
+<path d="M240 215L330.93266739736606 162.5" stroke="#326a89" stroke-width="2" fill="none"/>
+<circle cx="330.93266739736606" cy="162.5" r="4" fill="#326a89" stroke="#326a89"/>
+<text x="342.93266739736606" y="152.5" font-size="17" text-anchor="start" fill="#326a89">q: 1π/6</text>
+<path d="M240 215L240.0 110.0" stroke="#34836e" stroke-width="2" fill="none"/>
+<circle cx="240.0" cy="110.0" r="4" fill="#34836e" stroke="#34836e"/>
+<text x="252.0" y="100.0" font-size="17" text-anchor="start" fill="#34836e">k: 3π/6</text>
+<text x="240" y="365" font-size="18" text-anchor="middle" fill="#253747">夹角 π/3，点积 1/2</text>
+<circle cx="740" cy="215" r="105" fill="none" stroke="#ced8df"/>
+<path d="M610 215L875 215" stroke="#ced8df" stroke-width="2" fill="none"/>
+<path d="M740 340L740 85" stroke="#ced8df" stroke-width="2" fill="none"/>
+<text x="740" y="35" font-size="21" text-anchor="middle" fill="#253747">共同平移 3 个位置</text>
+<path d="M740 215L687.5 124.06733260263394" stroke="#326a89" stroke-width="2" fill="none"/>
+<circle cx="687.5" cy="124.06733260263394" r="4" fill="#326a89" stroke="#326a89"/>
+<text x="675.5" y="114.06733260263394" font-size="17" text-anchor="end" fill="#326a89">q: 4π/6</text>
+<path d="M740 215L635.0 215.0" stroke="#34836e" stroke-width="2" fill="none"/>
+<circle cx="635.0" cy="215.0" r="4" fill="#34836e" stroke="#34836e"/>
+<text x="623.0" y="205.0" font-size="17" text-anchor="end" fill="#34836e">k: 6π/6</text>
+<text x="740" y="365" font-size="18" text-anchor="middle" fill="#253747">夹角 π/3，点积 1/2</text>
+<text x="500" y="66" font-size="17" text-anchor="middle" fill="#253747">固定 q = k = (1, 0)ᵀ，θ = π/6</text>
+</g></svg>

@@ -8,7 +8,7 @@
 
 ## 本阶段目标
 
-在现有 GitBook 框架和第 1 章基础上，撰写第 2 章“Transformer Attention 的基本原理与计算过程”，核对原始来源、完成图文与数值检查，并执行逐章 Review。
+在前三章框架下完成第 3 章“Position Encoding 的演进与 Context Extension”，解释位置表示、RoPE Scaling 及评估条件；核对原始来源、完成图文与数值检查，并执行逐章 Review。
 
 第 1 章包含：
 
@@ -66,3 +66,5 @@
 2026-10-20：1.4 按信息使用、历史成本、计算存储效率及方法组合重写；首图改为方法作用位置图。复查见 [1.4 技术路线叙述 Review](reviews/attention-routes.md)，归档与发布检查待完成。
 
 2026-10-26：第 2 章已写成概览及五节独立页面，采用原始 Transformer 论文、D2L、Shazeer 增量推理论文和 PagedAttention 论文解释计算。新增两张 D2L 原图、一张 Mask 示意图及数值核查脚本；正文技术核查、表达检查和本地结构检查结果见[第二章 Review](reviews/transformer-attention.md)。必备原文归档与 GitBook 页面预览待完成。
+
+2026-10-26：第三章已按五节展开，调整小标题以衔接顺序建模、位置编码、RoPE/ALiBi、上下文扩展与评估。新增 Alammar 原图、五组 SVG/PNG 教学图及数学检查脚本；资料归档与发布状态见[第三章 Review](reviews/position-encoding.md)。
