@@ -16,7 +16,7 @@ $$
 
 相邻两维构成同一频率的 sin/cos 对。图 3-2 中，每行对应一个位置；左侧较高频的维度变化较快，右侧较低频的维度在这段位置范围内变化较慢。[Vaswani et al.，§3.5](https://arxiv.org/html/1706.03762v7)
 
-<figure><img src="../../.gitbook/assets/alammar-sinusoidal.png" alt="Jay Alammar 的正弦位置编码热图：横轴为编码维度，纵轴为 Token 位置，颜色为编码值"><figcaption><p align="center">图 3-2　不同频率的 Sinusoidal Position Encoding</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/alammar-sinusoidal (1).png" alt="Jay Alammar 的正弦位置编码热图：横轴为编码维度，纵轴为 Token 位置，颜色为编码值"><figcaption><p align="center">图 3-2　不同频率的 Sinusoidal Position Encoding</p></figcaption></figure>
 
 固定偏移 $$\Delta$$ 对每对 sin/cos 的影响可用一个相同的线性变换表达：
 

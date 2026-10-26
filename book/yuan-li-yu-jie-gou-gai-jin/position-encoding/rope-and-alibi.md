@@ -20,7 +20,7 @@ $$
 
 旋转保留向量长度，只改变方向。高频维度每前进一个位置转过更大角度，低频维度变化较慢。[Su et al.，§3.2，式 (13)—(15)](https://arxiv.org/html/2104.09864v5)
 
-<figure><img src="../../.gitbook/assets/rope-relative-rotation.png" alt="相同内容向量在两个位置分别旋转；两个位置同时平移后，两向量之间的夹角保持不变"><figcaption><p align="center">图 3-3　RoPE 的共同旋转与相对角度</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/rope-relative-rotation (1).png" alt="相同内容向量在两个位置分别旋转；两个位置同时平移后，两向量之间的夹角保持不变"><figcaption><p align="center">图 3-3　RoPE 的共同旋转与相对角度</p></figcaption></figure>
 
 ## 相对位置来自旋转矩阵的乘积
 
@@ -51,7 +51,7 @@ $$
 
 距离越远，附加项越负；不同斜率使各 Head 的距离偏好不同。偏置加在缩放后的内容分数上，随后统一做 Softmax。斜率在原方法中预先设定，不通过训练更新。[Press et al.，§3 及脚注 9—10](https://arxiv.org/html/2108.12409v2)
 
-<figure><img src="../../.gitbook/assets/alibi-bias.png" alt="Query 位于位置 4 时，两个固定正斜率对位置 0 至 4 分别产生不同强度的线性距离惩罚"><figcaption><p align="center">图 3-4　ALiBi 的距离偏置</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/alibi-bias (1).png" alt="Query 位于位置 4 时，两个固定正斜率对位置 0 至 4 分别产生不同强度的线性距离惩罚"><figcaption><p align="center">图 3-4　ALiBi 的距离偏置</p></figcaption></figure>
 
 图中只展示偏置。如果两个合法 Key 的内容分数相同，较近位置会获得较高权重；内容分数不同，则最终权重由内容与距离共同决定。因此，ALiBi 的距离惩罚构成偏好，并不把远处信息直接屏蔽。
 

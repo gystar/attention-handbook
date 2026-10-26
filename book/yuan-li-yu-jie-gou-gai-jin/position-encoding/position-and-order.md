@@ -35,7 +35,7 @@ Decoder 的 Causal Mask 规定位置 $$i$$ 只能读取 $$j\le i$$ 的内容。�
 
 后面的主要方法可以按作用位置理解：
 
-<figure><img src="../../.gitbook/assets/position-paths.png" alt="三种位置注入方式：位置向量加到输入，RoPE 旋转投影后的 Q/K，Relative Bias 加到内容匹配分数"><figcaption><p align="center">图 3-1　位置信息的作用位置</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/position-paths (1).png" alt="三种位置注入方式：位置向量加到输入，RoPE 旋转投影后的 Q/K，Relative Bias 加到内容匹配分数"><figcaption><p align="center">图 3-1　位置信息的作用位置</p></figcaption></figure>
 
 Absolute Position Encoding 通常给输入位置一个向量；RoPE 对投影后的 Q/K 施加随位置变化的旋转；T5 Relative Bias 与 ALiBi 则在 Softmax 前加入位置相关分数。Shaw 方法还允许把相对位置向量加入 Value 汇总，下一节会单独说明。[Vaswani et al.，§3.5](https://arxiv.org/html/1706.03762v7)；[Shaw et al.，§3](https://aclanthology.org/N18-2074.pdf)；[Raffel et al.，§2.1](https://arxiv.org/html/1910.10683v4)
 
