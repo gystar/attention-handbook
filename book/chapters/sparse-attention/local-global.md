@@ -2,6 +2,13 @@
 
 固定连接模式以位置关系确定读取范围。Sliding Window 保留近邻；Global 位置提供跨区域的信息通道；间隔连接或随机连接则增加远距离路径。选择模式时，需要同时考察每层连接数量，以及信息经过多少层才能到达目标位置。
 
+Longformer 的原图从左到右展示全连接、滑动窗口、扩张窗口和局部加全局连接。绿色格子是可访问的位置对；扩张窗口在相邻连接之间留出间隔，全局位置则形成贯穿行列的连接。原图展示双向模式，用于理解 Encoder 中的连接设计；自回归使用时还需施加因果约束。[原论文 Figure 2，PDF 第 3 页](https://arxiv.org/pdf/2004.05150v2#page=3)
+
+<figure>
+  <img src="../../assets/sparse-attention/longformer-patterns-original.png" alt="四张连接矩阵分别展示 Full、Sliding Window、Dilated Window 和 Global 加局部窗口">
+  <figcaption><p align="center">图 7-1　Longformer 的局部、扩张与全局连接</p></figcaption>
+</figure>
+
 ## Sliding Window 的跨层传播
 
 采用含自身共 $$w$$ 个位置的 Causal 窗口：
@@ -22,11 +29,11 @@ Longformer 在局部窗口之外，为少量任务相关位置设置 Global Atte
 
 在双向图中，若位置 $$g$$ 是 Global，原始位置 $$j$$ 的信息可以先进入下一层的 $$g$$，再由后一层的目标位置 $$i$$ 读取。这条经 Global 位置转发的路径跨越两层；已有直接连接的位置之间仍可在一层传递信息。同一层各位置并行计算，不能先读取该层刚算出的 Global 输出。
 
-图 7-1 用统一网格对照三种连接。每行代表 Query，每列代表 Key；深色格子表示允许读取的位置。第三幅为双向 Local–Global 结构，前两幅为 Causal 结构，边界条件在图内分别标明。
+图 7-2 用统一网格对照三种连接。每行代表 Query，每列代表 Key；深色格子表示允许读取的位置。第三幅为双向 Local–Global 结构，前两幅为 Causal 结构，边界条件在图内分别标明。
 
 <figure>
   <img src="../../assets/sparse-attention/connectivity.png" alt="Causal 全连接、Causal 局部窗口和双向局部加 Global 位置的连接矩阵对比">
-  <figcaption><p align="center">图 7-1　局部与全局连接模式</p></figcaption>
+  <figcaption><p align="center">图 7-2　局部与全局连接模式</p></figcaption>
 </figure>
 
 将双向 Global 设计移入自回归模型时，每条边都必须满足因果顺序。序列开头的 Global Token 只能汇总它之前的信息，无法在当前前向中作为整个未来序列的摘要。自回归结构需要使用满足位置顺序的汇总节点或其他长距离连接。

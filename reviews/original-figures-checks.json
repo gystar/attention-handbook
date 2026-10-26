@@ -1,0 +1,99 @@
+{
+  "figures": [
+    {
+      "figure": "图 3-3",
+      "size": [
+        1035,
+        596
+      ],
+      "path": "book/assets/position-encoding/rope-original.png",
+      "source_pdf": "sources/papers/su2021rope-v5.pdf",
+      "page": 5
+    },
+    {
+      "figure": "图 4-2",
+      "size": [
+        1409,
+        394
+      ],
+      "path": "book/assets/kv-representations/mla-heads-original.png",
+      "source_pdf": "sources/papers/deepseek2024mla-v5.pdf",
+      "page": 7
+    },
+    {
+      "figure": "图 5-3",
+      "size": [
+        508,
+        583
+      ],
+      "path": "book/assets/gated-attention/gate-positions-original.png",
+      "source_pdf": "sources/papers/qiu2025gatedattention-v1.pdf",
+      "page": 2
+    },
+    {
+      "figure": "图 6-1",
+      "size": [
+        898,
+        494
+      ],
+      "path": "book/assets/flash-attention/io-tiling-original.png",
+      "source_pdf": "sources/papers/dao2022flashattention-v2.pdf",
+      "page": 2
+    },
+    {
+      "figure": "图 7-1",
+      "size": [
+        1314,
+        285
+      ],
+      "path": "book/assets/sparse-attention/longformer-patterns-original.png",
+      "source_pdf": "sources/papers/beltagy2020longformer.pdf",
+      "page": 3
+    },
+    {
+      "figure": "图 8-3",
+      "size": [
+        1500,
+        852
+      ],
+      "path": "book/assets/kv-cache/kivi-distribution-original.png",
+      "source_pdf": "sources/papers/liu2024kivi-v2.pdf",
+      "page": 4
+    },
+    {
+      "figure": "图 9-2",
+      "size": [
+        1196,
+        449
+      ],
+      "path": "book/assets/linear-attention/retnet-dual-original.png",
+      "source_pdf": "sources/papers/sun2023retnet-4.pdf",
+      "page": 4
+    },
+    {
+      "figure": "图 10-2",
+      "size": [
+        1286,
+        643
+      ],
+      "path": "book/assets/hybrid-architectures/griffin-blocks-original.png",
+      "source_pdf": "sources/papers/de2024griffin-v1.pdf",
+      "page": 3
+    }
+  ],
+  "chapter_counts": {
+    "1": 12,
+    "2": 5,
+    "3": 8,
+    "4": 4,
+    "5": 3,
+    "6": 2,
+    "7": 3,
+    "8": 3,
+    "9": 3,
+    "10": 3
+  },
+  "caption_and_source_entries": 46,
+  "consecutive_numbers": true,
+  "scope": "Local images, numbering and source mapping; no GitBook rendering test"
+}

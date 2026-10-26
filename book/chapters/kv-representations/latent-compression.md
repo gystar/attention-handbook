@@ -2,6 +2,13 @@
 
 Multi-head Latent Attention（MLA）让多个 Head 的 Key 和 Value 由共同的低维向量生成。它保存这一 Latent 表示，并利用线性运算的重排减少历史 KV 的展开。DeepSeek-V2 将该结构与单独的位置分支结合；本节先推导内容分支，位置分支在 4.4 展开。[DeepSeek-AI，§2.1.2—2.1.3](https://arxiv.org/html/2405.04434v5)
 
+DeepSeek-V2 的原图用阴影标出推理时保存的表示：MHA、GQA、MQA 调整 KV Head 的数量，MLA 则保存多个 Head 共用的 Latent，再通过投影生成内容 Key 和 Value。图中 MLA 是简化的内容分支；4.4 将补入需要单独缓存的位置 Key。[原论文 Figure 3，PDF 第 7 页](https://arxiv.org/pdf/2405.04434v5#page=7)
+
+<figure>
+  <img src="../../assets/kv-representations/mla-heads-original.png" alt="四种 Attention 的 Head 组织，阴影标出推理期间缓存的表示">
+  <figcaption><p align="center">图 4-2　MHA、GQA、MQA 与 MLA 的缓存表示</p></figcaption>
+</figure>
+
 ## 共同的 Latent 与独立的投影
 
 沿用列向量约定，令位置 $$j$$ 的输入为 $$x_j\in\mathbb{R}^d$$，KV Latent 为 $$c_j\in\mathbb{R}^{d_c}$$。对 Head $$a$$，用 $$U_a^K,U_a^V\in\mathbb{R}^{d_h\times d_c}$$ 生成内容 Key 与 Value：
@@ -26,7 +33,7 @@ $$
 
 下面将两种计算顺序并列展示。图中使用行向量：$$C$$ 的第 $$j$$ 行为 $$c_j^{\mathsf T}$$，$$q$$ 和 $$\widehat q$$ 分别为正文对应列向量的转置；图中 $$U_K,U_V$$ 对应当前 Head 的 $$U_a^K,U_a^V$$。
 
-<figure><img src="../../assets/kv-representations/mla-computation.png" alt="上方先从 Latent 展开历史 K/V；下方先转换 Query，在 Latent 空间匹配并汇总后投影输出"><figcaption><p align="center">图 4-2　MLA 内容分支的计算重排</p></figcaption></figure>
+<figure><img src="../../assets/kv-representations/mla-computation.png" alt="上方先从 Latent 展开历史 K/V；下方先转换 Query，在 Latent 空间匹配并汇总后投影输出"><figcaption><p align="center">图 4-3　MLA 内容分支的计算重排</p></figcaption></figure>
 
 DeepSeek-V2 还对 Query 使用单独的低秩投影，以降低训练激活内存。Query 分支处理当前输入，不构成历史 KV 缓存；其压缩维度不计入本章的缓存容量式。[DeepSeek-AI，§2.1.2，式 (12)—(13)](https://arxiv.org/html/2405.04434v5)
 

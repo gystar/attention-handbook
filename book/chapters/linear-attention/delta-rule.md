@@ -90,11 +90,11 @@ $$
 
 以下为自设算例：Key 维度为 2，Value 为标量，旧状态为 $$(2,4)^\top$$。当前 $$k_t=(1,0)^\top$$、$$v_t=6$$，修正强度取 $$\beta_t=1$$，衰减取 $$\alpha_t=0.5$$。
 
-图 9-2 将保留的状态与本步写入分开：加法直接写入 6，Delta Rule 写入误差 4，Gated Delta Rule 相对于衰减后状态写入误差 5。图为本书自行绘制的算例。
+图 9-3 将保留的状态与本步写入分开：加法直接写入 6，Delta Rule 写入误差 4，Gated Delta Rule 相对于衰减后状态写入误差 5。图为本书自行绘制的算例。
 
 <figure>
   <img src="../../assets/linear-attention/delta-update.png" alt="加法更新为八四，Delta更新为六四，先衰减再修正得到六二；各路径显示保留状态与写入量">
-  <figcaption><p align="center">图 9-2　加法写入与 Delta 修正</p></figcaption>
+  <figcaption><p align="center">图 9-3　加法写入与 Delta 修正</p></figcaption>
 </figure>
 
 普通 Delta Rule 保留正交方向；Gated Delta Rule 先将该方向衰减到 2，再把当前 Key 的读取修正到 6。如果错误地使用未衰减状态计算误差，第一方向只会得到 $$1+(6-2)=5$$，与论文公式不同。

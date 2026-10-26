@@ -42,7 +42,7 @@ $$M_{tj}$$ 为 Mask 项。内容和位置分数先相加，再对历史位置做
 
 图中将历史向量按行排列为 $$C\in\mathbb{R}^{N\times d_c}$$ 和 $$K_R\in\mathbb{R}^{N\times d_r}$$，Query 也写成行向量。两份缓存分别生成分数，内容 Latent 还用于最终的加权汇总。
 
-<figure><img src="../../assets/kv-representations/mla-cache-branches.png" alt="内容缓存和位置缓存各产生一组分数，相加缩放后统一 Softmax，再用权重汇总内容 Latent"><figcaption><p align="center">图 4-3　MLA 的两类缓存与分数合并</p></figcaption></figure>
+<figure><img src="../../assets/kv-representations/mla-cache-branches.png" alt="内容缓存和位置缓存各产生一组分数，相加缩放后统一 Softmax，再用权重汇总内容 Latent"><figcaption><p align="center">图 4-4　MLA 的两类缓存与分数合并</p></figcaption></figure>
 
 ## 缓存容量与执行方式
 

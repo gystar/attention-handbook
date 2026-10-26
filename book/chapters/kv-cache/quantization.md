@@ -56,6 +56,13 @@ Key 误差先改变分数，再通过 Softmax 改变信息分配；Value 误差�
 
 KIVI 根据所研究模型的数值分布，对 Key 使用 Per-channel 分组，对 Value 使用 Per-token 分组。Key 的异常大值集中于部分 Channel，分开量化可避免这些 Channel 扩大其他 Channel 的量化范围。论文的 Figure 1 展示分组方向，Figure 2 展示实际数值分布；这一选择由论文所测模型的观测和实验支持，迁移到其他模型或量化格式时仍需评估。[KIVI，§3.1—§3.2](https://arxiv.org/html/2402.02750v2#S3)
 
+下面保留 KIVI 的实际观测图。横向两个轴分别为 Token 与 Channel，竖轴为绝对值；所展示的 Key 中可见沿特定 Channel 延伸的大值带，Value 的大值没有相同的固定 Channel 模式。各面板标明模型、层和 Head，观察范围以这些样例及论文实验为准。[原论文 Figure 2，PDF 第 4 页](https://arxiv.org/pdf/2402.02750v2#page=4)
+
+<figure>
+  <img src="../../assets/kv-cache/kivi-distribution-original.png" alt="Llama-2-13B 和 Falcon-7B 指定层与 Head 中，Key 和 Value 的绝对值沿 Token 与 Channel 的分布">
+  <figcaption><p align="center">图 8-3　KIVI 观察到的 Key 与 Value 数值分布</p></figcaption>
+</figure>
+
 Decode 每步只追加少量位置，Key 的跨位置分组需要等待数据积累。KIVI 将历史划分为量化部分和高精度 Residual Cache，其更新方式如下：
 
 | 对象 | 新数据写入 | 转入量化部分 |

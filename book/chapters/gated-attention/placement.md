@@ -2,6 +2,13 @@
 
 Gate 的效果取决于它乘在哪个张量上、由哪个位置的输入生成，以及是否在 Head 或特征之间共享。下面沿同一 Attention 计算路径区分这些选择。[Qiu et al.，§2.2](https://arxiv.org/html/2505.06708v1)
 
+Qiu 等人的结构图标出五处 Gate：$$G_4,G_3,G_2$$ 分别作用于 Query、Key、Value，$$G_1$$ 作用于 SDPA 输出，$$G_5$$ 位于 Output Projection 之后。沿箭头观察，可以直接区分匹配前的调节与汇总后的调节；图中“Most Effective”是作者在其比较设置中的结论，实验条件见 5.4。[原论文 Figure 1 left panel，PDF 第 2 页](https://arxiv.org/pdf/2505.06708v1#page=2)
+
+<figure>
+  <img src="../../assets/gated-attention/gate-positions-original.png" alt="Query、Key、Value、SDPA 输出及 Output Projection 后的五处 Gate" width="360">
+  <figcaption><p align="center">图 5-3　Attention 中的 Gate 插入位置</p></figcaption>
+</figure>
+
 ## 插入位置决定作用对象
 
 | Gate 位置 | 直接改变的对象 | 位置依赖 |

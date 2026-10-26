@@ -19,6 +19,13 @@ Griffin 采用两个递推残差块接一个 Local Attention 残差块的配置�
 
 不同层的状态通常分别维护。Attention 层中的 Key 已由此前各层计算得到，可能包含更早上下文的信息。因此，Local Attention 的窗口限定本层直接访问的位置范围，不能单独作为完整模型的历史依赖边界。
 
+Griffin 原图进一步说明模块如何接入网络：左侧残差块中的 Temporal Mixing 位置可放入 Attention 或递推模块，MLP 则保留为独立部分；右侧展开的递推模块包含短卷积与 RG-LRU。结合前述层比例，可区分“哪些层使用递推”与“一个递推层内部如何计算”。[原论文 Figure 2，PDF 第 3 页](https://arxiv.org/pdf/2402.19427v1#page=3)
+
+<figure>
+  <img src="../../assets/hybrid-architectures/griffin-blocks-original.png" alt="残差骨架中的 Temporal Mixing 与 MLP，以及递推模块内部的短卷积和 RG-LRU">
+  <figcaption><p align="center">图 10-2　Griffin 的残差块与递推模块</p></figcaption>
+</figure>
+
 ## 层内组合不同计算分支
 
 组合也可以发生在同一层内：不同 Head 使用不同连接范围，或多个分支分别计算后再融合。例如，一个教学构造是：

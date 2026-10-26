@@ -2,6 +2,13 @@
 
 第二章按矩阵运算解释了 Attention：计算分数、按行归一化，再汇总 Value。将这三步直接实现为独立的 GPU kernel，会产生另一个成本：中间矩阵需要写入显存，再由后续 kernel 读回。FlashAttention 将这些运算融合到分块计算中，使中间分数和权重在片上使用后即可释放。[原始论文 §3.1](https://arxiv.org/html/2205.14135v2#S3.SS1)
 
+FlashAttention 的原图左侧比较存储层级，右侧展示数据流：K/V 块从 HBM 进入 SRAM，与 Q 块完成局部计算，再更新输出。虚线框中的位置配对矩阵按块处理，完整矩阵不写回 HBM。这里节选原图的存储与算法部分；容量和带宽数值属于原论文的硬件示例。[原论文 Figure 1 left and middle panels，PDF 第 2 页](https://arxiv.org/pdf/2205.14135v2#page=2)
+
+<figure>
+  <img src="../../assets/flash-attention/io-tiling-original.png" alt="HBM 与 SRAM 的层级，以及 Q、K、V 块在片上计算后写回输出的路径">
+  <figcaption><p align="center">图 6-1　FlashAttention 的存储层级与分块数据流</p></figcaption>
+</figure>
+
 ## 中间矩阵的存储成本
 
 考虑一个 Head，序列长度为 $$N$$，Query、Key 和 Value 的维度均为 $$d_h$$，暂不使用 Mask 与 Dropout：

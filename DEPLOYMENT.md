@@ -58,7 +58,7 @@ python3 scripts/verify_examples.py
 
 公式采用 GitBook 文档中的双美元语法；图片和视频保留来源与原始链接。[行内公式语法](https://gitbook.com/docs/create-content/formatting/inline#math-and-tex)
 
-当前工作树的 60 篇必备论文 PDF 与 68 个图表文件已归档，严格归档检查已通过。原文 PDF 默认不随 Git 发布，新克隆环境需重新下载并检查。GitBook 当前书稿的图片、公式、导航及视频仍需在 Preview 中实际验收。
+当前工作树的 60 篇必备论文 PDF 与 76 个图表文件已归档，严格归档检查已通过。原文 PDF 默认不随 Git 发布，新克隆环境需重新下载并检查。GitBook 当前书稿的图片、公式、导航及视频仍需在 Preview 中实际验收。
 
 ## 后续更新
 

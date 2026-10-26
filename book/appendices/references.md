@@ -167,6 +167,7 @@
 
 | 本书图号 | 来源与原图位置 | 解释对象 |
 | --- | --- | --- |
+
 | 图 1-1 | [Jay Alammar，A Visual Guide to Using BERT for the First Time](https://jalammar.github.io/a-visual-guide-to-using-bert-for-the-first-time/)，CC BY-NC-SA 4.0；原图未修改 | 英文句子的 Token、编号及模型输出向量 |
 | 图 1-2 | 本书使用 AI 生成的上下文词义示意；概念参照 [3Blue1Brown，Motivating Examples](https://www.3blue1brown.com/lessons/attention/) | 同一词形在水果与公司语境中的不同含义，非实验数据 |
 | 图 1-3 | [Jay Alammar，The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)，CC BY-NC-SA 4.0；原图未修改 | Self-Attention 可视化 |
@@ -186,25 +187,33 @@
 | 图 2-5 | 本书依据 [Kwon et al.，§2.2](https://arxiv.org/html/2309.06180v1) 绘制，复用图 1-9 | 完整 Prompt 与单个新 Query 的读取范围 |
 | 图 3-1 | 本书依据 [Vaswani §3.5](https://arxiv.org/html/1706.03762v7)、[RoFormer §3.2](https://arxiv.org/html/2104.09864v5)、[T5 §2.1](https://arxiv.org/html/1910.10683v4) 与 [ALiBi §3](https://arxiv.org/html/2108.12409v2) 绘制 | 位置项进入 Attention 的主要位置 |
 | 图 3-2 | [Jay Alammar，The Illustrated Transformer，Position Encoding 段落的 July 2020 Update](https://jalammar.github.io/illustrated-transformer/#representing-the-order-of-the-sequence-using-positional-encoding)，[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)；原图未修改 | sin/cos 交错排列的编码热图 |
-| 图 3-3 | 本书依据 [Su et al.，§3.2](https://arxiv.org/html/2104.09864v5) 绘制；单位内容向量、角频率 π/6 为教学设定 | 共同平移与相对旋转 |
-| 图 3-4 | 本书依据 [Press et al.，§3](https://arxiv.org/html/2108.12409v2) 绘制；Query 位置 4，斜率 0.25 与 0.5 | ALiBi 的分数偏置，非 Attention 权重 |
-| 图 3-5 | 本书依据 [Chen et al.，§2.3，式 (4)](https://arxiv.org/html/2306.15595v2) 绘制；长度 4 扩展到 8 为教学设定 | PI 的坐标压缩 |
-| 图 3-6 | 本书依据 [Peng et al.，v2，§3.1—3.2](https://arxiv.org/html/2309.00071v2) 的公式绘制；d=64、L=2048、ρ=4、b=10000、α=1、β=32 | 各维度频率比值；未包含 YaRN 温度，无模型得分 |
-| 图 3-7 | 本书依据 [Liu et al.，§3.1](https://arxiv.org/html/2307.03172v1) 绘制，复用图 1-11；七份文档为教学设定 | 证据位置对照，非实验得分 |
+| 图 3-3 | [Su et al.，RoFormer: Enhanced Transformer with Rotary Position Embedding，Figure 1](https://arxiv.org/pdf/2104.09864v5#page=5)；[CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/) | 从归档 PDF 第 5 页截取图区并栅格化，保留原标注；RoPE 的成对维度旋转 |
+| 图 3-4 | 本书依据 [Su et al.，§3.2](https://arxiv.org/html/2104.09864v5) 绘制；单位内容向量、角频率 π/6 为教学设定 | 共同平移与相对旋转 |
+| 图 3-5 | 本书依据 [Press et al.，§3](https://arxiv.org/html/2108.12409v2) 绘制；Query 位置 4，斜率 0.25 与 0.5 | ALiBi 的分数偏置，非 Attention 权重 |
+| 图 3-6 | 本书依据 [Chen et al.，§2.3，式 (4)](https://arxiv.org/html/2306.15595v2) 绘制；长度 4 扩展到 8 为教学设定 | PI 的坐标压缩 |
+| 图 3-7 | 本书依据 [Peng et al.，v2，§3.1—3.2](https://arxiv.org/html/2309.00071v2) 的公式绘制；d=64、L=2048、ρ=4、b=10000、α=1、β=32 | 各维度频率比值；未包含 YaRN 温度，无模型得分 |
+| 图 3-8 | 本书依据 [Liu et al.，§3.1](https://arxiv.org/html/2307.03172v1) 绘制，复用图 1-11；七份文档为教学设定 | 证据位置对照，非实验得分 |
 | 图 4-1 | [Ainslie et al.，Figure 2](https://arxiv.org/html/2305.13245v3) | MHA、GQA、MQA 的 Head 组织 |
-| 图 4-2 | 本书依据 [DeepSeek-V2 §2.1.2](https://arxiv.org/html/2405.04434v5) 自行绘制；非原图改绘 | 内容分支两种计算顺序；图用行向量，正文列向量；SVG 与 PNG 保存于 assets/kv-representations/，脚本 scripts/render_kv_representations.py |
-| 图 4-3 | 本书依据 [DeepSeek-V2 §2.1.3](https://arxiv.org/html/2405.04434v5) 自行绘制；非原图改绘 | 内容与位置分数先相加后统一归一化；颜色区分缓存用途，非测量数据；源文件及脚本同上 |
+| 图 4-2 | [DeepSeek-AI，DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model，Figure 3](https://arxiv.org/pdf/2405.04434v5#page=7) | 从归档 PDF 第 7 页截取图区并栅格化，保留原标注；MHA、GQA、MQA 与 MLA 的缓存表示 |
+| 图 4-3 | 本书依据 [DeepSeek-V2 §2.1.2](https://arxiv.org/html/2405.04434v5) 自行绘制；非原图改绘 | 内容分支两种计算顺序；图用行向量，正文列向量；SVG 与 PNG 保存于 assets/kv-representations/，脚本 scripts/render_kv_representations.py |
+| 图 4-4 | 本书依据 [DeepSeek-V2 §2.1.3](https://arxiv.org/html/2405.04434v5) 自行绘制；非原图改绘 | 内容与位置分数先相加后统一归一化；颜色区分缓存用途，非测量数据；源文件及脚本同上 |
 | 图 5-1 | 本书依据 [Qiu et al. §2.2](https://arxiv.org/html/2505.06708v1) 自行绘制，非原图改绘 | SDPA 与 Gate 分支；SVG、PNG 位于 assets/gated-attention/，脚本 scripts/render_gated_attention.py |
 | 图 5-2 | 本书按逐元素乘法绘制教学算例 | 输入与 Gate 值为构造数据，非实验结果；源文件及脚本同上 |
-| 图 6-1 | 本书依据 [FlashAttention-2 §3.1.1](https://tridao.me/publications/flash2/flash2.pdf) 自行绘制，非原图改绘 | 三位置的教学算例；SVG、PNG 位于 assets/flash-attention/，脚本 scripts/render_flash_attention.py；数值经 CPU 检查 |
-| 图 7-1 | 本书依据 [Longformer §3.1](https://arxiv.org/html/2004.05150v2) 与单向 Mask 定义自行绘制，非原图改绘 | N=8；Causal 窗口包含自身为 3，双向局部半径 1、Global 位置 1；SVG/PNG 位于 assets/sparse-attention/，脚本 scripts/render_sparse_attention.py |
-| 图 7-2 | 本书依据 [Quest §3.4](https://arxiv.org/html/2406.10774v1) 自行构造反例，非原图改绘 | 页面上界与真实最大点积排序不同；SVG/PNG 位于 assets/sparse-attention/，生成脚本 scripts/render_sparse_attention.py，数值已经检查 |
+| 图 5-3 | [Qiu et al.，Gated Attention for Large Language Models: Non-linearity, Sparsity, and Attention-Sink-Free，Figure 1 left panel](https://arxiv.org/pdf/2505.06708v1#page=2) | 从归档 PDF 第 2 页截取图区并栅格化，保留原标注；Attention 中的 Gate 插入位置 |
+| 图 6-1 | [Dao et al.，FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness，Figure 1 left and middle panels](https://arxiv.org/pdf/2205.14135v2#page=2) | 从归档 PDF 第 2 页截取图区并栅格化，保留原标注；FlashAttention 的存储层级与分块数据流 |
+| 图 6-2 | 本书依据 [FlashAttention-2 §3.1.1](https://tridao.me/publications/flash2/flash2.pdf) 自行绘制，非原图改绘 | 三位置的教学算例；SVG、PNG 位于 assets/flash-attention/，脚本 scripts/render_flash_attention.py；数值经 CPU 检查 |
+| 图 7-1 | [Beltagy, Peters & Cohan，Longformer: The Long-Document Transformer，Figure 2](https://arxiv.org/pdf/2004.05150v2#page=3) | 从归档 PDF 第 3 页截取图区并栅格化，保留原标注；Longformer 的局部、扩张与全局连接 |
+| 图 7-2 | 本书依据 [Longformer §3.1](https://arxiv.org/html/2004.05150v2) 与单向 Mask 定义自行绘制，非原图改绘 | N=8；Causal 窗口包含自身为 3，双向局部半径 1、Global 位置 1；SVG/PNG 位于 assets/sparse-attention/，脚本 scripts/render_sparse_attention.py |
+| 图 7-3 | 本书依据 [Quest §3.4](https://arxiv.org/html/2406.10774v1) 自行构造反例，非原图改绘 | 页面上界与真实最大点积排序不同；SVG/PNG 位于 assets/sparse-attention/，生成脚本 scripts/render_sparse_attention.py，数值已经检查 |
 | 图 8-1 | 本书依据 [PagedAttention §4.1—4.3](https://arxiv.org/html/2309.06180v1) 自行绘制 | 块表 `[7, 2, 5]` 与 9 个有效位置的教学例子；[SVG](../assets/kv-cache/paged-mapping.svg) · [PNG](../assets/kv-cache/paged-mapping.png) |
 | 图 8-2 | 本书依据 [KIVI §3.1、Figure 1](https://arxiv.org/html/2402.02750v2) 自行绘制 | 4×4 矩阵、组长 4 的量化分组，不显示实验数据；[SVG](../assets/kv-cache/quantization-groups.svg) · [PNG](../assets/kv-cache/quantization-groups.png) |
+| 图 8-3 | [Liu et al.，KIVI: A Tuning-Free Asymmetric 2bit Quantization for KV Cache，Figure 2](https://arxiv.org/pdf/2402.02750v2#page=4)；[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | 从归档 PDF 第 4 页截取图区并栅格化，保留原标注；KIVI 观察到的 Key 与 Value 数值分布 |
 | 图 9-1 | 本书依据 [Katharopoulos et al. §3.2](https://proceedings.mlr.press/v119/katharopoulos20a/katharopoulos20a.pdf) 自行绘制 | 核特征计算的重排与中间张量；[SVG](../assets/linear-attention/kernel-reordering.svg) · [PNG](../assets/linear-attention/kernel-reordering.png) |
-| 图 9-2 | 本书依据 [Gated DeltaNet §3.1](https://arxiv.org/html/2412.06464v1#S3.SS1) 自行绘制 | 衰减、读取误差与状态修正的教学示意；[SVG](../assets/linear-attention/delta-update.svg) · [PNG](../assets/linear-attention/delta-update.png) |
+| 图 9-2 | [Yutao Sun et al.，Retentive Network: A Successor to Transformer for Large Language Models，Figure 3](https://arxiv.org/pdf/2307.08621v4#page=4) | 从归档 PDF 第 4 页截取图区并栅格化，保留原标注；RetNet 的并行计算与递推计算 |
+| 图 9-3 | 本书依据 [Gated DeltaNet §3.1](https://arxiv.org/html/2412.06464v1#S3.SS1) 自行绘制 | 衰减、读取误差与状态修正的教学示意；[SVG](../assets/linear-attention/delta-update.svg) · [PNG](../assets/linear-attention/delta-update.png) |
 | 图 10-1 | 本书参照 [Griffin §3](https://arxiv.org/html/2402.19427v1#S3) 的模块组合自行构造层排列 | 三种教学布局与各层历史状态，非完整发布模型；[SVG](../assets/hybrid-architectures/layer-state-layouts.svg) · [PNG](../assets/hybrid-architectures/layer-state-layouts.png) |
-| 图 10-2 | 本书根据 10.5 的状态恢复条件自行绘制，递推定义参照 [Mamba §2—3](https://arxiv.org/html/2312.00752v2#S2) | 同一前缀边界的快照与分支更新，非特定服务实现；[SVG](../assets/hybrid-architectures/prefix-state-branches.svg) · [PNG](../assets/hybrid-architectures/prefix-state-branches.png) |
+| 图 10-2 | [De et al.，Griffin: Mixing Gated Linear Recurrences with Local Attention for Efficient Language Models，Figure 2](https://arxiv.org/pdf/2402.19427v1#page=3)；[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | 从归档 PDF 第 3 页截取图区并栅格化，保留原标注；Griffin 的残差块与递推模块 |
+| 图 10-3 | 本书根据 10.5 的状态恢复条件自行绘制，递推定义参照 [Mamba §2—3](https://arxiv.org/html/2312.00752v2#S2) | 同一前缀边界的快照与分支更新，非特定服务实现；[SVG](../assets/hybrid-architectures/prefix-state-branches.svg) · [PNG](../assets/hybrid-architectures/prefix-state-branches.png) |
 
 <p align="center">表 C-2　图表来源</p>
 
@@ -214,7 +223,7 @@ Vaswani et al. 原论文首页允许署名后的学术图表转载；GQA 原图�
 
 公开书页直接链接原论文和作者页面。本地原文放在仓库 `sources/` 中，由 `sources/INDEX.md` 提供真实文件链接；来源 ID 与上述条目一致。原文文件默认不随 Git 仓库发布。
 
-当前工作树已归档 60 篇必备论文 PDF 和清单中的 68 个图表文件；正文中的自回归 GIF、Scaled Dot-Product Attention 与 GQA 原图均使用本地相对路径。另存有 3Blue1Brown 的英文字幕，视频仍通过原始链接观看。重新克隆后，本地资料是否齐备应以 `python3 scripts/check_handbook.py --require-archives` 的检查结果为准。
+当前工作树已归档 60 篇必备论文 PDF 和清单中的 76 个图表文件；正文中的自回归 GIF、Scaled Dot-Product Attention 与 GQA 原图均使用本地相对路径。另存有 3Blue1Brown 的英文字幕，视频仍通过原始链接观看。重新克隆后，本地资料是否齐备应以 `python3 scripts/check_handbook.py --require-archives` 的检查结果为准。
 
 在允许联网的环境中，可在仓库根目录执行 `python3 scripts/sources.py --download` 获取必备原文及引用图片，再执行 `python3 scripts/sources.py` 更新索引。选读资料使用 `--download --all`。工具说明和后续归档要求见仓库 `references/README.md`。
 

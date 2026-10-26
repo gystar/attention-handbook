@@ -6,6 +6,13 @@ RoPE 与 ALiBi 都把位置信息带入 Attention 匹配，但采用不同的计
 
 Rotary Position Embedding（RoPE）先计算内容向量 $$q_i,k_j\in\mathbb{R}^d$$，再施加旋转。设 $$d$$ 为偶数，第 $$r$$ 对相邻维度的角频率为 $$\theta_r=b^{-2r/d}$$，其中 $$r=0,\ldots,d/2-1$$；原始 RoPE 取 $$b=10000$$。
 
+RoFormer 的原图把这一操作分成两层：上方是一对坐标随位置旋转，下方是完整向量中多对坐标采用不同角频率。图中的颜色区分维度对，位置编号决定每一对坐标的旋转角度。[原论文 Figure 1，PDF 第 5 页](https://arxiv.org/pdf/2104.09864v5#page=5)
+
+<figure>
+  <img src="../../assets/position-encoding/rope-original.png" alt="上半部分展示二维向量随位置旋转，下半部分展示各维度对以不同频率旋转">
+  <figcaption><p align="center">图 3-3　RoPE 的成对维度旋转</p></figcaption>
+</figure>
+
 对任一二维列向量，旋转矩阵为：
 
 $$
@@ -22,7 +29,7 @@ $$
 
 <figure align="center">
 <img src="../../assets/position-encoding/rope-relative-rotation.png" alt="相同内容向量在两个位置分别旋转；两个位置同时平移后，两向量之间的夹角保持不变">
-<figcaption><p align="center">图 3-3　RoPE 的共同旋转与相对角度</p></figcaption>
+<figcaption><p align="center">图 3-4　RoPE 的共同旋转与相对角度</p></figcaption>
 </figure>
 
 ## 相对位置来自旋转矩阵的乘积
@@ -35,7 +42,7 @@ $$
 =q_i^\top R_{j-i}k_j.
 $$
 
-原因是每个二维块都有 $$R(\alpha)^\top R(\beta)=R(\beta-\alpha)$$。位置在点积中以偏移 $$j-i$$ 出现；两端位置共同平移时，点积保持不变。图 3-3 固定内容向量展示的就是这一性质。[Su et al.，§3.2.2](https://arxiv.org/html/2104.09864v5)
+原因是每个二维块都有 $$R(\alpha)^\top R(\beta)=R(\beta-\alpha)$$。位置在点积中以偏移 $$j-i$$ 出现；两端位置共同平移时，点积保持不变。图 3-4 固定内容向量展示的就是这一性质。[Su et al.，§3.2.2](https://arxiv.org/html/2104.09864v5)
 
 例如取 $$q=k=(1,0)^\top$$、单对维度的 $$\theta=\pi/6$$：位置 1 与 3 的点积为 $$\cos(2\theta)=1/2$$；改到位置 4 与 6，结果仍为 $$1/2$$。这是教学设定，实际 Head 由多个不同频率的维度对组成。
 
@@ -56,7 +63,7 @@ $$
 
 <figure align="center">
 <img src="../../assets/position-encoding/alibi-bias.png" alt="Query 位于位置 4 时，两个固定正斜率对位置 0 至 4 分别产生不同强度的线性距离惩罚">
-<figcaption><p align="center">图 3-4　ALiBi 的距离偏置</p></figcaption>
+<figcaption><p align="center">图 3-5　ALiBi 的距离偏置</p></figcaption>
 </figure>
 
 图中只展示偏置。如果两个合法 Key 的内容分数相同，较近位置会获得较高权重；内容分数不同，则最终权重由内容与距离共同决定。因此，ALiBi 的距离惩罚构成偏好，并不把远处信息直接屏蔽。

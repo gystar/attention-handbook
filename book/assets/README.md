@@ -27,19 +27,19 @@
 | 2-5 | [prefill-decode.svg](overview/prefill-decode.svg) | 复用图 1-9，方法依据为 Kwon §2.2 |
 | 3-1 | [PNG](position-encoding/position-paths.png)／[SVG](position-encoding/position-paths.svg) | 本书依据公式绘制；生成脚本 scripts/render_position_encoding.py；方法与参数见附录 C |
 | 3-2 | [PNG](position-encoding/alammar-sinusoidal.png) | Jay Alammar 原图；CC BY-NC-SA 4.0；未修改 |
-| 3-3 | [PNG](position-encoding/rope-relative-rotation.png)／[SVG](position-encoding/rope-relative-rotation.svg) | 本书依据公式绘制；生成脚本 scripts/render_position_encoding.py；方法与参数见附录 C |
-| 3-4 | [PNG](position-encoding/alibi-bias.png)／[SVG](position-encoding/alibi-bias.svg) | 本书依据公式绘制；生成脚本 scripts/render_position_encoding.py；方法与参数见附录 C |
-| 3-5 | [PNG](position-encoding/position-interpolation.png)／[SVG](position-encoding/position-interpolation.svg) | 本书依据公式绘制；生成脚本 scripts/render_position_encoding.py；方法与参数见附录 C |
-| 3-6 | [PNG](position-encoding/frequency-scaling.png)／[SVG](position-encoding/frequency-scaling.svg) | 本书依据公式绘制；生成脚本 scripts/render_position_encoding.py；方法与参数见附录 C |
-| 3-7 | [PNG](overview/context-evidence-position.png)／[SVG](overview/context-evidence-position.svg) | 复用图 1-11；Lost in the Middle 证据位置实验设置 |
+| 3-4 | [PNG](position-encoding/rope-relative-rotation.png)／[SVG](position-encoding/rope-relative-rotation.svg) | 本书依据公式绘制；生成脚本 scripts/render_position_encoding.py；方法与参数见附录 C |
+| 3-5 | [PNG](position-encoding/alibi-bias.png)／[SVG](position-encoding/alibi-bias.svg) | 本书依据公式绘制；生成脚本 scripts/render_position_encoding.py；方法与参数见附录 C |
+| 3-6 | [PNG](position-encoding/position-interpolation.png)／[SVG](position-encoding/position-interpolation.svg) | 本书依据公式绘制；生成脚本 scripts/render_position_encoding.py；方法与参数见附录 C |
+| 3-7 | [PNG](position-encoding/frequency-scaling.png)／[SVG](position-encoding/frequency-scaling.svg) | 本书依据公式绘制；生成脚本 scripts/render_position_encoding.py；方法与参数见附录 C |
+| 3-8 | [PNG](overview/context-evidence-position.png)／[SVG](overview/context-evidence-position.svg) | 复用图 1-11；Lost in the Middle 证据位置实验设置 |
 | 4-1 | [GQA Figure 2](overview/gqa-heads-original.png) | Ainslie et al.，CC BY 4.0；原图未修改，已本地归档 |
-| 4-2 | [PNG](kv-representations/mla-computation.png)／[SVG](kv-representations/mla-computation.svg) | 本书依据 DeepSeek-V2 §2.1.2 绘制；两种内容计算顺序，保留相同缩放与 Mask |
-| 4-3 | [PNG](kv-representations/mla-cache-branches.png)／[SVG](kv-representations/mla-cache-branches.svg) | 本书依据 DeepSeek-V2 §2.1.3 绘制；两类缓存与统一 Softmax，非实验结果 |
+| 4-3 | [PNG](kv-representations/mla-computation.png)／[SVG](kv-representations/mla-computation.svg) | 本书依据 DeepSeek-V2 §2.1.2 绘制；两种内容计算顺序，保留相同缩放与 Mask |
+| 4-4 | [PNG](kv-representations/mla-cache-branches.png)／[SVG](kv-representations/mla-cache-branches.svg) | 本书依据 DeepSeek-V2 §2.1.3 绘制；两类缓存与统一 Softmax，非实验结果 |
 | 5-1 | [PNG](gated-attention/output-gate.png)／[SVG](gated-attention/output-gate.svg) | 本书依据 Qiu §2.2 绘制；拼接形式的输出 Gate |
 | 5-2 | [PNG](gated-attention/gate-example.png)／[SVG](gated-attention/gate-example.svg) | 逐元素乘法教学算例；非实验结果 |
-| 6-1 | [PNG](flash-attention/online-merge.png)／[SVG](flash-attention/online-merge.svg) | 本书自行绘制的分块合并算例；公式依据 FlashAttention-2 §3.1.1，生成脚本 scripts/render_flash_attention.py |
-| 7-1 | [PNG](sparse-attention/connectivity.png)／[SVG](sparse-attention/connectivity.svg) | 本书自行绘制的连接矩阵；蓝色为允许连接，不表示测得权重；生成脚本 scripts/render_sparse_attention.py |
-| 7-2 | [PNG](sparse-attention/page-bound.png)／[SVG](sparse-attention/page-bound.svg) | 本书构造的页面上界反例；二维 Query/Key，非实测结果 |
+| 6-2 | [PNG](flash-attention/online-merge.png)／[SVG](flash-attention/online-merge.svg) | 本书自行绘制的分块合并算例；公式依据 FlashAttention-2 §3.1.1，生成脚本 scripts/render_flash_attention.py |
+| 7-2 | [PNG](sparse-attention/connectivity.png)／[SVG](sparse-attention/connectivity.svg) | 本书自行绘制的连接矩阵；蓝色为允许连接，不表示测得权重；生成脚本 scripts/render_sparse_attention.py |
+| 7-3 | [PNG](sparse-attention/page-bound.png)／[SVG](sparse-attention/page-bound.svg) | 本书构造的页面上界反例；二维 Query/Key，非实测结果 |
 
 Transformer 图表使用条件见原论文首页的转载声明。三张论文原图的归档目标路径和来源 ID 已记录在仓库 `references/catalog.yaml`，没有将尚不存在的本地文件作为链接。
 
@@ -70,6 +70,21 @@ Transformer 图表使用条件见原论文首页的转载声明。三张论文�
 
 第八章图 8-1、8-2 为 `scripts/render_kv_cache.py` 生成的教学示意，保留 SVG 和 PNG。分页例子与正文块表一致，量化图颜色只表示分组；方法来源与校验值见 catalog.yaml。
 
-第九章图 9-1、9-2 由 `scripts/render_linear_attention.py` 生成，保留 SVG 与 PNG。图 9-1 表示归一化前的张量计算；图 9-2 展开正文自设状态更新算例。来源及校验值见 catalog.yaml。
+第九章图 9-1、9-2 由 `scripts/render_linear_attention.py` 生成，保留 SVG 与 PNG。图 9-1 表示归一化前的张量计算；图 9-3 展开正文自设状态更新算例。来源及校验值见 catalog.yaml。
 
 第十章图 10-1、10-2 由 `scripts/render_hybrid_architectures.py` 生成。前者为简化层排列及状态示意，后者为依据因果状态推导的快照与分支要求；均非原论文图片复制，保留 SVG 和 PNG，版本与校验值见 catalog.yaml。
+
+## 新增论文原图
+
+下列图区从本地归档 PDF 提取，保留原图标注；页面、裁切坐标与输出路径见 `references/paper-figures.json`，提取脚本为 `scripts/extract_paper_figures.py`。原图来源链接同时保留在正文与附录 C。
+
+| 图号 | 本地图片 | 原图位置 |
+| --- | --- | --- |
+| 图 3-3 | [rope-original.png](position-encoding/rope-original.png) | [Figure 1](https://arxiv.org/html/2104.09864v5)，PDF 第 5 页 |
+| 图 4-2 | [mla-heads-original.png](kv-representations/mla-heads-original.png) | [Figure 3](https://arxiv.org/html/2405.04434v5)，PDF 第 7 页 |
+| 图 5-3 | [gate-positions-original.png](gated-attention/gate-positions-original.png) | [Figure 1 left panel](https://arxiv.org/html/2505.06708v1)，PDF 第 2 页 |
+| 图 6-1 | [io-tiling-original.png](flash-attention/io-tiling-original.png) | [Figure 1 left and middle panels](https://arxiv.org/html/2205.14135v2)，PDF 第 2 页 |
+| 图 7-1 | [longformer-patterns-original.png](sparse-attention/longformer-patterns-original.png) | [Figure 2](https://arxiv.org/html/2004.05150v2)，PDF 第 3 页 |
+| 图 8-3 | [kivi-distribution-original.png](kv-cache/kivi-distribution-original.png) | [Figure 2](https://arxiv.org/html/2402.02750v2)，PDF 第 4 页 |
+| 图 9-2 | [retnet-dual-original.png](linear-attention/retnet-dual-original.png) | [Figure 3](https://arxiv.org/html/2307.08621v4)，PDF 第 4 页 |
+| 图 10-2 | [griffin-blocks-original.png](hybrid-architectures/griffin-blocks-original.png) | [Figure 2](https://arxiv.org/html/2402.19427v1)，PDF 第 3 页 |

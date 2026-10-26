@@ -1760,7 +1760,7 @@ assets:
   display_mode: local_file
 - id: mla-computation-svg
   source_id: deepseek2024mla
-  locator: §2.1.2; handbook Figure 4-2
+  locator: §2.1.2; handbook Figure 4-3
   local_path: book/assets/kv-representations/mla-computation.svg
   archive_status: downloaded
   sha256: df876efba918145f40dc38c737a3b5f1b89ee51a5f26f73f1cb7b66246f45cad
@@ -1769,7 +1769,7 @@ assets:
   bytes: 3433
 - id: mla-computation-png
   source_id: deepseek2024mla
-  locator: §2.1.2; handbook Figure 4-2
+  locator: §2.1.2; handbook Figure 4-3
   local_path: book/assets/kv-representations/mla-computation.png
   archive_status: downloaded
   sha256: 3fca0a1e355a2e23bab998ea13122f7f3dcce4f87351fb2b9678000ad9e048b3
@@ -1778,7 +1778,7 @@ assets:
   bytes: 72429
 - id: mla-cache-branches-svg
   source_id: deepseek2024mla
-  locator: §2.1.3; handbook Figure 4-3
+  locator: §2.1.3; handbook Figure 4-4
   local_path: book/assets/kv-representations/mla-cache-branches.svg
   archive_status: downloaded
   sha256: 091a3860ea4dbf6ff48574fe59ec1317cffec743a4c63aaf91a4e661c60849a5
@@ -1787,7 +1787,7 @@ assets:
   bytes: 2747
 - id: mla-cache-branches-png
   source_id: deepseek2024mla
-  locator: §2.1.3; handbook Figure 4-3
+  locator: §2.1.3; handbook Figure 4-4
   local_path: book/assets/kv-representations/mla-cache-branches.png
   archive_status: downloaded
   sha256: b632be755062e8ae555a4a839d95c32592b74f590b90d3bc448b45fedb1b9999
@@ -1850,7 +1850,7 @@ assets:
   bytes: 75631
 - id: sparse-connectivity-svg
   source_id: beltagy2020longformer
-  locator: §3.1 patterns; handbook Figure 7-1 constructed comparison
+  locator: §3.1 patterns; handbook Figure 7-2 constructed comparison
   local_path: book/assets/sparse-attention/connectivity.svg
   archive_status: downloaded
   sha256: eb8540e5734af813212a742fc8c161d72839cd6334b6c57a6e3ea204e1691ade
@@ -1859,7 +1859,7 @@ assets:
   bytes: 16122
 - id: sparse-connectivity-png
   source_id: beltagy2020longformer
-  locator: §3.1 patterns; handbook Figure 7-1 constructed comparison
+  locator: §3.1 patterns; handbook Figure 7-2 constructed comparison
   local_path: book/assets/sparse-attention/connectivity.png
   archive_status: downloaded
   sha256: 18e567744f1dffcea2d5e75c615ea73b99964fbf2e580749a3d6731511e8de45
@@ -1868,7 +1868,7 @@ assets:
   bytes: 34013
 - id: quest-page-bound-svg
   source_id: tang2024quest
-  locator: §3.4; handbook Figure 7-2 constructed counterexample
+  locator: §3.4; handbook Figure 7-3 constructed counterexample
   local_path: book/assets/sparse-attention/page-bound.svg
   archive_status: downloaded
   sha256: 99f09a9d8e42c8f88d0a9f1b3751472758ab73865c769380e50f437a0318cd81
@@ -1877,7 +1877,7 @@ assets:
   bytes: 1289
 - id: quest-page-bound-png
   source_id: tang2024quest
-  locator: §3.4; handbook Figure 7-2 constructed counterexample
+  locator: §3.4; handbook Figure 7-3 constructed counterexample
   local_path: book/assets/sparse-attention/page-bound.png
   archive_status: downloaded
   sha256: eb1d8acf6e591dec0df6bdc38c26c7b86650fa26ca041bbf3ed02b47bd2a90e6
@@ -1940,7 +1940,7 @@ assets:
   bytes: 40032
 - id: linear-delta-update-svg
   source_id: yang2024gateddelta
-  locator: §3.1; handbook Figure 9-2
+  locator: §3.1; handbook Figure 9-3
   local_path: book/assets/linear-attention/delta-update.svg
   archive_status: downloaded
   sha256: 203d3fdf7c78326c91cb520da694d4178b2e2d81c5be2f20a56e5949b82616b5
@@ -1949,7 +1949,7 @@ assets:
   bytes: 3885
 - id: linear-delta-update-png
   source_id: yang2024gateddelta
-  locator: §3.1; handbook Figure 9-2
+  locator: §3.1; handbook Figure 9-3
   local_path: book/assets/linear-attention/delta-update.png
   archive_status: downloaded
   sha256: 55a1442b40b1e5d4f61471e035c95ad91225fbdd75c4dd144b6620f6e100eb11
@@ -1976,7 +1976,7 @@ assets:
   bytes: 56632
 - id: hybrid-prefix-state-branches-svg
   source_id: gu2023mamba
-  locator: §2–3 state recurrence; handbook Figure 10-2 derived state snapshot requirements
+  locator: §2–3 state recurrence; handbook Figure 10-3 derived state snapshot requirements
   local_path: book/assets/hybrid-architectures/prefix-state-branches.svg
   archive_status: downloaded
   sha256: cac48daab30587f65d4e86f6cbb02e04256c9e48cc415c8f3700eddb6f5cebcc
@@ -1985,10 +1985,117 @@ assets:
   bytes: 3086
 - id: hybrid-prefix-state-branches-png
   source_id: gu2023mamba
-  locator: §2–3 state recurrence; handbook Figure 10-2 derived state snapshot requirements
+  locator: §2–3 state recurrence; handbook Figure 10-3 derived state snapshot requirements
   local_path: book/assets/hybrid-architectures/prefix-state-branches.png
   archive_status: downloaded
   sha256: 40d9afa01c976a32209fe1fe6d8f5945b9787abb3842d6dcdfdb4bc0e9111f81
   attribution: 本书自行绘制，非原图复制或性能实验；脚本 scripts/render_hybrid_architectures.py。
   display_mode: local_file
   bytes: 80489
+- id: rope-original
+  source_id: su2021rope
+  locator: Figure 1; PDF page 5
+  local_path: book/assets/position-encoding/rope-original.png
+  archive_status: downloaded
+  sha256: d1a16f46712565f0374fdc4c0e4b42b1c59e0c6b3869fdec1445f0d1a8d0f18c
+  bytes: 71042
+  display_mode: local_file
+  attribution: 'Su et al., RoFormer: Enhanced Transformer with Rotary Position Embedding; 原论文图区节选，保留原标注，版权归原权利人；非本书重绘。'
+  source_url: https://arxiv.org/pdf/2104.09864v5#page=5
+  extraction_config: references/paper-figures.json
+  license_url: https://creativecommons.org/licenses/by-nc-nd/4.0/
+  license_note: CC BY-NC-ND 4.0；仅转换图区文件格式，图内内容未修改。
+- id: mla-heads-original
+  source_id: deepseek2024mla
+  locator: Figure 3; PDF page 7
+  local_path: book/assets/kv-representations/mla-heads-original.png
+  archive_status: downloaded
+  sha256: e4a519e4725ecd7eaf9b0670ded72ade49e47d16f0aa9b7c31e6d2b5c0bb985b
+  bytes: 53677
+  display_mode: local_file
+  attribution: 'DeepSeek-AI, DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model;
+    原论文图区节选，保留原标注，版权归原权利人；非本书重绘。'
+  source_url: https://arxiv.org/pdf/2405.04434v5#page=7
+  extraction_config: references/paper-figures.json
+  license_url: https://arxiv.org/licenses/nonexclusive-distrib/1.0/
+  license_note: arXiv non-exclusive distribution license；该许可面向 arXiv 分发，并非作者对所有再使用的通用授权。此处为逐图署名的学术说明引用。
+- id: gate-positions-original
+  source_id: qiu2025gatedattention
+  locator: Figure 1 left panel; PDF page 2
+  local_path: book/assets/gated-attention/gate-positions-original.png
+  archive_status: downloaded
+  sha256: f4f8b97e74c924c8949dc8f2dd22eb2cd7a277a6007868c3b38bc661c67267a7
+  bytes: 45310
+  display_mode: local_file
+  attribution: 'Qiu et al., Gated Attention for Large Language Models: Non-linearity, Sparsity, and Attention-Sink-Free;
+    原论文图区节选，保留原标注，版权归原权利人；非本书重绘。'
+  source_url: https://arxiv.org/pdf/2505.06708v1#page=2
+  extraction_config: references/paper-figures.json
+  license_url: https://arxiv.org/licenses/nonexclusive-distrib/1.0/
+  license_note: arXiv non-exclusive distribution license；该许可面向 arXiv 分发，并非作者对所有再使用的通用授权。此处为逐图署名的学术说明引用。
+- id: io-tiling-original
+  source_id: dao2022flashattention
+  locator: Figure 1 left and middle panels; PDF page 2
+  local_path: book/assets/flash-attention/io-tiling-original.png
+  archive_status: downloaded
+  sha256: 357f3d343f1eb934d0aace928cf4c9fed4ff4d652db0eff54bd74309687e24d5
+  bytes: 81423
+  display_mode: local_file
+  attribution: 'Dao et al., FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness; 原论文图区节选，保留原标注，版权归原权利人；非本书重绘。'
+  source_url: https://arxiv.org/pdf/2205.14135v2#page=2
+  extraction_config: references/paper-figures.json
+  license_url: https://arxiv.org/licenses/nonexclusive-distrib/1.0/
+  license_note: arXiv non-exclusive distribution license；该许可面向 arXiv 分发，并非作者对所有再使用的通用授权。此处为逐图署名的学术说明引用。
+- id: longformer-patterns-original
+  source_id: beltagy2020longformer
+  locator: Figure 2; PDF page 3
+  local_path: book/assets/sparse-attention/longformer-patterns-original.png
+  archive_status: downloaded
+  sha256: 7776d8826b0f23958f7c0564b18d1591f81e32fb5d5feddef0a7e9d15b20ec6a
+  bytes: 30318
+  display_mode: local_file
+  attribution: 'Beltagy, Peters & Cohan, Longformer: The Long-Document Transformer; 原论文图区节选，保留原标注，版权归原权利人；非本书重绘。'
+  source_url: https://arxiv.org/pdf/2004.05150v2#page=3
+  extraction_config: references/paper-figures.json
+  license_url: https://arxiv.org/licenses/nonexclusive-distrib/1.0/
+  license_note: arXiv non-exclusive distribution license；该许可面向 arXiv 分发，并非作者对所有再使用的通用授权。此处为逐图署名的学术说明引用。
+- id: kivi-distribution-original
+  source_id: liu2024kivi
+  locator: Figure 2; PDF page 4
+  local_path: book/assets/kv-cache/kivi-distribution-original.png
+  archive_status: downloaded
+  sha256: 7c81b28015ec3e198601b657853812efbd8560e531d10de8c089a52fc8bbed26
+  bytes: 489384
+  display_mode: local_file
+  attribution: 'Liu et al., KIVI: A Tuning-Free Asymmetric 2bit Quantization for KV Cache; 原论文图区节选，保留原标注，版权归原权利人；非本书重绘。'
+  source_url: https://arxiv.org/pdf/2402.02750v2#page=4
+  extraction_config: references/paper-figures.json
+  license_url: https://creativecommons.org/licenses/by/4.0/
+  license_note: CC BY 4.0；仅转换图区文件格式，图内内容未修改。
+- id: retnet-dual-original
+  source_id: sun2023retnet
+  locator: Figure 3; PDF page 4
+  local_path: book/assets/linear-attention/retnet-dual-original.png
+  archive_status: downloaded
+  sha256: fdb556ba64004be15fdba0ac2db17f597620774d327d10a07f296743a003e999
+  bytes: 40636
+  display_mode: local_file
+  attribution: 'Yutao Sun et al., Retentive Network: A Successor to Transformer for Large Language Models; 原论文图区节选，保留原标注，版权归原权利人；非本书重绘。'
+  source_url: https://arxiv.org/pdf/2307.08621v4#page=4
+  extraction_config: references/paper-figures.json
+  license_url: https://arxiv.org/licenses/nonexclusive-distrib/1.0/
+  license_note: arXiv non-exclusive distribution license；该许可面向 arXiv 分发，并非作者对所有再使用的通用授权。此处为逐图署名的学术说明引用。
+- id: griffin-blocks-original
+  source_id: de2024griffin
+  locator: Figure 2; PDF page 3
+  local_path: book/assets/hybrid-architectures/griffin-blocks-original.png
+  archive_status: downloaded
+  sha256: a68eff5ec97007cd4d2459c36e1f32e8f3483cd5b1a2705693786848cd1da464
+  bytes: 79472
+  display_mode: local_file
+  attribution: 'De et al., Griffin: Mixing Gated Linear Recurrences with Local Attention for Efficient Language
+    Models; 原论文图区节选，保留原标注，版权归原权利人；非本书重绘。'
+  source_url: https://arxiv.org/pdf/2402.19427v1#page=3
+  extraction_config: references/paper-figures.json
+  license_url: https://creativecommons.org/licenses/by/4.0/
+  license_note: CC BY 4.0；仅转换图区文件格式，图内内容未修改。
