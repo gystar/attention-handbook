@@ -15,7 +15,7 @@ $$
 
 索引范围 $$[0,L')$$ 被映射回 $$[0,L)$$。例如从 4 个位置扩展到 8 个位置，$$\rho=2$$：新索引 $$0,1,\ldots,7$$ 对应 $$0,0.5,\ldots,3.5$$。相邻 Token 的相位差也缩小为原来的一半。[Chen et al.，§2.3，式 (4)](https://arxiv.org/html/2306.15595v2)
 
-<figure><img src="../../.gitbook/assets/position-interpolation.png" alt="原训练范围为零至四的半开区间；直接外推的八个位置跨出范围，二倍 PI 将它们映射到零至三点五"><figcaption><p align="center">图 3-5　位置外推与 Position Interpolation</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/position-interpolation (1).png" alt="原训练范围为零至四的半开区间；直接外推的八个位置跨出范围，二倍 PI 将它们映射到零至三点五"><figcaption><p align="center">图 3-5　位置外推与 Position Interpolation</p></figcaption></figure>
 
 PI 在方法上缩放位置，等价于将所有频率除以 $$\rho$$。它保留了顺序，却改变了相邻位置的间隔；原论文使用继续微调来适配这种改变，并评估长文本与原长度范围内的任务。上述映射本身只说明相位如何变化，模型质量还取决于训练。[Chen et al.，§3.1—3.4](https://arxiv.org/html/2306.15595v2)
 
@@ -41,7 +41,7 @@ $$
 
 这里 $$\gamma_r=0$$ 对应 PI，$$\gamma_r=1$$ 对应保留原频率；图中采用 $$u_r=L\theta_r/(2\pi)$$、$$\gamma_r=\operatorname{clip}((u_r-\alpha)/(\beta-\alpha),0,1)$$，其中 $$\alpha=1,\beta=32$$；这些参数用于该公式示例，实际模型应记录所用配置。[Peng et al.，v2，§3.2，式 (18)—(20)](https://arxiv.org/html/2309.00071v2)
 
-<figure><img src="../../.gitbook/assets/frequency-scaling.png" alt="四倍扩展示例：PI 对所有维度使用四分之一频率，NTK-aware 从高频保持到低频四分之一，分频方法在两端保留对应策略"><figcaption><p align="center">图 3-6　RoPE 各维度的频率缩放</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/frequency-scaling (1).png" alt="四倍扩展示例：PI 对所有维度使用四分之一频率，NTK-aware 从高频保持到低频四分之一，分频方法在两端保留对应策略"><figcaption><p align="center">图 3-6　RoPE 各维度的频率缩放</p></figcaption></figure>
 
 图 3-6 依据公式计算，显示频率比值，不是模型得分。YaRN 还引入温度 $$\tau>0$$，对 Softmax 前的内容分数进行调整。令 $$\widetilde K$$ 的第 $$j$$ 行为 $$\widetilde k_j^\top$$，则：
 

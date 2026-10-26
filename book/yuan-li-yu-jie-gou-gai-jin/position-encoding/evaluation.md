@@ -21,7 +21,7 @@
 
 只把文本加长，无法分辨错误来自距离、证据位置还是干扰内容。Lost in the Middle 固定问题与相关文档，改变文档位置及干扰文档数量，以观察不同条件下的信息利用。[Liu et al.，§3.1—3.3](https://arxiv.org/html/2307.03172v1)
 
-<figure><img src="../../.gitbook/assets/context-evidence-position (1).png" alt="保持相关文档内容不变，将其移动到文档序列的开头、中部和结尾，比较模型回答"><figcaption><p align="center">图 3-7　证据位置的对照评估</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/context-evidence-position.png" alt="保持相关文档内容不变，将其移动到文档序列的开头、中部和结尾，比较模型回答"><figcaption><p align="center">图 3-7　证据位置的对照评估</p></figcaption></figure>
 
 Passkey Retrieval 或 Needle-in-a-Haystack（NIAH）要求从干扰文本中找出指定信息。它们适合检验定位与检索；涉及多条证据或推理链时，需要相应增加任务。RULER 将检索扩展到多 Key、多 Value 和多 Query，并加入变量追踪、信息聚合与问答。[Hsieh et al.，§3](https://arxiv.org/html/2404.06654v3)
 
