@@ -1,6 +1,6 @@
 # 9.1 从 Softmax Attention 到 Kernel Attention
 
-前面讨论的 MHA、MQA/GQA 和 MLA 保留了按历史位置读取 KV 的方式。另一条路线是先将历史写入固定维度的状态，再让 Query 读取这个状态。实现这一计算形式，需要相似度能够分解为 Query 特征与 Key 特征的内积。
+沿序列压缩 KV，仍然会让 Query 逐条读取压缩后的历史。Kernel Attention 从计算形式入手：若相似度可以分解为有限维 Query 特征与 Key 特征的内积，就能先汇总历史，再让不同 Query 读取共同状态。下面先推导这一重排，随后区分“选择新核函数”和“近似 Softmax 核”两条路线。
 
 ## 用核函数定义权重
 

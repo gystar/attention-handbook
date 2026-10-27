@@ -49,7 +49,8 @@
   * [7.2 Sliding Window 与 Local–Global Attention](chapters/sparse-attention/local-global.md)
   * [7.3 Block-Sparse Attention 的组织与执行](chapters/sparse-attention/block-sparse.md)
   * [7.4 基于内容的动态选择](chapters/sparse-attention/dynamic-selection.md)
-  * [7.5 信息覆盖与长上下文评估](chapters/sparse-attention/evaluation.md)
+  * [7.5 DeepSeek-V4 的 CSA 与 HCA](chapters/sparse-attention/compressed-attention.md)
+  * [7.6 信息覆盖与长上下文评估](chapters/sparse-attention/evaluation.md)
 * [第 8 章 KV Cache 的存储管理与推理优化](chapters/kv-cache/README.md)
   * [8.1 KV Cache 的生命周期与容量](chapters/kv-cache/lifecycle.md)
   * [8.2 PagedAttention 与缓存分配](chapters/kv-cache/paged-attention.md)
@@ -73,7 +74,8 @@
   * [10.3 Attention 与 Linear Attention 的组合](chapters/hybrid-architectures/attention-linear.md)
   * [10.4 Attention 与 State Space Models 的组合](chapters/hybrid-architectures/attention-ssm.md)
   * [10.5 层间配置与状态管理](chapters/hybrid-architectures/state-management.md)
-  * [10.6 模型能力与资源成本的比较](chapters/hybrid-architectures/evaluation.md)
+  * [10.6 MoE 与 Expert Routing](chapters/hybrid-architectures/moe-routing.md)
+  * [10.7 模型能力与资源成本的比较](chapters/hybrid-architectures/evaluation.md)
 
 ## 附录
 

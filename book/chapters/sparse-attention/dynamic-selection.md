@@ -1,6 +1,6 @@
 # 7.4 基于内容的动态选择
 
-固定窗口由位置决定读取范围；动态选择还使用当前 Query 或输入表示，寻找本次计算需要的历史位置。候选集合可以通过内容分组或低成本评分产生，再在选中的 KV 上执行 Attention。选择器的输入、粒度和训练方式决定了方法之间的区别。
+固定窗口和全局位置预先规定读取范围，但相关线索也可能出现在这些范围之外。动态选择使用当前 Query 或输入表示产生候选集合，再在选中 KV 上执行 Attention。以下按选择过程组织案例：先用 Hash/Clustering 分组，再用低成本分数挑选页面或块，最后介绍与模型共同训练的 Indexer。
 
 ## Hash 与 Clustering 的候选分组
 
@@ -13,6 +13,8 @@
 用于自回归计算时，分组后的 Mask 仍须依据原始位置。最终 Mask 限制被读取的 Key；若定额选择或排序分块还依赖整段输入，前缀复用则需另查选择过程是否受后缀影响，见[8.5 Prefix Caching 与 Offloading](../kv-cache/reuse-offloading.md)。
 
 ## Quest 的页面评分
+
+内容分组需要组织或重排候选。对于已经按页保存的 KV，另一种思路是保留布局，利用页面摘要估计当前 Query 应优先读取哪些页。
 
 Quest 按页管理 KV，保存每页 Key 各维度的最小值和最大值。当前 Query 用这些统计量估计页面分数，再读取选中的页。[Tang et al.，§3.4](https://arxiv.org/html/2406.10774v1#S3.SS4)
 
@@ -35,6 +37,8 @@ $$
 
 ## MInference 的模式选择与 Prefill 稀疏化
 
+Quest 的页面评分面向当前 Query 的历史访问。长 Prompt 的 Prefill 则同时包含许多 Query，可以利用 Head 的连接模式组织整段计算。
+
 MInference 1.0 面向已有模型的长 Prompt Prefill，无需额外训练。它先离线为每个 Head 选择模式及预算，运行时再根据输入生成索引，并调用相应的稀疏 Kernel。[Jiang et al.，§2.2—3.2](https://arxiv.org/html/2407.02490v1#S3)
 
 三类模式使用不同的索引方式：
@@ -48,6 +52,8 @@ MInference 1.0 面向已有模型的长 Prompt Prefill，无需额外训练。�
 这种索引过程还影响前缀复用。Vertical-Slash 用 Prompt 末尾的 Query 选择整段输入的连接；相同前缀接上不同后缀时，较早位置的选择集合可能改变。最终乘法中的 Causal Mask 约束被读取的 Key，但不使索引选择本身独立于后续输入。因此，复用这类 Prefill 的中间状态时，还需检查选择器的输入范围与配置；第二章标准 Causal Transformer 的前缀不变性不能直接推广到整个稀疏化流程。这是根据 Algorithm 2 的依赖关系推得的复用限制，具体缓存条件见[8.5 Prefix Caching 与 Offloading](../kv-cache/reuse-offloading.md)。
 
 ## NSA 的压缩与块选择
+
+前述 Quest 和 MInference 侧重已有模型的推理计算。Native Sparse Attention 将选择与压缩纳入模型结构，使网络在训练时适应这些读取路径。
 
 Native Sparse Attention（NSA）组合三个分支：压缩块级 KV、读取选中块的原始位置，以及局部窗口。压缩分支的 Attention 权重用于产生块选择分数；GQA 组内的 Query Heads 汇总评分，共享被选中的 KV 块。三个分支独立计算 Attention，再通过输入相关的 Sigmoid Gate 合并。[Yuan et al.，§3.2—3.4](https://arxiv.org/html/2502.11089v1#S3)
 
@@ -63,9 +69,9 @@ Native Sparse Attention（NSA）组合三个分支：压缩块级 KV、读取选
 
 压缩序列仍随历史增长。若压缩步长固定为 $$s$$，长度为 $$t$$ 的前缀含 $$O(t/s)$$ 个压缩条目；即使选中块数与窗口固定，对全部 Query 的压缩分支求和仍有 $$O(N^2/s)$$ 的配对规模。固定压缩率降低了系数，并未自动消除这一项。
 
-## DSA 的可训练 Indexer
+## DeepSeek 的 DSA 与可训练 Indexer
 
-DeepSeek Sparse Attention（DSA）引入 Lightning Indexer，用独立的低成本评分选择历史位置，再由主 Attention 读取对应 MLA 条目。其分数为：
+DeepSeek Sparse Attention（DSA）是 DeepSeek-V3.2 报告采用的稀疏 Attention 设计。与利用压缩分支 Attention 权重选择块的 NSA 相比，它引入独立的 Lightning Indexer，用低成本评分选择历史位置，再由主 Attention 读取对应 MLA 条目。其分数为：
 
 $$
 I_{t,j}=\sum_{h=1}^{H_I}w_{t,h}^{I}\operatorname{ReLU}\!\left((q_{t,h}^{I})^\top k_j^{I}\right).
@@ -76,5 +82,7 @@ $$H_I$$ 是 Indexer Head 数，$$q^I,k^I$$ 为索引表示，$$w^I$$ 为当前�
 训练分为两个阶段。Dense warm-up 冻结主模型，将主 Attention 各 Head 的权重相加并沿位置归一化，作为 Indexer 的 KL 对齐目标。随后引入稀疏选择，继续训练主模型与 Indexer；这一阶段的 KL 对齐只在选中集合上计算。Indexer 的输入经过 detach，其参数只接收 KL 损失的训练信号，主模型则由语言建模损失优化。[§2.1.1](https://arxiv.org/html/2512.02556v1#S2.SS1.SSS1)
 
 主 Attention 的选中配对数可降为 $$O(Nk)$$，但 Indexer 仍计算各 Query 与前缀位置的分数，总体保留 $$O(N^2)$$ 的索引项。[§2.3](https://arxiv.org/html/2512.02556v1#S2.SS3) 比较效率时，应同时计入索引、选择和主 Attention，而非只报告最后一步。
+
+DSA 的位置选择进一步与序列压缩结合，形成[7.5 DeepSeek-V4 的 CSA 与 HCA](compressed-attention.md)讨论的历史访问方式。
 
 图表来源与本地文件信息见[附录 C 参考文献、教学资源与本地源文件索引](../../appendices/references.md)。

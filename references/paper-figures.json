@@ -134,5 +134,56 @@
     "url": "https://arxiv.org/html/2402.19427v1",
     "book_figure": "图 10-2",
     "chapter_file": "book/chapters/hybrid-architectures/composition.md"
+  },
+  {
+    "id": "csa-original",
+    "source_id": "deepseek2026v4",
+    "pdf": "sources/papers/deepseek2026v4-v1.pdf",
+    "page": 9,
+    "crop_at_height_900": [
+      78,
+      88,
+      480,
+      240
+    ],
+    "output": "book/assets/sparse-attention/csa-original.png",
+    "locator": "Figure 3",
+    "url": "https://arxiv.org/pdf/2606.19348v1",
+    "book_figure": "图 7-4",
+    "chapter_file": "book/chapters/sparse-attention/compressed-attention.md"
+  },
+  {
+    "id": "hca-original",
+    "source_id": "deepseek2026v4",
+    "pdf": "sources/papers/deepseek2026v4-v1.pdf",
+    "page": 11,
+    "crop_at_height_900": [
+      165,
+      86,
+      305,
+      185
+    ],
+    "output": "book/assets/sparse-attention/hca-original.png",
+    "locator": "Figure 4",
+    "url": "https://arxiv.org/pdf/2606.19348v1",
+    "book_figure": "图 7-5",
+    "chapter_file": "book/chapters/sparse-attention/compressed-attention.md"
+  },
+  {
+    "id": "moe-original",
+    "source_id": "shazeer2017moe",
+    "pdf": "sources/papers/shazeer2017moe-v1.pdf",
+    "page": 2,
+    "crop_at_height_900": [
+      118,
+      88,
+      420,
+      205
+    ],
+    "output": "book/assets/hybrid-architectures/moe-original.png",
+    "locator": "Figure 1",
+    "url": "https://arxiv.org/pdf/1701.06538v1",
+    "book_figure": "图 10-4",
+    "chapter_file": "book/chapters/hybrid-architectures/moe-routing.md"
   }
 ]

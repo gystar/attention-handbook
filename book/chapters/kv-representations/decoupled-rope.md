@@ -15,7 +15,7 @@ $$
 
 ## 分离内容与位置分支
 
-Decoupled RoPE 为内容点积保留不旋转的分支，另设位置分支。令其维度为 $$d_r$$，旋转后的向量为 $$q_{t,a}^R,k_j^R\in\mathbb{R}^{d_r}$$，其中位置 Key 在 Head 间共享。原论文从输入隐藏状态投影出位置 Key，从 Query 的压缩表示投影出各 Head 的位置 Query，再分别应用对应位置的 RoPE。拼接后：
+DeepSeek-V2 的 Decoupled RoPE 为内容点积保留不旋转的分支，另设位置分支。令其维度为 $$d_r$$，旋转后的向量为 $$q_{t,a}^R,k_j^R\in\mathbb{R}^{d_r}$$，其中位置 Key 在 Head 间共享。原论文从输入隐藏状态投影出位置 Key，从 Query 的压缩表示投影出各 Head 的位置 Query，再分别应用对应位置的 RoPE。拼接后：
 
 $$
 q_{t,a}=[q_{t,a}^C;q_{t,a}^R],\qquad

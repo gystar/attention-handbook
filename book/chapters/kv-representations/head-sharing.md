@@ -1,6 +1,6 @@
 # 4.2 MQA 与 GQA 的 Head 共享
 
-Multi-Query Attention（MQA）让所有 Query Head 共用一组 Key 和 Value。Grouped-Query Attention（GQA）保留多组 KV，每组服务一部分 Query Head。两者都保留多个 Query 的匹配过程，改变的是这些 Query 读取的表示。[Shazeer，§3](https://arxiv.org/html/1911.02150v1)；[Ainslie et al.，§2.2](https://arxiv.org/html/2305.13245v3)
+4.1 的容量式表明，在长度与精度固定时，KV Head 数直接决定缓存元素数。Multi-Query Attention（MQA）让所有 Query Head 共用一组 Key 和 Value；Grouped-Query Attention（GQA）则保留多组 KV，每组服务一部分 Query Head。两者保留多个 Query 的匹配过程，通过共享其读取的表示降低存储需求。[Shazeer，§3](https://arxiv.org/html/1911.02150v1)；[Ainslie et al.，§2.2](https://arxiv.org/html/2305.13245v3)
 
 ## 从独立 Head 到分组共享
 

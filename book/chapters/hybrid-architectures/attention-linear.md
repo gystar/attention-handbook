@@ -44,4 +44,4 @@ Gated DeltaNet 论文还研究了 H2：在层间组合 Mamba2、Gated DeltaNet �
 
 在这组实验中，H1、H2 的两项汇总结果均优于纯 Gated DeltaNet；H2 的 WikiText Perplexity 更低，H1 的准确率均值更高。因此，选择配置需要结合目标任务查看分项结果，并分别测量运行成本。仅凭这些质量指标，无法判断训练或 Decode 更快。
 
-层比例、窗口和递推状态维度同时影响计算与存储，具体计数见[10.5 层间配置与状态管理](state-management.md)；训练预算控制与窗口内外检索的比较方法见[10.6 模型能力与资源成本的比较](evaluation.md)。
+层比例、窗口和递推状态维度同时影响计算与存储，具体计数见[10.5 层间配置与状态管理](state-management.md)；训练预算控制与窗口内外检索的比较方法见[10.7 模型能力与资源成本的比较](evaluation.md)。

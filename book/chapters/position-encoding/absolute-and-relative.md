@@ -1,6 +1,6 @@
 # 3.2 Absolute 与 Relative Position Encoding
 
-位置可以表示为序列中的索引，也可以表示为两个位置之间的偏移。前者为各位置提供向量，后者直接描述 Query 与 Key 的关系。
+上一节区分了可见范围与位置关系。加入位置关系有两个直接入口：给每个索引一个位置向量，或在 Query–Key 配对时表示两者的偏移。下面先用原始 Transformer 说明 Absolute Position Encoding，再以 Shaw 方法和 T5 的分数偏置说明 Relative 设计。
 
 ## Absolute Position Encoding 为位置赋予向量
 
@@ -41,6 +41,8 @@ $$
 
 ## Relative Position Encoding 直接表示位置对
 
+输入位置向量让网络间接学习距离关系；另一种选择是在匹配时直接提供相对偏移。
+
 Shaw et al. 为偏移 $$j-i$$ 学习向量。令截断半径为 $$k$$，将偏移截断到 $$[-k,k]$$，分别查得 $$a^K_{ij}$$ 与 $$a^V_{ij}$$。为便于展示，这里取 $$d_k=d_v=d$$，各向量均为 $$d$$ 维：
 
 $$
@@ -52,6 +54,8 @@ $$
 相对位置既参与匹配，也可以参与输出。截断后，距离超过阈值的位置共享同一方向的边界表示；这种表示保留了左右方向，但不再区分更远位置的精确距离。[Shaw et al.，§3.1—3.2，式 (3)—(4)](https://aclanthology.org/N18-2074.pdf)
 
 ## Relative Position Bias 简化为分数偏置
+
+相对位置也可以只调节“读取多少”，而不增加待汇总的向量。T5 采用的标量偏置体现了这种简化。
 
 T5 将相对位置表示简化为每个 Head 的可学习标量，并直接加到 Attention logits。以 $$\operatorname{bucket}(j-i)$$ 表示偏移所属的区间：
 

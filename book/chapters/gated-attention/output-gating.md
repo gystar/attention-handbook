@@ -1,6 +1,6 @@
 # 5.1 Attention 输出的 Gating
 
-一个 Head 已经完成匹配和加权汇总后，仍可根据当前输入调节其输出。Gate 为每个位置生成一个标量或向量，与 Head 输出相乘。采用 Sigmoid 时，系数位于 0 与 1 之间。[Qiu et al.，§2.2](https://arxiv.org/html/2505.06708v1)
+Softmax 为每个 Query 分配一组和为 1 的读取权重，但汇总后的结果还可以由输入相关的系数调节。本节采用 Qiu 等人研究的 SDPA 输出 Gate：先完成一个 Head 的 Attention，再生成标量或向量，与其输出相乘。使用 Sigmoid 时，系数位于 0 与 1 之间。[Qiu et al.，§2.2](https://arxiv.org/html/2505.06708v1)
 
 ## 从权重分配到输出调节
 

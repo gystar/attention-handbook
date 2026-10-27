@@ -1,6 +1,6 @@
 # 8.5 Prefix Caching 与 Offloading
 
-重复的 System Prompt、Few-shot 示例和多轮对话前缀，会使不同请求再次处理同一段输入。Prefix Caching 复用这些前缀已经计算出的 KV；Offloading 则将 KV 放到 GPU 之外，需要时传回或在数据所在设备上计算。前者减少重复计算，后者调整存储与传输。
+前几节讨论单个请求内部如何保存历史。服务多个请求时，重复的 System Prompt、Few-shot 示例和对话前缀还会带来重复计算，有限显存也可能无法容纳全部可复用数据。Prefix Caching 复用相同前缀已经算出的 KV；Offloading 将 KV 放到 GPU 之外，需要时恢复或在数据所在设备上计算。两者分别处理重复计算与存储层级。
 
 ## 前缀复用的条件
 

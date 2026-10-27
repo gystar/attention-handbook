@@ -1,6 +1,6 @@
 # 2.5 Training、Prefill 与 Decode 的计算差异
 
-同一组 Attention 参数可以处理完整序列，也可以在 KV cache 的支持下逐步处理新位置。区别来自本轮 Query 的数量、历史 KV 的来源，以及是否需要计算梯度。
+前面已经定义一层 Multi-Head Attention 的计算。将它用于语言模型时，同一组参数既可以处理已知的完整序列，也可以在 KV Cache 支持下逐步处理新位置。Training、Prefill 与 Decode 的差异来自本轮 Query 的数量、历史 KV 的来源，以及是否需要计算梯度。
 
 ## 完整序列与增量计算
 

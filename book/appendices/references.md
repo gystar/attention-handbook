@@ -163,6 +163,12 @@
 
 教学材料用于帮助理解，核心公式和方法归属仍以原始论文为据。D2L 已核查 §10.7 的架构说明、§11.1、§11.3 的缩放与 Mask、§11.5 的公式与张量布局，§11.6.3 的位置编码，以及 §11.7.1—11.7.3 的结构说明。书中数值检查使用本仓库脚本，D2L 的模型训练代码未运行。
 
+### 压缩 Attention 与 Expert Routing
+
+- **DeepSeek-AI，2026**：[DeepSeek-V4: Towards Highly Efficient Million-Token Context Intelligence](https://arxiv.org/abs/2606.19348v1)。使用版本：2606.19348v1；核查 §2.1、§2.3、§3.1、§3.5.1、§4.2.1 和 Figures 3–4。[PDF](https://arxiv.org/pdf/2606.19348v1)。来源 ID：`deepseek2026v4`。
+- **Shazeer et al.，2017**：[Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer](https://arxiv.org/abs/1701.06538v1)。核查 §1.1—2.1、§3、Figure 1。[PDF](https://arxiv.org/pdf/1701.06538v1)。来源 ID：`shazeer2017moe`。
+- **DeepSeek-AI，2026**：[DeepSeek-V4 官方推理实现](https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro/blob/b5968e9190ef611bbf34a7229255be88a0e937c1/inference/model.py)。固定版本 `b5968e9190ef611bbf34a7229255be88a0e937c1`；核查 `Gate.forward` 与 `MoE.forward`。来源 ID：`deepseek2026v4code`。
+
 ## 图表来源
 
 | 本书图号 | 来源与原图位置 | 解释对象 |
@@ -205,6 +211,8 @@
 | 图 7-1 | [Beltagy, Peters & Cohan，Longformer: The Long-Document Transformer，Figure 2](https://arxiv.org/pdf/2004.05150v2#page=3) | 从归档 PDF 第 3 页截取图区并栅格化，保留原标注；Longformer 的局部、扩张与全局连接 |
 | 图 7-2 | 本书依据 [Longformer §3.1](https://arxiv.org/html/2004.05150v2) 与单向 Mask 定义自行绘制，非原图改绘 | N=8；Causal 窗口包含自身为 3，双向局部半径 1、Global 位置 1；SVG/PNG 位于 assets/sparse-attention/，脚本 scripts/render_sparse_attention.py |
 | 图 7-3 | 本书依据 [Quest §3.4](https://arxiv.org/html/2406.10774v1) 自行构造反例，非原图改绘 | 页面上界与真实最大点积排序不同；SVG/PNG 位于 assets/sparse-attention/，生成脚本 scripts/render_sparse_attention.py，数值已经检查 |
+| 图 7-4 | [DeepSeek-AI，Figure 3](https://arxiv.org/pdf/2606.19348v1#page=9)；[arXiv 分发许可](https://arxiv.org/licenses/nonexclusive-distrib/1.0/) | 原论文图区节选，保留标注；学术说明引用，版权归原权利人；提取参数见 references/paper-figures.json |
+| 图 7-5 | [DeepSeek-AI，Figure 4](https://arxiv.org/pdf/2606.19348v1#page=11)；[arXiv 分发许可](https://arxiv.org/licenses/nonexclusive-distrib/1.0/) | 原论文图区节选，保留标注；学术说明引用，版权归原权利人；提取参数见 references/paper-figures.json |
 | 图 8-1 | 本书依据 [PagedAttention §4.1—4.3](https://arxiv.org/html/2309.06180v1) 自行绘制 | 块表 `[7, 2, 5]` 与 9 个有效位置的教学例子；[SVG](../assets/kv-cache/paged-mapping.svg) · [PNG](../assets/kv-cache/paged-mapping.png) |
 | 图 8-2 | 本书依据 [KIVI §3.1、Figure 1](https://arxiv.org/html/2402.02750v2) 自行绘制 | 4×4 矩阵、组长 4 的量化分组，不显示实验数据；[SVG](../assets/kv-cache/quantization-groups.svg) · [PNG](../assets/kv-cache/quantization-groups.png) |
 | 图 8-3 | [Liu et al.，KIVI: A Tuning-Free Asymmetric 2bit Quantization for KV Cache，Figure 2](https://arxiv.org/pdf/2402.02750v2#page=4)；[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | 从归档 PDF 第 4 页截取图区并栅格化，保留原标注；KIVI 观察到的 Key 与 Value 数值分布 |
@@ -214,6 +222,7 @@
 | 图 10-1 | 本书参照 [Griffin §3](https://arxiv.org/html/2402.19427v1#S3) 的模块组合自行构造层排列 | 三种教学布局与各层历史状态，非完整发布模型；[SVG](../assets/hybrid-architectures/layer-state-layouts.svg) · [PNG](../assets/hybrid-architectures/layer-state-layouts.png) |
 | 图 10-2 | [De et al.，Griffin: Mixing Gated Linear Recurrences with Local Attention for Efficient Language Models，Figure 2](https://arxiv.org/pdf/2402.19427v1#page=3)；[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | 从归档 PDF 第 3 页截取图区并栅格化，保留原标注；Griffin 的残差块与递推模块 |
 | 图 10-3 | 本书根据 10.5 的状态恢复条件自行绘制，递推定义参照 [Mamba §2—3](https://arxiv.org/html/2312.00752v2#S2) | 同一前缀边界的快照与分支更新，非特定服务实现；[SVG](../assets/hybrid-architectures/prefix-state-branches.svg) · [PNG](../assets/hybrid-architectures/prefix-state-branches.png) |
+| 图 10-4 | [Shazeer et al.，Figure 1](https://arxiv.org/pdf/1701.06538v1#page=2)；[arXiv 分发许可](https://arxiv.org/licenses/nonexclusive-distrib/1.0/) | 原论文图区节选，保留标注；学术说明引用，版权归原权利人；提取参数见 references/paper-figures.json |
 
 <p align="center">表 C-2　图表来源</p>
 
@@ -223,7 +232,7 @@ Vaswani et al. 原论文首页允许署名后的学术图表转载；GQA 原图�
 
 公开书页直接链接原论文和作者页面。本地原文放在仓库 `sources/` 中，由 `sources/INDEX.md` 提供真实文件链接；来源 ID 与上述条目一致。原文文件默认不随 Git 仓库发布。
 
-当前工作树已归档 60 篇必备论文 PDF 和清单中的 76 个图表文件；正文中的自回归 GIF、Scaled Dot-Product Attention 与 GQA 原图均使用本地相对路径。另存有 3Blue1Brown 的英文字幕，视频仍通过原始链接观看。重新克隆后，本地资料是否齐备应以 `python3 scripts/check_handbook.py --require-archives` 的检查结果为准。
+当前工作树已归档 62 篇必备论文 PDF 和清单中的 79 个图表文件；正文中的自回归 GIF、Scaled Dot-Product Attention 与 GQA 原图均使用本地相对路径。另存有 3Blue1Brown 的英文字幕，视频仍通过原始链接观看。重新克隆后，本地资料是否齐备应以 `python3 scripts/check_handbook.py --require-archives` 的检查结果为准。
 
 在允许联网的环境中，可在仓库根目录执行 `python3 scripts/sources.py --download` 获取必备原文及引用图片，再执行 `python3 scripts/sources.py` 更新索引。选读资料使用 `--download --all`。工具说明和后续归档要求见仓库 `references/README.md`。
 

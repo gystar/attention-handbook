@@ -15,7 +15,7 @@ Sequence Mixing 指让不同位置的信息参与当前位置的表示计算。S
   <figcaption><p align="center">图 10-1　层间组合与历史状态</p></figcaption>
 </figure>
 
-Griffin 采用两个递推残差块接一个 Local Attention 残差块的配置，Attention 使用 MQA，默认窗口为 1024。该配置让部分层直接读取近期 KV，其他层通过 RG-LRU 递推状态传递信息。[De et al.，§3，Griffin](https://arxiv.org/html/2402.19427v1#S3)
+Griffin 采用两个递推残差块接一个 Local Attention 残差块的配置，Attention 使用 MQA，默认窗口为 1024。该配置让部分层直接读取近期 KV，其他层通过 Real-Gated Linear Recurrent Unit（RG-LRU）的状态传递信息；这是 Griffin 使用的门控递推单元。[De et al.，§3，Griffin](https://arxiv.org/html/2402.19427v1#S3)
 
 不同层的状态通常分别维护。Attention 层中的 Key 已由此前各层计算得到，可能包含更早上下文的信息。因此，Local Attention 的窗口限定本层直接访问的位置范围，不能单独作为完整模型的历史依赖边界。
 
@@ -68,3 +68,5 @@ Mixture-of-Experts（MoE）通过路由选择部分 Expert 处理每个 Token。
 Jamba 就同时设置了这两个维度：论文配置以 1:7 的比例组合 Attention 与 Mamba 层，并每隔一层使用 MoE。序列模块比例决定多少层保存 Attention KV 或递推状态，Expert 数量与路由决定哪些参数参与该位置的 FFN 计算。[Lieber et al.，§2、Figure 1](https://arxiv.org/html/2403.19887v2#S2)
 
 比较混合架构时，需要分别记录 Sequence Mixer 配置与 FFN/MoE 配置。若两者同时变化，质量或吞吐差异就包含多项因素；应通过相应消融实验判断贡献。
+
+Expert 的选择、输出加权与负载均衡见[10.6 MoE 与 Expert Routing](moe-routing.md)。

@@ -1,6 +1,6 @@
 # 9.4 DeltaNet 与 Gated DeltaNet 的状态更新
 
-加法更新把新的 Key–Value 外积叠加到状态中；衰减决定旧状态保留多少。Delta Rule 进一步利用当前 Key 读取已有内容，根据读取结果与目标 Value 的差值修正状态，使写入同时依赖输入和已有记忆。
+衰减可以减弱旧状态，却不能单独判断某个 Key 对应的内容是否需要更新。例如，同一个 Key 先后写入两个不同 Value 时，简单相加会混合新旧关联。Delta Rule 先用当前 Key 读取已有内容，再根据它与目标 Value 的差值修正状态，使写入同时依赖输入与已有记忆。
 
 Schlag 等人在 2021 年将这种误差修正引入 Linear Transformer 的 Fast Weight 更新；2024 年的 DeltaNet 工作进一步解决其沿序列维度的高效并行训练。[Schlag et al.，§4.2](https://proceedings.mlr.press/v139/schlag21a/schlag21a.pdf) · [Yang et al.，§3](https://arxiv.org/html/2406.06484v2#S3)
 

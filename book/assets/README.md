@@ -88,3 +88,13 @@ Transformer 图表使用条件见原论文首页的转载声明。三张论文�
 | 图 8-3 | [kivi-distribution-original.png](kv-cache/kivi-distribution-original.png) | [Figure 2](https://arxiv.org/html/2402.02750v2)，PDF 第 4 页 |
 | 图 9-2 | [retnet-dual-original.png](linear-attention/retnet-dual-original.png) | [Figure 3](https://arxiv.org/html/2307.08621v4)，PDF 第 4 页 |
 | 图 10-2 | [griffin-blocks-original.png](hybrid-architectures/griffin-blocks-original.png) | [Figure 2](https://arxiv.org/html/2402.19427v1)，PDF 第 3 页 |
+
+## CSA、HCA 与 MoE 原图
+
+| 图号 | 本地文件 | 原始位置 |
+| --- | --- | --- |
+| 图 7-4 | [csa-original](sparse-attention/csa-original.png) | [Figure 3，PDF 第 9 页](https://arxiv.org/pdf/2606.19348v1#page=9) |
+| 图 7-5 | [hca-original](sparse-attention/hca-original.png) | [Figure 4，PDF 第 11 页](https://arxiv.org/pdf/2606.19348v1#page=11) |
+| 图 10-4 | [moe-original](hybrid-architectures/moe-original.png) | [Figure 1，PDF 第 2 页](https://arxiv.org/pdf/1701.06538v1#page=2) |
+
+以上为原论文图区节选，保留原标注；版权及使用条件见附录 C 和来源清单。

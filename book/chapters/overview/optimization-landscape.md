@@ -19,19 +19,22 @@ Attention 根据内容计算匹配权重，序列建模还需要利用词语的�
 
 ## 降低历史信息的存储与读取成本
 
-标准 Multi-Head Attention 中，每个 Head 独立执行一组匹配与汇总。生成时，多个 Head 都要读取历史 KV；历史越长，保存和访问这些向量的成本越高。改进可以作用于三个对象：每个位置保存的 KV、允许读取的位置，以及累积历史信息的方式。
+标准 Multi-Head Attention 中，每个 Head 独立执行一组匹配与汇总。生成时，多个 Head 都要读取历史 KV；历史越长，保存和访问这些向量的成本越高。改进可以作用于每个位置的表示、历史条目数量、读取集合，以及累积历史信息的方式。
 
 | 改变的对象 | 代表方法 | 具体变化 | 需要评估的代价 |
 | --- | --- | --- | --- |
 | 每个位置的 KV 表示 | MQA、GQA、MLA | MQA/GQA 共享 KV Head；MLA 使用压缩表示 | 表示容量、训练适应与实现成本 |
+| 历史条目的数量 | DeepSeek-V4 的 CSA/HCA | 将多个位置压缩为条目，再选择部分或读取全部压缩历史 | 压缩后保留的信息、索引与读取成本 |
 | 可读取的位置 | Sparse Attention | 用窗口、块或动态选择减少参与计算的位置 | 信息覆盖、选择开销与模型质量 |
 | 历史信息的累积方式 | Linear Attention | 在适用的核形式下更新状态，再从状态读取 | 状态容量、更新规则与检索能力 |
 
-<p align="center">表 1-5　历史信息的三类改进</p>
+<p align="center">表 1-5　历史表示与读取方式的改进</p>
 
 Multi-Query Attention（MQA）让 Query Head 共用一组 KV，Grouped-Query Attention（GQA）按组共享，Multi-Head Latent Attention（MLA）则使用压缩后的 Latent 表示；具体结构见[第 4 章 MQA、GQA 与 MLA 的 KV 表示优化](../kv-representations/README.md)。[Shazeer，§3](https://arxiv.org/html/1911.02150v1)；[Ainslie et al.，§2.2](https://arxiv.org/html/2305.13245v3)；[DeepSeek-AI，§2.1](https://arxiv.org/html/2405.04434v5)
 
 Sparse Attention 保留按位置读取的计算方式，通过减少连接降低配对与读取开销；未选中的 KV 仍可能为后续 Query 保留，因此连接稀疏度与缓存容量需要分别统计。具体见[第 7 章 Sparse Attention 的连接模式与动态选择](../sparse-attention/README.md)。Linear Attention 则可将历史累积到固定维度的状态，逐步推理时的状态大小不随历史长度增加；其核形式、递推条件和更新方法见[第 9 章 Linear Attention 的 Recurrent Formulation 与 State Update](../linear-attention/README.md)。[Child et al.，§4](https://arxiv.org/html/1904.10509v1)；[Katharopoulos et al.，§3.2—3.4](https://proceedings.mlr.press/v119/katharopoulos20a/katharopoulos20a.pdf)
+
+沿序列压缩与减少读取还可以组合。DeepSeek-V4 的 CSA 选择部分压缩 KV，HCA 则读取更高压缩率下的全部可见条目；二者是该模型的具体设计，说明同一个架构可以结合不同历史访问方式。[报告 §2.3](https://arxiv.org/html/2606.19348v1#S2.SS3) 计算过程见[7.5 DeepSeek-V4 的 CSA 与 HCA](../sparse-attention/compressed-attention.md)。
 
 ## 提高计算与存储效率
 

@@ -1,6 +1,6 @@
 # 4.3 MLA 的 Latent Compression
 
-Multi-head Latent Attention（MLA）让多个 Head 的 Key 和 Value 由共同的低维向量生成。它保存这一 Latent 表示，并利用线性运算的重排减少历史 KV 的展开。DeepSeek-V2 将该结构与单独的位置分支结合；本节先推导内容分支，位置分支在 4.4 展开。[DeepSeek-AI，§2.1.2—2.1.3](https://arxiv.org/html/2405.04434v5)
+MQA/GQA 直接共享部分 Head 的 K/V 投影。DeepSeek-V2 提出的 Multi-head Latent Attention（MLA）采用另一种组织方式：各 Head 的 Key 和 Value 由共同的低维向量生成，推理时保存这一 Latent 表示，再利用线性运算重排减少历史 KV 的展开。本节按 DeepSeek-V2 的结构先推导内容分支，其配套的位置分支在 4.4 展开。[DeepSeek-AI，§2.1.2—2.1.3](https://arxiv.org/html/2405.04434v5)
 
 DeepSeek-V2 的原图用阴影标出推理时保存的表示：MHA、GQA、MQA 调整 KV Head 的数量，MLA 则保存多个 Head 共用的 Latent，再通过投影生成内容 Key 和 Value。图中 MLA 是简化的内容分支；4.4 将补入需要单独缓存的位置 Key。[原论文 Figure 3，PDF 第 7 页](https://arxiv.org/pdf/2405.04434v5#page=7)
 

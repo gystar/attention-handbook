@@ -1,12 +1,14 @@
 # 第 4 章 MQA、GQA 与 MLA 的 KV 表示优化
 
-生成时，模型持续读取各层的历史 KV。MQA 和 GQA 通过共享 KV Head 减少保存的表示；MLA 则使用共同的 Latent 表示，并单独处理位置相关分量。本章按缓存成本、共享结构、压缩计算和比较条件展开。
+位置编码决定 Query 与 Key 如何利用顺序；自回归生成还面临另一个问题：每个历史位置需要保存多少 KV 数据。第二章的标准 MHA 为各 Head 保存独立的 Key 和 Value，长上下文会持续放大这部分存储与读取成本。本章比较两种结构选择：MQA/GQA 共享 KV Head，MLA 用共同的低维表示生成多个 Head 的 KV。
 
 - [4.1 KV 表示与缓存成本](cache-cost.md)
 - [4.2 MQA 与 GQA 的 Head 共享](head-sharing.md)
 - [4.3 MLA 的 Latent Compression](latent-compression.md)
 - [4.4 MLA 中的 RoPE 与投影合并](decoupled-rope.md)
 - [4.5 KV 表示的质量与效率比较](comparison.md)
+
+MLA 部分以 DeepSeek-V2 报告中的结构为例，连同其 Decoupled RoPE 解释缓存与投影合并。MQA/GQA 的 Head 共享与这一具体压缩设计分别推导，最后在明确维度和训练条件后比较。
 
 ## KV 表示与 Head 共享
 

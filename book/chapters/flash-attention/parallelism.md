@@ -34,6 +34,8 @@ FlashAttention-4 面向 Blackwell 的资源比例变化：Tensor Core 吞吐增�
 
 ## 低精度矩阵乘法
 
+前面的 FlashAttention 版本主要围绕分块、调度及硬件执行单元组织计算。SageAttention 是另一组实现工作，通过量化参与乘法的张量提高吞吐；它的近似误差需要与调度收益分别考察。
+
 除调度方式外，矩阵乘法的数据类型也影响硬件吞吐。SageAttention 的 SAGEAttn-B 采用如下混合精度路径：Q/K 按块量化为 INT8 → 计算点积并恢复尺度 → 高精度 Online Softmax → FP16 的加权求和。最后一步的矩阵乘法采用 FP16 累加器。[Zhang et al.，§4.1、§4.4，Table 6](https://arxiv.org/html/2410.02367v1#S4)
 
 量化前，方法从所有 Key 中减去同一个均值向量。对固定 Query，这只给整行分数减去相同常量，因此在实数运算下保持 Softmax 权重；随后的量化仍引入近似误差。[§4.2](https://arxiv.org/html/2410.02367v1#S4.SS2)

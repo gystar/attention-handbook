@@ -11,7 +11,7 @@ M_{\mathrm{KV},\ell}=n_\ell(N)h_{\mathrm{kv},\ell}
 (d_{k,\ell}+d_{v,\ell})b_\ell.
 $$
 
-Full Attention 通常取 $$n_\ell(N)=N$$，固定窗口取 $$\min(N,w_\ell)$$。MLA 等压缩表示需改用实际缓存张量的形状；量化还要另计尺度、零点等元数据。
+Full Attention 通常取 $$n_\ell(N)=N$$，固定窗口取 $$\min(N,w_\ell)$$。MLA 需改用 Latent 与位置分支的实际形状；DeepSeek-V4 的 CSA/HCA 则需分别统计压缩条目、局部窗口及压缩过程中的状态，见[7.5 DeepSeek-V4 的 CSA 与 HCA](../sparse-attention/compressed-attention.md)。量化还要另计尺度、零点等元数据。
 
 记递推层核心状态占 $$s_\ell$$ 字节，辅助状态占 $$c_\ell$$ 字节，则没有跨层或跨请求共享时，单请求总有效载荷为：
 

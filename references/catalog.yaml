@@ -1271,6 +1271,59 @@ sources:
   - §2.1–2.3; Figure 6; §2.6 Theorem 1; §2.7 internal model and initialization
   checked_on: '2026-10-26'
   bytes: 1713478
+- id: deepseek2026v4
+  kind: paper
+  title: 'DeepSeek-V4: Towards Highly Efficient Million-Token Context Intelligence'
+  authors: DeepSeek-AI
+  first_public_year: 2026
+  version: 2606.19348v1
+  url: https://arxiv.org/abs/2606.19348v1
+  full_text_url: https://arxiv.org/pdf/2606.19348v1
+  download_url: https://arxiv.org/pdf/2606.19348v1
+  local_path: sources/papers/deepseek2026v4-v1.pdf
+  required_local: true
+  archive_status: downloaded
+  sha256: 55b2d72f772ac00de2e470b3ee08443c648d971c7f57c52d6202895665e5978d
+  bytes: 4713349
+  checked_sections:
+  - §2.1; §2.3.1–2.3.4; Figures 3–4
+  - §3.1; §3.5.1; §4.2.1
+  checked_on: '2026-10-27'
+  archive_note: 已下载并解析 PDF；核查范围见 checked_sections。
+- id: shazeer2017moe
+  kind: paper
+  title: 'Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer'
+  authors: Shazeer et al.
+  first_public_year: 2017
+  version: 1701.06538v1
+  url: https://arxiv.org/abs/1701.06538v1
+  full_text_url: https://arxiv.org/pdf/1701.06538v1
+  download_url: https://arxiv.org/pdf/1701.06538v1
+  local_path: sources/papers/shazeer2017moe-v1.pdf
+  required_local: true
+  archive_status: downloaded
+  sha256: 2567713d198a376b65b92f0c60b9f58c8c5f66755530b92203533a17c4ec4b8e
+  bytes: 544288
+  checked_sections:
+  - §1.1–2.1; §3; Figure 1
+  checked_on: '2026-10-27'
+  archive_note: 已下载并解析 PDF；核查范围见 checked_sections。
+- id: deepseek2026v4code
+  kind: code
+  title: DeepSeek-V4 reference inference model
+  authors: DeepSeek-AI
+  first_public_year: 2026
+  version: b5968e9190ef611bbf34a7229255be88a0e937c1
+  url: https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro/blob/b5968e9190ef611bbf34a7229255be88a0e937c1/inference/model.py
+  download_url: https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro/raw/b5968e9190ef611bbf34a7229255be88a0e937c1/inference/model.py
+  local_path: sources/code/deepseek-v4-model-b5968e9.py
+  required_local: true
+  archive_status: downloaded
+  sha256: ce962f1face79d4f633d36436576214057a7e11443c9789935e1deb5c6cd1d71
+  bytes: 38632
+  checked_sections:
+  - Gate.forward lines 546–584; MoE.forward
+  checked_on: '2026-10-27'
 assets:
 - id: transformer-architecture
   source_id: vaswani2017attention
@@ -2099,3 +2152,42 @@ assets:
   extraction_config: references/paper-figures.json
   license_url: https://creativecommons.org/licenses/by/4.0/
   license_note: CC BY 4.0；仅转换图区文件格式，图内内容未修改。
+- id: csa-original
+  source_id: deepseek2026v4
+  locator: Figure 3; PDF page 9
+  local_path: book/assets/sparse-attention/csa-original.png
+  archive_status: downloaded
+  sha256: e8fe73577a989b575ea1889d05b6ad5880ab1c2ad91deed5c6131aae636aa25d
+  bytes: 82602
+  display_mode: local_file
+  attribution: DeepSeek-AI
+  source_url: https://arxiv.org/pdf/2606.19348v1#page=9
+  extraction_config: references/paper-figures.json
+  license_url: https://arxiv.org/licenses/nonexclusive-distrib/1.0/
+  license_note: arXiv 分发许可并非通用转载授权；本书按图署名用于学术说明，节选原论文图区，保留标注，版权归原权利人。
+- id: hca-original
+  source_id: deepseek2026v4
+  locator: Figure 4; PDF page 11
+  local_path: book/assets/sparse-attention/hca-original.png
+  archive_status: downloaded
+  sha256: 4eaacef5fed9724e399b2ca3d771ccfc61702a729608fff7e95d72134e9e1e40
+  bytes: 42304
+  display_mode: local_file
+  attribution: DeepSeek-AI
+  source_url: https://arxiv.org/pdf/2606.19348v1#page=11
+  extraction_config: references/paper-figures.json
+  license_url: https://arxiv.org/licenses/nonexclusive-distrib/1.0/
+  license_note: arXiv 分发许可并非通用转载授权；本书按图署名用于学术说明，节选原论文图区，保留标注，版权归原权利人。
+- id: moe-original
+  source_id: shazeer2017moe
+  locator: Figure 1; PDF page 2
+  local_path: book/assets/hybrid-architectures/moe-original.png
+  archive_status: downloaded
+  sha256: 974b3a7b07bc93166e121ed0d93888ae2e2cc183c1b5bf03246cd976fe8b06aa
+  bytes: 38684
+  display_mode: local_file
+  attribution: Shazeer et al.
+  source_url: https://arxiv.org/pdf/1701.06538v1#page=2
+  extraction_config: references/paper-figures.json
+  license_url: https://arxiv.org/licenses/nonexclusive-distrib/1.0/
+  license_note: arXiv 分发许可并非通用转载授权；本书按图署名用于学术说明，节选原论文图区，保留标注，版权归原权利人。

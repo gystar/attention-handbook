@@ -30,7 +30,7 @@
 | Length Generalization | 超出相关训练长度时保持任务能力 | [3.5 长度泛化与长上下文评估](../chapters/position-encoding/evaluation.md) |
 | Multi-Query Attention（MQA） | 多个 Query Head 共享一组 KV | [4.2 MQA 与 GQA 的 Head 共享](../chapters/kv-representations/head-sharing.md) |
 | Grouped-Query Attention（GQA） | 每组 Query Head 共享一组 KV | [4.2 MQA 与 GQA 的 Head 共享](../chapters/kv-representations/head-sharing.md) |
-| Multi-Head Latent Attention（MLA） | 采用联合低秩 KV 表示，并处理位置相关分量的 Attention 设计 | [4.3 MLA 的 Latent Compression](../chapters/kv-representations/latent-compression.md) |
+| Multi-Head Latent Attention（MLA） | 本书按 DeepSeek-V2 介绍的联合低秩 KV 表示及位置分支设计 | [4.3 MLA 的 Latent Compression](../chapters/kv-representations/latent-compression.md) |
 | Output Gating | 按输入生成系数，逐元素或逐 Head 调节 Attention 汇总结果 | [5.1 Attention 输出的 Gating](../chapters/gated-attention/output-gating.md) |
 
 <p align="center">表 A-2　位置编码与表示调整术语</p>
@@ -43,6 +43,8 @@
 | IO / HBM | 数据传输 / GPU 的 High Bandwidth Memory；区别于算术运算量 | [6.1 Attention 的计算量与数据访问](../chapters/flash-attention/io-cost.md) |
 | Online Softmax | 逐块更新最大值与归一化分母；Attention 同时累积 Value 加权和 | [6.2 Online Softmax 与分块计算](../chapters/flash-attention/online-softmax.md) |
 | Block-Sparse Attention | 按块组织可访问的位置对，使实现能够跳过未选块 | [7.3 Block-Sparse Attention 的组织与执行](../chapters/sparse-attention/block-sparse.md) |
+| Compressed Sparse Attention（CSA） | DeepSeek-V4 中先沿序列压缩 KV、再选择压缩条目的设计 | [7.5 DeepSeek-V4 的 CSA 与 HCA](../chapters/sparse-attention/compressed-attention.md) |
+| Heavily Compressed Attention（HCA） | DeepSeek-V4 中高压缩率、全体可见压缩条目读取的设计 | [7.5 DeepSeek-V4 的 CSA 与 HCA](../chapters/sparse-attention/compressed-attention.md) |
 | PagedAttention | 通过块表将逻辑 KV 位置映射到物理存储块 | [8.2 PagedAttention 与缓存分配](../chapters/kv-cache/paged-attention.md) |
 | Cache Eviction | 本书 8.4 指移除活跃请求的历史 KV，改变后续可访问集合；闲置前缀缓存的回收见 8.5 | [8.4 Token Selection 与 Cache Eviction](../chapters/kv-cache/eviction.md) |
 | Prefix Caching / Offloading | 复用已计算的前缀状态 / 在不同存储层之间迁移数据 | [8.5 Prefix Caching 与 Offloading](../chapters/kv-cache/reuse-offloading.md) |
@@ -57,10 +59,12 @@
 | --- | --- | --- |
 | Recurrent Formulation | 用上一步状态与当前输入表达下一步状态和输出 | [9.2 Causal Linear Attention 的递推计算](../chapters/linear-attention/recurrence.md) |
 | Kernel Attention | 以特征核定义 Query–Key 权重；有限维特征映射允许重排计算 | [9.1 从 Softmax Attention 到 Kernel Attention](../chapters/linear-attention/kernel-attention.md) |
-| Gated Linear Attention（GLA） | 通过输入相关 Gate 调节递推状态的历史保留 | [9.3 状态衰减与 Gated Linear Attention](../chapters/linear-attention/state-decay.md) |
+| Gated Linear Attention（GLA） | 本书特指 Yang 等人的模型，用输入相关 Gate 调节矩阵状态 | [9.3 状态衰减与 Gated Linear Attention](../chapters/linear-attention/state-decay.md) |
 | Delta Rule | 根据当前 Key 读取状态的误差修正状态写入 | [9.4 DeltaNet 与 Gated DeltaNet 的状态更新](../chapters/linear-attention/delta-rule.md) |
 | State Space Model（SSM） | 通过状态转移、输入写入和状态读取描述序列计算 | [10.4 Attention 与 State Space Models 的组合](../chapters/hybrid-architectures/attention-ssm.md) |
 | Hybrid Architecture | 在同一模型的不同层、Head 或分支中组合序列模块 | [10.1 序列模块的组合方式](../chapters/hybrid-architectures/composition.md) |
+| Mixture-of-Experts（MoE） | 本书讨论 FFN MoE，为每个 Token 选择部分前馈 Expert 执行 | [10.6 MoE 与 Expert Routing](../chapters/hybrid-architectures/moe-routing.md) |
+| Score-based / Hash Routing | 本节分别按隐藏状态分数 / Token ID 映射选择 Expert；具体加权方式以模型为准 | [10.6 MoE 与 Expert Routing](../chapters/hybrid-architectures/moe-routing.md) |
 
 <p align="center">表 A-4　递推状态与混合架构术语</p>
 

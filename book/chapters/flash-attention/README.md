@@ -1,6 +1,6 @@
 # 第 6 章 FlashAttention 的计算与 IO 优化
 
-Attention 的执行效率同时受到运算量、数据访问和 GPU 并行方式的影响。本章先分析完整分数矩阵的成本，再推导 Online Softmax 如何支持分块汇总，随后展开前后向计算、硬件调度、低精度矩阵乘法及跨设备划分，最后讨论数值误差和性能比较条件。
+第三至第五章讨论模型计算本身的设计。选定 Attention 公式后，硬件执行还需处理数据搬运问题：同样的矩阵乘法，如果把庞大的中间结果反复写入显存，就会增加数据搬运。本章以 FlashAttention 为主线，解释如何通过分块与 Online Softmax 保持目标运算，同时减少中间存储，再分析并行调度、数值实现与硬件条件。
 
 - [6.1 Attention 的计算量与数据访问](io-cost.md)
 - [6.2 Online Softmax 与分块计算](online-softmax.md)

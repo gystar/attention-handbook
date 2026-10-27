@@ -1,6 +1,6 @@
 # 10.4 Attention 与 State Space Models 的组合
 
-State Space Models（SSMs）用随输入更新的状态描述序列。用于语言模型的结构化 SSM 通过限制状态转移的形式，使长序列计算和增量推理更高效。与 Attention 组合时，需要同时考虑 SSM 如何更新历史，以及 Attention 保留多大范围的显式 KV。
+上一节将 Softmax Attention 与 Linear Attention 的递推层组合。另一类递推模块来自 State Space Models（SSMs）：它们用状态转移、输入写入和状态读取描述序列。下面先给出理解 Mamba 所需的离散形式，再解释 Mamba-2 与 Linear Attention 的联系，最后比较 Jamba、Samba 如何把这些模块接入语言模型。
 
 ## 从状态转移到输入相关的选择
 

@@ -1,6 +1,6 @@
 # 8.2 PagedAttention 与缓存分配
 
-PagedAttention 用块表将序列中的逻辑位置映射到物理 KV 块，使相邻位置无需占据连续的物理块。分配器可以按需增加块，Attention kernel 则按映射读取正确的 Key 和 Value。[原论文 §4.1—4.3](https://arxiv.org/html/2309.06180v1#S4)
+请求不断增长，最终长度又往往事先未知。若为每个请求预留一段连续的大缓存，就容易出现预留浪费和碎片。vLLM 提出的 PagedAttention 用块表将逻辑位置映射到物理 KV 块，按需增加块；Attention Kernel 沿映射读取 KV，保持原有的位置关系。[原论文 §3、§4.1—4.3](https://arxiv.org/html/2309.06180v1#S4)
 
 ## 逻辑位置到物理块
 

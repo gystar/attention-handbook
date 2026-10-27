@@ -1,6 +1,6 @@
 # 2.3 Self-Attention、Cross-Attention 与 Causal Attention
 
-QKV 来自哪里，决定 Attention 在哪些序列之间传递信息；Mask 则决定每个 Query 可以访问哪些 Key。这两个维度可以分别设置。
+前一节用输入矩阵定义 QKV 的来源，用 Mask 限制有效位置。本节把这两个设置与 Transformer 中的具体 Attention 形式对应起来。QKV 的来源决定信息在哪些序列之间传递，Mask 决定允许的访问范围；Self-Attention、Cross-Attention 与 Causal Attention 分别从这两个维度描述计算。
 
 ## 信息来源与访问范围
 

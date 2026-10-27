@@ -1,6 +1,6 @@
 # 2.2 Query、Key、Value 与 Scaled Dot-Product Attention
 
-单个 Attention Head 通过 Query–Key 匹配决定读取权重，再汇总对应的 Value。下面先定义一个 Head 的计算，再用可复算的小例子连接分数、权重和输出。
+上一节把 Attention 分为投影、匹配、归一化和汇总。本节展开其中一个 Attention Head，也就是一组独立的匹配与汇总计算：Query 表达当前读取需求，Key 参与匹配，Value 提供被汇总的内容。先明确它们的来源和形状，再用一个小例子连接分数、权重与输出。
 
 ## QKV 的来源与形状
 
@@ -24,7 +24,7 @@ $$
 
 ## 从匹配分数到加权汇总
 
-Scaled Dot-Product Attention 的矩阵形式为：
+Scaled Dot-Product Attention（SDPA）的矩阵形式为：
 
 $$
 S=\frac{QK^\top}{\sqrt{d_k}}+M,\qquad

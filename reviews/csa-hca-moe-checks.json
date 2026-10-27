@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-27",
+  "canonical_errors": [],
+  "legacy_export_errors": 81,
+  "routing_example": {
+    "3": "1/4",
+    "2": "3/4"
+  },
+  "figures": {
+    "sparse-attention": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "hybrid-architectures": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "tables": {
+    "sparse-attention": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "hybrid-architectures": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ]
+  },
+  "navigation_titles": "passed",
+  "figure_visual_inspection": "3 crops checked against complete PDF pages",
+  "gitbook_rendering": "not performed"
+}

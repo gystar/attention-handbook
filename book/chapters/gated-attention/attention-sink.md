@@ -1,6 +1,6 @@
 # 5.3 输出调节与 Attention Sink
 
-Attention Sink 指某些位置持续获得较高的 Attention 权重，即使其文本内容与当前预测缺乏明显关联。StreamingLLM 的研究观察到初始位置具有这种现象，并通过替换初始 Token、移除或保留其 KV 来检查影响。[Xiao et al.，§3.1](https://arxiv.org/html/2309.17453v4)
+输出 Gate 将“从哪里读取”与“传递多大幅度的结果”分开。研究这种调节时，一个具体观察对象是 Attention Sink。Attention Sink 指某些位置持续获得较高权重，即使其文本内容与当前预测缺乏明显关联。StreamingLLM 在所研究模型中观察到初始位置的这一现象，并通过替换初始 Token、移除或保留其 KV 检查影响。[Xiao et al.，§3.1](https://arxiv.org/html/2309.17453v4)
 
 ## 权重归一化与输出幅度
 

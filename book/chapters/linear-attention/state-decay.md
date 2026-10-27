@@ -1,6 +1,6 @@
 # 9.3 状态衰减与 Gated Linear Attention
 
-9.2 的加法状态持续累积历史写入。加入 Forget Gate 后，每一步先调整已有状态，再写入当前信息。这样，历史贡献除了取决于 Query 与 Key，还取决于它从写入到读取期间经历的衰减。
+9.2 的加法状态持续累积写入，所有历史项都留在同一个状态中。若希望根据时间或当前输入调节旧信息的保留程度，可以在写入之前引入衰减。本节先用一个带标量 Gate 的教学构造解释作用，再比较 RetNet、早期 RWKV 与 GLA 的具体更新形式。
 
 ## 从累积到衰减
 
@@ -44,11 +44,11 @@ RetNet 原图将两种计算方式并列：左侧通过带衰减矩阵 $$D$$ 的
   <figcaption><p align="center">图 9-2　RetNet 的并行计算与递推计算</p></figcaption>
 </figure>
 
-GLA 进一步让状态衰减取决于当前输入，并以逐通道 Gate 调整矩阵状态中的各行。
+与固定衰减相比，输入相关衰减可以在每一步调整历史项的保留程度。下面的 GLA 采用这一设计，并按通道调节矩阵状态中的各行。
 
 ## GLA 的逐通道 Gate
 
-Gated Linear Attention（GLA）将输入相关的 Gate 施加到矩阵状态。沿用列向量记法，其一般形式为：
+这里的 Gated Linear Attention（GLA）特指 Yang 等人提出的模型，将输入相关的 Gate 施加到矩阵状态。沿用列向量记法，其一般形式为：
 
 $$
 G_t=\alpha_t\beta_t^\top,\qquad

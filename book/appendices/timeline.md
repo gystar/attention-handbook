@@ -1,6 +1,6 @@
 # 附录 B 技术演进时间线与方法对照表
 
-本页按时间、技术对象和比较指标组织跨章检索入口。
+正文按问题与计算对象组织，时间线则补充各项工作的公开顺序。下面先列代表性节点，再按改变的对象查找专题，最后列出比较条件；同年出现的方法也可能处理不同层次的问题。
 
 ## 代表性时间节点
 
@@ -17,7 +17,7 @@
 | 2023 | [GQA](https://arxiv.org/abs/2305.13245)、[PagedAttention](https://arxiv.org/abs/2309.06180)、[Position Interpolation](https://arxiv.org/abs/2306.15595) | KV 共享、缓存管理和上下文扩展分别推进 |
 | 2024 | [Griffin](https://arxiv.org/abs/2402.19427)、[MLA](https://arxiv.org/abs/2405.04434)、[Mamba-2/SSD](https://arxiv.org/abs/2405.21060)、[Gated DeltaNet](https://arxiv.org/abs/2412.06464) | 递推与 Local Attention 的组合、Latent 压缩、结构化状态计算与状态更新 |
 | 2025 | [Native Sparse Attention](https://arxiv.org/abs/2502.11089)、[Gated Attention](https://arxiv.org/abs/2505.06708) | 硬件适配的稀疏选择，以及对 Softmax Attention 中 Gating 位置的系统研究 |
-| 2026 | [FlashAttention-4](https://arxiv.org/abs/2603.05451v1) | 针对 Blackwell 的执行单元与片上带宽比例调整流水线 |
+| 2026 | [FlashAttention-4](https://arxiv.org/abs/2603.05451v1)、[DeepSeek-V4](https://arxiv.org/abs/2606.19348v1) | 分别研究 Blackwell 上的执行优化，以及 CSA/HCA 的序列压缩与历史读取 |
 
 <p align="center">表 B-1　代表性时间节点</p>
 
@@ -32,9 +32,11 @@
 | Attention 内部的 Gate | Gated Attention | Gate 的输入、作用位置与实验依据 | [第 5 章 Gated Attention 的结构与作用](../chapters/gated-attention/README.md) |
 | 运算调度与中间存储 | FlashAttention | 目标算子是否相同，IO 减少多少 | [第 6 章 FlashAttention 的计算与 IO 优化](../chapters/flash-attention/README.md) |
 | 可访问的位置对 | Sparse Attention | 选择开销、实际稀疏度与质量变化 | [第 7 章 Sparse Attention 的连接模式与动态选择](../chapters/sparse-attention/README.md) |
+| 压缩历史条目与选择 | DeepSeek-V4 的 CSA/HCA | 压缩率、因果边界、选择与全量读取的成本 | [7.5 DeepSeek-V4 的 CSA 与 HCA](../chapters/sparse-attention/compressed-attention.md) |
 | KV 的物理存储和保留 | PagedAttention、KV 量化与淘汰 | 分别改变布局、精度还是历史覆盖 | [第 8 章 KV Cache 的存储管理与推理优化](../chapters/kv-cache/README.md) |
 | 状态更新与读取 | Linear Attention、Gated DeltaNet | 状态容量、计算方式与信息读取能力 | [第 9 章 Linear Attention 的 Recurrent Formulation 与 State Update](../chapters/linear-attention/README.md) |
 | 模块组合 | Full–Sparse Attention、Attention 与 Linear Attention 或 SSM | 配置、训练及整模型表现 | [第 10 章 Hybrid Architectures 的结构设计与方法比较](../chapters/hybrid-architectures/README.md) |
+| FFN 参数的稀疏激活 | MoE 与 Expert Routing | 选择依据、输出加权、负载及通信；与序列模块分别统计 | [10.6 MoE 与 Expert Routing](../chapters/hybrid-architectures/moe-routing.md) |
 
 <p align="center">表 B-2　按改变的对象查找</p>
 

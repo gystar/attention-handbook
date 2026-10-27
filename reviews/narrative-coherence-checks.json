@@ -1,0 +1,401 @@
+{
+  "date": "2026-10-27",
+  "chapter_pages_reviewed": 63,
+  "chapter_pages_changed": 36,
+  "chapter_page_counts": {
+    "overview": 5,
+    "transformer-attention": 6,
+    "position-encoding": 6,
+    "kv-representations": 6,
+    "gated-attention": 5,
+    "flash-attention": 6,
+    "sparse-attention": 7,
+    "kv-cache": 7,
+    "linear-attention": 7,
+    "hybrid-architectures": 8
+  },
+  "navigation_titles": "passed",
+  "display_math_code_and_figures_unchanged": true,
+  "current_content_errors": [],
+  "legacy_export_errors": 81,
+  "pages": [
+    {
+      "path": "book/chapters/overview/README.md",
+      "title": "第 1 章 Attention 机制的演进与主要发展方向",
+      "changed": false,
+      "note": "已有建模需求、演进与阅读范围，保留。"
+    },
+    {
+      "path": "book/chapters/overview/introduction.md",
+      "title": "1.1 从 Representation Learning 到 Attention 机制",
+      "changed": false,
+      "note": "表示、Token、上下文、动态汇总按依赖展开；DistilBERT 图例有具体语境，保留。"
+    },
+    {
+      "path": "book/chapters/overview/from-seq2seq-to-transformer.md",
+      "title": "1.2 从 RNN 到 Transformer",
+      "changed": false,
+      "note": "RNN 固定表示—动态读取—Self-Attention 的职责变化清楚；Encoder/Decoder 结构已解释，保留。"
+    },
+    {
+      "path": "book/chapters/overview/bottlenecks-and-context.md",
+      "title": "1.3 LLM 中的 Attention 成本与长上下文需求",
+      "changed": false,
+      "note": "生成循环—缓存—成本—长上下文能力衔接完整，保留计算条件。"
+    },
+    {
+      "path": "book/chapters/overview/optimization-landscape.md",
+      "title": "1.4 Attention 机制的主要发展方向与技术路线",
+      "changed": true,
+      "note": "新增序列压缩在路线图中的位置，以 DeepSeek-V4 为明确案例；保留与 Head 共享、固定状态的区别。"
+    },
+    {
+      "path": "book/chapters/transformer-attention/README.md",
+      "title": "第 2 章 Transformer Attention 的基本原理与计算过程",
+      "changed": true,
+      "note": "章首从第一章的信息读取落实到可计算对象。"
+    },
+    {
+      "path": "book/chapters/transformer-attention/structure-and-flow.md",
+      "title": "2.1 Transformer 中的 Attention 结构与计算流程",
+      "changed": false,
+      "note": "原始 Encoder–Decoder 图与 Decoder-only 的使用范围已说明，保留。"
+    },
+    {
+      "path": "book/chapters/transformer-attention/scaled-dot-product.md",
+      "title": "2.2 Query、Key、Value 与 Scaled Dot-Product Attention",
+      "changed": true,
+      "note": "补出单个 Head 的含义与 QKV 职责，补 SDPA 全称缩写；公式及例子不变。"
+    },
+    {
+      "path": "book/chapters/transformer-attention/attention-and-masks.md",
+      "title": "2.3 Self-Attention、Cross-Attention 与 Causal Attention",
+      "changed": true,
+      "note": "从前页输入来源、Mask 设置转向三类 Attention 的语义；避免声称前页没有介绍 Mask。"
+    },
+    {
+      "path": "book/chapters/transformer-attention/multi-head.md",
+      "title": "2.4 Multi-Head Attention 的结构与 Output Projection",
+      "changed": false,
+      "note": "单 Head 到多 Head、拼接到输出投影已有完整过渡，保留。"
+    },
+    {
+      "path": "book/chapters/transformer-attention/training-prefill-decode.md",
+      "title": "2.5 Training、Prefill 与 Decode 的计算差异",
+      "changed": true,
+      "note": "从完整一层计算转入不同执行阶段，补出参数相同与输入形状变化的关系。"
+    },
+    {
+      "path": "book/chapters/position-encoding/README.md",
+      "title": "第 3 章 Position Encoding 的演进与 Context Extension",
+      "changed": false,
+      "note": "章首已承接内容匹配，并限定 RoPE 扩展对象，保留。"
+    },
+    {
+      "path": "book/chapters/position-encoding/position-and-order.md",
+      "title": "3.1 Attention 中的顺序与位置信息",
+      "changed": false,
+      "note": "语序例子先于置换推导；Mask 与位置表示的区别明确，保留。"
+    },
+    {
+      "path": "book/chapters/position-encoding/absolute-and-relative.md",
+      "title": "3.2 Absolute 与 Relative Position Encoding",
+      "changed": true,
+      "note": "补 Absolute 到相对偏移、Shaw 向量到 T5 标量偏置的动机；各方案归属明确。"
+    },
+    {
+      "path": "book/chapters/position-encoding/rope-and-alibi.md",
+      "title": "3.3 RoPE 与 ALiBi 的位置建模",
+      "changed": true,
+      "note": "补 RoFormer 的方法来源，并把 RoPE/ALiBi 写成不同设计选择。"
+    },
+    {
+      "path": "book/chapters/position-encoding/context-extension.md",
+      "title": "3.4 RoPE Scaling 与上下文扩展",
+      "changed": true,
+      "note": "先说明训练长度与相位使用范围，再进入插值、分频和搜索。"
+    },
+    {
+      "path": "book/chapters/position-encoding/evaluation.md",
+      "title": "3.5 长度泛化与长上下文评估",
+      "changed": false,
+      "note": "可执行长度、任务能力、评估设置已经区分，保留。"
+    },
+    {
+      "path": "book/chapters/kv-representations/README.md",
+      "title": "第 4 章 MQA、GQA 与 MLA 的 KV 表示优化",
+      "changed": true,
+      "note": "从位置处理转向每个位置的 KV 存储；明确两种结构选择及 DeepSeek-V2 案例。"
+    },
+    {
+      "path": "book/chapters/kv-representations/cache-cost.md",
+      "title": "4.1 KV 表示与缓存成本",
+      "changed": false,
+      "note": "已有缓存等价条件、形状与成本背景，保留。"
+    },
+    {
+      "path": "book/chapters/kv-representations/head-sharing.md",
+      "title": "4.2 MQA 与 GQA 的 Head 共享",
+      "changed": true,
+      "note": "先由容量式指出 KV Head 数的作用，再引入 MQA/GQA。"
+    },
+    {
+      "path": "book/chapters/kv-representations/latent-compression.md",
+      "title": "4.3 MLA 的 Latent Compression",
+      "changed": true,
+      "note": "对照 Head 共享引入 DeepSeek-V2 MLA；保留内容/位置分支的展开顺序。"
+    },
+    {
+      "path": "book/chapters/kv-representations/decoupled-rope.md",
+      "title": "4.4 MLA 中的 RoPE 与投影合并",
+      "changed": true,
+      "note": "首段已说明投影合并为何遇到 RoPE；明确 Decoupled RoPE 归属。"
+    },
+    {
+      "path": "book/chapters/kv-representations/comparison.md",
+      "title": "4.5 KV 表示的质量与效率比较",
+      "changed": true,
+      "note": "容量、结构与训练比较已齐备；补到输出 Gating 与缓存管理的不同后续问题。"
+    },
+    {
+      "path": "book/chapters/gated-attention/README.md",
+      "title": "第 5 章 Gated Attention 的结构与作用",
+      "changed": true,
+      "note": "从位置与 KV 设计转向汇总结果的幅度；明确以 Qiu 等人的输出 Gate 为例。"
+    },
+    {
+      "path": "book/chapters/gated-attention/output-gating.md",
+      "title": "5.1 Attention 输出的 Gating",
+      "changed": true,
+      "note": "补 Softmax 权重与输出幅度的关系，定义本节采用的 Gate；保留输入相关与粒度条件。"
+    },
+    {
+      "path": "book/chapters/gated-attention/placement.md",
+      "title": "5.2 Gate 的位置与参数化",
+      "changed": false,
+      "note": "已有位置、粒度、动态系数三层分析，原图实验标签有范围说明，保留。"
+    },
+    {
+      "path": "book/chapters/gated-attention/attention-sink.md",
+      "title": "5.3 输出调节与 Attention Sink",
+      "changed": true,
+      "note": "用读取位置与输出幅度的区别引出 Sink；限定 StreamingLLM 的观测对象。"
+    },
+    {
+      "path": "book/chapters/gated-attention/evaluation.md",
+      "title": "5.4 训练证据与比较条件",
+      "changed": false,
+      "note": "实验、长上下文适配与组合条件均明确，保留参数对齐和未复现标记。"
+    },
+    {
+      "path": "book/chapters/flash-attention/README.md",
+      "title": "第 6 章 FlashAttention 的计算与 IO 优化",
+      "changed": true,
+      "note": "从结构设计转向给定算子的执行问题，以中间数据搬运引出分块。"
+    },
+    {
+      "path": "book/chapters/flash-attention/io-cost.md",
+      "title": "6.1 Attention 的计算量与数据访问",
+      "changed": false,
+      "note": "矩阵成本、硬件层级、IO 模型的前提已说明，保留。"
+    },
+    {
+      "path": "book/chapters/flash-attention/online-softmax.md",
+      "title": "6.2 Online Softmax 与分块计算",
+      "changed": false,
+      "note": "整行分母问题先于在线统计量；数值例子支撑合并，保留。"
+    },
+    {
+      "path": "book/chapters/flash-attention/forward-backward.md",
+      "title": "6.3 FlashAttention 的前向与反向计算",
+      "changed": false,
+      "note": "已有前向统计量到反向重算的依赖解释，保留。"
+    },
+    {
+      "path": "book/chapters/flash-attention/parallelism.md",
+      "title": "6.4 并行调度与硬件适配",
+      "changed": true,
+      "note": "保留 FA2/3/4 硬件背景；补 SageAttention 的独立路线与量化误差定位。"
+    },
+    {
+      "path": "book/chapters/flash-attention/evaluation.md",
+      "title": "6.5 数值误差与性能评估",
+      "changed": false,
+      "note": "数值与性能评估分开；Kernel 到端到端的条件完整，保留。"
+    },
+    {
+      "path": "book/chapters/sparse-attention/README.md",
+      "title": "第 7 章 Sparse Attention 的连接模式与动态选择",
+      "changed": true,
+      "note": "由 FlashAttention 仍计算完整有效配对引出稀疏；明确 HCA 是案例中配合的 Dense 压缩层。"
+    },
+    {
+      "path": "book/chapters/sparse-attention/connectivity-cost.md",
+      "title": "7.1 稀疏连接与计算成本",
+      "changed": false,
+      "note": "集合定义先于计数与误差，已有条件说明，保留。"
+    },
+    {
+      "path": "book/chapters/sparse-attention/local-global.md",
+      "title": "7.2 Sliding Window 与 Local–Global Attention",
+      "changed": false,
+      "note": "局部、Global、长距离路径的职责与 Encoder/Causal 差异明确，保留。"
+    },
+    {
+      "path": "book/chapters/sparse-attention/block-sparse.md",
+      "title": "7.3 Block-Sparse Attention 的组织与执行",
+      "changed": false,
+      "note": "逻辑连接与物理块的矛盾先于实现分析，保留。"
+    },
+    {
+      "path": "book/chapters/sparse-attention/dynamic-selection.md",
+      "title": "7.4 基于内容的动态选择",
+      "changed": true,
+      "note": "补分组—页面评分—Prefill 模式—训练结构之间的比较关系；DSA 归属于 DeepSeek-V3.2。"
+    },
+    {
+      "path": "book/chapters/sparse-attention/compressed-attention.md",
+      "title": "7.5 DeepSeek-V4 的 CSA 与 HCA",
+      "changed": true,
+      "note": "标题改为 DeepSeek-V4；首段交代 DSA 背景与模型归属，再展开 CSA/HCA，保留原图和参数。"
+    },
+    {
+      "path": "book/chapters/sparse-attention/evaluation.md",
+      "title": "7.6 信息覆盖与长上下文评估",
+      "changed": true,
+      "note": "保留通用评价方法；补模型压缩表示与逐位置剪枝指标不直接对应的条件。"
+    },
+    {
+      "path": "book/chapters/kv-cache/README.md",
+      "title": "第 8 章 KV Cache 的存储管理与推理优化",
+      "changed": true,
+      "note": "承接读取集合与保留集合，再引入请求生命周期；区分第四章表示与服务系统管理。"
+    },
+    {
+      "path": "book/chapters/kv-cache/lifecycle.md",
+      "title": "8.1 KV Cache 的生命周期与容量",
+      "changed": false,
+      "note": "Prefill、Decode、回收与共享的时间边界明确，保留。"
+    },
+    {
+      "path": "book/chapters/kv-cache/paged-attention.md",
+      "title": "8.2 PagedAttention 与缓存分配",
+      "changed": true,
+      "note": "先说明未知请求长度与预留浪费，再引入 vLLM 的分页设计。"
+    },
+    {
+      "path": "book/chapters/kv-cache/quantization.md",
+      "title": "8.3 KV Cache Quantization",
+      "changed": false,
+      "note": "分页到字节表示的衔接已有；KIVI 限于论文观察与实现，保留。"
+    },
+    {
+      "path": "book/chapters/kv-cache/eviction.md",
+      "title": "8.4 Token Selection 与 Cache Eviction",
+      "changed": true,
+      "note": "承接分页和量化的预算限制；补固定位置、历史评分、Prompt 观察三类决策依据的衔接。"
+    },
+    {
+      "path": "book/chapters/kv-cache/reuse-offloading.md",
+      "title": "8.5 Prefix Caching 与 Offloading",
+      "changed": true,
+      "note": "从请求内部管理转向跨请求重复计算与外部存储。"
+    },
+    {
+      "path": "book/chapters/kv-cache/evaluation.md",
+      "title": "8.6 缓存策略与服务性能",
+      "changed": false,
+      "note": "服务目标、调度、指标及质量条件的依赖关系明确，保留。"
+    },
+    {
+      "path": "book/chapters/linear-attention/README.md",
+      "title": "第 9 章 Linear Attention 的 Recurrent Formulation 与 State Update",
+      "changed": true,
+      "note": "从显式历史条目转向固定状态；指出具体论文的状态、归一化和 Gate 需要分别定义。"
+    },
+    {
+      "path": "book/chapters/linear-attention/kernel-attention.md",
+      "title": "9.1 从 Softmax Attention 到 Kernel Attention",
+      "changed": true,
+      "note": "用有限维特征分解引出状态读取；明确换核与近似 Softmax 两条路线。"
+    },
+    {
+      "path": "book/chapters/linear-attention/recurrence.md",
+      "title": "9.2 Causal Linear Attention 的递推计算",
+      "changed": false,
+      "note": "前缀和自然导出递推，归一化与边界有说明，保留。"
+    },
+    {
+      "path": "book/chapters/linear-attention/state-decay.md",
+      "title": "9.3 状态衰减与 Gated Linear Attention",
+      "changed": true,
+      "note": "先说明持续累积的限制，再比较固定/输入相关衰减；GLA 明确归属 Yang 等人的模型。"
+    },
+    {
+      "path": "book/chapters/linear-attention/delta-rule.md",
+      "title": "9.4 DeltaNet 与 Gated DeltaNet 的状态更新",
+      "changed": true,
+      "note": "用同一 Key 更新 Value 的问题引出 Delta Rule；保留对已有状态的误差修正与 TTT 条件。"
+    },
+    {
+      "path": "book/chapters/linear-attention/chunkwise-computation.md",
+      "title": "9.5 并行训练与分块计算",
+      "changed": false,
+      "note": "Decode 与已知完整输入的并行需求先于公式，保留块内/块间解释。"
+    },
+    {
+      "path": "book/chapters/linear-attention/capacity-retrieval.md",
+      "title": "9.6 状态容量与检索能力",
+      "changed": false,
+      "note": "从干扰到秩、有限比特与任务评估逐层限定；自然引出混合架构，保留。"
+    },
+    {
+      "path": "book/chapters/hybrid-architectures/README.md",
+      "title": "第 10 章 Hybrid Architectures 的结构设计与方法比较",
+      "changed": true,
+      "note": "由显式条目与固定状态的取舍进入组合；案例模型与独立 FFN/MoE 维度明确。"
+    },
+    {
+      "path": "book/chapters/hybrid-architectures/composition.md",
+      "title": "10.1 序列模块的组合方式",
+      "changed": true,
+      "note": "已有层间、Head、分支的组织关系；补 RG-LRU 全称及 Griffin 归属。"
+    },
+    {
+      "path": "book/chapters/hybrid-architectures/full-sparse.md",
+      "title": "10.2 Full Attention 与 Sparse Attention 的组合",
+      "changed": true,
+      "note": "以 Gemma 2 明确说明 Full/Local 组合案例，再推导通用计数。"
+    },
+    {
+      "path": "book/chapters/hybrid-architectures/attention-linear.md",
+      "title": "10.3 Attention 与 Linear Attention 的组合",
+      "changed": false,
+      "note": "局部 KV 与全局 KV 分别补足固定状态，实验条件齐全，保留。"
+    },
+    {
+      "path": "book/chapters/hybrid-architectures/attention-ssm.md",
+      "title": "10.4 Attention 与 State Space Models 的组合",
+      "changed": true,
+      "note": "先交代与前节递推模块的关系，给出 SSM 必需基础，再进入具体混合模型。"
+    },
+    {
+      "path": "book/chapters/hybrid-architectures/state-management.md",
+      "title": "10.5 层间配置与状态管理",
+      "changed": true,
+      "note": "补 CSA/HCA 状态计数入口，保留快照、边界和共享条件。"
+    },
+    {
+      "path": "book/chapters/hybrid-architectures/moe-routing.md",
+      "title": "10.6 MoE 与 Expert Routing",
+      "changed": true,
+      "note": "先回顾 FFN 的位置，说明 MoE 与序列模块的独立配置；限定 Token-choice 评分例子与 DeepSeek 公式。"
+    },
+    {
+      "path": "book/chapters/hybrid-architectures/evaluation.md",
+      "title": "10.7 模型能力与资源成本的比较",
+      "changed": false,
+      "note": "评价依次区分约束、任务、阶段及消融，保留；不泛化模型实验结果。"
+    }
+  ]
+}

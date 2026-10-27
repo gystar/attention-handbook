@@ -1,6 +1,6 @@
 # 8.4 Token Selection 与 Cache Eviction
 
-当缓存预算小于完整历史时，系统需要决定保留哪些位置。Token Selection 给出位置集合；Cache Eviction 则释放或覆盖被淘汰位置的 KV，改变后续计算可以直接访问的历史。这里的选择单位是 Token **位置**，同一个词在不同位置产生不同的 KV。
+分页减少分配浪费，量化减少每个数值占用的比特；如果缓存预算仍不足以保存完整历史，就需要决定哪些位置继续保留。Token Selection 给出位置集合，Cache Eviction 释放或覆盖被淘汰位置的 KV，从而限制后续计算能直接访问的历史。这里选择的是 Token 位置，同一个词在不同位置产生不同的 KV。
 
 ## 当前读取与历史保留
 
@@ -31,6 +31,8 @@ $$
 
 ## H₂O 的累计 Attention 评分
 
+固定保留初始与近期位置，无法根据中间内容的重要性分配空间。另一类策略利用生成过程中已有的 Attention 权重，持续更新历史位置的保留优先级。
+
 H₂O 同时保留近期位置和累计 Attention 权重较高的历史位置，后者称为 Heavy Hitters。生成过程中，系统更新评分并淘汰预算之外的 KV。[Zhang et al.，§3.2、§4.1、Appendix A](https://arxiv.org/html/2306.14048v3)
 
 为说明累计统计，固定某层某个 Head，设本步可访问位置 $$j$$ 的归一化权重为 $$a_{t,j}$$，可以用以下记号表示其累计分数：
@@ -44,6 +46,8 @@ $$
 原论文的近似保证针对满足 Submodular 假设的目标函数；实际生成质量仍需通过模型与任务实验评估。[§4.2](https://arxiv.org/html/2306.14048v3)
 
 ## SnapKV 的 Prompt 选择
+
+还可以在生成开始前，利用 Prompt 自身的查询特征选择历史，而不只依赖后续 Decode 中积累的评分。SnapKV 采用 Prompt 尾部的观察窗口完成这一选择。
 
 SnapKV 在 Prompt 尾部设置 Observation Window，汇总该窗口中的 Query 对前缀位置的 Attention 权重。随后沿位置方向做 Pooling，再按 Head 选择 Top-k 位置，与 Observation Window 的全部 KV 一起保留。[Li et al.，§4.1、§4.3、Listing 1](https://arxiv.org/html/2404.14469v2#S4)
 

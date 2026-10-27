@@ -1,6 +1,6 @@
 # 第 2 章 Transformer Attention 的基本原理与计算过程
 
-Attention 层把每个位置的输入表示转换为 Query、Key 和 Value，计算位置之间的权重，再组合信息。本章沿这一计算过程展开，建立后续结构改进、kernel 优化和 KV cache 管理共同使用的定义与符号。
+第一章用“按相关性读取信息”解释了 Attention 的作用。要分析后续方法，需要把这一过程落实为可计算的对象：输入如何变成 Query、Key 和 Value，哪些位置可以相互访问，各 Head 的结果又如何形成下一层表示。本章以原始 Transformer 的 Softmax Attention 为基准，建立这些定义与符号。
 
 | 小节 | 主要内容 |
 | --- | --- |

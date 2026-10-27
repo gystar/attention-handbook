@@ -68,4 +68,4 @@ Causal 使用还需检查投影的信息来源。如果某个压缩条目混入�
 
 Prefill 与 Decode 分开测量，有助于判断收益来自哪段计算。若比较最大吞吐，还要同时报告 batch、延迟和显存约束；更小的缓存可能让系统容纳更多请求，这与固定 batch 下单步更快是不同的测量结果。
 
-缓存的分配、量化、淘汰和复用见[第 8 章 KV Cache 的存储管理与推理优化](../kv-cache/README.md)。
+本章改变了历史表示及其读取计算；得到 Head 输出后，还可以调节它向后续网络传递的信息，见[第 5 章 Gated Attention 的结构与作用](../gated-attention/README.md)。缓存的分配、量化、淘汰和复用见[第 8 章 KV Cache 的存储管理与推理优化](../kv-cache/README.md)。
